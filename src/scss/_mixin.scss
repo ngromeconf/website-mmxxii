@@ -1,0 +1,40 @@
+/** Manage Media Queries */
+@mixin mq($width, $type: min) {
+  @if map_has_key($breakpoints, $width) {
+      $width: map_get($breakpoints, $width);
+      @if $type == max {
+          $width: $width - 1px;
+      }
+      @media only screen and (#{$type}-width: $width) {
+          @content;
+      }
+  }
+}
+
+/* automatic center the element */
+@mixin push--auto {
+  margin: {
+      left: auto;
+      right: auto;
+  }
+}
+
+@mixin linkColor($color) {
+  color: $color;
+
+  &:hover, &:active, &:focus {
+      color: lighten($color, 20%);
+  }
+}
+
+@mixin clearfix {
+  display: inline-block;
+  &:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+  * html & { height: 1px }
+}

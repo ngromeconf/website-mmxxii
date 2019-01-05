@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "scss/reset";
+@import "scss/variables";
+@import "scss/mixin";
+
+@import "node_modules/typi/scss/_typi.scss";
+@include typi-init;
+
+@import "scss/typo";
+@import "scss/main";
