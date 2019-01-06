@@ -6,14 +6,18 @@ $typi: (
   base: (
     null: (16px, 1.4),
     phone: (18px),
-    tablet-wide: (20px)
+    tablet-small: (22px),
+    tablet-wide: (25px),
+    desktop: (28px)
   ),
   // Other font maps here
   // base font-map,
   h1special: (
-    null: (34px, 1.3),
-    phone: (1.869em, 1.2),
-    tablet-wide: (2.369em, 1.2),
+    null: (15px, 2),
+    phone: (1.269em, 2.2),
+    tablet-small: (1.7em, 1.7),
+    tablet-wide: (2em, 1.7),
+    desktop: (2.869em, 1.5),
   ),
   h1: (
     null: (34px, 1.3),
@@ -27,17 +31,20 @@ $typi: (
   ),
   h3: (
     null: (24px, 1.3),
-    phone: (1.1em, 1.2),
-    tablet-wide: (1.2em, 1.2),
+    phone: (0.8em, 1.2),
+    tablet-wide: (1em, 1.2),
   )
 );
 
 h1{
+  font-family: 'Rubik', sans-serif;
   @include typi('h1');
 }
 h2{
+  font-family: 'Rubik', sans-serif;
   @include typi('h2');
 }
 h3{
+  font-family: 'Rubik', sans-serif;
   @include typi('h3');
 }

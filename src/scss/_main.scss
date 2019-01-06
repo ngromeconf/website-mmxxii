@@ -62,7 +62,7 @@
   .site-container{
     background-color: $bg-white;
     margin-right: 0;
-    margin-top: 80px;
+    margin-top: 200px;
     opacity: 0;
     @include mq("tablet"){
       margin-top: 300px;
@@ -75,6 +75,7 @@
 
     .site-content{
       margin: 0 30px;
+      border: 1px solid red;
       @include mq("tablet"){
         margin: 0 130px;
       }
@@ -84,9 +85,11 @@
 
       h1{
         &.main-title{
+          font-family: 'Rubik', sans-serif;
+          font-weight: 500;
           margin: 0 0 80px;
           @include typi('h1special');
-          margin-top: vr(1); // 1 baseline
+          margin-top: vr(2); // 1 baseline
           margin-bottom: vr(2); // 2 baselines
           .red{
             color: $main-red;
@@ -106,6 +109,7 @@
             text-align: center;
             span{
               text-transform: uppercase;
+              font-weight: 200;
               &::after {
                 content: ""; /* This is necessary for the pseudo element to work. */
                 display: block; /* This will put the pseudo element on its own line. */
