@@ -7,7 +7,7 @@
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
-      "prefix": "app",
+      "prefix": "ngrome",
       "schematics": {
         "@schematics/angular:component": {
           "styleext": "scss"
@@ -24,10 +24,11 @@
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/manifest.json"
             ],
             "styles": [
-              "src/styles.sass"
+              "src/styles.scss"
             ],
             "scripts": []
           },
@@ -54,7 +55,8 @@
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
                 }
-              ]
+              ],
+              "serviceWorker": true
             }
           }
         },
@@ -85,10 +87,10 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": [],
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/manifest.json"
             ]
           }
         },

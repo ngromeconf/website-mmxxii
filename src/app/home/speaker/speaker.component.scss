@@ -1,0 +1,19 @@
+@import "../../../scss/variables";
+img{
+  padding: 0;
+  border-radius: 50%;
+  &.left{
+    float: left;
+    padding: 20px;
+  }
+  &.right{
+    float: right;
+    padding: 20px;
+  }
+}
+
+h3{
+  padding: 10px 0 20px;
+  color: $main-red;
+  text-transform: uppercase;
+}
