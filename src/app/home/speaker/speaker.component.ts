@@ -4,7 +4,7 @@ import { bounce } from 'ng-animate';
 
 
 @Component({
-  selector: 'app-speaker',
+  selector: 'ngrome-speaker',
   templateUrl: './speaker.component.html',
   styleUrls: ['./speaker.component.scss'],
   animations: [

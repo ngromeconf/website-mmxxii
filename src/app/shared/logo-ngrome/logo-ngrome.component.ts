@@ -4,7 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { bounceOutUp } from 'ng-animate';
 
 @Component({
-  selector: 'app-logo-ngrome',
+  selector: 'ngrome-logo',
   templateUrl: './logo-ngrome.component.html',
   styleUrls: ['./logo-ngrome.component.scss'],
   animations: [
