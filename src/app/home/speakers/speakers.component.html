@@ -1,0 +1,10 @@
+<div class="featured">
+  <span>Featured Speakers</span>
+</div>
+
+<ngrome-speaker-bio
+  *ngFor="let speaker of speakerService.getSpeakers(); let isOdd = odd"
+  [speaker]="speaker"
+  [isOdd]="isOdd"
+  >
+</ngrome-speaker-bio>

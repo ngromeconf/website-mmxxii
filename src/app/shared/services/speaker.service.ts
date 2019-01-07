@@ -1,24 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { trigger, transition, useAnimation } from '@angular/animations';
-import { bounce } from 'ng-animate';
+import { Injectable } from '@angular/core';
 
-@Component({
-  selector: 'ngrome-speaker',
-  templateUrl: './speaker.component.html',
-  styleUrls: ['./speaker.component.scss'],
-  animations: [
-    trigger('bounce', [
-      transition(
-        '* => *',
-        useAnimation(bounce, {
-          // Set the duration to 5seconds and delay to 2seconds
-          params: { timing: 2, delay: 0 },
-        })
-      ),
-    ]),
-  ],
+@Injectable({
+  providedIn: 'root'
 })
-export class SpeakerComponent implements OnInit {
+export class SpeakerService {
+
   speakerList = [
     {
       name: 'Matias Niemelä',
@@ -69,7 +55,10 @@ export class SpeakerComponent implements OnInit {
       image: 'https://pbs.twimg.com/profile_images/957865024126533632/71tNdug__400x400.jpg'
     }
   ];
-  constructor() {}
 
-  ngOnInit() {}
+  constructor() { }
+
+  getSpeakers(){
+    return this.speakerList;
+  }
 }

@@ -1,11 +1,4 @@
-<div class="featured">
-  <span>Featured Speakers</span>
-</div>
-
-
-<div
-  [@bounce]="'bounce'"
-  *ngFor="let speaker of speakerList; let isOdd = odd">
+<div [@scrollAnimation]="state">
   <img [ngClass]="{'right': isOdd, 'left': !isOdd}" width="250" [src]="speaker.image">
   <h1>{{speaker.name}}</h1>
   <h3>{{speaker.job}}</h3>
