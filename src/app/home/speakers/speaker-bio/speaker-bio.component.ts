@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, HostListener, ElementRef } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
+import { Speaker } from 'src/app/shared/services/speaker.service';
 
 @Component({
   selector: 'ngrome-speaker-bio',
@@ -22,7 +23,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 })
 export class BioComponent implements OnInit {
 
-  @Input('speaker') speaker: String;
+  @Input('speaker') speaker: Speaker;
   @Input('isOdd') isOdd: Boolean;
 
   state = 'hide';

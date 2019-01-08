@@ -1,11 +1,19 @@
 import { Injectable } from '@angular/core';
 
+
+export interface Speaker{
+  image: String;
+  name: String;
+  job: String;
+  description: String;
+}
+
 @Injectable({
   providedIn: 'root'
 })
 export class SpeakerService {
 
-  speakerList = [
+  speakerList: Speaker[] = [
     {
       name: 'Matias Niemelä',
       job: '@yearofmoo',
@@ -58,7 +66,7 @@ export class SpeakerService {
 
   constructor() { }
 
-  getSpeakers(){
+  getSpeakers(): Speaker[] {
     return this.speakerList;
   }
 }
