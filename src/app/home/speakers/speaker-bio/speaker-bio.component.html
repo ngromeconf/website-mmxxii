@@ -1,6 +1,6 @@
 <div [@scrollAnimation]="state">
   <img [ngClass]="{'right': isOdd, 'left': !isOdd}" width="250" [src]="speaker.image">
   <h1>{{speaker.name}}</h1>
-  <h3>{{speaker.job}}</h3>
-  <span class="description">{{speaker.description}}</span>
+  <p class="labelSmall">{{speaker.job}}</p>
+  <span>{{speaker.description}}</span>
 </div>

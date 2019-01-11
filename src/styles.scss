@@ -1,5 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-@import "scss/reset";
 @import "scss/variables";
 @import "scss/mixin";
 
@@ -7,4 +6,6 @@
 @include typi-init;
 
 @import "scss/typo";
+
+@import "scss/reset";
 @import "scss/main";

@@ -1,6 +1,12 @@
 <div class="page-main">
-
-  <ngrome-logo></ngrome-logo>
+  <div class="menu">
+    <div class="logo"><img src="/assets/logo/logo-white.svg"></div>
+    <div class="hamburger">
+      <input type="image" src="/assets/icons/hamburger.svg"
+        (click)="openCloseSidebar()">
+    </div>
+  </div>
+  <!-- ngrome-logo></ngrome-logo -->
   <div class="page-side"
     [@animateSidebar]="sidebarStatus">
     <ngrome-sidebar></ngrome-sidebar>

@@ -4,16 +4,15 @@ img{
   border-radius: 50%;
   &.left{
     float: left;
-    padding: 20px;
+    padding: 20px 30px 20px 0;
   }
   &.right{
     float: right;
-    padding: 20px;
+    padding: 20px 0 20px 30px;
   }
 }
 
-h3{
-  padding: 10px 0 20px;
-  color: $main-red;
+.labelSmall{
+  padding: 10px 0 40px;
   text-transform: uppercase;
 }
