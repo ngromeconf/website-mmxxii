@@ -39,7 +39,6 @@
 
   .page-side {
     display: none;
-    right: -3000px;
     height: 100%;
     background-color: $main-color;
     position: fixed;
@@ -49,6 +48,9 @@
     @include mq("tablet-wide"){
       width: 25%;
       // display: block;
+    }
+    &.show {
+      display: block;
     }
 
     .logo{

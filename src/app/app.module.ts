@@ -9,6 +9,7 @@ import { environment } from '../environments/environment';
 import { SidebarModule } from './sidebar/sidebar.module';
 import { HomeModule } from './home/home.module';
 import { SharedModule } from './shared/shared.module';
+import {SideBarService} from './shared/services/sidebar.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { SharedModule } from './shared/shared.module';
     SharedModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
-  providers: [],
+  providers: [SideBarService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

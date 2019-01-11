@@ -7,8 +7,8 @@
     </div>
   </div>
   <!-- ngrome-logo></ngrome-logo -->
-  <div class="page-side"
-    [@animateSidebar]="sidebarStatus">
+  <div class="page-side show"
+    [@animateSidebar]="sidebarService.sidebarStatus$ | async">
     <ngrome-sidebar></ngrome-sidebar>
   </div>
   <div class="site-container"

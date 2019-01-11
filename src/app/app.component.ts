@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import {AfterViewInit, Component} from '@angular/core';
 import { trigger, transition, state, useAnimation, style } from '@angular/animations';
 import { fadeIn, fadeOut, bounceInRight, bounceOutRight } from 'ng-animate';
+import {SideBarService} from './shared/services/sidebar.service';
 
 @Component({
   selector: 'app-root',
@@ -8,41 +9,45 @@ import { fadeIn, fadeOut, bounceInRight, bounceOutRight } from 'ng-animate';
   styleUrls: ['./app.component.scss'],
   animations: [
     trigger('animateSidebar', [
-      state('visible', style({ "opacity": 1})),
-      state('hidden', style({ "opacity": 0})),
+      state('visible', style({ 'opacity': 1})),
+      state('hidden', style({ 'opacity': 0})),
       transition('visible => hidden', useAnimation(bounceOutRight)),
       transition('hidden => visible', useAnimation(bounceInRight, {
         // Set the duration to 5seconds and delay to 2seconds
         params: {
           timing: 2,
-          a: '5000px',
+          a: '2000px',
           b: '100px',
           c: '-50px',
-          d: '0px',
+          d: '100%',
         }
       })),
     ]),
     trigger('animateContainer', [
-      state('visible', style({ "opacity": 1})),
-      state('hidden', style({ "opacity": 0})),
+      state('visible', style({ 'opacity': 1})),
+      state('hidden', style({ 'opacity': 0})),
       transition('visible => hidden', useAnimation(fadeOut)),
       transition('hidden => visible', useAnimation(fadeIn)),
     ]),
   ]
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
   title = 'ng-rome-MMXIX';
-  sidebarStatus= 'hidden';
-  containerStatus= 'hidden';
-  ngAfterViewInit(){
+  sidebarStatus = 'hidden';
+  containerStatus = 'hidden';
+
+  constructor(
+    private sidebarService: SideBarService
+  ) {}
+
+  ngAfterViewInit() {
     setTimeout(() => {
       console.log('show container');
       this.containerStatus = 'visible';
     }, 800);
   }
 
-  openCloseSidebar(){
-    this.sidebarStatus = (this.sidebarStatus === 'hidden') ? 'visible' : 'hidden';
-    console.log(this.sidebarStatus);
+  openCloseSidebar() {
+    this.sidebarService.toggleSidebarStatus();
   }
 }
