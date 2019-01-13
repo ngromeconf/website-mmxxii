@@ -1,0 +1,12 @@
+<svg width="172px" height="237px" viewBox="0 0 172 237" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home---After-Landing-Animation" transform="translate(-273.000000, -2916.000000)" stroke="#FFFFFF" stroke-width="11">
+            <g id="Group-14" transform="translate(279.000000, 2916.000000)">
+                <path d="M160.467172,80.6818182 L160.467172,109.33667 C160.467172,148.900765 127.81099,180.973801 87.5275482,180.973801 L72.9396235,180.973801 C32.6561818,180.973801 4.26325641e-14,148.900765 4.26325641e-14,109.33667 L4.26325641e-14,80.6818182" id="Path"></path>
+                <rect id="Rectangle" x="35.0833333" y="5.5" width="89.2919823" height="139.437973" rx="44.6459912"></rect>
+                <path d="M79.5892519,184.94697 L79.5892519,228.063763" id="Line"></path>
+                <path d="M118.653985,230.92369 L38.9962121,230.92369" id="Line-2"></path>
+            </g>
+        </g>
+    </g>
+</svg>

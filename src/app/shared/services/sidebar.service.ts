@@ -7,6 +7,7 @@ export class SideBarService {
 
   toggleSidebarStatus = () => {
     this.sidebarStatus$.next(this.sidebarStatus === 'hidden' ? 'visible' : 'hidden');
+    console.log(this.sidebarStatus);
     this.updateSidebarStatus();
   }
 

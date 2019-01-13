@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SideBarService } from '../shared/services/sidebar.service';
 
 @Component({
   selector: 'ngrome-sidebar',
@@ -9,9 +10,13 @@ export class SidebarComponent implements OnInit {
 
   sidebarStatus = "hidden";
 
-  constructor() { }
+  constructor(public sidebarService: SideBarService) { }
 
   ngOnInit() {
+  }
+
+  openCloseSidebar() {
+    this.sidebarService.toggleSidebarStatus();
   }
 
 }

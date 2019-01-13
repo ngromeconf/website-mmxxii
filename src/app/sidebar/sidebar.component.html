@@ -1,4 +1,43 @@
-<p class="logo">
-  <img src="/assets/logo/logo-mmxix-white.svg">
-</p>
-<ngrome-menu></ngrome-menu>
+<div class="row">
+  <div class="col-xs-6">
+    <div class="box">
+      <div class="logo"><img src="/assets/logo/logo-mmxix-white.svg" /></div>
+    </div>
+  </div>
+
+  <div class="col-xs-6">
+    <div class="box">
+      <button
+        class="hamburger hamburger--elastic"
+        [ngClass]="{
+          'is-active': (sidebarService.sidebarStatus$ | async) == 'visible'
+        }"
+        type="button"
+        (click)="openCloseSidebar()"
+      >
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12 col-md-6">
+    <div class="row middle-xs">
+      <div class="col-xs">
+        <div class="box"><ngrome-menu></ngrome-menu></div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-12 col-md-6">
+    <div class="row bottom-xs">
+      <div class="col-xs signature textBig">
+        October 7th, 2019<br />
+        Teatro Manzoni, Rome<br />
+        Italy <a class="button"> get ticket </a>
+      </div>
+    </div>
+  </div>
+</div>

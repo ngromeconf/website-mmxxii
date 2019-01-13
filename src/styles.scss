@@ -1,11 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+//external libs
+@import "scss/reset";
+
+@import "node_modules/typi/scss/_typi";
+
+@import "node_modules/@drewbot/sass-flexbox-grid/public/sass-flexbox/scss/main.scss";
+
+
 @import "scss/variables";
 @import "scss/mixin";
 
-@import "node_modules/typi/scss/_typi.scss";
-@include typi-init;
 
+
+
+//typografy configuration
+@include typi-init;
 @import "scss/typo";
 
-@import "scss/reset";
+@import "scss/hamburger/hamburger";
+
 @import "scss/main";

@@ -12,11 +12,11 @@ $typi: (
   // Other font maps here
   // base font-map,
   h1special: (
-    null: (16px, 1.1),
-    phone: (35px, 1),
-    tablet-small: (48px, 1.1),
+    null: (27px, 1.3),
+    phone: (35px, 1.3),
+    tablet-small: (48px, 1.2),
     tablet-wide: (48px, 1.2),
-    desktop: (52px, 1.5),
+    desktop: (52px, 1.2),
   ),
   h1: (
     null: (52px, 1.3),
@@ -24,9 +24,10 @@ $typi: (
     tablet-wide: (52px, 1.2),
   ),
   h2: (
-    null: (33px, 1.3),
-    phone: (33px, 1.2),
-    tablet-wide: (33px, 1.2),
+    null: (25px, 1.3),
+    phone: (30px, 1.4),
+    tablet-wide: (33px, 1.4),
+    desktop: (33px, 1.4),
   ),
   h3: (
     null: (21px, 1.3),
@@ -44,11 +45,23 @@ $typi: (
   ),
   a: (),
   date: (),
-  hours: (),
-  textBig: (),
+  hours: (
+    null: (14px, 1.3),
+    phone: (14px, 1.2),
+    tablet-wide: (14px, 1.2),
+  ),
+  textBig: (
+    null: (18px, 1.3),
+    phone: (21px, 1.2),
+    tablet-wide: (21px, 1.2),
+  ),
   textBase: (),
   textSmall: (),
-  button: ()
+  button: (
+    null: (17px, 1.3),
+    phone: (17px, 1.2),
+    tablet-wide: (17px, 1.2),
+  )
 
 );
 
@@ -87,7 +100,9 @@ h3{
   @include typi('date');
 }
 .hours{
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
+  letter-spacing: 5px;
+  color: $main-color;
   @include typi('hours');
 }
 .textBig{
@@ -102,9 +117,16 @@ h3{
   font-family: 'Work Sans', sans-serif;
   @include typi('textBase');
 }
-button{
+.button{
   font-family: 'Work Sans', sans-serif;
+  font-weight: 600;
   @include typi('button');
+}
+.vertical-text {
+  float: left;
+  text-align: center;
+  transform: rotate(270deg);
+  transform-origin: left top 0;
 }
 
 

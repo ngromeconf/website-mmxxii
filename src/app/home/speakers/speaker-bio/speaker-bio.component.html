@@ -1,6 +1,38 @@
-<div [@scrollAnimation]="state">
-  <img [ngClass]="{'right': isOdd, 'left': !isOdd}" width="250" [src]="speaker.image">
-  <h1>{{speaker.name}}</h1>
-  <p class="labelSmall">{{speaker.job}}</p>
-  <span>{{speaker.description}}</span>
+<div [@scrollAnimation]="state" class="container">
+  <div class="row middle-xs" *ngIf="isOdd">
+    <div class="col-xs-5">
+        <div class="box">
+            <img [ngClass]="{'right': isOdd, 'left': !isOdd}" width="250" [src]="speaker.image">
+        </div>
+    </div>
+    <div class="col-xs-2">
+        <div class="box vertical-text hours">10:00 AM</div>
+    </div>
+    <div class="col-xs-5">
+        <div class="box">
+            <h1>{{speaker.name}}</h1>
+            <p class="labelSmall">{{speaker.job}}</p>
+            <span>{{speaker.description}}</span>
+        </div>
+    </div>
+  </div>
+  <div class="row middle-xs" *ngIf="!isOdd">
+
+    <div class="col-xs-5">
+      <div class="box">
+          <h1>{{speaker.name}}</h1>
+          <p class="labelSmall">{{speaker.job}}</p>
+          <span>{{speaker.description}}</span>
+      </div>
+    </div>
+    <div class="col-xs-2">
+        <div class="box vertical-text hours">10:00 AM</div>
+    </div>
+    <div class="col-xs-5">
+      <div class="box">
+          <img [ngClass]="{'right': isOdd, 'left': !isOdd}" width="250" [src]="speaker.image">
+      </div>
+  </div>
+
+  </div>
 </div>

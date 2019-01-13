@@ -1,0 +1,23 @@
+a.button{
+  text-decoration: none;
+  div{
+    text-transform: uppercase;
+    color: $secondary;
+    border: 1px solid $secondary;
+    text-align: center;
+  }
+  &.white{
+    div{
+      position: relative;
+      color: $white;
+      border: 1px solid $white;
+      padding: 10px 20px;
+      img{
+        width: 12px;
+        height: 18px;
+        vertical-align: middle;
+        padding: 10px;
+      }
+    }
+  }
+}
