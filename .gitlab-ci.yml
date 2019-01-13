@@ -1,4 +1,19 @@
-script:
-  - npm install
-  - npm run build
+image: node:9.0.0
 
+pages:
+  cache:
+    paths:
+    - node_modules/
+
+  stage: deploy
+  script:
+  - npm install -g @angular/cli@7.0.7
+  - npm install
+  - ng build
+  - mv dist/ngRome2019/* public/
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
+  - pages
