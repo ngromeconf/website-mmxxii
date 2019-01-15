@@ -5,6 +5,9 @@ a.button{
     color: $secondary;
     border: 1px solid $secondary;
     text-align: center;
+    @include mq("tablet-wide"){
+      max-width: 300px;
+    }
   }
   &.white{
     div{
