@@ -5,6 +5,8 @@ import { SpeakerComponent } from './speakers/speakers.component';
 import { SponsorsComponent } from './sponsors/sponsors.component';
 import { BioComponent } from './speakers/speaker-bio/speaker-bio.component';
 import { CallForPaperComponent } from './call-for-paper/call-for-paper.component';
+import { HomeComponent } from './home.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -13,13 +15,14 @@ import { CallForPaperComponent } from './call-for-paper/call-for-paper.component
     SponsorsComponent,
     BioComponent,
     CallForPaperComponent,
+    HomeComponent,
   ],
-  imports: [CommonModule],
-  exports: [
-    MainTitleComponent,
-    SpeakerComponent,
-    CallForPaperComponent,
-    SponsorsComponent,
+  imports: [
+    CommonModule,
+    RouterModule.forChild([
+      {path: '', component: HomeComponent, pathMatch: 'full'}
+    ]),
   ],
+  exports: [],
 })
 export class HomeModule {}

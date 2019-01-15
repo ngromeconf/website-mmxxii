@@ -1,5 +1,5 @@
 import {AfterViewInit, Component} from '@angular/core';
-import { trigger, transition, state, useAnimation, style, animate, group } from '@angular/animations';
+import { trigger, transition, state, useAnimation, style } from '@angular/animations';
 import { fadeIn, fadeOut } from 'ng-animate';
 import {SideBarService} from './shared/services/sidebar.service';
 
