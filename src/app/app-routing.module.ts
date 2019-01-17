@@ -7,10 +7,22 @@ const routes: Routes = [
     loadChildren: './home/home.module#HomeModule'
   },
   {
+    path: 'info',
+    loadChildren: './info/info.module#InfoModule'
+  },
+  {
+    path: 'about',
+    loadChildren: './about/about.module#AboutModule'
+  },
+  {
+    path: 'sponsor',
+    loadChildren: './sponsor/sponsor.module#SponsorModule'
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
-  }
+  },
 ];
 
 @NgModule({
