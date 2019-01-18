@@ -33,12 +33,12 @@
     }
 
     .site-content{
-      margin: 0 20px;
+      margin: 0 20px 50px;
       @include mq("tablet"){
-        margin: 0 130px;
+        margin: 0 130px 100px;
       }
       @include mq("tablet-wide"){
-        margin: 0 100px;
+        margin: 0 100px 100px;
       }
 
       h1{
