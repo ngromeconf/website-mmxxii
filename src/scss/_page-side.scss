@@ -3,7 +3,7 @@
   display: block;
   opacity: 1;
   height: 78px;
-  width: 160px;
+  width: 78px;
   overflow: hidden;
   background-color: $main-color;
   position: fixed;
@@ -11,12 +11,20 @@
   right: 0;
   z-index: 6;
 
+  @include mq("tablet-wide"){
+    width: 110px;
+    height: 110px;
+  }
+
   .logo{
     // padding: 8px;
     z-index: 10;
     background-color: $main-color;
     img{
       width: 80px;
+      @include mq("tablet-wide"){
+        width: 130px;
+      }
     }
   }
   .signature{
@@ -24,25 +32,16 @@
   }
 
   button{
-
     //hide for now
     display: none;
     float: right;
-  }
-
-
-  @include mq("tablet-wide"){
-    width: 200px;
-    height: 110px;
-    .logo{
-      img{
-        width: 110px;
-      }
-    }
-    button{
+    @include mq("tablet-wide"){
       padding: 25px;
     }
   }
+
+
+
 
   ngrome-menu{
     z-index: 9;
