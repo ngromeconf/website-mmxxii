@@ -19,6 +19,10 @@ const routes: Routes = [
     loadChildren: './sponsor/sponsor.module#SponsorModule'
   },
   {
+    path: 'terms',
+    loadChildren: './terms/terms.module#TermsModule'
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'

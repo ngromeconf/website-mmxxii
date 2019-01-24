@@ -11,7 +11,7 @@ import { SideBarService } from './shared/services/sidebar.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,

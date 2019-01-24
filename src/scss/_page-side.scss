@@ -2,8 +2,8 @@
 
   display: block;
   opacity: 1;
-  height: 70px;
-  width: 200px;
+  height: 78px;
+  width: 160px;
   overflow: hidden;
   background-color: $main-color;
   position: fixed;
@@ -12,27 +12,31 @@
   z-index: 6;
 
   .logo{
-    img{
-      width: 70px;
-    }
+    // padding: 8px;
     z-index: 10;
     background-color: $main-color;
+    img{
+      width: 80px;
+    }
   }
   .signature{
     color: $white;
   }
 
   button{
+
+    //hide for now
+    display: none;
     float: right;
   }
 
 
   @include mq("tablet-wide"){
-    width: 25%;
-    height: 94px;
+    width: 200px;
+    height: 110px;
     .logo{
       img{
-        width: 100px;
+        width: 110px;
       }
     }
     button{
@@ -52,7 +56,7 @@
     height: 100vh;
     @include mq("tablet-wide"){
       animation: sidebarOpenDesktop 2s;
-      width: 50%;
+      width: 720px;
       height: 100vh;
     }
 
@@ -103,19 +107,19 @@
 }
 @keyframes sidebarOpenDesktop {
   0% {
-    width: 25%;
-    height: 94px;
+    width: 200px;
+    height: 110px;
   }
   30% {
-    width: 50%;
-    height: 94px;
+    width: 720px;
+    height: 110px;
   }
   50% {
-    width: 50%;
+    width: 720px;
     height: 150px;
   }
   100% {
-    width: 50%;
+    width: 720px;
     height: 100vh;
   }
 }
