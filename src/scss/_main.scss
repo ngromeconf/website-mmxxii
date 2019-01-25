@@ -20,30 +20,31 @@
   @import "./_page-side";
 
   .site-container{
-    // border: 1px solid green;
+    //border: 1px solid green;
     background-color: $bg;
     margin-right: 0;
-    margin-top: 200px;
+    margin-top: 100px;
     opacity: 0;
     @include mq("tablet"){
-      margin-top: 300px;
+      margin-top: 100px;
       margin-right: 0;
     }
     @include mq("tablet-wide"){
-      margin-top: 250px;
+      margin-top: 100px;
     }
 
     .site-content{
-      // border: 1px solid purple;
+      //border: 1px solid purple;
       margin: 0 20px 50px;
+      max-width: 1024px;
       @include mq("tablet"){
-        margin: 0 50px 100px;
+        margin: 0 50px;
       }
       @include mq("tablet-wide"){
         margin: 50px 100px;
       }
       @include mq("desktop-wide"){
-        margin: 50px 200px;
+        margin: 50px auto;
       }
 
       h1{
@@ -121,7 +122,10 @@
             text-align: left; /* Change this to whatever width you want. */
           }
           img{
-            width: 100px;
+            width: 80px;
+            @include mq("tablet-wide"){
+              width: 100px;
+            }
           }
         }
       }
