@@ -11,7 +11,9 @@
   <div class="col-xs-12 col-sm-6 col-md-6 col-lg-7">
     <div class="box">
         <p>Copyright 2019 © Skaffolder Srl - All Rights Reserved. </p>
-        <p><a [routerLink]="'/terms'">Terms</a> <!--| <a [routerLink]="'/code-of-conduct'">Code Of Conduct</a -->
+        <p>
+          <a (click)="openModal('ngrome-terms')">Terms</a>
+          <!--| <a [routerLink]="'/code-of-conduct'">Code Of Conduct</a -->
         </p>
     </div>
   </div>
@@ -31,3 +33,8 @@
     </div>
   </div>
 </div>
+<ngrome-modal id="ngrome-terms">
+  <button class="close" (click)="closeModal('ngrome-terms');">Close</button>
+  <ngrome-terms></ngrome-terms>
+</ngrome-modal>
+

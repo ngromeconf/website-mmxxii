@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TermsComponent } from './terms.component';
+import { CodeOfConductComponent } from './code-of-conduct.component';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
-  declarations: [TermsComponent],
+  declarations: [CodeOfConductComponent],
   imports: [
     CommonModule,
     RouterModule.forChild([
-      {path: '', component: TermsComponent, pathMatch: 'full'}
+      {path: '', component: CodeOfConductComponent, pathMatch: 'full'}
     ]),
   ]
 })
-export class TermsModule { }
+export class CodeOfConductModule { }
