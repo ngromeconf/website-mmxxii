@@ -65,8 +65,8 @@ body.modal-open {
 
       h1{
         &.main-title{
-          max-width: 760px;
-          margin: 0 0 80px;
+          max-width: 1024px;
+          margin: 0 0 180px;
           font-weight: 700;
           @include typi('h1special');
           margin-top: vr(2); // 1 baseline

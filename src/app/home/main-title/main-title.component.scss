@@ -1,0 +1,26 @@
+@import "../../../scss/mixin";
+
+.conference-numbers{
+  text-align: center;
+  padding-right: 20%;
+  &--one, &--two, &--three{
+    text-align: center;
+
+  }
+  &--one, &--two{
+    margin: 80px 0;
+    img{
+      width: 40%;
+    }
+    p{
+      text-align: center;
+    }
+  }
+  &--three{
+    margin: 100px 0;
+    img{
+      width: 60%;
+    }
+  }
+
+}
