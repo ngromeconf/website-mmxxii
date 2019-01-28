@@ -1,18 +1,31 @@
-image: node:9.0.0
+image: node:latest
 
-pages:
-  cache:
+cache:
     paths:
     - node_modules/
 
+pages:
   stage: deploy
   script:
   - npm install -g @angular/cli@7.0.7
   - npm install
   - ng build --prod --base-href '/ngrome2019/'
+
   artifacts:
     paths:
     - public
   only:
-  - master
+  - develop
   - pages
+
+deploy_production:
+  stage: deploy
+  only:
+    - master
+  script:
+  - npm install -g @angular/cli@7.0.7
+  - npm install
+  - ng build --prod
+  - firebase use --token $FIREBASE_DEPLOY_KEY production
+  - firebase deploy -m "Pipeline $CI_PIPELINE_ID, build $CI_BUILD_ID" --non-interactive --token $FIREBASE_DEPLOY_KEY
+
