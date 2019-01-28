@@ -1,3 +1,4 @@
+@import "../../../scss/variables";
 @import "../../../scss/mixin";
 
 .conference-numbers{
@@ -18,9 +19,39 @@
   }
   &--three{
     margin: 100px 0;
+    @include mq("tablet-wide"){
+      margin: 200px 0;
+    }
     img{
-      width: 60%;
+      width: 70%;
+      @include mq("tablet-wide"){
+        width: 60%;
+      }
     }
   }
 
 }
+
+.relative{
+  position: relative;
+  @include mq("tablet-wide"){
+    .text-special{
+      position: absolute;
+      &.day{
+        left: 54%;
+        top: 60%;
+      }
+      &.talks{
+        left: 54%;
+        top: 92%;
+      }
+      &.attendees{
+        left: 54%;
+        top: 86%;
+      }
+
+    }
+  }
+}
+
+
