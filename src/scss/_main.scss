@@ -16,8 +16,8 @@ body.modal-open {
     overflow: hidden;
 }
 
-p,span{
-  a{
+p,span,div{
+  a,button{
     color: $secondary;
     text-decoration: none;
     cursor: pointer;
@@ -113,16 +113,16 @@ p,span{
     ngrome-call-for-paper{
       .site-content{
         .microphone{
-          text-align: center;
-          @include mq("tablet-wide"){
-            text-align: left; /* Change this to whatever width you want. */
-          }
+
+          text-align: left;
+
           img{
             width: 80px;
             @include mq("tablet-wide"){
               width: 100px;
             }
           }
+
         }
       }
     }

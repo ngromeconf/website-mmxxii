@@ -4,29 +4,41 @@ a{
   }
 }
 
-a.button{
+button, a.button{
   text-decoration: none;
+  text-transform: uppercase;
+  .signature{
+    color: $white;
+  }
   div{
     text-transform: uppercase;
     color: $secondary;
     border: 1px solid $secondary;
     text-align: center;
     @include mq("tablet-wide"){
-      max-width: 300px;
+      max-width: 350px;
     }
   }
   &.white{
-    div{
-      position: relative;
-      color: $white;
-      border: 1px solid $white;
-      padding: 10px 20px;
-      img{
-        width: 12px;
-        height: 18px;
-        vertical-align: middle;
-        padding: 10px;
-      }
-    }
+
+    position: relative;
+    color: $white;
+    border: 1px solid $white;
+    padding: 10px 50px 10px 30px;
+    background-color: $main-color;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><polyline fill='none' stroke='#FFFFFF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' points='0.375,0.375 8.63,7 0.375,14'/></svg>");
+    background-position: 180px 13px;
+
+  }
+  &.blue{
+    width: auto;
+    position: relative;
+    color: $secondary;
+    border: 1px solid $secondary;
+    padding: 10px 50px 10px 30px;
+    background-color: $white;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><polyline fill='none' stroke='#0086ff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' points='0.375,0.375 8.63,7 0.375,14'/></svg>");
+    background-position: 210px 13px;
+
   }
 }
