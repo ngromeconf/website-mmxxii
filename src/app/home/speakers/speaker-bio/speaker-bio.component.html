@@ -2,7 +2,7 @@
   <div class="row middle-xs" *ngIf="isOdd">
     <div class="col-xs-5">
         <div class="box">
-            <img [ngClass]="{'right': isOdd, 'left': !isOdd}" width="250" [src]="speaker.image">
+            <img alt="{{speaker.name}}" [ngClass]="{'right': isOdd, 'left': !isOdd}" width="250" [src]="speaker.image">
         </div>
     </div>
     <div class="col-xs-2">
@@ -30,7 +30,7 @@
     </div>
     <div class="col-xs-5">
       <div class="box">
-          <img [ngClass]="{'right': isOdd, 'left': !isOdd}" width="250" [src]="speaker.image">
+          <img alt="{{speaker.name}}" [ngClass]="{'right': isOdd, 'left': !isOdd}" width="250" [src]="speaker.image">
       </div>
   </div>
 
