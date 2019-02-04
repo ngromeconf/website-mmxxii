@@ -1,50 +1,91 @@
-<div class="row">
-  <div class="col-xs-6">
-    <div class="box">
-       <a [routerLink]="'/home'">
-        <div routerLinkActive="router-link-active"  class="logo"><img alt="logo NGRome sidebar" src="./assets/logo/logo-mmxix-white.svg" /></div>
-      </a>
-    </div>
-  </div>
-
-  <div class="col-xs-6">
-    <div class="box">
-      <button
-        class="hamburger hamburger--elastic"
-        [ngClass]="{
-          'is-active': (sidebarService.sidebarStatus$ | async) == 'visible'
-        }"
-        type="button"
-        (click)="openCloseSidebar()"
-      >
-        <span class="hamburger-box">
-          <span class="hamburger-inner"></span>
-        </span>
-      </button>
-    </div>
+<div class="header">
+  <div class="logo"><img src="./assets/logo/logo-white.svg"></div>
+  <div class="menu">
+    <button class="transparent" (click)="openCloseSidebar()">
+      <svg width="28px" height="19px" viewBox="0 0 28 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="Home---After-Landing-Animation" transform="translate(-1376.000000, -47.000000)">
+                <g id="Group-17" transform="translate(1240.000000, 0.000000)">
+                    <g id="Group-6" transform="translate(130.000000, 36.000000)">
+                        <rect id="Rectangle" x="0" y="0" width="40" height="40"></rect>
+                        <rect id="Rectangle-Copy" fill="#FFFFFF" x="6" y="19" width="28" height="3"></rect>
+                        <rect id="Rectangle-Copy-2" fill="#FFFFFF" x="6" y="27" width="21" height="3"></rect>
+                        <rect id="Rectangle" fill="#FFFFFF" x="6" y="11" width="21" height="3"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+      </svg>
+    </button>
   </div>
 </div>
+<!-- details -->
+<div class="details-wrap">
+  <div class="details">
+    <div class="details__item details__item--close" data-direction="ttb">
+      <div class="details__inner details__inner--grid">
+        <div></div>
+        <div></div>
+        <div>
+          <button class="action action--close transparent" (click)="openCloseSidebar()">
+            <svg width="22px" height="23px" viewBox="0 0 22 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g id="Menu" transform="translate(-1375.000000, -46.000000)">
+                      <g id="Group-13" transform="translate(1366.000000, 38.000000)">
+                          <rect id="Rectangle" x="0" y="0" width="40" height="40"></rect>
+                          <g id="Group-11" transform="translate(9.000000, 8.000000)" fill="#FFFFFF">
+                              <polygon id="Rectangle" transform="translate(11.000000, 11.500000) rotate(-45.000000) translate(-11.000000, -11.500000) " points="-3 10 25 10 25 13 -3 13"></polygon>
+                              <polygon id="Rectangle-Copy-2" transform="translate(11.000000, 11.500000) rotate(-315.000000) translate(-11.000000, -11.500000) " points="-3 10 25 10 25 13 -3 13"></polygon>
+                          </g>
+                      </g>
+                  </g>
+              </g>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="details__item details__item-spacebottom" data-direction="ttb">
+        <div class="details__inner details__inner--grid">
+          <div></div>
+        </div>
+      </div>
+    <div class="details__item details__item-spacetop" data-direction="rtl">
+      <div class="details__inner details__inner--grid">
+        <div></div>
+      </div>
+    </div>
 
-<div class="row">
-  <div class="col-xs-12 col-md-6">
-    <div class="row middle-xs">
-      <div class="col-xs">
-        <div class="box"><ngrome-menu></ngrome-menu></div>
+    <div class="details__item details__item-logo" data-direction="rtl">
+      <div class="details__inner details__inner--grid details__inner--logo">
+        <div>
+          <img src="./assets/logo/logo-mmxix-white.svg">
+        </div>
+        <div></div>
+        <div></div>
       </div>
     </div>
-  </div>
-  <!-- div class="col-xs-12 col-md-6">
-    <div class="row bottom-xs">
-      <div class="col-xs-12 signature textBig">
-        October 7th, 2019<br />
-        Teatro Manzoni, Rome<br />
-        Italy
-      </div>
-      <div class="col-xs-12">
-        <a href="#" class="button white">
-          <div>Get Ticket <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><polyline fill='none' stroke='#FFFFFF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' points='0.375,0.375 8.63,7 0.375,14'/></svg>" alt=""></div>
-        </a>
+    <div class="details__item details__item--addtocart" data-direction="ttb">
+      <div class="details__inner details__inner--grid details__inner--ticket">
+          <div class="text-ticket"><p>October 7th, 2019<br>
+            Teatro Manzoni, Rome<br>
+            Italy<br></p><br>
+            <button class="white ticket">Get Ticket</button>
+          </div>
       </div>
     </div>
-  </div -->
+    <div class="details__item details__item-menu" data-direction="ttb">
+      <div class="details__inner details__inner--grid details__inner--menu">
+        <ul>
+            <li class="speakers"><div><a href="">Speakers</a></div></li>
+            <li class="sponsors"><div><a [routerLink]="'/sponsor'">Sponsors</a></div></li>
+            <li class="agenda"><div><a href="">Agenda</a></div></li>
+            <li class="about"><div><a [routerLink]="'/about'">About</a></div></li>
+            <li class="info"><div><a routerLink="/info/">Info</a></div></li>
+            <li class="newsroom"><div><a href="">Newsroom</a></div></li>
+          </ul>
+      </div>
+    </div>
+
+  </div><!-- /details -->
 </div>

@@ -14,4 +14,4 @@ import { RouterModule } from '@angular/router';
     SidebarComponent, MenuComponent
   ]
 })
-export class SidebarModule { }
+export class SidebarModule {}
