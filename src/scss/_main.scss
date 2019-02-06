@@ -82,7 +82,7 @@ p,span,div{
           font-weight: 700;
           @include typi('h1special');
           margin-top: vr(2); // 1 baseline
-          margin-bottom: vr(2); // 2 baselines
+          margin-bottom: vr(4); // 2 baselines
           .red{
             color: $main-color;
           }

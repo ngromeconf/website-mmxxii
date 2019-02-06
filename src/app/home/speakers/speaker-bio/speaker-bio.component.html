@@ -1,6 +1,6 @@
 <div [@scrollAnimation]="state" class="container">
-  <div class="row middle-xs" *ngIf="isOdd">
-    <div class="col-xs-5">
+  <!-- <div class="row middle-xs" *ngIf="isOdd">
+    <div class="col-xs-10 col-sm-10 col-md-4">
         <div class="box">
             <img alt="{{speaker.name}}" [ngClass]="{'right': isOdd, 'left': !isOdd}" width="250" [src]="speaker.image">
         </div>
@@ -8,27 +8,26 @@
     <div class="col-xs-2">
         <div class="box vertical-text hours">10:00 AM</div>
     </div>
-    <div class="col-xs-5">
+    <div class="col-xs-12 col-sm-12 col-md-6">
         <div class="box">
             <h1>{{speaker.name}}</h1>
             <p class="labelSmall">{{speaker.job}}</p>
             <span>{{speaker.description}}</span>
         </div>
     </div>
-  </div>
-  <div class="row middle-xs" *ngIf="!isOdd">
-
-    <div class="col-xs-5">
+  </div> -->
+  <div class="row middle-xs" [class.reverse]="isOdd">
+    <div class="col-xs-12 col-sm-12 col-md-8">
       <div class="box">
           <h1>{{speaker.name}}</h1>
-          <p class="labelSmall">{{speaker.job}}</p>
+          <p class="labelSmall">{{speaker.job}}<br>&ndash;{{speaker.company}}</p>
           <span>{{speaker.description}}</span>
       </div>
     </div>
-    <div class="col-xs-2">
+    <!-- <div class="col-xs-2">
         <div class="box vertical-text hours">10:00 AM</div>
-    </div>
-    <div class="col-xs-5">
+    </div> -->
+    <div class="col-xs-12 col-sm-12 col-md-4">
       <div class="box">
           <img alt="{{speaker.name}}" [ngClass]="{'right': isOdd, 'left': !isOdd}" width="250" [src]="speaker.image">
       </div>
