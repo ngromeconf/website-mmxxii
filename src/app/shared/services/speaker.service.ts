@@ -7,6 +7,7 @@ export interface Speaker{
   job: String;
   description: String;
   visible: boolean;
+  company: String;
 }
 
 @Injectable({
@@ -17,14 +18,16 @@ export class SpeakerService {
   speakerList: Speaker[] = [
     {
       name: 'Matias Niemelä',
-      job: 'Angular core team, Google',
+      job: 'Angular core team',
+      company: 'Google',
       description: 'Matias is a fullstack web developer who has been programming & building websites for over 10 years, and a core team member of AngularJS for two years. In the spring of 2015 Matias joined Angular full time at Google. In his free time Matias loves to build complex things and is always up for public speaking, travelling and tweaking his current Vim setup.',
       image: './assets/images/matias.png',
       visible: true
     },
     {
       name: 'John Papa',
-      job: 'Principal Developer Advocate, Microsoft',
+      job: 'Principal Developer Advocate',
+      company: 'Microsoft',
       description: 'John Papa is a dedicated father and husband, a Web Developer, and an alumn of the Google Developer Expert, Microsoft RD, and MVP programs. His passions are coding and teaching modern web technologies and enjoying everything Disney with his family. John is a co-host of the Adventures in Angular and Views on Vue podcasts, author of the Angular Style Guide, and many popular Pluralsight courses.',
       image: './assets/images/john.png',
       visible: true
