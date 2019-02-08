@@ -5,7 +5,6 @@ import { FooterComponent } from './footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { TermsComponent } from './terms/terms.component';
 import { ModalComponent } from './modal/modal.component';
-import { ModalService } from '../services/modal.service';
 
 @NgModule({
   declarations: [

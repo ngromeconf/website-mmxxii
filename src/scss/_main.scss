@@ -28,22 +28,30 @@ p,span,div{
   }
 }
 
+#Calque_1 {
+  overflow: visible !important;
+}
+
+#blast {
+  stroke: none;
+}
+
 .page-main{
   min-height:100vh;
   overflow: hidden;
 
-  // ngrome-logo{
-  //   width: 100%;
-  //   min-height:100vh;
-  //   position: absolute;
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: center;
-  //   svg{
-  //     width: 30%;
-  //     @include push--auto;
-  //   }
-  // }
+  ngrome-logo{
+    width: 100%;
+    min-height:100vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg{
+      width: 40%;
+      @include push--auto;
+    }
+  }
 
   @import "./_page-side";
 
@@ -58,7 +66,7 @@ p,span,div{
       margin-right: 0;
     }
     @include mq("tablet-wide"){
-      margin-top: 100px;
+      margin-top: 300px;
     }
 
     .site-content{

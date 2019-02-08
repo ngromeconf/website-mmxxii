@@ -1,8 +1,6 @@
 <div class="page-main">
-  <!-- ngrome-logo></ngrome-logo -->
-  <div class="page-side"
-    [ngClass]="{'opened': (sidebarService.sidebarStatus$ | async) == 'visible'}"
-    >
+  <ngrome-logo></ngrome-logo>
+  <div class="page-side">
     <ngrome-sidebar></ngrome-sidebar>
   </div>
   <div class="site-container"
