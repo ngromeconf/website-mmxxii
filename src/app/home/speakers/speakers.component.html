@@ -1,10 +1,23 @@
-<div class="featured">
-  <p class="labelBig">Featured Speakers</p>
-</div>
+<section class="site-content__section">
+  <div class="site-content__wrap">
+    <h1 class="site-content__section__title">Featured Speakers</h1>
 
-<ngrome-speaker-bio
-  *ngFor="let speaker of speakerService.getSpeakers(); let isOdd = odd"
-  [speaker]="speaker"
-  [isOdd]="isOdd"
-  >
-</ngrome-speaker-bio>
+    <div class="speakers__list">
+      <ngrome-speaker-bio
+        *ngFor="let speaker of speakerService.getSpeakers(); let isOdd = odd"
+        [speaker]="speaker"
+        [isOdd]="isOdd"
+      >
+      </ngrome-speaker-bio>
+    </div>
+
+    <aside class="speakers__list__more" role="complementary">
+      <h1>More Speaker TBA</h1>
+
+      <p>
+        Nullam id dolor id nibh ultricies vehicula ut id elit. Etiam porta sem
+        malesuada magna mollis euismod.
+      </p>
+    </aside>
+  </div>
+</section>

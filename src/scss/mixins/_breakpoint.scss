@@ -1,0 +1,93 @@
+// Breakpoints mixins.
+// @author Antonio Capuozzo
+
+
+@mixin breakpoint-s {
+
+  @media only screen and (max-width: $s) {
+
+    @content;
+
+  }
+
+}
+
+@mixin breakpoint-xs {
+
+  @media only screen and (max-width: $xs) {
+
+    @content;
+
+  }
+
+}
+
+@mixin breakpoint-xxs {
+
+  @media only screen and (max-width: $xxs) {
+
+    @content;
+
+  }
+
+}
+
+@mixin breakpoint-m {
+
+  @media only screen and (min-width: $m) {
+
+    @content;
+
+  }
+
+}
+
+@mixin breakpoint-m-only {
+
+  @media only screen and (min-width: $m) and (max-width: $l -1px) {
+
+    @content;
+
+  }
+
+}
+
+@mixin breakpoint-l {
+
+  @media only screen and (min-width: $l) {
+
+    @content;
+
+  }
+
+}
+
+@mixin breakpoint-l-down {
+
+  @media only screen and (max-width: $l - 1px) {
+
+    @content;
+
+  }
+
+}
+
+@mixin breakpoint-xl {
+
+  @media only screen and (min-width: $xl) {
+
+    @content;
+
+  }
+
+}
+
+@mixin breakpoint-xxl {
+
+  @media only screen and (min-width: $xxl) {
+
+    @content;
+
+  }
+
+}

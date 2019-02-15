@@ -1,16 +1,17 @@
-<div class="page-main">
-  <ngrome-logo></ngrome-logo>
-  <div class="page-side">
-    <ngrome-sidebar></ngrome-sidebar>
-  </div>
-  <div class="site-container"
-  [@animateContainer]="containerStatus">
+  <ngrome-header></ngrome-header>
+
+  <!-- ngrome-logo></ngrome-logo-->
+
+  <main
+    class="site-content"
+    role="main"
+    [@animateContainer]="containerStatus">
 
     <router-outlet></router-outlet>
 
-    <div class="site-content">
-      <ngrome-footer></ngrome-footer>
-    </div>
-  </div> <!-- end of site-content -->
+  </main>
 
-</div>
+
+  <ngrome-footer></ngrome-footer>
+
+

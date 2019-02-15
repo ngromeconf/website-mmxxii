@@ -1,0 +1,22 @@
+// Clearfix mixin.
+// @author Antonio Capuozzo
+
+@mixin clearfix {
+
+  &:before,
+  &:after {
+
+    content: "";
+    display: table;
+    flex-basis: 0;
+    order: 1;
+
+  }
+
+  &:after {
+
+    clear: both;
+
+  }
+
+}

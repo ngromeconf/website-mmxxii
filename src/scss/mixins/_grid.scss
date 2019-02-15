@@ -1,0 +1,35 @@
+// Gryd sistem mixin.
+// @author Antonio Capuozzo
+
+
+// 1. Grid row
+
+@mixin grid-row {
+
+  display: flex;
+  margin-left: -.5rem;
+  margin-right: -.5rem;
+
+}
+
+// 2. Grid col
+
+@mixin grid-col($num:1, $of:12, $left:0, $right:0) {
+
+	padding-left: .5rem;
+	padding-right: .5rem;
+  width: (100% / $of * $num);
+
+  @if ($left) {
+
+		margin-left: 100% / $of * $left;
+
+	}
+
+  @if ($right) {
+
+		margin-right: 100% / $of * $right;
+
+	}
+
+}

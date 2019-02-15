@@ -1,0 +1,60 @@
+// ------------------------------
+// 🔥 Angular Rome Candidate
+// ------------------------------
+
+.candidate {
+
+  max-width: 890px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include breakpoint-m {
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+  }
+
+  &__affordance {
+
+    @include breakpoint-m {
+      flex-basis: 20%;
+      padding-right: 110px;
+    }
+
+  }
+
+  &__info {
+
+    @include breakpoint-m {
+      flex-basis: 60%;
+    }
+
+    h1 {
+      font-weight: 700;
+      font-size: 22px;
+      margin-top: 32px;
+      @include breakpoint-m {
+        font-size: 32px;
+        margin-top: 0;
+      }
+    }
+
+    p {
+      font-size: 18px;
+      margin-top: 16px;
+      @include breakpoint-m {
+        font-size: 21px;
+        margin-top: 32px;
+      }
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 32px;
+    }
+
+  }
+
+}
