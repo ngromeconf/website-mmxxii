@@ -4,6 +4,7 @@
 
     <div class="speakers__list">
       <ngrome-speaker-bio
+        class="speaker"
         *ngFor="let speaker of speakerService.getSpeakers(); let isOdd = odd"
         [speaker]="speaker"
         [isOdd]="isOdd"
