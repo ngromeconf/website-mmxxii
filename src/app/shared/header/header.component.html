@@ -23,7 +23,7 @@
 
       </a>
 
-      <button class="site-menu--open" type="button" name="button">
+      <button (click)="openSidebar()" class="site-menu--open" type="button" name="button">
 
         <svg width="28" height="19">
 
@@ -39,7 +39,7 @@
     </h1>
 
 
-    <nav class="site-menu" role="navigation">
+    <nav class="site-menu" role="navigation" #sitemenu>
 
       <h1 class="site-menu__logo">
 
@@ -194,7 +194,7 @@
 
       </div>
 
-      <button class="site-menu--close" type="button" name="button">
+      <button (click)="closeSidebar()" class="site-menu--close" type="button" name="button">
 
         <svg width="21" height="21">
 
