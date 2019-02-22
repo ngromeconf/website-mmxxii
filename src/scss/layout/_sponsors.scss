@@ -21,6 +21,13 @@
       flex: 0 1 25%;
     }
 
+    &.full-mobile{
+      flex: 0 1 100%;
+      @include breakpoint-m {
+        flex: 0 1 25%;
+      }
+    }
+
   }
 
   a {
