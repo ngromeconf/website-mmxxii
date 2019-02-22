@@ -25,4 +25,13 @@ export class FooterComponent implements OnInit {
     this.modalService.close(id);
   }
 
+  ngAfterViewInit() {
+    setTimeout(() => {
+      this.openModal('ticket');
+    }, 800);
+
+  }
+
+
+
 }
