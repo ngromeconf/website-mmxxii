@@ -47,7 +47,7 @@ export class AppComponent implements AfterViewInit {
             this.resetAnimationLogo();
             this.logoAlreadyAnimated = false;
           }
-          this.animateLogo();
+          //this.animateLogo();
           this.sidebarService.toggleSidebarStatus(true);
         }
 
