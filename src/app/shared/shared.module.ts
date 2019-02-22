@@ -5,15 +5,13 @@ import { FooterComponent } from './footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { TermsComponent } from './terms/terms.component';
 import { ModalComponent } from './modal/modal.component';
-import { TicketModalComponent } from './ticket-modal/ticket-modal.component';
 
 @NgModule({
   declarations: [
     LogoNgromeComponent,
     FooterComponent,
     TermsComponent,
-    ModalComponent,
-    TicketModalComponent
+    ModalComponent
   ],
   imports: [CommonModule, RouterModule],
   exports: [

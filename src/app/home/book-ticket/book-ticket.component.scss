@@ -1,0 +1,17 @@
+@import "../../../scss/variables";
+@import "../../../scss/mixin";
+
+.full-bg{
+  background-color: $main-color;
+  padding: 20px 0;
+  margin: 50px 0 20px;
+
+}
+
+h2{
+  color: $white;
+}
+
+a.button.white.ticket{
+  padding: 10px 40px 10px 70px;
+}

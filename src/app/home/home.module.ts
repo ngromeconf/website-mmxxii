@@ -7,6 +7,7 @@ import { BioComponent } from './speakers/speaker-bio/speaker-bio.component';
 import { CallForPaperComponent } from './call-for-paper/call-for-paper.component';
 import { HomeComponent } from './home.component';
 import { RouterModule } from '@angular/router';
+import { BookTicketComponent } from './book-ticket/book-ticket.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { RouterModule } from '@angular/router';
     BioComponent,
     CallForPaperComponent,
     HomeComponent,
+    BookTicketComponent
   ],
   imports: [
     CommonModule,
