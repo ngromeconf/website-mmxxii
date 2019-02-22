@@ -7,7 +7,7 @@ import { BioComponent } from './speakers/speaker-bio/speaker-bio.component';
 import { CallForPaperComponent } from './call-for-paper/call-for-paper.component';
 import { HomeComponent } from './home.component';
 import { RouterModule } from '@angular/router';
-import { CommunityComponent } from './community/community.component';
+import { PartnersComponent } from './partners/partners.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +17,7 @@ import { CommunityComponent } from './community/community.component';
     BioComponent,
     CallForPaperComponent,
     HomeComponent,
-    CommunityComponent,
+    PartnersComponent,
   ],
   imports: [
     CommonModule,
