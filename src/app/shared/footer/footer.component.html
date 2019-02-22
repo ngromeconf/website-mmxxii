@@ -30,13 +30,15 @@
 
             <li>
 
-              <a href="javascript:void(0);" title="Code of Conduct">Code of Conduct</a>
+              <a (click)="openModal('code-of-conduct')"
+                title="Code of Conduct">Code of Conduct</a>
 
             </li>
 
             <li>
 
-              <a href="javascript:void(0);" title="Terms & Privacy">Terms & Privacy</a>
+              <a (click)="openModal('ngrome-terms')"
+                title="Terms & Privacy">Terms & Privacy</a>
 
             </li>
 
@@ -120,3 +122,8 @@
 
 
   </footer>
+
+  <ngrome-modal id="ngrome-terms">
+    <input type="image" width="20" src="./assets/icons/error.svg" class="close" (click)="closeModal('ngrome-terms');">
+    <ngrome-terms></ngrome-terms>
+  </ngrome-modal>
