@@ -33,7 +33,7 @@ export class SpeakerService {
       visible: true
     },
     {
-      image: './assets/images/matias.png',
+      image: './assets/images/aysegul.png',
       name: 'Ayşegül Yönet',
       job: '@azureadvocates, @GoogleDevExpert for Web Technologies',
       company: 'CodeForGoodWeek',
@@ -45,7 +45,7 @@ export class SpeakerService {
       job: 'Software Engineer',
       company: 'OneMedical',
       description: 'As a lifetime learner of web technologies, Pam looks to Javascript as the gift that keeps on giving. Pam is currently a Señora Software Engineer at One Medical leading the migration of the clinical team’s electronic health record application from AngularJS to Angular. She advocates for consistent design, accessibility, and developer happiness. When she’s not fighting to exit vim, she can be found climbing fake rock walls (sometimes real ones), riding a bike, or lifting weights.',
-      image: './assets/images/john.png',
+      image: './assets/images/pamela.png',
       visible: false
     }
     // {
