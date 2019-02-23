@@ -30,7 +30,7 @@
 
             <li>
 
-              <a (click)="openModal('code-of-conduct')"
+              <a (click)="openModal('ngrome-conduct')"
                 title="Code of Conduct">Code of Conduct</a>
 
             </li>
@@ -126,4 +126,8 @@
   <ngrome-modal id="ngrome-terms">
     <input type="image" width="20" src="./assets/icons/error.svg" class="close" (click)="closeModal('ngrome-terms');">
     <ngrome-terms></ngrome-terms>
+  </ngrome-modal>
+  <ngrome-modal id="ngrome-conduct">
+    <input type="image" width="20" src="./assets/icons/error.svg" class="close" (click)="closeModal('ngrome-conduct');">
+    <ngrome-conduct></ngrome-conduct>
   </ngrome-modal>

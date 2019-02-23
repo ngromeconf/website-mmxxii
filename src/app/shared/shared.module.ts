@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { TermsComponent } from './terms/terms.component';
 import { ModalComponent } from './modal/modal.component';
 import { HeaderComponent } from './header/header.component';
+import { ConductComponent } from './conduct/conduct.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { HeaderComponent } from './header/header.component';
     FooterComponent,
     TermsComponent,
     ModalComponent,
-    HeaderComponent
+    HeaderComponent,
+    ConductComponent
   ],
   imports: [CommonModule, RouterModule],
   exports: [
@@ -21,7 +23,8 @@ import { HeaderComponent } from './header/header.component';
     FooterComponent,
     TermsComponent,
     ModalComponent,
-    HeaderComponent
+    HeaderComponent,
+    ConductComponent
   ],
 })
 export class SharedModule {}
