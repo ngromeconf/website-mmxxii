@@ -40,6 +40,11 @@
 
     .ticket_info{
       min-height: 125px;
+      .remaining,
+      .information{
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 0.8em;
+      }
     }
 
   }
