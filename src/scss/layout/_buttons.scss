@@ -1,4 +1,5 @@
 button, a{
+  cursor: pointer;
   &:focus {
     outline: none;
   }
