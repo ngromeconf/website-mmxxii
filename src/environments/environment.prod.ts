@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  eventBriteKey: 'XWRQ7HXFCBECMBFMPN6M'
 };
