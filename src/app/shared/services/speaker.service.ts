@@ -25,20 +25,29 @@ export class SpeakerService {
       visible: true
     },
     {
+      image: './assets/images/aysegul.png',
+      name: 'Ayşegül Yönet',
+      job: 'Azure Advocates',
+      company: 'Microsoft',
+      description: 'Aysegul, focuses on Spatial Computing, Mixed Reality, Angular and Data Visualization. She is a Google Developer Expert for Web Technologies & Angular and an active conference speaker. She previously worked as Senior Software Engineer at Nrwl.io, Autodesk Play, a 3D and VR authoring tool and A360 Viewer and A360 Drive. She enjoys teaching at a variety of non-profit organizations aiming to increase diversity in the software industry.',
+      visible: false
+    },
+    {
+      name: 'Pamela Ocampo',
+      job: 'Senior Software Engineer',
+      company: 'OneMedical',
+      description: 'As a lifetime learner of web technologies, Pam looks to Javascript as the gift that keeps on giving. Pam is currently a Señora Software Engineer at One Medical leading the migration of the clinical team’s electronic health record application from AngularJS to Angular. She advocates for consistent design, accessibility, and developer happiness. When she’s not fighting to exit vim, she can be found climbing fake rock walls (sometimes real ones), riding a bike, or lifting weights.',
+      image: './assets/images/pamela.png',
+      visible: false
+    },
+    {
+      image: './assets/images/john.png',
       name: 'John Papa',
       job: 'Principal Developer Advocate',
       company: 'Microsoft',
       description: 'John Papa is a dedicated father and husband, a Web Developer, and an alumn of the Google Developer Expert, Microsoft RD, and MVP programs. His passions are coding and teaching modern web technologies and enjoying everything Disney with his family. John is a co-host of the Adventures in Angular and Views on Vue podcasts, author of the Angular Style Guide, and many popular Pluralsight courses.',
-      image: './assets/images/john.png',
       visible: true
     },
-    // {
-    //   name: 'Ayşegül Yönet',
-    //   job: '@CodeForGoodWeek',
-    //   description: '@GoogleDevExpert for Web Technologies, #Angular. #WebVR and #Visualization, #NeuroTech bug. @CodeForGoodWeek, previously @nrwl_io, Autodesk',
-    //   image: 'https://uphillconf.com/2018/wp-content/uploads/2018/08/aysegul.png',
-    //   visible: false
-    // },
     // {
     //   name: 'Mike Ryan',
     //   job: 'NgRx Core Team & Software Engineer at Synapse',
@@ -60,13 +69,7 @@ export class SpeakerService {
     //   image: 'https://pbs.twimg.com/profile_images/1062162091598000128/5u1BNPgE_400x400.jpg',
     //   visible: false
     // },
-    // {
-    //   name: 'Pamela Ocampo',
-    //   job: 'Dev @OneMedical',
-    //   description: 'Chicana, ☕️ geek, lady 🏋🏻, climber, lazy cyclist. Dev @OneMedical Previously @ThoughtWorks ❤️',
-    //   image: 'https://pbs.twimg.com/profile_images/896227790369939460/LDxU2Zt7_400x400.jpg',
-    //   visible: false
-    // },
+    //
 
     // {
     //   name: 'Leonardo Zizzamia',
