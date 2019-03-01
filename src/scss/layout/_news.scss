@@ -5,7 +5,9 @@
 .news__list {
 
   @include breakpoint-s {
+
     overflow-x: scroll;
+
   }
 
   width: 100%;
@@ -21,6 +23,7 @@
 
     display: flex;
     overflow-x: visible;
+
   }
 
 }

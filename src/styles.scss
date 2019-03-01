@@ -9,6 +9,7 @@
   'scss/variables/devices',
   'scss/variables/typeface';
 
+
 // 2. Import mixins
 
 @import
@@ -24,15 +25,13 @@
   'scss/layout/header',
   'scss/layout/content',
   'scss/layout/speaker',
-  'scss/layout/tickets',
+  'scss/layout/ticket',
   'scss/layout/candidate',
   'scss/layout/sponsors',
   'scss/layout/news',
-  'scss/layout/footer',
   'scss/layout/modal',
-  'scss/layout/buttons';
+  'scss/layout/footer';
 
-
-  // ------------------------------
-  // 🔥 Angular Rome Ends
-  // ------------------------------
+// ------------------------------
+// 🔥 Angular Rome Ends
+// ------------------------------

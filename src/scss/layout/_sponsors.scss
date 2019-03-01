@@ -8,24 +8,17 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
 
   li {
 
     display: flex;
     align-items: center;
     flex: 0 1 50%;
-    margin-bottom: 22px;
+
+
 
     @include breakpoint-m {
       flex: 0 1 25%;
-    }
-
-    &.full-mobile{
-      flex: 0 1 100%;
-      @include breakpoint-m {
-        flex: 0 1 25%;
-      }
     }
 
   }
@@ -35,6 +28,21 @@
     text-align: center;
     display: block;
     width: 100%;
+    padding-bottom: 20px;
+
+  }
+
+  &--full {
+
+    justify-content: space-between;
+
+    li:first-child {
+      a {
+
+        padding-bottom: 0;
+
+      }
+    }
 
   }
 

@@ -13,7 +13,6 @@
 
 .site-content {
 
-
   &__wrap {
 
     padding-left: 20px;
@@ -42,6 +41,18 @@
     & + & {
 
       margin-top: 40px;
+
+      @include breakpoint-m {
+
+        margin-top: 80px;
+
+      }
+
+      @include breakpoint-l {
+
+        margin-top: 120px;
+
+      }
 
     }
 
@@ -91,21 +102,49 @@
 
   &__intro {
 
-      display: flex;
-      align-items: flex-end;
-      height: 100vh;
+    max-width: 890px;
+    margin-left: auto;
+    margin-right: auto;
 
+  }
+
+  &__intro__head {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100vh;
+
+    @include breakpoint-s {
+
+      padding-bottom: 160px;
+
+    }
+
+    @include breakpoint-m {
+
+      padding-bottom: 40px;
+
+    }
+
+    @include breakpoint-l {
+
+      padding-bottom: 60px;
+
+    }
+
+    .button {
+
+      margin-top: 30px;
       @include breakpoint-m {
-
-        padding-bottom: 60px;
-
+        margin-top: 40px;
       }
-
       @include breakpoint-l {
-
-        padding-bottom: 120px;
-
+        margin-top: 60px;
       }
+      align-self: flex-start;
+
+    }
 
   }
 
@@ -113,17 +152,10 @@
 
     font-size: 28px;
     font-weight: 700;
-    max-width: 890px;
-    margin-left: auto;
-    margin-right: auto;
-
-    @include breakpoint-s {
-      padding-bottom: 80px;
-    }
 
     @include breakpoint-m {
 
-      font-size: 38px
+      font-size: 38px;
 
     }
 
@@ -134,12 +166,105 @@
     }
 
     strong {
+
       //
       // @include breakpoint-s {
       //   display: block;
       // }
 
       color: $ribbon;
+
+    }
+
+  }
+
+  &__intro__info {
+
+    margin-top: 40px;
+    margin-bottom: 60px;
+
+    @include breakpoint-m {
+
+      margin-top: 60px;
+      margin-bottom: 80px;
+
+    }
+
+    @include breakpoint-l {
+
+      margin-top: 80px;
+      margin-bottom: 100px;
+
+    }
+
+    p {
+
+      font-size: 21px;
+      line-height: 1.6;
+      max-width: 800px;
+
+      + p  {
+        margin-top: 32px;
+      }
+
+    }
+
+  }
+
+}
+
+.button {
+
+  display: inline-block;
+  padding: 18px 22px;
+  border: 2px solid $radiance;
+  border-radius: 2px;
+  color: $radiance;
+  line-height: 1;
+  font-family: $font-primary;
+  font-weight: 600;
+  font-size: 17px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  cursor: pointer;
+
+  span {
+
+    margin-right: 16px;
+
+  }
+
+  svg {
+    position: relative;
+    top: 1px;
+  }
+
+  &--white {
+
+    border-color: $white;
+    color: $white;
+
+    svg, path {
+      stroke: $white;
+    }
+
+  }
+
+  &--fill {
+
+    padding: 14px 42px;
+    background-color: $white;
+    color: $ribbon;
+    border-color: $ribbon;
+
+    svg, path {
+      stroke: $ribbon;
+    }
+
+    span {
+
+      margin-right: 0;
+      margin-left: 16px;
 
     }
 
@@ -166,7 +291,7 @@
   left: 0;
   pointer-events: none;
   z-index: 3;
-  //cursor: url('../../assets/icons/cursor-close-menu.svg') 40 40, auto;
+  cursor: url('/assets/icons/cursor-close-menu.svg') 40 40, auto;
 
   .site-menu--show & {
 
@@ -174,6 +299,18 @@
     opacity: .90;
     pointer-events: all;
     background-color: lighten($ribbon, 50%);
+
+  }
+
+}
+
+#intro {
+
+  @include breakpoint-m {
+
+    background-image: url('/assets/images/confetti.png');
+    background-position: top -60px left -30px;
+    background-repeat: no-repeat;
 
   }
 

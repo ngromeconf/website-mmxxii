@@ -25,14 +25,6 @@ export class SpeakerService {
       visible: true
     },
     {
-      image: './assets/images/john.png',
-      name: 'John Papa',
-      job: 'Principal Developer Advocate',
-      company: 'Microsoft',
-      description: 'John Papa is a dedicated father and husband, a Web Developer, and an alumn of the Google Developer Expert, Microsoft RD, and MVP programs. His passions are coding and teaching modern web technologies and enjoying everything Disney with his family. John is a co-host of the Adventures in Angular and Views on Vue podcasts, author of the Angular Style Guide, and many popular Pluralsight courses.',
-      visible: true
-    },
-    {
       image: './assets/images/aysegul.png',
       name: 'Ayşegül Yönet',
       job: 'Azure Advocates',
@@ -47,7 +39,15 @@ export class SpeakerService {
       description: 'As a lifetime learner of web technologies, Pam looks to Javascript as the gift that keeps on giving. Pam is currently a Señora Software Engineer at One Medical leading the migration of the clinical team’s electronic health record application from AngularJS to Angular. She advocates for consistent design, accessibility, and developer happiness. When she’s not fighting to exit vim, she can be found climbing fake rock walls (sometimes real ones), riding a bike, or lifting weights.',
       image: './assets/images/pamela.png',
       visible: false
-    }
+    },
+    {
+      image: './assets/images/john.png',
+      name: 'John Papa',
+      job: 'Principal Developer Advocate',
+      company: 'Microsoft',
+      description: 'John Papa is a dedicated father and husband, a Web Developer, and an alumn of the Google Developer Expert, Microsoft RD, and MVP programs. His passions are coding and teaching modern web technologies and enjoying everything Disney with his family. John is a co-host of the Adventures in Angular and Views on Vue podcasts, author of the Angular Style Guide, and many popular Pluralsight courses.',
+      visible: true
+    },
     // {
     //   name: 'Mike Ryan',
     //   job: 'NgRx Core Team & Software Engineer at Synapse',

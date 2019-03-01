@@ -16,7 +16,13 @@
   & + & {
 
     margin-top: 32px;
-    
+
+    @include breakpoint-l {
+
+      margin-top: 48px;
+
+    }
+
   }
 
   &:nth-child(even) {
@@ -159,6 +165,10 @@
     writing-mode: vertical-rl;
     white-space: nowrap;
 
+    display: none;
+    visibility: hidden;
+
+
   }
 
   &__desc {
@@ -175,6 +185,8 @@
 
   .read__more {
 
+    display: none;
+    visibility: hidden;
 
     margin-top: 16px;
 

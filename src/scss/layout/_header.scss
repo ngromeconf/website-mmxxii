@@ -16,7 +16,7 @@
   top: 0;
   right: 0;
   background-color: $ribbon;
-  width: 110px; //temporary width, set to 200px after activating the menu
+  width: 116px;
   height: 110px;
   display: flex;
   align-items: center;
@@ -180,6 +180,10 @@
     margin: 0;
     padding: 0;
     cursor: pointer;
+
+    display: none;
+    visibility: hidden;
+
 
   }
 
