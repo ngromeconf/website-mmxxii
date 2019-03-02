@@ -115,21 +115,37 @@
     justify-content: flex-end;
     height: 100vh;
 
+
     @include breakpoint-s {
 
-      padding-bottom: 160px;
+      padding-bottom: 100px;
+
+    }
+
+    @include breakpoint-xxs {
+      height: 110vh;
+      padding-bottom: 0px;
 
     }
 
     @include breakpoint-m {
 
+      height: 90vh;
       padding-bottom: 40px;
 
     }
 
     @include breakpoint-l {
 
-      padding-bottom: 60px;
+      height: 120vh;
+      padding-bottom: 40px;
+
+    }
+
+    @include breakpoint-xl {
+
+      height: 120vh;
+      padding-bottom: 40px;
 
     }
 
@@ -293,12 +309,16 @@
   z-index: 3;
   cursor: url('/assets/icons/cursor-close-menu.svg') 40 40, auto;
 
-  .site-menu--show & {
+  .site-menu--show,.modal--show & {
 
     transition: opacity .25s ease;
     opacity: .90;
     pointer-events: all;
     background-color: lighten($ribbon, 50%);
+
+    /* body overflow is hidden to hide main scrollbar when modal window is open */
+    overflow: hidden;
+
 
   }
 

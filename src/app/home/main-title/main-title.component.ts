@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgAnimateScrollService } from 'src/app/services/ng-animate-scroll.service';
+
 
 @Component({
   selector: 'ngrome-main-title',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainTitleComponent implements OnInit {
 
-  constructor() { }
+  constructor(private animateScrollService: NgAnimateScrollService) { }
 
   ngOnInit() {
+  }
+
+  scrollTo(el:string, duration?:number) {
+    this.animateScrollService.scrollToElement(el, duration);
   }
 
 }

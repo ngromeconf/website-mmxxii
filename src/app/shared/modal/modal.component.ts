@@ -54,13 +54,13 @@ export class ModalComponent implements OnInit {
   open(): void {
       this.element.style.display = 'block';
       this.element.classList.add('opened');
-      document.body.classList.add('site-menu--show');
+      document.body.classList.add('modal--show');
   }
 
   // close modal
   close(): void {
       this.element.style.display = 'none';
-      document.body.classList.remove('site-menu--show');
+      document.body.classList.remove('modal--show');
   }
 
 }
