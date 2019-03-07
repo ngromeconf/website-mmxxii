@@ -3,6 +3,7 @@ import { trigger, transition, state, useAnimation, style } from '@angular/animat
 import { fadeIn, fadeOut } from 'ng-animate';
 import {SideBarService} from './shared/services/sidebar.service';
 import { Router, Event, NavigationStart, NavigationEnd, NavigationError } from '@angular/router';
+import {SwUpdate} from "@angular/service-worker"
 
 declare var TweenMax: any;
 declare var Linear: any;
@@ -34,9 +35,11 @@ export class AppComponent implements AfterViewInit {
   private logoAlreadyAnimated = false;
 
   constructor(
+    private swUpdate: SwUpdate,
     public sidebarService: SideBarService,
     private router: Router,
     private elementRef: ElementRef
+
   ) {
       router.events.subscribe( (event: Event) => {
 
@@ -63,6 +66,16 @@ export class AppComponent implements AfterViewInit {
           console.log(event.error);
         }
     });
+  }
+
+  ngOnInit(){
+    if (this.swUpdate.isEnabled){
+      this.swUpdate.available.subscribe( () => {
+        if (confirm("New version available, Load a new version?")){
+          window.location.reload();
+        }
+      });
+    }
   }
 
   ngAfterViewInit() {

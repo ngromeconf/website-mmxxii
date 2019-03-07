@@ -1,8 +1,8 @@
 {
   "name": "ng-rome-MMXIX",
   "short_name": "NGRome",
-  "theme_color": "#1976d2",
-  "background_color": "#fafafa",
+  "theme_color": "#EE0C3E",
+  "background_color": "#ffffff",
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
