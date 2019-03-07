@@ -6,6 +6,7 @@ export interface Speaker{
   name: string;
   job: string;
   description: string;
+  fullDescription: string;
   visible: boolean;
   company: string;
   twitter: string;
@@ -21,7 +22,8 @@ export class SpeakerService {
       name: 'Matias Niemelä',
       job: 'Angular core team',
       company: 'Google',
-      description: 'Matias is a fullstack web developer who has been programming & building websites for over 10 years, and a core team member of AngularJS for two years. In the spring of 2015 Matias joined Angular full time at Google. In his free time Matias loves to build complex things and is always up for public speaking, travelling and tweaking his current Vim setup.',
+      description: 'Matias is a fullstack web developer who has been programming & building websites for over 10 years, and a core team member of AngularJS for two years. In the spring of 2015 Matias joined Angular full time at Google.',
+      fullDescription: 'Matias is a fullstack web developer who has been programming & building websites for over 10 years, and a core team member of AngularJS for two years. In the spring of 2015 Matias joined Angular full time at Google. In his free time Matias loves to build complex things and is always up for public speaking, travelling and tweaking his current Vim setup.',
       image: './assets/images/matias.png',
       visible: true,
       twitter: 'yearofmoo'
@@ -31,7 +33,8 @@ export class SpeakerService {
       name: 'Ayşegül Yönet',
       job: 'Azure Advocates',
       company: 'Microsoft',
-      description: 'Aysegul, focuses on Spatial Computing, Mixed Reality, Angular and Data Visualization. She is a Google Developer Expert for Web Technologies & Angular and an active conference speaker. She previously worked as Senior Software Engineer at Nrwl.io, Autodesk Play, a 3D and VR authoring tool and A360 Viewer and A360 Drive. She enjoys teaching at a variety of non-profit organizations aiming to increase diversity in the software industry.',
+      description: 'Aysegul, focuses on Spatial Computing, Mixed Reality, Angular and Data Visualization. She is a Google Developer Expert for Web Technologies & Angular and an active conference speaker.',
+      fullDescription: 'Aysegul, focuses on Spatial Computing, Mixed Reality, Angular and Data Visualization. She is a Google Developer Expert for Web Technologies & Angular and an active conference speaker. She previously worked as Senior Software Engineer at Nrwl.io, Autodesk Play, a 3D and VR authoring tool and A360 Viewer and A360 Drive. She enjoys teaching at a variety of non-profit organizations aiming to increase diversity in the software industry.',
       visible: false,
       twitter: 'AysSomething'
     },
@@ -39,7 +42,8 @@ export class SpeakerService {
       name: 'Pamela Ocampo',
       job: 'Senior Software Engineer',
       company: 'OneMedical',
-      description: 'As a lifetime learner of web technologies, Pam looks to Javascript as the gift that keeps on giving. Pam is currently a Señora Software Engineer at One Medical leading the migration of the clinical team’s electronic health record application from AngularJS to Angular. She advocates for consistent design, accessibility, and developer happiness. When she’s not fighting to exit vim, she can be found climbing fake rock walls (sometimes real ones), riding a bike, or lifting weights.',
+      description: 'As a lifetime learner of web technologies, Pam looks to Javascript as the gift that keeps on giving. Pam is currently a Señora Software Engineer at One Medical leading the migration of the clinical team’s electronic health record application from AngularJS to Angular.',
+      fullDescription: 'As a lifetime learner of web technologies, Pam looks to Javascript as the gift that keeps on giving. Pam is currently a Señora Software Engineer at One Medical leading the migration of the clinical team’s electronic health record application from AngularJS to Angular. She advocates for consistent design, accessibility, and developer happiness. When she’s not fighting to exit vim, she can be found climbing fake rock walls (sometimes real ones), riding a bike, or lifting weights.',
       image: './assets/images/pamela.png',
       visible: false,
       twitter: 'pmocampo'
@@ -49,7 +53,8 @@ export class SpeakerService {
       name: 'John Papa',
       job: 'Principal Developer Advocate',
       company: 'Microsoft',
-      description: 'John Papa is a dedicated father and husband, a Web Developer, and an alumn of the Google Developer Expert, Microsoft RD, and MVP programs. His passions are coding and teaching modern web technologies and enjoying everything Disney with his family. John is a co-host of the Adventures in Angular and Views on Vue podcasts, author of the Angular Style Guide, and many popular Pluralsight courses.',
+      description: 'John Papa is a dedicated father and husband, a Web Developer, and an alumn of the Google Developer Expert, Microsoft RD, and MVP programs. His passions are coding and teaching modern web technologies and enjoying everything Disney with his family. ',
+      fullDescription: 'John Papa is a dedicated father and husband, a Web Developer, and an alumn of the Google Developer Expert, Microsoft RD, and MVP programs. His passions are coding and teaching modern web technologies and enjoying everything Disney with his family. John is a co-host of the Adventures in Angular and Views on Vue podcasts, author of the Angular Style Guide, and many popular Pluralsight courses.',
       visible: true,
       twitter: 'John_Papa'
     },
