@@ -183,10 +183,21 @@
 
   }
 
+  &__twitter {
+    float: right;
+    margin-top: 16px;
+    font-family: $font-secondary;
+    font-size: 14px;
+    letter-spacing: 2px;
+    svg{
+      vertical-align: bottom;
+    }
+  }
+
   .read__more {
 
-    display: none;
-    visibility: hidden;
+    display: blol;
+    visibility: visible;
 
     margin-top: 16px;
 

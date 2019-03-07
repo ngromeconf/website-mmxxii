@@ -5,7 +5,7 @@
     <img [src]="speaker.image" alt="{{speaker.name}}">
 
     <span class="speaker__time">
-      <!-- H 14:00 -->
+      H 14:00
     </span>
 
   </div>
@@ -24,7 +24,19 @@
 
     <p class="speaker__desc">{{speaker.description}}</p>
 
-    <!-- a class="read__more" href="javascript:void(0);">Read More</a-->
+    <a class="speaker__twitter" href="https://twitter.com/{{speaker.twitter}}" target="_blank">
+      <svg width="21" height="20">
+
+        <g fill="none" fill-rule="evenodd">
+          <path fill="#FFF" d="M-1150-4689H290V70h-1440z"/>
+          <path d="M-15-17h50v50h-50z"/>
+          <path fill="#2BA3EF" d="M20.904 2.639a7.8 7.8 0 0 1-2.448.75c.881-.59 1.557-1.524 1.875-2.637a7.997 7.997 0 0 1-2.709 1.156C16.847.98 15.738.403 14.512.403c-2.353 0-4.262 2.135-4.262 4.768 0 .374.037.737.11 1.086-3.543-.2-6.683-2.096-8.787-4.984a5.202 5.202 0 0 0-.577 2.4c0 1.654.752 3.113 1.896 3.969a3.927 3.927 0 0 1-1.931-.595v.059c0 2.31 1.47 4.239 3.42 4.675a3.75 3.75 0 0 1-1.123.168c-.274 0-.542-.029-.802-.085.542 1.894 2.116 3.273 3.982 3.31-1.459 1.28-3.298 2.043-5.294 2.043a7.83 7.83 0 0 1-1.018-.066c1.887 1.35 4.129 2.14 6.535 2.14 7.842 0 12.128-7.264 12.128-13.566 0-.207-.003-.415-.01-.618a9.262 9.262 0 0 0 2.125-2.468"/>
+        </g>
+
+      </svg>
+      @{{speaker.twitter}}
+    </a>
+    <a class="read__more" href="javascript:void(0);">Read More</a>
 
   </div>
 
