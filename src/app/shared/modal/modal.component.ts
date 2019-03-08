@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, ElementRef } from '@angular/core';
-import { ModalService } from 'src/app/services/modal.service';
+import { ModalService } from 'src/app/shared/services/modal.service';
 
 @Component({
   selector: 'ngrome-modal',

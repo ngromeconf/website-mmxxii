@@ -1,9 +1,10 @@
-import {AfterViewInit, Component, ElementRef} from '@angular/core';
+import { AfterViewInit, Component, ElementRef } from '@angular/core';
 import { trigger, transition, state, useAnimation, style } from '@angular/animations';
 import { fadeIn, fadeOut } from 'ng-animate';
-import {SideBarService} from './shared/services/sidebar.service';
+import { SideBarService} from './shared/services/sidebar.service';
 import { Router, Event, NavigationStart, NavigationEnd, NavigationError } from '@angular/router';
-import {SwUpdate} from "@angular/service-worker"
+import { SwUpdate } from "@angular/service-worker"
+import { MessagingService } from './shared/services/messaging.service';
 
 declare var TweenMax: any;
 declare var Linear: any;
@@ -33,12 +34,14 @@ export class AppComponent implements AfterViewInit {
   containerStatus = 'hidden';
   private el;
   private logoAlreadyAnimated = false;
+  private message;
 
   constructor(
     private swUpdate: SwUpdate,
     public sidebarService: SideBarService,
     private router: Router,
-    private elementRef: ElementRef
+    private elementRef: ElementRef,
+    private messagingService: MessagingService
 
   ) {
       router.events.subscribe( (event: Event) => {
@@ -69,13 +72,11 @@ export class AppComponent implements AfterViewInit {
   }
 
   ngOnInit(){
-    if (this.swUpdate.isEnabled){
-      this.swUpdate.available.subscribe( () => {
-        if (confirm("New version available, Load a new version?")){
-          window.location.reload();
-        }
-      });
-    }
+
+    this.startMessagingService();
+
+    this.checkUpdateAvailable();
+
   }
 
   ngAfterViewInit() {
@@ -177,6 +178,23 @@ export class AppComponent implements AfterViewInit {
       TweenMax.set(element, {clearProps:"x"});
     });
 
+  }
+
+  startMessagingService(){
+    const userId = 'user001';
+    this.messagingService.requestPermission(userId);
+    this.messagingService.receiveMessage();
+    this.message = this.messagingService.currentMessage;
+  }
+
+  checkUpdateAvailable(){
+    if (this.swUpdate.isEnabled){
+      this.swUpdate.available.subscribe( () => {
+        if (confirm("New version available, Load a new version?")){
+          window.location.reload();
+        }
+      });
+    }
   }
 
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgAnimateScrollService } from 'src/app/services/ng-animate-scroll.service';
+import { NgAnimateScrollService } from 'src/app/shared/services/ng-animate-scroll.service';
 
 
 @Component({
