@@ -9,13 +9,15 @@
   flex-wrap: wrap;
   align-items: center;
 
+  @include breakpoint-l {
+    margin-top: 45px;
+  }
+
   li {
 
     display: flex;
     align-items: center;
     flex: 0 1 50%;
-
-
 
     @include breakpoint-m {
       flex: 0 1 25%;
@@ -28,7 +30,19 @@
     text-align: center;
     display: block;
     width: 100%;
-    padding-bottom: 20px;
+    padding-bottom: 25px;
+    @include breakpoint-s {
+      padding-bottom: 40px;
+    }
+
+    img {
+
+      @include breakpoint-s {
+        max-height: 70px;
+        max-width: 70px;
+      }
+
+    }
 
   }
 
@@ -36,12 +50,52 @@
 
     justify-content: space-between;
 
-    li:first-child {
+    li {
       a {
+        img {
 
-        padding-bottom: 0;
+          @include breakpoint-s {
+            max-height: 70px;
+            max-width: 120px;
+          }
+
+        }
+      }
+    }
+
+    li:first-child {
+
+      @include breakpoint-m {
+
+        a {
+
+          padding-bottom: 0;
+
+        }
 
       }
+
+    }
+
+    li:last-child {
+
+      @include breakpoint-s {
+
+        margin-top: 16px;
+        flex: 0 1 100%;
+
+        a {
+          padding-bottom: 12px;
+        }
+
+      }
+
+      @include breakpoint-m {
+        a {
+          padding-bottom: 20px;
+        }
+      }
+
     }
 
   }
