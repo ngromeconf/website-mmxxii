@@ -1,0 +1,129 @@
+// ------------------------------
+// 🔥 Angular Rome Footer
+// ------------------------------
+
+.site-footer {
+
+  position: relative;
+  margin-top: 20px;
+
+  @include breakpoint-m {
+    margin-top: 40px;
+  }
+
+  @include breakpoint-l{
+    margin-top: 60px;
+  }
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  &__menu {
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include breakpoint-m {
+
+      align-items: center;
+
+    }
+
+  }
+
+  &__logo {
+
+    flex-grow: 0;
+
+    span {
+      @include assistive();
+    }
+
+  }
+
+  &__copy {
+
+    flex-grow: 1;
+    font-size: 12px;
+    margin-left: 20px;
+
+    @include breakpoint-s {
+
+      flex-basis: 70px;
+
+    }
+
+    @include breakpoint-m {
+
+      margin-left: 36px;
+
+    }
+
+    p {
+
+      margin-bottom: 10px;
+
+      @include breakpoint-s {
+
+        margin-bottom: 20px;
+
+      }
+
+
+    }
+
+  }
+
+  &__nav {
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    li {
+
+      display: inline-block;
+      margin-right: 25px;
+      margin-bottom: 8px;
+
+      a {
+
+        color: $radiance;
+
+      }
+
+    }
+
+    &--social {
+
+      @include breakpoint-s {
+
+        margin-top: 24px;
+        margin-left: 75px;
+        flex-basis: 100%;
+
+      }
+
+      li {
+
+        margin-right: 0;
+        margin-bottom: 0;
+
+        + li {
+
+          margin-left: 50px;
+
+        }
+
+      }
+
+      span {
+        @include assistive();
+      }
+
+    }
+
+  }
+
+}

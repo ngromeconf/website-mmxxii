@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, ElementRef } from '@angular/core';
-import { ModalService } from 'src/app/services/modal.service';
+import { ModalService } from 'src/app/shared/services/modal.service';
 
 @Component({
   selector: 'ngrome-modal',
@@ -54,13 +54,13 @@ export class ModalComponent implements OnInit {
   open(): void {
       this.element.style.display = 'block';
       this.element.classList.add('opened');
-      document.body.classList.add('modal-open');
+      document.body.classList.add('modal--show');
   }
 
   // close modal
   close(): void {
       this.element.style.display = 'none';
-      document.body.classList.remove('modal-open');
+      document.body.classList.remove('modal--show');
   }
 
 }

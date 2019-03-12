@@ -5,13 +5,17 @@ import { FooterComponent } from './footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { TermsComponent } from './terms/terms.component';
 import { ModalComponent } from './modal/modal.component';
+import { HeaderComponent } from './header/header.component';
+import { ConductComponent } from './conduct/conduct.component';
 
 @NgModule({
   declarations: [
     LogoNgromeComponent,
     FooterComponent,
     TermsComponent,
-    ModalComponent
+    ModalComponent,
+    HeaderComponent,
+    ConductComponent
   ],
   imports: [CommonModule, RouterModule],
   exports: [
@@ -19,6 +23,8 @@ import { ModalComponent } from './modal/modal.component';
     FooterComponent,
     TermsComponent,
     ModalComponent,
+    HeaderComponent,
+    ConductComponent
   ],
 })
 export class SharedModule {}

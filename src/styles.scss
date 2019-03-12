@@ -1,22 +1,37 @@
-/* You can add global styles to this file, and also import other style files */
-//external libs
-@import "scss/reset";
+// ------------------------------
+// 🔥 Angular Rome Start
+// ------------------------------
 
-@import "node_modules/typi/scss/_typi";
+// 1. Import variables
 
-@import "node_modules/@drewbot/sass-flexbox-grid/public/sass-flexbox/scss/main.scss";
-
-
-@import "scss/variables";
-@import "scss/mixin";
-
+@import
+  'scss/variables/palette',
+  'scss/variables/devices',
+  'scss/variables/typeface';
 
 
+// 2. Import mixins
 
-//typografy configuration
-@include typi-init;
-@import "scss/typo";
+@import
+  'scss/mixins/clearfix',
+  'scss/mixins/antialias',
+  'scss/mixins/assistive',
+  'scss/mixins/breakpoint';
 
-@import "scss/hamburger/hamburger";
+// 3. Import layout
 
-@import "scss/main";
+@import
+  'scss/layout/reset',
+  'scss/layout/header',
+  'scss/layout/content',
+  'scss/layout/speaker',
+  'scss/layout/ticket',
+  'scss/layout/candidate',
+  'scss/layout/sponsors',
+  'scss/layout/news',
+  'scss/layout/modal',
+  'scss/layout/footer';
+
+// ------------------------------
+// 🔥 Angular Rome Ends
+// ------------------------------

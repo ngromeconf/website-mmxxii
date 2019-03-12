@@ -1,0 +1,119 @@
+// ------------------------------
+// 🔥 Angular Rome News
+// ------------------------------
+
+.news__list {
+
+  @include breakpoint-s {
+
+    overflow-x: scroll;
+
+  }
+
+  width: 100%;
+  display: flex;
+  box-sizing: content-box;
+  -webkit-overflow-scrolling: touch;
+  -ms-scroll-snap-points-x: repeat(290px);
+  scroll-snap-points-x: repeat(290px);
+  -ms-scroll-snap-type: mandatory;
+  scroll-snap-type: mandatory;
+
+  &--wrap {
+
+    display: flex;
+    overflow-x: visible;
+
+  }
+
+}
+
+.news {
+
+  position: relative;
+
+  & + & {
+
+    margin-left: 20px;
+
+    @include breakpoint-m {
+
+      margin-left: 40px;
+
+    }
+
+  }
+
+  @include breakpoint-s {
+
+    scroll-snap-align: start;
+    min-width: 290px;
+
+  }
+
+  @include breakpoint-m {
+
+    flex: 0 1 33.33333%;
+
+  }
+
+  &__media {
+
+    img {
+
+      max-width: 100%;
+      object-fit: cover;
+
+    }
+
+  }
+
+  &__head {
+
+  }
+
+  &__date {
+
+    margin-top: 18px;
+    font-family: $font-secondary;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #b4b4b4;
+
+  }
+
+  &__title {
+
+    margin-top: 8px;
+    font-weight: 700;
+    font-size: 18px;
+
+    @include breakpoint-m {
+
+      margin-top: 10px;
+      font-size: 21px;
+
+    }
+
+  }
+
+  &__excerpt {
+
+    margin-top: 8px;
+
+    @include breakpoint-m {
+      margin-top: 16px;
+    }
+    font-size: 14px;
+
+  }
+
+  .read__more {
+
+    margin-top: 16px
+
+  }
+
+
+}

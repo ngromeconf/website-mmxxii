@@ -1,0 +1,9 @@
+// Antialias mixin.
+// @author Antonio Capuozzo
+
+@mixin antialias {
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}

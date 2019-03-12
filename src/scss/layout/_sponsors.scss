@@ -1,0 +1,49 @@
+// ------------------------------
+// 🔥 Angular Rome Sponsors
+// ------------------------------
+
+.sponsors__list {
+
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  li {
+
+    display: flex;
+    align-items: center;
+    flex: 0 1 50%;
+
+
+
+    @include breakpoint-m {
+      flex: 0 1 25%;
+    }
+
+  }
+
+  a {
+
+    text-align: center;
+    display: block;
+    width: 100%;
+    padding-bottom: 20px;
+
+  }
+
+  &--full {
+
+    justify-content: space-between;
+
+    li:first-child {
+      a {
+
+        padding-bottom: 0;
+
+      }
+    }
+
+  }
+
+}

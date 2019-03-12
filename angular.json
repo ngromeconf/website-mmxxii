@@ -25,12 +25,15 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/manifest.json"
+              "src/manifest.json",
+              "src/firebase-messaging-sw.js"
             ],
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/gsap/src/uncompressed/TweenMax.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -90,7 +93,8 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/manifest.json"
+              "src/manifest.json",
+              "src/firebase-messaging-sw.js"
             ]
           }
         },

@@ -1,18 +1,11 @@
-<div class="page-main">
-  <!-- ngrome-logo></ngrome-logo -->
-  <div class="page-side"
-    [ngClass]="{'opened': (sidebarService.sidebarStatus$ | async) == 'visible'}"
-    >
-    <ngrome-sidebar></ngrome-sidebar>
-  </div>
-  <div class="site-container"
-  [@animateContainer]="containerStatus">
-
-    <router-outlet></router-outlet>
-
-    <div class="site-content">
-      <ngrome-footer></ngrome-footer>
-    </div>
-  </div> <!-- end of site-content -->
-
-</div>
+<ngrome-header></ngrome-header>
+<!-- ngrome-logo></ngrome-logo-->
+<!-- [@animateContainer]="containerStatus" -->
+<main
+  class="site-content"
+  role="main"
+  >
+  <router-outlet></router-outlet>
+</main>
+<ngrome-footer></ngrome-footer>
+<div class="site-menu--close--full"></div>

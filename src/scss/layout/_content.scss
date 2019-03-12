@@ -1,0 +1,337 @@
+// ------------------------------
+// 🔥 Angular Rome Content
+// ------------------------------
+
+.site {
+
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  height: 100%;
+
+}
+
+.site-content {
+
+  &__wrap {
+
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1080px;
+
+    &--flow {
+
+      @include breakpoint-s {
+
+        padding-right: 0;
+
+      }
+
+
+    }
+
+  }
+
+  &__section {
+
+    position: relative;
+
+    & + & {
+
+      margin-top: 40px;
+
+      @include breakpoint-m {
+
+        margin-top: 80px;
+
+      }
+
+      @include breakpoint-l {
+
+        margin-top: 120px;
+
+      }
+
+    }
+
+    &--full {
+
+      color: $white;
+      background-color: $ribbon;
+      padding-top: 80px;
+      padding-bottom: 80px;
+
+    }
+
+  }
+
+  &__section__title {
+
+    position: relative;
+    padding-top: 20px;
+    padding-left: 10px;
+    margin-bottom: 30px;
+    font-family: $font-secondary;
+    font-size: 20px;
+
+    @include breakpoint-m {
+      margin-left: 70px;
+      font-size: 27px;
+      padding-top: 26px;
+      padding-left: 20px;
+    }
+
+    text-transform: uppercase;
+    letter-spacing: 10px;
+
+    &:before {
+
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 10px;
+      width: 90px;
+      background-color: $ribbon;
+
+    }
+
+  }
+
+  &__intro {
+
+    max-width: 890px;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
+  &__intro__head {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100vh;
+
+
+    @include breakpoint-s {
+
+      padding-bottom: 100px;
+
+    }
+
+    @include breakpoint-xxs {
+      height: 110vh;
+      padding-bottom: 0px;
+
+    }
+
+    @include breakpoint-m {
+
+      height: 90vh;
+      padding-bottom: 40px;
+
+    }
+
+    @include breakpoint-l {
+
+      height: 120vh;
+      padding-bottom: 40px;
+
+    }
+
+    @include breakpoint-xl {
+
+      height: 120vh;
+      padding-bottom: 40px;
+
+    }
+
+    .button {
+
+      margin-top: 30px;
+      @include breakpoint-m {
+        margin-top: 40px;
+      }
+      @include breakpoint-l {
+        margin-top: 60px;
+      }
+      align-self: flex-start;
+
+    }
+
+  }
+
+  &__intro__title {
+
+    font-size: 28px;
+    font-weight: 700;
+
+    @include breakpoint-m {
+
+      font-size: 38px;
+
+    }
+
+    @include breakpoint-l {
+
+      font-size: 52px;
+
+    }
+
+    strong {
+
+      //
+      // @include breakpoint-s {
+      //   display: block;
+      // }
+
+      color: $ribbon;
+
+    }
+
+  }
+
+  &__intro__info {
+
+    margin-top: 40px;
+    margin-bottom: 60px;
+
+    @include breakpoint-m {
+
+      margin-top: 60px;
+      margin-bottom: 80px;
+
+    }
+
+    @include breakpoint-l {
+
+      margin-top: 80px;
+      margin-bottom: 100px;
+
+    }
+
+    p {
+
+      font-size: 21px;
+      line-height: 1.6;
+      max-width: 800px;
+
+      + p  {
+        margin-top: 32px;
+      }
+
+    }
+
+  }
+
+}
+
+.button {
+
+  display: inline-block;
+  padding: 18px 22px;
+  border: 2px solid $radiance;
+  border-radius: 2px;
+  color: $radiance;
+  line-height: 1;
+  font-family: $font-primary;
+  font-weight: 600;
+  font-size: 17px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  cursor: pointer;
+
+  span {
+
+    margin-right: 16px;
+
+  }
+
+  svg {
+    position: relative;
+    top: 1px;
+  }
+
+  &--white {
+
+    border-color: $white;
+    color: $white;
+
+    svg, path {
+      stroke: $white;
+    }
+
+  }
+
+  &--fill {
+
+    padding: 14px 42px;
+    background-color: $white;
+    color: $ribbon;
+    border-color: $ribbon;
+
+    svg, path {
+      stroke: $ribbon;
+    }
+
+    span {
+
+      margin-right: 0;
+      margin-left: 16px;
+
+    }
+
+  }
+
+}
+
+.read__more {
+
+  display: inline-block;
+  color: $radiance;
+  font-size: 14px;
+
+}
+
+.site-menu--close--full {
+
+  opacity: 0;
+  transition: opacity .25s ease;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 3;
+  cursor: url('/assets/icons/cursor-close-menu.svg') 40 40, auto;
+
+  .site-menu--show,.modal--show & {
+
+    transition: opacity .25s ease;
+    opacity: .90;
+    pointer-events: all;
+    background-color: lighten($ribbon, 50%);
+
+    /* body overflow is hidden to hide main scrollbar when modal window is open */
+    overflow: hidden;
+
+
+  }
+
+}
+
+#intro {
+
+  @include breakpoint-m {
+
+    background-image: url('/assets/images/confetti.png');
+    background-position: top -60px left -30px;
+    background-repeat: no-repeat;
+
+  }
+
+}
