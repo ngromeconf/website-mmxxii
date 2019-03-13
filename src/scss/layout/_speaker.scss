@@ -4,6 +4,8 @@
 
 .speaker {
 
+  display: block; // :( Maledetti componenti
+
   @include breakpoint-m {
 
     display: flex;
@@ -34,14 +36,13 @@
   &:nth-child(even) {
 
 
-
     @include breakpoint-m {
 
       flex-direction: row-reverse;
 
       .speaker__face {
 
-        padding-right: 32px;
+        padding-right: 0;
         padding-left: 53px;
 
       }
@@ -49,6 +50,29 @@
       .speaker__info {
 
         padding-left: 0;
+        padding-right: 45px;
+
+      }
+
+      .speaker__time {
+
+        left: -20px;
+        right: auto;
+
+      }
+
+    }
+
+    @include breakpoint-l {
+
+      .speaker__face {
+
+        padding-left: 26px;
+
+      }
+
+      .speaker__info {
+
         padding-right: 95px;
 
       }
@@ -78,6 +102,14 @@
 
       flex-basis: 50%;
       max-width: 50%;
+      padding-right: 45px;
+
+
+    }
+
+    @include breakpoint-l {
+
+
       padding-right: 95px;
 
     }
@@ -98,6 +130,12 @@
 
       flex-basis: 50%;
       max-width: 50%;
+      padding-left: 45px;
+
+    }
+
+    @include breakpoint-l {
+
       padding-left: 95px;
 
     }

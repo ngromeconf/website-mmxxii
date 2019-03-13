@@ -16,9 +16,21 @@ ngrome-modal {
     // Ogni qualvolta che uno sviluppatore li trova in un foglio di stile, MUORE.
 
     position: absolute;
-    top: 30px;
-    right: 30px;
+    top: 20px;
+    right: 20px;
+    @include breakpoint-m {
 
+      top: 30px;
+      right: 30px;
+
+    }
+    @include breakpoint-l {
+
+      top: 40px;
+      right: 40px;
+
+    }
+    z-index: 1;
     // Molto meglio così :)
 
   }
@@ -27,29 +39,24 @@ ngrome-modal {
 
 .modal {
 
-  /* modal container fixed across whole screen */
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-
-  /* z-index must be higher than .jw-modal-background */
   z-index: 1000;
-
-  /* enables scrolling for tall modals */
   overflow: auto;
 
   .modal-body {
 
     position: relative;
     background: $white;
-    margin: 20px auto;
-    padding: 20px;
+    margin: 0 auto;
+    padding: 20px 0;
 
     @include breakpoint-m {
 
-      margin: 40px auto;
+      margin: 20px;
       max-width: 750px;
       padding: 35px 25px;
 
@@ -65,7 +72,33 @@ ngrome-modal {
 
     .site-content__section__title {
 
-      margin-left: -20px;
+      @include breakpoint-m {
+
+        margin-left: -20px;
+
+      }
+
+    }
+
+    h2 {
+
+      font-family: $font-primary;
+      font-weight: 700;
+      font-size: 28px;
+      margin-bottom: 12px;
+      line-height: 1;
+
+      @include breakpoint-m {
+
+        font-size: 38px;
+
+      }
+
+      @include breakpoint-l {
+
+        font-size: 48px;
+
+      }
 
     }
 
@@ -75,6 +108,7 @@ ngrome-modal {
       font-weight: 700;
       font-size: 22px;
       margin-bottom: 12px;
+      line-height: 1;
 
       @include breakpoint-m {
 
@@ -87,12 +121,6 @@ ngrome-modal {
     p {
 
       font-size: 17px;
-      //
-      // @include breakpoint-m {
-      //
-      //   font-size: 21px;
-      // }
-
       line-height: 1.6;
       margin-bottom: 32px;
 
@@ -104,18 +132,13 @@ ngrome-modal {
 
 .modal-background {
 
-  /* modal background fixed across whole screen */
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-
-  /* semi-transparent black  */
   background-color: #000;
   opacity: 0.75;
-
-  /* z-index must be below .jw-modal and above everything else  */
   z-index: 900;
 
 }

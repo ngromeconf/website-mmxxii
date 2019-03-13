@@ -44,6 +44,7 @@
   &__section {
 
     position: relative;
+    display: block; // Maledetto Angular
 
     & + & {
 
@@ -208,7 +209,7 @@
   &__intro__scroller {
 
     width: 40px;
-    height: 60px;
+    height: 40px;
     position: absolute;
     right: 0;
 
@@ -221,6 +222,7 @@
     @include breakpoint-m {
 
       bottom: 40px;
+      height: 60px;
 
     }
 
