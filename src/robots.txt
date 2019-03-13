@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://ngrome.io/sitemap.xml
