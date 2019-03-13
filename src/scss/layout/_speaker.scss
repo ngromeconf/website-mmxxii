@@ -15,11 +15,17 @@
 
   & + & {
 
-    margin-top: 32px;
+    margin-top: 60px;
+
+    @include breakpoint-m {
+
+      margin-top: 80px;
+
+    }
 
     @include breakpoint-l {
 
-      margin-top: 48px;
+      margin-top: 100px;
 
     }
 
