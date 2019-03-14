@@ -49,6 +49,16 @@ export class SpeakerService {
       twitter: 'pmocampo'
     },
     {
+        name: 'Juri Strumpflohner',
+        job: 'Google Developer Expert #GDE',
+        company: 'Freelance',
+        description: 'Is a software engineer and freelance trainer. He currently develops modern web and mobile enterprise applications using the web platform, JavaScript and Angular.',
+        fullDescription: 'Juri Strumpflohner is a software engineer and freelance trainer. He currently develops modern web and mobile enterprise applications using the web platform, JavaScript and Angular. He is an official http://Egghead.io  instructor where he is one of the top publishers around Angular topics. Most recently Juri has been recognized by Google as a Google Developers Expert in Web Technologies. Juri is an international speaker, writes technical articles on his website at https://juristr.com  and tweets as @juristr.',
+        image: './assets/images/juri.png',
+        visible: false,
+        twitter: 'juristr'
+      },
+    {
       image: './assets/images/john.png',
       name: 'John Papa',
       job: 'Principal Developer Advocate',
@@ -65,13 +75,7 @@ export class SpeakerService {
     //   image: 'https://pbs.twimg.com/profile_images/967861418765750282/Omq905_m_400x400.jpg',
     //   visible: false
     // },
-    // {
-    //   name: 'Juri Strumpflohner',
-    //   job: 'Google Developer Expert #GDE',
-    //   description: 'Google Developer Expert #GDE •🎓 @eggheadio instructor • ❤ Softw. Architecture, JS, Angular • dev • freelance trainer • 📽 author • 📝 blogger • intl speaker',
-    //   image: 'https://pbs.twimg.com/profile_images/1061721443262595072/exf-4JXp_400x400.jpg',
-    //   visible: false
-    // },
+    //
     // {
     //   name: 'Juan Herrera',
     //   job: 'Head of Frontend Development @YuxiGlobal',
