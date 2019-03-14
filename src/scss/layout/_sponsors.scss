@@ -30,9 +30,12 @@
     text-align: center;
     display: block;
     width: 100%;
-    padding-bottom: 25px;
-    @include breakpoint-s {
-      padding-bottom: 40px;
+    padding-bottom: 40px;
+    @include breakpoint-m {
+      padding-bottom: 50px;
+    }
+    @include breakpoint-l {
+      padding-bottom: 60px;
     }
 
     img {
