@@ -52,7 +52,7 @@ export class SpeakerService {
         name: 'Juri Strumpflohner',
         job: 'Google Developer Expert #GDE',
         company: 'Freelance',
-        description: 'Is a software engineer and freelance trainer. He currently develops modern web and mobile enterprise applications using the web platform, JavaScript and Angular.',
+        description: 'Juri is a software engineer and freelance trainer. He currently develops modern web and mobile enterprise applications using the web platform, JavaScript and Angular. He is an official http://Egghead.io  instructor where he is one of the top publishers around Angular topics.',
         fullDescription: 'Juri Strumpflohner is a software engineer and freelance trainer. He currently develops modern web and mobile enterprise applications using the web platform, JavaScript and Angular. He is an official http://Egghead.io  instructor where he is one of the top publishers around Angular topics. Most recently Juri has been recognized by Google as a Google Developers Expert in Web Technologies. Juri is an international speaker, writes technical articles on his website at https://juristr.com  and tweets as @juristr.',
         image: './assets/images/juri.png',
         visible: false,
