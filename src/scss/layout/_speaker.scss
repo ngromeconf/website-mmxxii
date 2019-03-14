@@ -227,6 +227,25 @@
 
   }
 
+  &__twitter {
+
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+    font-size: 14px;
+    color: $radiance;
+
+    @include breakpoint-m {
+
+      margin-top: 32px;
+
+    }
+
+    span {
+      margin-left: 6px;
+    }
+
+  }
   .read__more {
 
     display: none;
