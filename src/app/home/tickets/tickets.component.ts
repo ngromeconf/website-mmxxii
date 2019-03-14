@@ -19,10 +19,27 @@ export class TicketsComponent implements OnInit {
 
 
   startMessagingService(){
-    const userId = 'user001';
+
+    const userId = 'User:'+this.guid();
+    console.log(userId);
     this.messagingService.requestPermission(userId);
     this.messagingService.receiveMessage();
     this.message = this.messagingService.currentMessage;
+
   }
+
+  guid() {
+
+    const nav = window.navigator;
+    const screen = window.screen;
+    let guid = nav.mimeTypes.length.toString();
+    guid += nav.userAgent.replace(/\D+/g, '');
+    guid += nav.plugins.length;
+    guid += screen.height || '';
+    guid += screen.width || '';
+    guid += screen.pixelDepth || '';
+
+    return guid;
+};
 
 }
