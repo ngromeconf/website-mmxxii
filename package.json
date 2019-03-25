@@ -7,7 +7,8 @@
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "stats": "ng build --stats-json --build-optimizer=false --vendor-chunk=true"
   },
   "private": true,
   "dependencies": {
