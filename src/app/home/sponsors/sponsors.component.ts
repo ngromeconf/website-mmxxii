@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SponsorService } from 'src/app/shared/services/sponsor.service';
 
 @Component({
   selector: 'ngrome-sponsors',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SponsorsComponent implements OnInit {
 
-  constructor() { }
+  constructor(public sponsorService: SponsorService) { }
 
   ngOnInit() {
   }

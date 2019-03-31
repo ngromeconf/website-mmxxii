@@ -6,81 +6,11 @@
 
     <ul class="sponsors__list">
 
-      <li>
+      <li *ngFor="let partner of partnerService.getPartner(); let isOdd = odd">
 
-        <a rel="noopener" href="https://www.meetup.com/it-IT/GDG-Roma/" target="_blank" title="GDG Roma">
+        <a rel="noopener" href="{{partner.websiteUrl}}" target="_blank" title="{{partner.name}}">
 
-          <img src="./assets/images/gdg-roma.png" alt="GDG Roma">
-
-        </a>
-
-      </li>
-
-      <li>
-
-        <a rel="noopener" href="https://www.gdgvda.it/" target="_blank" title="GDG Valle d'Aosta">
-
-            <img alt="GDG Valle d'Aosta" src="./assets/images/gdg-vda.png">
-
-        </a>
-
-      </li>
-
-      <li>
-
-        <a rel="noopener" href="https://www.meetup.com/GDG-Bari/" target="_blank" title="GDG Bari">
-
-          <img alt="GDG Bari" src="./assets/images/gdg-bari.png">
-
-        </a>
-
-      </li>
-
-      <li>
-
-        <a rel="noopener" href="https://twitter.com/AngularVienna" target="_blank" title="Angular Vienna">
-
-          <img alt="Angular Vienna" src="./assets/images/ng-vienna.png">
-
-        </a>
-
-      </li>
-
-      <li>
-
-        <a rel="noopener" href="https://twitter.com/angularrome" target="_blank" title="Angular Roma">
-
-          <img alt="Angular Roma" src="./assets/images/ng-rome.png">
-
-        </a>
-
-      </li>
-
-      <li>
-
-        <a rel="noopener" href="https://twitter.com/angularsf" target="_blank" title="Angular S. Francisco">
-
-          <img alt="Angular S. Francisco" src="./assets/images/ng-sf.png">
-
-        </a>
-
-      </li>
-
-      <li>
-
-        <a rel="noopener" href="https://twitter.com/swissangular" target="_blank" title="">
-
-          <img alt="Swiss Angular" src="./assets/images/swiss-angular.png">
-
-        </a>
-
-      </li>
-
-      <li>
-
-        <a rel="noopener" href="https://www.meetup.com/it-IT/Agile_Talks/" target="_blank" title="">
-
-          <img alt="Swiss Angular" src="./assets/images/agile-talks.png">
+          <img src="{{partner.image}}" alt="{{partner.name}}">
 
         </a>
 

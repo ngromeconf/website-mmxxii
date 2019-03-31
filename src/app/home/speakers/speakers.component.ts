@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, HostListener } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
 import { SpeakerService } from 'src/app/shared/services/speaker.service';
 
 @Component({

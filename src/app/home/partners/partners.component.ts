@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PartnersService } from 'src/app/shared/services/partners.service';
 
 @Component({
   selector: 'ngrome-partners',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PartnersComponent implements OnInit {
 
-  constructor() { }
+  constructor(public partnerService: PartnersService) { }
 
   ngOnInit() {
   }

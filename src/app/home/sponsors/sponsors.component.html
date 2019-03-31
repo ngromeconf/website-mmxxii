@@ -5,13 +5,13 @@
     <h1 class="site-content__section__title">Sponsors</h1>
 
     <ul class="sponsors__list sponsors__list--full">
-      <li>
-        <a rel="noopener" href="https://www.skaffolder.com/" target="_blank" title="Skaffolder">
 
-          <img src="./assets/images/skaffolder_logo-nero.svg" alt="Skaffolder">
+      <li *ngFor="let sponsor of sponsorService.getSponsors(); let isOdd = odd">
+        <a rel="noopener" href="{{sponsor.websiteUrl}}" target="_blank" title="{{sponsor.name}}">
+
+          <img src="{{sponsor.image}}" alt="{{sponsor.name}}">
 
         </a>
-
       </li>
 
       <li>
