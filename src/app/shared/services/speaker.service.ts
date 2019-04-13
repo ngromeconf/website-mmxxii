@@ -75,39 +75,39 @@ export class SpeakerService {
       homepage: true,
     },
     {
-      image: 'https://pbs.twimg.com/profile_images/967861418765750282/Omq905_m_400x400.jpg',
+      image: './assets/images/juri.png',
       name: 'Mike Ryan',
       job: 'NgRx Core Team & Software Engineer at Synapse',
-      company: '',
+      company: 'Synapse',
       description: 'Google Developer Expert, Software Engineer at Synapse, and builder of #NgRx',
       fullDescription: '',
       visible: false,
-      twitter: 'mike',
+      twitter: 'MikeRyanDev',
       homepage: false,
     },
 
     {
-      image: 'https://pbs.twimg.com/profile_images/1062162091598000128/5u1BNPgE_400x400.jpg',
+      image: './assets/images/juri.png',
       name: 'Juan Herrera',
       job: 'Head of Frontend Development @YuxiGlobal',
-      company: '',
+      company: 'YuxiGlobal',
       description: 'Google Developer Expert in #Angular Organizer of @AngularMedellin & #NgColombia 🌟 Head of Frontend Development @YuxiGlobal ❤️ I sing and dance 🕺',
       fullDescription: '',
       visible: false,
-      twitter: '',
+      twitter: 'jdjuan',
       homepage: false
     },
 
 
     {
-      image: 'https://pbs.twimg.com/profile_images/957865024126533632/71tNdug__400x400.jpg',
+      image: './assets/images/juri.png',
       name: 'Leonardo Zizzamia',
-      job: 'Web Consumer, Coinbase',
-      company:'',
+      job: 'Web Consumer',
+      company:'Coinbase',
       description: 'Leonardo is a Google Developer Expert in Web Technologies and Angular. Previously, he lead the internal #ngTwitter cross-team Angular group as a Web engineer at Twitter',
       fullDescription: '',
       visible: false,
-      twitter: '',
+      twitter: 'Zizzamia',
       homepage: false
     }
   ];

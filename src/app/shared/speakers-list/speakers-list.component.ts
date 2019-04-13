@@ -1,5 +1,7 @@
 import { Component, ElementRef, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { SpeakerService } from 'src/app/shared/services/speaker.service';
+
 
 @Component({
   selector: 'ngrome-speakers-list',
@@ -10,10 +12,13 @@ export class SpeakerListComponent {
 
   @Input('speakerFilter') speakerFilter: Boolean;
 
+  public actualPage;
+
   constructor(
     public el: ElementRef,
-    public speakerService: SpeakerService) {
-      console.log('speaker-list: filter - ', this.speakerFilter)
+    public speakerService: SpeakerService,
+    private router:Router) {
+      this.actualPage = this.router.url;
     }
 
 }

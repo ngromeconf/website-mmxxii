@@ -10,7 +10,10 @@
       >
       </ngrome-speaker-bio>
 
-      <a class="button" id="go-to-tickets" routerLink="/speakers" routerLinkActive="router-link-active"  title="Get Ticket Now">
+      <a *ngIf="actualPage === '/home'" class="button" id="go-to-tickets"
+        routerLink="/speakers"
+        routerLinkActive="router-link-active"
+        title="Get Ticket Now">
 
           <span id="go-to-tickets-text">more speaker</span>
 
