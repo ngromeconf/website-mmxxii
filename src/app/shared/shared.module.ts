@@ -9,7 +9,6 @@ import { HeaderComponent } from './header/header.component';
 import { ConductComponent } from './conduct/conduct.component';
 import { SpeakerListComponent } from './speakers-list/speakers-list.component';
 import { SpeakerBioComponent } from './speakers-list/speaker-bio/speaker-bio.component';
-import { HomeSpeakersPipe } from './pipes/home-speakers.pipe';
 
 @NgModule({
   declarations: [
@@ -20,8 +19,7 @@ import { HomeSpeakersPipe } from './pipes/home-speakers.pipe';
     HeaderComponent,
     ConductComponent,
     SpeakerListComponent,
-    SpeakerBioComponent,
-    HomeSpeakersPipe
+    SpeakerBioComponent
   ],
   imports: [CommonModule, RouterModule],
   exports: [
