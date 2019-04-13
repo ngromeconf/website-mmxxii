@@ -21,10 +21,9 @@ import { Speaker } from 'src/app/shared/services/speaker.service';
     ])
   ],
 })
-export class BioComponent implements OnInit {
+export class SpeakerBioComponent implements OnInit {
 
   @Input('speaker') speaker: Speaker;
-  @Input('isOdd') isOdd: Boolean;
 
   state = 'hide';
 

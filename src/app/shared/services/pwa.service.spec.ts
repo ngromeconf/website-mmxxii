@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { UpdateService } from './update.service';
+import { PWAService } from './pwa.service';
 
-describe('UpdateService', () => {
+describe('PWAService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: UpdateService = TestBed.get(UpdateService);
+    const service: PWAService = TestBed.get(PWAService);
     expect(service).toBeTruthy();
   });
 });

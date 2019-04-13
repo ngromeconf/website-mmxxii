@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BioComponent } from './speaker-bio.component';
+import { SpeakerBioComponent } from './speaker-bio.component';
 
 describe('BioComponent', () => {
-  let component: BioComponent;
-  let fixture: ComponentFixture<BioComponent>;
+  let component: SpeakerBioComponent;
+  let fixture: ComponentFixture<SpeakerBioComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BioComponent ]
+      declarations: [ SpeakerBioComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BioComponent);
+    fixture = TestBed.createComponent(SpeakerBioComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -2,7 +2,9 @@
 <ngrome-main-title class="site-content__section"></ngrome-main-title>
 
 <!-- speakers list / agenda -->
-<ngrome-speakers class="site-content__section"></ngrome-speakers>
+<ngrome-speakers-list
+  class="site-content__section"
+  [speakerFilter]="speakerFilter"></ngrome-speakers-list>
 
 <!-- tickets list -->
 <ngrome-tickets class="site-content__section" id="tickets"></ngrome-tickets>

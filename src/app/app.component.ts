@@ -3,7 +3,7 @@ import { trigger, transition, state, useAnimation, style } from '@angular/animat
 import { fadeIn, fadeOut } from 'ng-animate';
 import { SideBarService} from './shared/services/sidebar.service';
 import { Router, Event, NavigationStart, NavigationEnd, NavigationError } from '@angular/router';
-import { SwUpdate } from "@angular/service-worker";
+import { PWAService } from './shared/services/pwa.service';
 
 declare var TweenMax: any;
 declare var Linear: any;
@@ -36,10 +36,10 @@ export class AppComponent implements AfterViewInit {
 
 
   constructor(
-    private swUpdate: SwUpdate,
     public sidebarService: SideBarService,
     private router: Router,
-    private elementRef: ElementRef
+    private elementRef: ElementRef,
+    private pwaService: PWAService
   ) {
       router.events.subscribe( (event: Event) => {
 
@@ -47,8 +47,8 @@ export class AppComponent implements AfterViewInit {
           // Show loading indicator
           console.log('start');
           if (this.logoAlreadyAnimated === true){
-            this.resetAnimationLogo();
-            this.logoAlreadyAnimated = false;
+            //this.resetAnimationLogo();
+            //this.logoAlreadyAnimated = false;
           }
           //this.animateLogo();
           this.sidebarService.toggleSidebarStatus(true);
@@ -69,7 +69,8 @@ export class AppComponent implements AfterViewInit {
   }
 
   ngOnInit(){
-    this.checkUpdateAvailable();
+    //check if is available a new version
+    this.pwaService.checkUpdateAvailable();
   }
 
   ngAfterViewInit() {
@@ -173,14 +174,6 @@ export class AppComponent implements AfterViewInit {
 
   }
 
-  checkUpdateAvailable(){
-    if (this.swUpdate.isEnabled){
-      this.swUpdate.available.subscribe( () => {
-        if (confirm("New version available, Load a new version?")){
-          window.location.reload();
-        }
-      });
-    }
-  }
+
 
 }

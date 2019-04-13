@@ -1,21 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MainTitleComponent } from './main-title/main-title.component';
-import { SpeakerComponent } from './speakers/speakers.component';
 import { SponsorsComponent } from './sponsors/sponsors.component';
-import { BioComponent } from './speakers/speaker-bio/speaker-bio.component';
 import { CallForPaperComponent } from './call-for-paper/call-for-paper.component';
 import { HomeComponent } from './home.component';
 import { RouterModule } from '@angular/router';
 import { PartnersComponent } from './partners/partners.component';
 import { TicketsComponent } from './tickets/tickets.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
     MainTitleComponent,
-    SpeakerComponent,
     SponsorsComponent,
-    BioComponent,
     CallForPaperComponent,
     HomeComponent,
     PartnersComponent,
@@ -26,6 +23,7 @@ import { TicketsComponent } from './tickets/tickets.component';
     RouterModule.forChild([
       {path: '', component: HomeComponent, pathMatch: 'full'}
     ]),
+    SharedModule
   ],
   exports: [],
 })

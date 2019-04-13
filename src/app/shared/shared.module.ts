@@ -7,6 +7,9 @@ import { TermsComponent } from './terms/terms.component';
 import { ModalComponent } from './modal/modal.component';
 import { HeaderComponent } from './header/header.component';
 import { ConductComponent } from './conduct/conduct.component';
+import { SpeakerListComponent } from './speakers-list/speakers-list.component';
+import { SpeakerBioComponent } from './speakers-list/speaker-bio/speaker-bio.component';
+import { HomeSpeakersPipe } from './pipes/home-speakers.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,10 @@ import { ConductComponent } from './conduct/conduct.component';
     TermsComponent,
     ModalComponent,
     HeaderComponent,
-    ConductComponent
+    ConductComponent,
+    SpeakerListComponent,
+    SpeakerBioComponent,
+    HomeSpeakersPipe
   ],
   imports: [CommonModule, RouterModule],
   exports: [
@@ -24,7 +30,9 @@ import { ConductComponent } from './conduct/conduct.component';
     TermsComponent,
     ModalComponent,
     HeaderComponent,
-    ConductComponent
+    ConductComponent,
+    SpeakerListComponent,
+    SpeakerBioComponent
   ],
 })
 export class SharedModule {}
