@@ -46,6 +46,10 @@ export class AppComponent implements AfterViewInit {
         if (event instanceof NavigationStart) {
           // Show loading indicator
           console.log('start');
+
+          //scroll the user to up (0,0)
+          window.scrollTo(0, 0);
+
           if (this.logoAlreadyAnimated === true){
             //this.resetAnimationLogo();
             //this.logoAlreadyAnimated = false;
@@ -57,6 +61,7 @@ export class AppComponent implements AfterViewInit {
         if (event instanceof NavigationEnd) {
           console.log('end');
           this.logoAlreadyAnimated = true;
+
         }
 
         if (event instanceof NavigationError) {

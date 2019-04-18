@@ -6,8 +6,7 @@ import { CallForPaperComponent } from './call-for-paper/call-for-paper.component
 import { HomeComponent } from './home.component';
 import { RouterModule } from '@angular/router';
 import { PartnersComponent } from './partners/partners.component';
-import { TicketsComponent } from './tickets/tickets.component';
-import { SharedModule } from '../shared/shared.module';
+import { SharedModule } from '../../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -15,8 +14,7 @@ import { SharedModule } from '../shared/shared.module';
     SponsorsComponent,
     CallForPaperComponent,
     HomeComponent,
-    PartnersComponent,
-    TicketsComponent,
+    PartnersComponent
   ],
   imports: [
     CommonModule,

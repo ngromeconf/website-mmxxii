@@ -9,26 +9,29 @@
         [speaker]="speaker"
       >
       </ngrome-speaker-bio>
-
-      <a *ngIf="actualPage === '/home'" class="button" id="go-to-tickets"
-        routerLink="/speakers"
-        routerLinkActive="router-link-active"
-        title="Get Ticket Now">
-
-          <span id="go-to-tickets-text">more speaker</span>
-
-          <svg width="11" height="12" id="go-to-tickets-svg">
-
-            <path fill="none" fill-rule="evenodd" stroke="#0086FF" stroke-width="2" d="M1 1l7.358 5L1 11"/>
-
-          </svg>
-
-        </a>
     </div>
 
+
     <aside class="speakers__list__more" role="complementary">
+      <a *ngIf="actualPage === '/home'" class="button" id="go-to-tickets"
+          routerLink="/speakers"
+          routerLinkActive="router-link-active"
+          title="Get Ticket Now">
+
+        <span id="go-to-tickets-text">more speaker</span>
+
+        <svg width="11" height="12" id="go-to-tickets-svg">
+
+          <path fill="none" fill-rule="evenodd" stroke="#0086FF" stroke-width="2" d="M1 1l7.358 5L1 11"/>
+
+        </svg>
+
+      </a>
+    </aside>
 
 
+    <aside class="speakers__list__more" role="complementary"
+      *ngIf="this.actualPage != '/home'">
 
       <h1>More Speaker TBA</h1>
 

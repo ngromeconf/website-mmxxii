@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 
-export interface Speaker{
+export interface Speaker {
   image: string;
   name: string;
   job: string;
@@ -53,16 +53,50 @@ export class SpeakerService {
       homepage: true,
     },
     {
-        name: 'Juri Strumpflohner',
-        job: 'Google Developer Expert #GDE',
-        company: 'Freelance',
-        description: 'Juri is a software engineer and freelance trainer. He currently develops modern web and mobile enterprise applications using the web platform, JavaScript and Angular. He is an official http://Egghead.io  instructor where he is one of the top publishers around Angular topics.',
-        fullDescription: 'Juri Strumpflohner is a software engineer and freelance trainer. He currently develops modern web and mobile enterprise applications using the web platform, JavaScript and Angular. He is an official http://Egghead.io  instructor where he is one of the top publishers around Angular topics. Most recently Juri has been recognized by Google as a Google Developers Expert in Web Technologies. Juri is an international speaker, writes technical articles on his website at https://juristr.com  and tweets as @juristr.',
-        image: './assets/images/juri.png',
-        visible: false,
-        twitter: 'juristr',
-        homepage: false,
-      },
+      name: 'Juri Strumpflohner',
+      job: 'Google Developer Expert #GDE',
+      company: 'Freelance',
+      description: 'Juri is a software engineer and freelance trainer. He currently develops modern web and mobile enterprise applications using the web platform, JavaScript and Angular. He is an official http://Egghead.io  instructor where he is one of the top publishers around Angular topics.',
+      fullDescription: 'Juri Strumpflohner is a software engineer and freelance trainer. He currently develops modern web and mobile enterprise applications using the web platform, JavaScript and Angular. He is an official http://Egghead.io  instructor where he is one of the top publishers around Angular topics. Most recently Juri has been recognized by Google as a Google Developers Expert in Web Technologies. Juri is an international speaker, writes technical articles on his website at https://juristr.com  and tweets as @juristr.',
+      image: './assets/images/juri.png',
+      visible: false,
+      twitter: 'juristr',
+      homepage: false,
+    },
+    {
+      image: './assets/images/mike.png',
+      name: 'Mike Ryan',
+      job: 'NgRx Core Team & Software Engineer',
+      company: 'Synapse',
+      description: 'Google Developer Expert, Software Engineer, and builder of #NgRx',
+      fullDescription: '',
+      visible: false,
+      twitter: 'MikeRyanDev',
+      homepage: false,
+    },
+
+    {
+      image: './assets/images/juan.png',
+      name: 'Juan Herrera',
+      job: 'Head of Frontend Development',
+      company: 'YuxiGlobal',
+      description: 'Google Developer Expert in #Angular - Organizer of @AngularMedellin & #NgColombia 🌟 Head of Frontend Development @YuxiGlobal ❤️ I sing and dance 🕺',
+      fullDescription: '',
+      visible: false,
+      twitter: 'jdjuan',
+      homepage: false
+    },
+    {
+      image: './assets/images/zizzamia.png',
+      name: 'Leonardo Zizzamia',
+      job: 'Web Consumer',
+      company: 'Coinbase',
+      description: 'Leonardo is a Google Developer Expert in Web Technologies and Angular. Previously, he lead the internal #ngTwitter cross-team Angular group as a Web engineer at Twitter',
+      fullDescription: '',
+      visible: false,
+      twitter: 'Zizzamia',
+      homepage: false
+    },
     {
       image: './assets/images/john.png',
       name: 'John Papa',
@@ -73,42 +107,6 @@ export class SpeakerService {
       visible: true,
       twitter: 'John_Papa',
       homepage: true,
-    },
-    {
-      image: './assets/images/juri.png',
-      name: 'Mike Ryan',
-      job: 'NgRx Core Team & Software Engineer at Synapse',
-      company: 'Synapse',
-      description: 'Google Developer Expert, Software Engineer at Synapse, and builder of #NgRx',
-      fullDescription: '',
-      visible: false,
-      twitter: 'MikeRyanDev',
-      homepage: false,
-    },
-
-    {
-      image: './assets/images/juri.png',
-      name: 'Juan Herrera',
-      job: 'Head of Frontend Development @YuxiGlobal',
-      company: 'YuxiGlobal',
-      description: 'Google Developer Expert in #Angular Organizer of @AngularMedellin & #NgColombia 🌟 Head of Frontend Development @YuxiGlobal ❤️ I sing and dance 🕺',
-      fullDescription: '',
-      visible: false,
-      twitter: 'jdjuan',
-      homepage: false
-    },
-
-
-    {
-      image: './assets/images/juri.png',
-      name: 'Leonardo Zizzamia',
-      job: 'Web Consumer',
-      company:'Coinbase',
-      description: 'Leonardo is a Google Developer Expert in Web Technologies and Angular. Previously, he lead the internal #ngTwitter cross-team Angular group as a Web engineer at Twitter',
-      fullDescription: '',
-      visible: false,
-      twitter: 'Zizzamia',
-      homepage: false
     }
   ];
 
@@ -117,13 +115,13 @@ export class SpeakerService {
   getSpeakers(ishome: false): Speaker[] {
     let toReturn: Speaker[];
 
-    if (ishome){
+    if (ishome) {
 
       toReturn = this.speakerList
         .map(data => data)
         .filter(x => x.homepage === ishome);
 
-    } else {
+    } else {
       toReturn = this.speakerList;
     }
 

@@ -2,7 +2,6 @@ import { Component, ElementRef, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { SpeakerService } from 'src/app/shared/services/speaker.service';
 
-
 @Component({
   selector: 'ngrome-speakers-list',
   templateUrl: './speakers-list.component.html',
