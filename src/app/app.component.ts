@@ -45,7 +45,7 @@ export class AppComponent implements AfterViewInit {
 
         if (event instanceof NavigationStart) {
           // Show loading indicator
-          console.log('start');
+          //console.log('start');
 
           //scroll the user to up (0,0)
           window.scrollTo(0, 0);
@@ -59,7 +59,7 @@ export class AppComponent implements AfterViewInit {
         }
 
         if (event instanceof NavigationEnd) {
-          console.log('end');
+          //console.log('end');
           this.logoAlreadyAnimated = true;
 
         }
@@ -80,7 +80,7 @@ export class AppComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     setTimeout(() => {
-      console.log('show container');
+      //console.log('show container');
       this.containerStatus = 'visible';
     }, 800);
   }

@@ -5,7 +5,7 @@
     <div class="speakers__list">
       <ngrome-speaker-bio
         class="speaker"
-        *ngFor="let speaker of speakerService.getSpeakers(speakerFilter);"
+        *ngFor="let speaker of speakerList$ | async"
         [speaker]="speaker"
       >
       </ngrome-speaker-bio>
@@ -13,8 +13,8 @@
 
 
     <aside class="speakers__list__more" role="complementary">
-      <a *ngIf="actualPage === '/home'" class="button" id="go-to-tickets"
-          routerLink="/speakers"
+      <a *ngIf="actualPage === 'home'" class="button" id="go-to-tickets"
+          href="/speakers"
           routerLinkActive="router-link-active"
           title="Get Ticket Now">
 
@@ -31,7 +31,7 @@
 
 
     <aside class="speakers__list__more" role="complementary"
-      *ngIf="this.actualPage != '/home'">
+      *ngIf="this.actualPage != 'home'">
 
       <h1>More Speaker TBA</h1>
 

@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, HostListener, ElementRef } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { Speaker } from 'src/app/shared/services/speaker.service';
+import { AngularFireStorage } from '@angular/fire/storage';
 
 @Component({
   selector: 'ngrome-speaker-bio',
@@ -27,9 +28,15 @@ export class SpeakerBioComponent implements OnInit {
 
   state = 'hide';
 
-  constructor(public el: ElementRef) { }
+  constructor(public el: ElementRef,
+    private storage: AngularFireStorage) { }
 
   ngOnInit() {
+    //console.log(this.speaker);
+  }
+
+  getImageBio(){
+    //console.log(this.speaker);
   }
 
   @HostListener('window:scroll', ['$event'])

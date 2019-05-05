@@ -21,7 +21,7 @@ export class TicketsComponent implements OnInit {
   startMessagingService(){
 
     const userId = 'User:'+this.guid();
-    console.log(userId);
+    //console.log(userId);
     this.messagingService.requestPermission(userId);
     this.messagingService.receiveMessage();
     this.message = this.messagingService.currentMessage;
