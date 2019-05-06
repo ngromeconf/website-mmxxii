@@ -44,13 +44,13 @@ export class SpeakerListComponent {
             if (homepage) { query = query.where('homepage', '==', true) };
             if (visible) { query = query.where('visible', '==', true)};
             query = query.orderBy('position', 'asc');
-            console.log(query);
+            //console.log(query);
             return query;
           }).valueChanges()
       )
     );
 
-    console.log(this.actualPage);
+    //console.log(this.actualPage);
     if (this.actualPage === 'home') {
       // trigger the query
       homepage$.next(true);

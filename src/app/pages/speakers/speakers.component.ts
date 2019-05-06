@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { NgAnimateScrollService } from 'src/app/shared/services/ng-animate-scroll.service';
+import { MessagingService } from 'src/app/shared/services/messaging.service';
 
 
 @Component({
@@ -14,7 +15,11 @@ export class SpeakersComponent {
 
 
   constructor(
-    private animateScrollService: NgAnimateScrollService) {
+    private animateScrollService: NgAnimateScrollService,
+    private messagingService: MessagingService) {
+
+      this.messagingService.requestPermission();
+      this.messagingService.receiveMessage();
 
   }
 

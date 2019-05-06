@@ -43,7 +43,10 @@ export class MessagingService {
    *
    * @param userId userId
    */
-  requestPermission(userId) {
+  requestPermission() {
+
+    const userId = this.generateUID();
+    //console.log(userId);
     this.angularFireMessaging.requestToken.subscribe(
       (token) => {
         //console.log(token);
@@ -64,5 +67,20 @@ export class MessagingService {
         console.log("new message received. ", payload);
         this.currentMessage.next(payload);
       })
+  }
+
+  private generateUID() {
+
+    const nav = window.navigator;
+    const screen = window.screen;
+    let guid = 'User:';
+    guid += nav.mimeTypes.length.toString();
+    guid += nav.userAgent.replace(/\D+/g, '');
+    guid += nav.plugins.length;
+    guid += screen.height || '';
+    guid += screen.width || '';
+    guid += screen.pixelDepth || '';
+
+    return guid;
   }
 }

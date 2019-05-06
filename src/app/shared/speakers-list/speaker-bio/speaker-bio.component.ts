@@ -1,7 +1,6 @@
 import { Component, OnInit, Input, HostListener, ElementRef } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { Speaker } from 'src/app/shared/services/speaker.service';
-import { AngularFireStorage } from '@angular/fire/storage';
 
 @Component({
   selector: 'ngrome-speaker-bio',
@@ -28,8 +27,7 @@ export class SpeakerBioComponent implements OnInit {
 
   state = 'hide';
 
-  constructor(public el: ElementRef,
-    private storage: AngularFireStorage) { }
+  constructor(public el: ElementRef) { }
 
   ngOnInit() {
     //console.log(this.speaker);
