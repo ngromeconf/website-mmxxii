@@ -6,7 +6,6 @@
 
   position: relative;
 
-
 }
 
 .site-logo {
@@ -16,11 +15,30 @@
   top: 0;
   right: 0;
   background-color: $ribbon;
-  width: 116px;
-  height: 110px;
+  height: 65px;
+  width: 65px;
+  @include breakpoint-m {
+    width: 116px;
+    height: 110px;
+
+  }
   display: flex;
   align-items: center;
   justify-content: space-around;
+
+  svg {
+
+    width: 36px;
+    height: 38px;
+
+    @include breakpoint-m {
+
+      width: 56px;
+      height: 60px;
+
+    }
+
+  }
 
   span {
 

@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFireMessaging } from '@angular/fire/messaging';
-import { mergeMapTo } from 'rxjs/operators';
 import { take } from 'rxjs/operators';
 import { BehaviorSubject } from 'rxjs'
 
@@ -44,10 +43,13 @@ export class MessagingService {
    *
    * @param userId userId
    */
-  requestPermission(userId) {
+  requestPermission() {
+
+    const userId = this.generateUID();
+    //console.log(userId);
     this.angularFireMessaging.requestToken.subscribe(
       (token) => {
-        console.log(token);
+        //console.log(token);
         this.updateToken(userId, token);
       },
       (err) => {
@@ -65,5 +67,20 @@ export class MessagingService {
         console.log("new message received. ", payload);
         this.currentMessage.next(payload);
       })
+  }
+
+  private generateUID() {
+
+    const nav = window.navigator;
+    const screen = window.screen;
+    let guid = 'User:';
+    guid += nav.mimeTypes.length.toString();
+    guid += nav.userAgent.replace(/\D+/g, '');
+    guid += nav.plugins.length;
+    guid += screen.height || '';
+    guid += screen.width || '';
+    guid += screen.pixelDepth || '';
+
+    return guid;
   }
 }

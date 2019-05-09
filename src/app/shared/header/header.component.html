@@ -2,9 +2,9 @@
 
     <h1 class="site-logo">
 
-      <a href="/" title="NG-Rome">
+      <a [routerLink]="['/']" routerLinkActive="router-link-active"  title="NG-Rome">
 
-        <svg width="56" height="60">
+        <svg width="56" height="60" viewBox="0 0 56 60" preserveAspectratio="xMinYMin">
 
           <g fill="none" fill-rule="evenodd">
 
@@ -194,7 +194,10 @@
 
       </div>
 
-      <button (click)="closeSidebar()" class="site-menu--close" type="button" name="button">
+      <button (click)="closeSidebar()"
+          class="site-menu--close" type="button"
+          name="site menu close"
+          aria-label="Close Menu">
 
         <svg width="21" height="21">
 

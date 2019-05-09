@@ -37,6 +37,14 @@ ngrome-logo{
 
     padding-left: 20px;
     padding-right: 20px;
+
+    @include breakpoint-m {
+
+      padding-left: 40px;
+      padding-right: 40px;
+
+    }
+
     margin-left: auto;
     margin-right: auto;
     max-width: 1080px;
@@ -49,7 +57,6 @@ ngrome-logo{
 
       }
 
-
     }
 
   }
@@ -57,10 +64,11 @@ ngrome-logo{
   &__section {
 
     position: relative;
+    display: block; // Maledetto Angular
 
     & + & {
 
-      margin-top: 40px;
+      margin-top: 65px;
 
       @include breakpoint-m {
 
@@ -80,8 +88,19 @@ ngrome-logo{
 
       color: $white;
       background-color: $ribbon;
-      padding-top: 80px;
-      padding-bottom: 80px;
+
+      padding-top: 40px;
+      padding-bottom: 40px;
+
+      @include breakpoint-m {
+        padding-top: 60px;
+        padding-bottom: 60px;
+      }
+
+      @include breakpoint-l {
+        padding-top: 80px;
+        padding-bottom: 80px;
+      }
 
     }
 
@@ -97,14 +116,22 @@ ngrome-logo{
     font-size: 20px;
 
     @include breakpoint-m {
-      margin-left: 70px;
+
       font-size: 27px;
       padding-top: 26px;
       padding-left: 20px;
+
+    }
+
+    @include breakpoint-l {
+
+      margin-left: 70px;
+      letter-spacing: 10px;
+
     }
 
     text-transform: uppercase;
-    letter-spacing: 10px;
+    letter-spacing: 7px;
 
     &:before {
 
@@ -130,42 +157,27 @@ ngrome-logo{
 
   &__intro__head {
 
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     height: 100vh;
 
-
     @include breakpoint-s {
 
-      padding-bottom: 100px;
-
-    }
-
-    @include breakpoint-xxs {
-      height: 110vh;
-      padding-bottom: 0px;
+      padding-bottom: 20px;
 
     }
 
     @include breakpoint-m {
 
-      height: 90vh;
       padding-bottom: 40px;
 
     }
 
     @include breakpoint-l {
 
-      height: 120vh;
-      padding-bottom: 40px;
-
-    }
-
-    @include breakpoint-xl {
-
-      height: 120vh;
-      padding-bottom: 40px;
+      padding-bottom: 60px;
 
     }
 
@@ -191,7 +203,7 @@ ngrome-logo{
 
     @include breakpoint-m {
 
-      font-size: 38px;
+      font-size: 48px;
 
     }
 
@@ -214,10 +226,92 @@ ngrome-logo{
 
   }
 
+  &__intro__scroller {
+
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 0;
+
+    @include breakpoint-s {
+
+      bottom: 20px;
+
+    }
+
+    @include breakpoint-m {
+
+      bottom: 40px;
+      height: 60px;
+
+    }
+
+    &:before, &:after {
+
+      content: "";
+      display: block;
+      position: absolute;
+
+    }
+
+    &:before {
+
+      width: 4px;
+      height: 34px;
+      border-radius: 4px;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background: $radiance;
+      animation: scroller 1.2s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+
+    }
+
+    @keyframes scroller {
+
+      0%, 50%, 60% {
+
+        transform: scaleY(0.118);
+
+      }
+
+      30% {
+
+        transform: scaleY(1);
+
+      }
+
+      0%, 29.99% {
+
+        transform-origin: top;
+
+      }
+
+      30%, 100% {
+
+        transform-origin: bottom;
+
+      }
+
+      90%, 100% {
+
+        transform: scaleY(0.118) translateY(-255px);
+
+      }
+    }
+
+  }
+
   &__intro__info {
 
-    margin-top: 40px;
+    // margin-top: 40px;
     margin-bottom: 60px;
+
+    @include breakpoint-s {
+
+      margin-top: 64px;
+
+    }
 
     @include breakpoint-m {
 
@@ -235,7 +329,12 @@ ngrome-logo{
 
     p {
 
-      font-size: 21px;
+      font-size: 18px;
+      @include breakpoint-m {
+        font-size: 21px;
+      }
+
+
       line-height: 1.6;
       max-width: 800px;
 
@@ -252,7 +351,10 @@ ngrome-logo{
 .button {
 
   display: inline-block;
-  padding: 18px 22px;
+  padding: 12px 22px;
+  @include breakpoint-m {
+    padding: 18px 22px;
+  }
   border: 2px solid $radiance;
   border-radius: 2px;
   color: $radiance;
@@ -329,22 +431,23 @@ ngrome-logo{
   z-index: 3;
   cursor: url('/assets/icons/cursor-close-menu.svg') 40 40, auto;
 
-  .site-menu--show,.modal--show & {
+  .site-menu--show & {
 
     transition: opacity .25s ease;
     opacity: .90;
     pointer-events: all;
     background-color: lighten($ribbon, 50%);
 
-    /* body overflow is hidden to hide main scrollbar when modal window is open */
-    overflow: hidden;
-
-
   }
 
 }
 
 #intro {
+
+  background-image: url('/assets/images/confetti-mobile.png');
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: contain;
 
   @include breakpoint-m {
 

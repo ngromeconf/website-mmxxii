@@ -1,0 +1,37 @@
+<section class="site-content__section">
+
+  <div class="site-content__wrap">
+
+    <h1 class="site-content__section__title">Sponsors</h1>
+
+    <ul class="sponsors__list sponsors__list--full">
+
+      <li *ngFor="let sponsor of sponsorService.getSponsors(); let isOdd = odd">
+        <a rel="noopener" href="{{sponsor.websiteUrl}}" target="_blank" title="{{sponsor.name}}">
+
+          <img src="{{sponsor.image}}" alt="{{sponsor.name}}">
+
+        </a>
+      </li>
+
+      <li>
+
+        <a class="button" href="mailto:angularroma@gmail.com" title="Became a Sponsor">
+
+          <span>Become a Sponsor</span>
+
+          <svg width="11" height="12">
+
+            <path fill="none" fill-rule="evenodd" stroke="#0086FF" stroke-width="2" d="M1 1l7.358 5L1 11"/>
+
+          </svg>
+
+        </a>
+
+      </li>
+
+    </ul>
+
+  </div>
+
+</section>

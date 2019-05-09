@@ -48,7 +48,7 @@
 .ticket {
 
   position: relative;
-  opacity: .4;
+  opacity: .2;
 
   & + & {
 
@@ -72,12 +72,6 @@
   @include breakpoint-m {
 
     flex: 0 1 33.33333%;
-
-  }
-
-  &--ready {
-
-    opacity: 1;
 
   }
 
@@ -136,6 +130,24 @@
 
     span {
       display: block;
+    }
+
+  }
+
+  .button {
+
+    opacity: 0;
+
+  }
+
+  &--ready {
+
+    opacity: 1;
+
+    .button {
+
+      opacity: 1;
+
     }
 
   }
