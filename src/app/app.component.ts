@@ -10,8 +10,6 @@ declare var TweenMax: any;
 declare var Linear: any;
 declare var TimelineMax: any;
 declare var Expo: any;
-
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -48,17 +46,17 @@ export class AppComponent implements AfterViewInit {
 
         if (event instanceof NavigationStart) {
           // Show loading indicator
-          console.log('start');
+          console.log('NavigationStart');
           if (this.logoAlreadyAnimated === true){
             this.resetAnimationLogo();
             this.logoAlreadyAnimated = false;
           }
-          //this.animateLogo();
+          this.animateLogo();
           this.sidebarService.toggleSidebarStatus(true);
         }
 
         if (event instanceof NavigationEnd) {
-          console.log('end');
+          console.log('NavigationEnd');
           this.logoAlreadyAnimated = true;
         }
 
@@ -121,7 +119,7 @@ export class AppComponent implements AfterViewInit {
       var scale = 1;
       var toBlur = false;
       if (i%2==0 && element.className.baseVal === 'toBlur'){
-        scale = Math.random() * (3 - 1) +1;
+        scale = Math.random() * 2 + 1;
         if (scale > 1.7){
           toBlur = true;
         }

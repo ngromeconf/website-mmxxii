@@ -1,4 +1,24 @@
 // ------------------------------
+// 🔥 ANIMATED LOGO
+// ------------------------------
+
+ngrome-logo{
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  #Calque_1 {
+    overflow: visible !important;
+    width: 80vmin;
+    height: 80vmin;
+  }
+}
+
+// ------------------------------
 // 🔥 Angular Rome Content
 // ------------------------------
 
@@ -328,9 +348,9 @@
 
   @include breakpoint-m {
 
-    background-image: url('/assets/images/confetti.png');
-    background-position: top -60px left -30px;
-    background-repeat: no-repeat;
+    //background-image: url('/assets/images/confetti.png');
+    //background-position: top -60px left -30px;
+    //background-repeat: no-repeat;
 
   }
 
