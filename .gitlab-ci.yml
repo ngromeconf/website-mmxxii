@@ -15,8 +15,7 @@ pages:
     paths:
     - dist
   only:
-  - develop
-  - pages
+    - develop
 
 deploy_production:
   stage: deploy

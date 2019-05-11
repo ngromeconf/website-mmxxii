@@ -144,7 +144,7 @@ export class AppComponent implements AfterViewInit {
       var rotation = itemRotation+"_short";
 
       tl.to(element, 0.5, {
-        autoAlpha: 0.6,
+        autoAlpha: 0.8,
         x: (bbox.x - center.x) * scalar,
         y: (bbox.y - center.y) * scalar,
         directionalRotation:rotation,
@@ -153,7 +153,10 @@ export class AppComponent implements AfterViewInit {
 
       if(toBlur){
 
-        element.classList.add('blur');
+        setTimeout(() => {
+          //console.log('show container');
+          element.classList.add('blur');
+        }, 1500);
 
       }
     });
