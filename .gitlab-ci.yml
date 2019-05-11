@@ -16,9 +16,6 @@ pages:
       - dist
   only:
     - develop
-  tags:
-    - site-gen
-
 deploy_production:
   stage: deploy
   only:
