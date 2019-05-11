@@ -18,10 +18,10 @@ declare var Expo: any;
       state('visible', style({ 'opacity': 1})),
       state('hidden', style({ 'opacity': 0})),
       transition('visible => hidden', useAnimation(fadeOut, {
-        params: { timing: 2, delay: 2 }
+        params: { timing: 1.5, delay: 0.5 }
       })),
       transition('hidden => visible', useAnimation(fadeIn, {
-        params: { timing: 2, delay: 2 }
+        params: { timing: 1.5, delay: 0.5 }
       })),
     ]),
   ]
@@ -31,7 +31,6 @@ export class AppComponent implements AfterViewInit {
   containerStatus = 'hidden';
   private el;
   private logoAlreadyAnimated = false;
-
 
   constructor(
     public sidebarService: SideBarService,
@@ -91,9 +90,16 @@ export class AppComponent implements AfterViewInit {
     var bounds = logoElement.getBBox();
     var blast = this.el.querySelector('#blast');
 
+    //check the window height
+    let centerY = window.innerHeight / 2;
+    let centerX = bounds.x + bounds.width /2;
+    console.log('window centerX,Y: ', centerX, centerY);
+    console.log('bounds X,Y: ', bounds);
+
+    //define center of the explosion
     var center = {
-      x: bounds.x + bounds.width /2,
-      y: bounds.y + bounds.height,
+      x: centerX,
+      y: centerY,
     };
 
     var stagger = 5;
@@ -104,33 +110,41 @@ export class AppComponent implements AfterViewInit {
 
     var tl = new TimelineMax()
       //.to(blast, stagger, { scale: 1 }, 0);
-      .to(blast, stagger, { scale: 2, autoAlpha: 0 }, stagger);
+      .to(blast, stagger, { scale: 0, autoAlpha: 1 }, stagger);
 
     let logoElementsToAnimate = Array.prototype.slice.call( logoElement.children )
-    console.log('');
+    console.log('1-get element to animate ');
     logoElementsToAnimate.forEach( (element,i) => {
-
+      console.log('3-forEach element ',i);
       var bbox = element.getBBox();
       var scale = 1;
       var toBlur = false;
+
+      //define the element to blur
       if (i%2==0 && element.className.baseVal === 'toBlur'){
         scale = Math.random() * 2 + 1;
         if (scale > 1.7){
           toBlur = true;
+          console.log('4-blur this element ',element);
         }
       }
 
+      //this item should be not visible
       if (element.className.baseVal === 'long'){
         scale = 0;
       }
       var dist = getDistance(bbox, center);
-      var delay = 1;
+      var delay = 0.5;
+
       var scalar = radius / dist;
-      var itemRotation = Math.floor(Math.random() * 2360);
+
+      console.log('6-scalar ', scalar);
+      var itemRotation = Math.floor(Math.random() * (365 - 90) + 90);
+      console.log('7-rotate this element ', itemRotation);
       var rotation = itemRotation+"_short";
 
-      tl.to(element, 2, {
-        autoAlpha: 1,
+      tl.to(element, 0.5, {
+        autoAlpha: 0.6,
         x: (bbox.x - center.x) * scalar,
         y: (bbox.y - center.y) * scalar,
         directionalRotation:rotation,
@@ -138,19 +152,15 @@ export class AppComponent implements AfterViewInit {
       }, delay);
 
       if(toBlur){
-        //console.log('to blur',element);
-        tl.to(element, 2, {
-          paused: true,
-          attr: {
-            "stdDeviation": 10
-          }
-        });
+
+        element.classList.add('blur');
+
       }
     });
 
-
+    console.log('2-define the animation ');
     TweenMax.to(tl, 8, {
-      progress: 2,
+      progress: 10,
       ease: Expo.easeInOut,
       repeat: 0,
     });
