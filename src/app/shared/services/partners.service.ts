@@ -15,6 +15,27 @@ export class PartnersService {
 
   partners: Partner[]  = [
     {
+      websiteUrl: 'https://www.codemotion.com/',
+      name: 'Codemotion',
+      description: '',
+      visible: true,
+      image: './assets/images/codemotion.png'
+    },
+    {
+      websiteUrl: 'https://twitter.com/angularrome',
+      name: 'Angular Roma',
+      description: '',
+      visible: true,
+      image: './assets/images/ng-rome.png'
+    },
+    {
+      websiteUrl: 'https://twitter.com/angularsf',
+      name: 'Angular S. Francisco',
+      description: '',
+      visible: true,
+      image: './assets/images/ng-sf.png'
+    },
+    {
       image: './assets/images/gdg-roma.png',
       name: 'GDG Roma',
       description: '',
@@ -43,20 +64,6 @@ export class PartnersService {
       image: './assets/images/ng-vienna.png'
     },
     {
-      websiteUrl: 'https://twitter.com/angularrome',
-      name: 'Angular Roma',
-      description: '',
-      visible: true,
-      image: './assets/images/ng-rome.png'
-    },
-    {
-      websiteUrl: 'https://twitter.com/angularsf',
-      name: 'Angular S. Francisco',
-      description: '',
-      visible: true,
-      image: './assets/images/ng-sf.png'
-    },
-    {
       websiteUrl: 'https://twitter.com/swissangular',
       name: 'Swiss Angular',
       description: '',
@@ -83,7 +90,8 @@ export class PartnersService {
       description: '',
       visible: true,
       image: './assets/images/gdg-bologna.png'
-    },
+    }
+
   ];
 
   getPartner(){
