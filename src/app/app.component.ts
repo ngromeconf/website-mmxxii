@@ -18,10 +18,10 @@ declare var Expo: any;
       state('visible', style({ 'opacity': 1})),
       state('hidden', style({ 'opacity': 0})),
       transition('visible => hidden', useAnimation(fadeOut, {
-        params: { timing: 1.5, delay: 0.5 }
+        params: { timing: 0.1, delay: 0.1 }
       })),
       transition('hidden => visible', useAnimation(fadeIn, {
-        params: { timing: 1.5, delay: 0.5 }
+        params: { timing: 0.5, delay: 0.1 }
       })),
     ]),
   ]
@@ -43,18 +43,17 @@ export class AppComponent implements AfterViewInit {
         if (event instanceof NavigationStart) {
           // Show loading indicator
           console.log('NavigationStart');
-          if (this.logoAlreadyAnimated === true){
-            //this.resetAnimationLogo();
-            //this.logoAlreadyAnimated = false;
-          }
-          this.animateLogo();
+          this.hideContainer();
+          window.scroll(0,0);
           this.sidebarService.toggleSidebarStatus(true);
         }
 
         if (event instanceof NavigationEnd) {
           console.log('NavigationEnd');
+          if (this.logoAlreadyAnimated === true){
+            this.showContainer();
+          }
           this.logoAlreadyAnimated = true;
-
         }
 
         if (event instanceof NavigationError) {
@@ -69,13 +68,29 @@ export class AppComponent implements AfterViewInit {
   ngOnInit(){
     //check if is available a new version
     this.pwaService.checkUpdateAvailable();
+    this.animateLogo();
   }
 
   ngAfterViewInit() {
+    this.showContainer();
+  }
+
+  showContainer(){
     setTimeout(() => {
-      //console.log('show container');
+      console.log('show container');
       this.containerStatus = 'visible';
-    }, 800);
+    }, 1000);
+  }
+
+  hideContainer(){
+
+    console.log('hide container');
+    this.containerStatus = 'hidden';
+
+  }
+
+  ngOnDestroy() {
+    console.log('destroy app.component');
   }
 
   openCloseSidebar() {
@@ -83,7 +98,7 @@ export class AppComponent implements AfterViewInit {
   }
 
   animateLogo(){
-    console.log('animate logo');
+    //console.log('animate logo');
     this.el = this.elementRef.nativeElement;
     TweenMax.defaultEase = Linear.easeNone;
     let logoElement = this.el.querySelector('#logo-ng-rome');
@@ -93,8 +108,8 @@ export class AppComponent implements AfterViewInit {
     //check the window height
     let centerY = window.innerHeight / 2;
     let centerX = bounds.x + bounds.width /2;
-    console.log('window centerX,Y: ', centerX, centerY);
-    console.log('bounds X,Y: ', bounds);
+    //console.log('window centerX,Y: ', centerX, centerY);
+    //console.log('bounds X,Y: ', bounds);
 
     //define center of the explosion
     var center = {
@@ -113,9 +128,9 @@ export class AppComponent implements AfterViewInit {
       .to(blast, stagger, { scale: 0, autoAlpha: 1 }, stagger);
 
     let logoElementsToAnimate = Array.prototype.slice.call( logoElement.children )
-    console.log('1-get element to animate ');
+    //console.log('1-get element to animate ');
     logoElementsToAnimate.forEach( (element,i) => {
-      console.log('3-forEach element ',i);
+      //console.log('3-forEach element ',i);
       var bbox = element.getBBox();
       var scale = 1;
       var toBlur = false;
@@ -125,7 +140,7 @@ export class AppComponent implements AfterViewInit {
         scale = Math.random() * 2 + 1;
         if (scale > 1.7){
           toBlur = true;
-          console.log('4-blur this element ',element);
+          //console.log('4-blur this element ',element);
         }
       }
 
@@ -138,13 +153,13 @@ export class AppComponent implements AfterViewInit {
 
       var scalar = radius / dist;
 
-      console.log('6-scalar ', scalar);
+      //console.log('6-scalar ', scalar);
       var itemRotation = Math.floor(Math.random() * (365 - 90) + 90);
-      console.log('7-rotate this element ', itemRotation);
+      //console.log('7-rotate this element ', itemRotation);
       var rotation = itemRotation+"_short";
 
       tl.to(element, 0.5, {
-        autoAlpha: 0.8,
+        autoAlpha: 1,
         x: (bbox.x - center.x) * scalar,
         y: (bbox.y - center.y) * scalar,
         directionalRotation:rotation,
@@ -161,7 +176,7 @@ export class AppComponent implements AfterViewInit {
       }
     });
 
-    console.log('2-define the animation ');
+    //console.log('2-define the animation ');
     TweenMax.to(tl, 8, {
       progress: 10,
       ease: Expo.easeInOut,
