@@ -1,6 +1,6 @@
 <section class="site-content__section">
   <div class="site-content__wrap">
-    <h1 class="site-content__section__title">Featured Speakers</h1>
+    <h1 *ngIf="actualPage === 'home'" class="site-content__section__title">Featured Speakers</h1>
 
     <div class="speakers__list">
       <ngrome-speaker-bio
@@ -14,7 +14,7 @@
 
     <aside class="speakers__list__more" role="complementary">
       <a *ngIf="actualPage === 'home'" class="button" id="go-to-tickets"
-          href="/speakers"
+          routerLink="/speakers"
           routerLinkActive="router-link-active"
           title="Get Ticket Now">
 
