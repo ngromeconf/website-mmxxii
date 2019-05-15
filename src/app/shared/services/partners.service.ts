@@ -50,12 +50,19 @@ export class PartnersService {
       image: './assets/images/ng-vikings.png'
     },
     {
+      websiteUrl: 'https://ng-atl.org/',
+      name: 'ngAtlanta',
+      description: '',
+      visible: true,
+      image: './assets/images/ng-atlanta.png'
+    },
+    {
       websiteUrl: 'https://www.meetup.com/AngularJS-Bucharest/',
       name: 'ngBucharest',
       description: '',
       visible: true,
       image: './assets/images/ng-bucharest.png'
-    },
+    },    
     {
       image: './assets/images/gdg-roma.png',
       name: 'GDG Roma',
