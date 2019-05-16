@@ -15,13 +15,6 @@ export class PartnersService {
 
   partners: Partner[]  = [
     {
-      websiteUrl: 'https://www.codemotion.com/',
-      name: 'Codemotion',
-      description: '',
-      visible: true,
-      image: './assets/images/codemotion.png'
-    },
-    {
       websiteUrl: 'https://twitter.com/angularrome',
       name: 'Angular Roma',
       description: '',
@@ -30,17 +23,17 @@ export class PartnersService {
     },
     {
       websiteUrl: 'https://twitter.com/angularsf',
-      name: 'Angular S. Francisco',
+      name: 'Angular San Francisco',
       description: '',
       visible: true,
       image: './assets/images/ng-sf.png'
     },
     {
-      websiteUrl: 'https://twitter.com/angularsf',
-      name: 'Angular San Francisco',
+      websiteUrl: 'https://www.codemotion.com/',
+      name: 'Codemotion',
       description: '',
       visible: true,
-      image: './assets/images/ng-sf.png'
+      image: './assets/images/codemotion.png'
     },
     {
       websiteUrl: 'https://twitter.com/AngularVienna',
