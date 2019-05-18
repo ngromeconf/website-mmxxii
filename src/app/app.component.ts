@@ -1,14 +1,11 @@
-import { AfterViewInit, Component, ElementRef } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, NgZone } from '@angular/core';
 import { trigger, transition, state, useAnimation, style } from '@angular/animations';
 import { fadeIn, fadeOut } from 'ng-animate';
 import { SideBarService} from './shared/services/sidebar.service';
 import { Router, Event, NavigationStart, NavigationEnd, NavigationError } from '@angular/router';
 import { PWAService } from './shared/services/pwa.service';
+import { Expo, Linear, TimelineLite, TweenLite } from "gsap";
 
-declare var TweenMax: any;
-declare var Linear: any;
-declare var TimelineMax: any;
-declare var Expo: any;
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -18,7 +15,7 @@ declare var Expo: any;
       state('visible', style({ 'opacity': 1})),
       state('hidden', style({ 'opacity': 0})),
       transition('visible => hidden', useAnimation(fadeOut, {
-        params: { timing: 0.1, delay: 0.1 }
+        params: { timing: 2, delay: 0.5 }
       })),
       transition('hidden => visible', useAnimation(fadeIn, {
         params: { timing: 0.5, delay: 0.1 }
@@ -31,12 +28,20 @@ export class AppComponent implements AfterViewInit {
   containerStatus = 'hidden';
   private el;
   private logoAlreadyAnimated = false;
+  private _animating: boolean;
+  private _tl = new TimelineLite();
+  private _active: boolean = false;
+
+  public get isActive(): boolean {
+		return this._active;
+  }
 
   constructor(
     public sidebarService: SideBarService,
     private router: Router,
     private elementRef: ElementRef,
-    private pwaService: PWAService
+    private pwaService: PWAService,
+    private ngZone: NgZone
   ) {
       router.events.subscribe( (event: Event) => {
 
@@ -72,14 +77,20 @@ export class AppComponent implements AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.showContainer();
+
   }
 
   showContainer(){
-    setTimeout(() => {
-      console.log('show container');
-      this.containerStatus = 'visible';
-    }, 1000);
+
+    console.log('show container');
+    if (this.containerStatus !== 'visible'){
+      setTimeout(() => {
+        //console.log('show container');
+        this.containerStatus = 'visible';
+      });
+
+    }
+
   }
 
   hideContainer(){
@@ -97,37 +108,39 @@ export class AppComponent implements AfterViewInit {
     this.sidebarService.toggleSidebarStatus();
   }
 
-  animateLogo(){
-    //console.log('animate logo');
-    this.el = this.elementRef.nativeElement;
-    TweenMax.defaultEase = Linear.easeNone;
-    let logoElement = this.el.querySelector('#logo-ng-rome');
-    var bounds = logoElement.getBBox();
-    var blast = this.el.querySelector('#blast');
-
-    //check the window height
+  //define center of the logo explosion
+  getCenter(bounds){
     let centerY = window.innerHeight / 2;
     let centerX = bounds.x + bounds.width /2;
-    //console.log('window centerX,Y: ', centerX, centerY);
-    //console.log('bounds X,Y: ', bounds);
 
-    //define center of the explosion
-    var center = {
-      x: centerX,
-      y: centerY,
-    };
+    return {x: centerX, y: centerY};
+  }
 
-    var stagger = 5;
-    var radius = getDistance(center, bounds);
+
+  animateLogo(){
+    console.log('animate logo');
+    this._animating = true;
+
+    const stagger = 5;
+
+    this.el = this.elementRef.nativeElement;
+    TweenLite.defaultEase = Linear.easeNone;
+    let logoElement = this.el.querySelector('#logo-ng-rome');
+    let bounds = logoElement.getBBox();
+    let blast = this.el.querySelector('#blast');
+    let center = this.getCenter(bounds);
+    //check the window height
+
+    var radius = this.getDistance(center, bounds);
 
     //TweenMax.set(blast, { attr: { r: radius, cx: center.x, cy: center.y }});
-    TweenMax.set(blast, { transformOrigin: "center", scale: 0 });
+    TweenLite.set(blast, { transformOrigin: "center", scale: 0 });
 
-    var tl = new TimelineMax()
-      //.to(blast, stagger, { scale: 1 }, 0);
-      .to(blast, stagger, { scale: 0, autoAlpha: 1 }, stagger);
 
-    let logoElementsToAnimate = Array.prototype.slice.call( logoElement.children )
+    //tl.to(blast, stagger, { scale: 1 }, 0);
+    this._tl.to(blast, stagger, { scale: 0, autoAlpha: 1 }, stagger);
+
+    let logoElementsToAnimate = Array.prototype.slice.call( logoElement.children );
     //console.log('1-get element to animate ');
     logoElementsToAnimate.forEach( (element,i) => {
       //console.log('3-forEach element ',i);
@@ -148,8 +161,8 @@ export class AppComponent implements AfterViewInit {
       if (element.className.baseVal === 'long'){
         scale = 0;
       }
-      var dist = getDistance(bbox, center);
-      var delay = 0.5;
+      var dist = this.getDistance(bbox, center);
+      var delay = 0.1;
 
       var scalar = radius / dist;
 
@@ -158,7 +171,7 @@ export class AppComponent implements AfterViewInit {
       //console.log('7-rotate this element ', itemRotation);
       var rotation = itemRotation+"_short";
 
-      tl.to(element, 0.5, {
+      this._tl.to(element, 3, {
         autoAlpha: 1,
         x: (bbox.x - center.x) * scalar,
         y: (bbox.y - center.y) * scalar,
@@ -171,35 +184,52 @@ export class AppComponent implements AfterViewInit {
         setTimeout(() => {
           //console.log('show container');
           element.classList.add('blur');
-        }, 1500);
+        }, 2000);
 
       }
     });
 
-    //console.log('2-define the animation ');
-    TweenMax.to(tl, 8, {
+    let animation = this.isActive ? this.inactivate() : this.activate();
+    this._active = !this.isActive;
+
+    //return new TimelineLite().add(animation);
+    this.showContainer();
+
+  }
+
+  getDistance(p1, p2) {
+    var dx = p2.x - p1.x;
+    var dy = p2.y - p1.y;
+    return Math.sqrt(dx * dx + dy * dy);
+  }
+
+  activate(){
+    console.log('activate');
+    return TweenLite.to(this._tl, 5, {
       progress: 10,
       ease: Expo.easeInOut,
       repeat: 0,
-    });
-
-    function getDistance(p1, p2) {
-      var dx = p2.x - p1.x;
-      var dy = p2.y - p1.y;
-      return Math.sqrt(dx * dx + dy * dy);
-    }
-
+    },{ className: "" }, { className: "active" });
   }
 
-  resetAnimationLogo(){
-    let logoElement = this.el.querySelector('#logo-ng-rome');
-    let logoElementsToAnimate = Array.prototype.slice.call( logoElement.children )
-    logoElementsToAnimate.forEach( (element,i) => {
-      //or clear those properties altogether:
-      TweenMax.set(element, {clearProps:"x"});
-    });
-
+  inactivate(){
+    console.log('inactivate');
+    return TweenLite.to(this._tl, 8, {
+      progress: 10,
+      ease: Expo.easeInOut,
+      repeat: 0,
+    },{ className: "active" }, { className: "" });
   }
+
+  // resetAnimationLogo(){
+  //   let logoElement = this.el.querySelector('#logo-ng-rome');
+  //   let logoElementsToAnimate = Array.prototype.slice.call( logoElement.children )
+  //   logoElementsToAnimate.forEach( (element,i) => {
+  //     //or clear those properties altogether:
+  //     TweenMax.set(element, {clearProps:"x"});
+  //   });
+
+  // }
 
 
 
