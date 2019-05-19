@@ -1,114 +1,61 @@
 <section #tickets class="site-content__section">
-
   <div class="site-content__wrap">
-
     <h1 class="site-content__section__title">Buy Ticket</h1>
-
     <div class="tickets__list">
-
-      <article class="ticket ticket--ready">
-
-        <a
+      <article class="ticket">
+        <a rel="noopener"
           href="https://www.eventbrite.it/e/ng-rome-mmxix-angular-conference-tickets-54968197358"
-          title="Ticket">
-
-          <h2 class="ticket__title">Early Bird</h2>
-
-          <span class="ticket__price">€ 98,00</span>
-
+          id="book-ticket-now"
+          target="_blank" title="Ticket"
+        >
+          <h2 id="book-ticket-now-text" class="ticket__title">Very Early Bird</h2>
+          <span id="book-ticket-now-span" class="ticket__price">€ 68,00</span>
           <p class="ticket__info">
-
-            <!--span>0/70 sold</span -->
-
-            Sales end on May 30
-
+            <span>30/30 sold</span>
+            Sold Out
           </p>
-
-          <span id="book-ticket-now-button" class="button" title="Buy Now">
-
-            <span id="book-ticket-now-button-text">Buy Now</span>
-
-            <svg width="11" height="12" id="book-ticket-now-button-svg">
-
-              <path fill="none" fill-rule="evenodd" stroke="#0086FF" stroke-width="2" d="M1 1l7.358 5L1 11"/>
-
-            </svg>
-
-          </span>
-
-        </a>
-
-      </article>
-
-      <article class="ticket">
-
-          <a rel="noopener"
-            href="https://www.eventbrite.it/e/ng-rome-mmxix-angular-conference-tickets-54968197358"
-            id="book-ticket-now"
-            target="_blank" title="Ticket">
-
-            <h2 id="book-ticket-now-text" class="ticket__title">Very Early Bird</h2>
-
-            <span id="book-ticket-now-span" class="ticket__price">€ 68,00</span>
-
-            <p class="ticket__info">
-
-              <span>30/30 sold</span>
-
-              Sold Out
-
-            </p>
-
-            <span class="button" title="Buy Now">
-
-              <span>Buy Now</span>
-
-              <svg width="11" height="12">
-
-                <path fill="none" fill-rule="evenodd" stroke="#0086FF" stroke-width="2" d="M1 1l7.358 5L1 11"/>
-
-              </svg>
-
-            </span>
-
-          </a>
-
-        </article>
-
-      <article class="ticket">
-
-        <a href="javascript:void(0);" title="Ticket">
-
-          <h2 class="ticket__title">Regular Tickets</h2>
-
-          <span class="ticket__price">€ 118,00</span>
-
-          <p class="ticket__info">
-
-            <!-- span>...</span-->
-
-            Sales starts on May 31
-
-          </p>
-
           <span class="button" title="Buy Now">
-
             <span>Buy Now</span>
-
             <svg width="11" height="12">
-
               <path fill="none" fill-rule="evenodd" stroke="#0086FF" stroke-width="2" d="M1 1l7.358 5L1 11"/>
-
             </svg>
-
           </span>
-
         </a>
-
       </article>
-
+      <article class="ticket ticket--ready">
+        <a href="https://www.eventbrite.it/e/ng-rome-mmxix-angular-conference-tickets-54968197358"
+        title="Ticket">
+          <h2 class="ticket__title">Early Bird</h2>
+          <span class="ticket__price">€ 98,00</span>
+          <p class="ticket__info">
+            <span>35/45 sold</span>
+            Sales end on May 31
+          </p>
+          <span id="book-ticket-now-button" class="button" title="Buy Now">
+            <span id="book-ticket-now-button-text">Buy Now</span>
+            <svg width="11" height="12" id="book-ticket-now-button-svg">
+              <path fill="none" fill-rule="evenodd" stroke="#0086FF" stroke-width="2" d="M1 1l7.358 5L1 11"/>
+            </svg>
+          </span>
+        </a>
+      </article>
+      <article class="ticket">
+        <a href="https://www.eventbrite.it/e/ng-rome-mmxix-angular-conference-tickets-54968197358"
+          title="Ticket">
+          <h2 class="ticket__title">Regular Tickets</h2>
+          <span class="ticket__price">€ 112,00</span>
+          <p class="ticket__info">
+            <!-- span>...</span-->
+            Sales starts on May 31
+          </p>
+          <span class="button" title="Buy Now">
+            <span>Buy Now</span>
+            <svg width="11" height="12">
+              <path fill="none" fill-rule="evenodd" stroke="#0086FF" stroke-width="2" d="M1 1l7.358 5L1 11"/>
+            </svg>
+          </span>
+        </a>
+      </article>
     </div>
-
   </div>
-
 </section>
