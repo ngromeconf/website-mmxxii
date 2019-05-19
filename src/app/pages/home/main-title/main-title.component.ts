@@ -38,15 +38,16 @@ import { NgAnimateScrollService } from 'src/app/shared/services/ng-animate-scrol
             <span class="site-content__intro__scroller"></span>
           </header>
           <div class="site-content__intro__info">
-            <p>We will have sessions about the latest version of Angular and related technologies. 
-            Whether you are a beginner, intermediate, or expert, 
+            <p>We will have <b>15 talks</b> about the latest version of 
+            Angular.</p>
+            <p>Whether you are a beginner, intermediate, or an expert, 
             this will be the best opportunity to learn about the last 
-            trends in the Angular world.</p>
-            <p>And in case you are wondering, we expect the following topics 
-            to be covered at our event: Blockchain, GraphQL, Machine Learning, NgRx, 
-            New Angular features, Progressive Web Apps, RxJs, Testing, Web Performance, etc.</p>
-            <p>9 hours of news and tips about Angular and the possibility 
-            to share ideas and meet top developers.</p>
+            trends in the <b>Angular</b> world and <b>Web Technologies</b>.</p>
+            <p>We will cover <b>topics</b> like: Blockchain, GraphQL, Machine Learning, NgRx, 
+            New Angular features, Progressive Web Apps, RxJs, Testing, Web Performance, 
+            Ionic, How to learn Javascript, etc.</p>
+            <p>A <b>full day</b> of news and tips about Angular and the possibility 
+            to share ideas and meet top <b>Italian</b> and International developers.</p>
           </div>
         </div>
       </div>
@@ -58,6 +59,9 @@ import { NgAnimateScrollService } from 'src/app/shared/services/ng-animate-scrol
     }
     .site-content__intro__description a {
       margin-right: 30px;
+    }
+    .site-content__intro__info b {
+      font-weight: bolder;
     }
   `]
 })

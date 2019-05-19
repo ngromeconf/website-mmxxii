@@ -92,6 +92,20 @@ export class PartnersService {
       image: './assets/images/gdg-bologna.png'
     },
     {
+      websiteUrl: 'https://www.meetup.com/GDG-Pescara/',
+      name: 'GDG Pescara',
+      description: '',
+      visible: true,
+      image: './assets/images/gdg-pescara.png'
+    },
+    {
+      websiteUrl: 'https://www.meetup.com/it-IT/GDGCampania/',
+      name: 'GDG Campania',
+      description: '',
+      visible: true,
+      image: './assets/images/gdg-campania.jpg'
+    },
+    {
       websiteUrl: 'http://romajs.org/',
       name: 'Roma JS',
       description: '',
