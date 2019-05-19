@@ -6,6 +6,7 @@
   class="site-content"
   role="main"
   [@animateContainer]="containerStatus"
+  (animationToggled)='showContainer($event)'
   >
   <router-outlet></router-outlet>
 </main>

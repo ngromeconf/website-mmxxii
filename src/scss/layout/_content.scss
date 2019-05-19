@@ -10,7 +10,10 @@ ngrome-logo{
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  overflow: visible;
+  border:1px solid red;
+  padding: 0;
+  margin: 0;
   @include breakpoint-m {
 
     align-items: flex-end;
@@ -18,8 +21,8 @@ ngrome-logo{
   }
   #Calque_1 {
     overflow: visible !important;
-    width: 60vmin;
-    height: 60vmin;
+    width: 50vmin;
+    height: 50vmin;
   }
   svg g.blur {
     filter: url(#blur);
