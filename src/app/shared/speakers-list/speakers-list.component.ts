@@ -7,20 +7,42 @@ import { switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'ngrome-speakers-list',
-  templateUrl: './speakers-list.component.html',
-  styleUrls: ['./speakers-list.component.scss']
+  template: `
+    <section class="site-content__section">
+      <div class="site-content__wrap">
+        <h1 class="site-content__section__title">Featured Speakers</h1>
+        <div class="speakers__list">
+          <ngrome-speaker-bio
+            class="speaker"
+            *ngFor="let speaker of speakerList$ | async"
+            [speaker]="speaker"
+          >
+          </ngrome-speaker-bio>
+        </div>
+        <aside class="speakers__list__more" role="complementary">
+        </aside>
+        <aside class="speakers__list__more" role="complementary"
+          *ngIf="this.actualPage != 'home'">
+          <h1>More Speaker TBA</h1>
+          <p>
+            We will announce more speaker soon. <br>Stay tuned!
+          </p>
+        </aside>
+      </div>
+    </section>  
+  `,
+  styles: [``]
 })
 export class SpeakerListComponent {
-
   @Input('speakerFilter') speakerFilter;
-
-  public actualPage;
-  public speakerList$: Observable<any[]>;
+  actualPage: string;
+  speakerList$: Observable<any[]>;
 
   constructor(
-    public el: ElementRef,
+    el: ElementRef,
     private router: Router,
-    private afs: AngularFirestore) {
+    private afs: AngularFirestore
+  ) {
     const urlTree = this.router.parseUrl(this.router.url);
     this.actualPage = urlTree.root.children['primary']
       .segments.map(it => it.path)
