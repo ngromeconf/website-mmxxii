@@ -108,7 +108,7 @@ export class LogoNgromeComponent implements OnInit{
       var scalar = radius / dist;
 
       //console.log('6-scalar ', scalar);
-      var itemRotation = Math.floor(Math.random() * (1000 - 90) + 90);
+      var itemRotation = Math.floor(Math.random() * (365 - 90) + 90);
       //console.log('7-rotate this element ', itemRotation);
       var rotation = itemRotation+"_short";
 
