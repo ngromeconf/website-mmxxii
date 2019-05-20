@@ -44,12 +44,13 @@ export class MessagingService {
    * @param userId userId
    */
   requestPermission() {
-
+    // Many people complained that we push notification on our website
+    // For now it's better we disable it
+    // @zizzamia
+    return false;
     const userId = this.generateUID();
-    //console.log(userId);
     this.angularFireMessaging.requestToken.subscribe(
       (token) => {
-        //console.log(token);
         this.updateToken(userId, token);
       },
       (err) => {

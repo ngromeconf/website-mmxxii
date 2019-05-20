@@ -6,7 +6,7 @@ import { PartnersService } from 'src/app/shared/services/partners.service';
   template: `
     <section>
       <div class="site-content__wrap">
-        <h1 class="site-content__section__title">Partners</h1>
+        <h1 class="site-content__section__title">Community Partners</h1>
         <ul class="sponsors__list">
           <li *ngFor="let partner of partnerService.getPartner(); let isOdd = odd">
             <a rel="noopener"
