@@ -8,8 +8,19 @@ import { Expo, Linear, TimelineLite, TweenLite } from "gsap";
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  template: `
+  <ngrome-header></ngrome-header>
+    <ngrome-logo (animationToggled)='showContainer($event)'></ngrome-logo>
+    <main
+      class="site-content"
+      role="main"
+      [@animateContainer]="containerStatus"
+      >
+      <router-outlet></router-outlet>
+    </main>
+    <ngrome-footer></ngrome-footer>
+  <div class="site-menu--close--full"></div>
+  `,
   animations: [
     trigger('animateContainer', [
       state('visible', style({ 'opacity': 1})),
@@ -18,7 +29,7 @@ import { Expo, Linear, TimelineLite, TweenLite } from "gsap";
         params: { timing: 0.1, delay: 0.1 }
       })),
       transition('hidden => visible', useAnimation(fadeIn, {
-        params: { timing: 5, delay: 2 }
+        params: { timing: 2, delay: 0.1 }
       })),
     ]),
   ]
@@ -56,7 +67,7 @@ export class AppComponent implements AfterViewInit {
         if (event instanceof NavigationEnd) {
           console.log('NavigationEnd');
           if (this.logoAlreadyAnimated === true){
-            this.showContainer();
+            //this.showContainer();
           }
           this.logoAlreadyAnimated = true;
         }
@@ -76,12 +87,12 @@ export class AppComponent implements AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.showContainer();
+    //this.showContainer();
   }
 
-  showContainer(){
+  showContainer(event){
 
-    console.log('show container');
+    console.log('show container:', event);
     if (this.containerStatus !== 'visible'){
       setTimeout(() => {
         //console.log('show container');

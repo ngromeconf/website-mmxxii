@@ -8,8 +8,8 @@ import { Expo, Linear, TimelineLite, TweenLite } from "gsap";
 })
 export class LogoNgromeComponent implements OnInit{
 
-  @Output()
-  public animationToggled = new EventEmitter<TimelineLite>();
+    @Output()
+    public animationToggled = new EventEmitter();
 
   public get isActive(): boolean {
 		return this._active;
@@ -102,7 +102,7 @@ export class LogoNgromeComponent implements OnInit{
       }
 
       var dist = this.getDistance(bbox, center);
-      console.log(element, dist);
+      //console.log(element, dist);
       var delay = 0.1;
 
       var scalar = radius / dist;
@@ -120,23 +120,26 @@ export class LogoNgromeComponent implements OnInit{
         scale: scale
       }, delay);
 
-      //this._tl.add(this.toggle(), "start");
-		  this.animationToggled.emit(this._tl);
 
-      // if(toBlur){
-      //   setTimeout(() => {
-      //     //console.log('show container');
-      //     element.classList.add('blur');
-      //   }, 2500);
+      if(toBlur){
+        setTimeout(() => {
+          //console.log('show container');
+          element.classList.add('blur');
+        }, 2000);
+      }
 
-      // }
     });
 
-    let animation = this.isActive ? this.inactivate() : this.activate();
+    let animation = this.activate();
+
+    //this._tl.add(this.toggle(), "start");
+
+
     this._active = !this.isActive;
 
     return new TimelineLite().add(animation).add(() =>
 			this.ngZone.run(() => {
+        this.animationToggled.emit(true);
         this._animating = false;
         console.log('animation complete');
 			})
@@ -178,16 +181,7 @@ export class LogoNgromeComponent implements OnInit{
 
   public activate(){
     console.log('activate');
-    return TweenLite.fromTo(this._tl, 3, { className: "" }, { className: "active" });
-  }
-
-  public inactivate(){
-    console.log('inactivate');
-    return TweenLite.to(this._tl, 8, {
-      progress: 10,
-      ease: Expo.easeInOut,
-      repeat: 0,
-    },{ className: "active" }, { className: "" });
+    return TweenLite.fromTo(this._tl, 2, { className: "" }, { className: "active" });
   }
 
 
