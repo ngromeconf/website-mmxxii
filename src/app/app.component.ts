@@ -1,10 +1,10 @@
-import { AfterViewInit, Component, ElementRef, NgZone } from '@angular/core';
+import { AfterViewInit, Component, NgZone } from '@angular/core';
 import { trigger, transition, state, useAnimation, style } from '@angular/animations';
 import { fadeIn, fadeOut } from 'ng-animate';
 import { SideBarService} from './shared/services/sidebar.service';
 import { Router, Event, NavigationStart, NavigationEnd, NavigationError } from '@angular/router';
 import { PWAService } from './shared/services/pwa.service';
-import { Expo, Linear, TimelineLite, TweenLite } from "gsap";
+import { Expo, Linear, TimelineLite } from "gsap";
 
 @Component({
   selector: 'app-root',
@@ -34,13 +34,10 @@ import { Expo, Linear, TimelineLite, TweenLite } from "gsap";
     ]),
   ]
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent {
   title = 'ng-rome-MMXIX';
   containerStatus = 'hidden';
-  private el;
   private logoAlreadyAnimated = false;
-  private _animating: boolean;
-  private _tl = new TimelineLite();
   private _active: boolean = false;
 
   public get isActive(): boolean {
@@ -50,9 +47,7 @@ export class AppComponent implements AfterViewInit {
   constructor(
     public sidebarService: SideBarService,
     private router: Router,
-    private elementRef: ElementRef,
     private pwaService: PWAService,
-    private ngZone: NgZone
   ) {
       router.events.subscribe( (event: Event) => {
 
@@ -86,10 +81,6 @@ export class AppComponent implements AfterViewInit {
     this.pwaService.checkUpdateAvailable();
   }
 
-  ngAfterViewInit() {
-    //this.showContainer();
-  }
-
   showContainer(event){
 
     console.log('show container:', event);
@@ -117,20 +108,6 @@ export class AppComponent implements AfterViewInit {
   openCloseSidebar() {
     this.sidebarService.toggleSidebarStatus();
   }
-
-
-
-
-  // resetAnimationLogo(){
-  //   let logoElement = this.el.querySelector('#logo-ng-rome');
-  //   let logoElementsToAnimate = Array.prototype.slice.call( logoElement.children )
-  //   logoElementsToAnimate.forEach( (element,i) => {
-  //     //or clear those properties altogether:
-  //     TweenMax.set(element, {clearProps:"x"});
-  //   });
-
-  // }
-
 
 
 }
