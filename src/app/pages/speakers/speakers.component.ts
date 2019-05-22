@@ -9,20 +9,17 @@ import { MessagingService } from 'src/app/shared/services/messaging.service';
       <div class="site-content__wrap">
         <div class="site-content__intro">
           <header class="site-content__intro__head">
-            <h1 class="site-content__intro__title">One track, one day, filled with 15 talks of the 
-              best <strong>Web Engineers</strong> who build the most <strong>performant</strong> 
-              apps and web experiences.
-            </h1>
+            <h1 class="site-content__intro__title">Speaker</h1>
             <div class="site-content__intro__description">
               <a class="button"
               href="/home"
               routerLinkActive="router-link-active"
               title="NGRome Home">
-                <span id="go-to-tickets-text">Home</span>  
+                <span id="go-to-tickets-text">Home</span>
                 <svg width="11" height="12" id="go-to-tickets-svg">
-                  <path fill="none" fill-rule="evenodd" stroke="#0086FF" 
+                  <path fill="none" fill-rule="evenodd" stroke="#0086FF"
                   stroke-width="2" d="M1 1l7.358 5L1 11"/>
-                </svg> 
+                </svg>
               </a>
               <a class="button" id="go-to-tickets" (click)="scrollTo('tickets', 300)" title="Get Ticket Now">
                 <span id="go-to-tickets-text">Get Ticket Now</span>
@@ -34,7 +31,7 @@ import { MessagingService } from 'src/app/shared/services/messaging.service';
             <span class="site-content__intro__scroller"></span>
           </header>
           <div class="site-content__intro__info">
-            <p></p>
+            <p>One track, one day, filled with talks of the <strong>Angular</strong> engineers who build the most <strong>performant</strong> apps and web experiences.</p>
           </div>
         </div>
       </div>
