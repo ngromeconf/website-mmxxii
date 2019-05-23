@@ -22,7 +22,7 @@ export class HeaderComponent implements OnInit {
   }
 
   closeSidebar(){
-    this.renderer.removeClass(document.body, 'modal-open');
+    this.renderer.removeClass(document.body, 'site-menu--show');
     this.renderer.removeClass(this.sitemenu.nativeElement, 'site-menu--show');
   }
 
