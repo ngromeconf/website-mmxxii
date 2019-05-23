@@ -29,6 +29,13 @@ export class PartnersService {
       image: './assets/images/ng-sf.png'
     },
     {
+      websiteUrl: 'https://www.codemotion.com/',
+      name: 'Codemotion',
+      description: '',
+      visible: true,
+      image: './assets/images/codemotion.png'
+    },
+    {
       websiteUrl: 'https://twitter.com/AngularVienna',
       name: 'Angular Vienna',
       description: '',
@@ -62,7 +69,7 @@ export class PartnersService {
       description: '',
       visible: true,
       image: './assets/images/ng-bucharest.png'
-    },    
+    },
     {
       image: './assets/images/gdg-roma.png',
       name: 'GDG Roma',

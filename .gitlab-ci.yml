@@ -10,14 +10,13 @@ pages:
   - npm install -g @angular/cli@7.0.7
   - npm install
   - ng build --prod --base-href '/ngrome2019/'
+  - mv dist/* public/
 
   artifacts:
     paths:
-    - public
+      - public
   only:
-  - develop
-  - pages
-
+    - develop
 deploy_production:
   stage: deploy
   only:
