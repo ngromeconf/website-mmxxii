@@ -91,7 +91,7 @@ export class LogoNgromeComponent implements OnInit{
 
       //define the element to blur
       if (i%2==0 && element.className.baseVal === 'toBlur'){
-        scale = Math.random() * 4.5 + 1;
+        scale = Math.random() * 3.5 + 1;
         if (scale > 1.7){
           toBlur = true;
           //console.log('4-blur this element ',element);
