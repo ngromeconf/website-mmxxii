@@ -57,6 +57,7 @@ export class LogoNgromeComponent implements OnInit{
   }
 
   private animateLogo(){
+
     //console.log('animate logo');
     this._animating = true;
 
@@ -105,7 +106,7 @@ export class LogoNgromeComponent implements OnInit{
 
       var dist = this.getDistance(element_bbox, center);
       //console.log(element, dist);
-      var delay = 0.1;
+      var delay = 1.1;
 
       var scalar = radius / dist;
 
@@ -114,7 +115,7 @@ export class LogoNgromeComponent implements OnInit{
       //console.log('7-rotate this element ', itemRotation);
       var rotation = itemRotation+"_short";
 
-      this._tl.to(element, 2, {
+      this._tl.to(element, 1, {
         autoAlpha: 1,
         x: (element_bbox.x - center.x) * scalar,
         y: (element_bbox.y - center.y) * scalar,
@@ -127,7 +128,7 @@ export class LogoNgromeComponent implements OnInit{
         setTimeout(() => {
           //console.log('show container');
           element.classList.add('blur');
-        }, 2000);
+        }, 800);
       }
 
     });
@@ -178,9 +179,10 @@ export class LogoNgromeComponent implements OnInit{
     //on mobile we have less space on top...
     //console.log(window.innerHeight);
     let centerY = bounds.x + bounds.width /2;
-    centerY = centerY + 0.25 * centerY;
+    //centerY = centerY + 0.25 * centerY;
 
     let centerX = bounds.x + bounds.width /2;
+    //centerX = centerX + 0.55 * centerX;
 
     return {x: centerX, y: centerY};
   }
