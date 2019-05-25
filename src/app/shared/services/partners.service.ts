@@ -92,6 +92,13 @@ export class PartnersService {
       image: './assets/images/gdg-bari.png'
     },
     {
+      websiteUrl: 'https://djangogirls.org/',
+      name: 'Django Girls',
+      description: '',
+      visible: true,
+      image: './assets/images/django-girls-italy.png'
+    },
+    {
       websiteUrl: 'https://www.meetup.com/it-IT/gdgbologna/',
       name: 'GDG Bologna',
       description: '',

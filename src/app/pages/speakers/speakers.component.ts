@@ -11,16 +11,6 @@ import { MessagingService } from 'src/app/shared/services/messaging.service';
           <header class="site-content__intro__head">
             <h1 class="site-content__intro__title">Speaker</h1>
             <div class="site-content__intro__description">
-              <a class="button"
-              href="/home"
-              routerLinkActive="router-link-active"
-              title="NGRome Home">
-                <span id="go-to-tickets-text">Home</span>
-                <svg width="11" height="12" id="go-to-tickets-svg">
-                  <path fill="none" fill-rule="evenodd" stroke="#0086FF"
-                  stroke-width="2" d="M1 1l7.358 5L1 11"/>
-                </svg>
-              </a>
               <a class="button" id="go-to-tickets" (click)="scrollTo('tickets', 300)" title="Get Ticket Now">
                 <span id="go-to-tickets-text">Get Ticket Now</span>
                 <svg width="11" height="12" id="go-to-tickets-svg">

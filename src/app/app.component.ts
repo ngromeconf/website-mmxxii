@@ -9,8 +9,8 @@ import { Expo, Linear, TimelineLite } from "gsap";
 @Component({
   selector: 'app-root',
   template: `
-  <ngrome-header></ngrome-header>
-    <ngrome-logo (animationToggled)='showContainer($event)'></ngrome-logo>
+    <ngrome-header></ngrome-header>
+    <ngrome-logo (animationToggled)='showContainer()'></ngrome-logo>
     <main
       class="site-content"
       role="main"
@@ -19,7 +19,7 @@ import { Expo, Linear, TimelineLite } from "gsap";
       <router-outlet></router-outlet>
     </main>
     <ngrome-footer></ngrome-footer>
-  <div class="site-menu--close--full"></div>
+    <div class="site-menu--close--full"></div>
   `,
   animations: [
     trigger('animateContainer', [
@@ -62,7 +62,7 @@ export class AppComponent {
         if (event instanceof NavigationEnd) {
           console.log('NavigationEnd');
           if (this.logoAlreadyAnimated === true){
-            //this.showContainer();
+            this.showContainer();
           }
           this.logoAlreadyAnimated = true;
         }
@@ -81,7 +81,7 @@ export class AppComponent {
     this.pwaService.checkUpdateAvailable();
   }
 
-  showContainer(event){
+  showContainer(){
 
     console.log('show container:', event);
     if (this.containerStatus !== 'visible'){

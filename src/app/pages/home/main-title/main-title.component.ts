@@ -41,7 +41,7 @@ import { NgAnimateScrollService } from 'src/app/shared/services/ng-animate-scrol
           </div>
           <div class="site-content__intro__description">
               <a class="button"
-              href="/speakers"
+              routerLink="/speakers"
               routerLinkActive="router-link-active"
               title="NGRome Speakers">
                 <span id="go-to-tickets-text">Speakers</span>
