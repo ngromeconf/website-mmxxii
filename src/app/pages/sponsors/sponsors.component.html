@@ -14,12 +14,30 @@
         <span class="site-content__intro__scroller"></span>
       </header>
       <div class="site-content__intro__info">
-        <p>One track, one day, filled with talks of the <strong>Angular</strong> engineers who build the most <strong>performant</strong> apps and web experiences.</p>
+        <p>We want to say thank you to our sponsors! They make <strong>NG Rome Conference</strong> possible. Come and say hello the day of the conference.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- sponsor here -->
+
+<section>
+  <div class="site-content__wrap">
+    <h1 class="site-content__section__title">Community Partners</h1>
+    <ul class="sponsors__list">
+      <li *ngFor="let partner of partnerService.getPartner(); let isOdd = odd">
+        <a rel="noopener"
+        href="{{ partner.websiteUrl }}"
+        target="_blank"
+        title="{{ partner.name }}">
+          <img src="{{ partner.image }}" alt="{{ partner.name }}" />
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- end sponsor -->
 
 <ngrome-tickets class="site-content__section" id="tickets"></ngrome-tickets>

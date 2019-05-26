@@ -1,13 +1,21 @@
 import { Component, OnInit } from '@angular/core';
+import { PartnersService } from 'src/app/shared/services/partners.service';
 
 @Component({
   selector: 'ngrome-sponsors',
   templateUrl: './sponsors.component.html',
-  styleUrls: ['./sponsors.component.scss']
+  styles: [`
+    section {
+      margin-top: 40px;
+    }
+    img {
+      max-width: 106px;
+    }
+  `]
 })
 export class SponsorsComponent implements OnInit {
 
-  constructor() { }
+  constructor(public partnerService: PartnersService) { }
 
   ngOnInit() {
   }

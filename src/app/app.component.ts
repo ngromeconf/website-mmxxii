@@ -1,10 +1,9 @@
-import { AfterViewInit, Component, NgZone } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { trigger, transition, state, useAnimation, style } from '@angular/animations';
 import { fadeIn, fadeOut } from 'ng-animate';
 import { SideBarService} from './shared/services/sidebar.service';
 import { Router, Event, NavigationStart, NavigationEnd, NavigationError } from '@angular/router';
 import { PWAService } from './shared/services/pwa.service';
-import { Expo, Linear, TimelineLite } from "gsap";
 
 @Component({
   selector: 'app-root',
@@ -19,7 +18,7 @@ import { Expo, Linear, TimelineLite } from "gsap";
       <router-outlet></router-outlet>
     </main>
     <ngrome-footer></ngrome-footer>
-    <div class="site-menu--close--full"></div>
+    <div class="site-menu--close--full" #siteMenuClose></div>
   `,
   animations: [
     trigger('animateContainer', [
@@ -44,23 +43,26 @@ export class AppComponent {
 		return this._active;
   }
 
+  @ViewChild('siteMenuClose')
+  siteMenuClose: ElementRef;
+
   constructor(
-    public sidebarService: SideBarService,
+    private sidebarService: SideBarService,
     private router: Router,
     private pwaService: PWAService,
   ) {
-      router.events.subscribe( (event: Event) => {
+      this.router.events.subscribe( (event: Event) => {
 
         if (event instanceof NavigationStart) {
           // Show loading indicator
-          console.log('NavigationStart');
+          //console.log('NavigationStart');
           this.hideContainer();
           window.scroll(0,0);
           this.sidebarService.toggleSidebarStatus(true);
         }
 
         if (event instanceof NavigationEnd) {
-          console.log('NavigationEnd');
+          //console.log('NavigationEnd');
           if (this.logoAlreadyAnimated === true){
             this.showContainer();
           }
@@ -79,14 +81,17 @@ export class AppComponent {
   ngOnInit(){
     //check if is available a new version
     this.pwaService.checkUpdateAvailable();
+
+    this.siteMenuClose.nativeElement.addEventListener('click', ()=>{
+      this.sidebarService.toggleSidebarStatus();
+    });
+
   }
 
   showContainer(){
 
-    console.log('show container:', event);
     if (this.containerStatus !== 'visible'){
       setTimeout(() => {
-        //console.log('show container');
         this.containerStatus = 'visible';
       });
 
@@ -96,7 +101,7 @@ export class AppComponent {
 
   hideContainer(){
 
-    console.log('hide container');
+    //console.log('hide container');
     this.containerStatus = 'hidden';
 
   }

@@ -5,7 +5,7 @@ export class SideBarService {
   private sidebarStatus = 'hidden';
   sidebarStatus$: BehaviorSubject<string> = new BehaviorSubject(this.sidebarStatus);
 
-  toggleSidebarStatus = (status = false) => {
+  public toggleSidebarStatus = (status = false) => {
     if (!status) {
       this.sidebarStatus$.next(this.sidebarStatus === 'hidden' ? 'visible' : 'hidden');
       this.updateSidebarStatus();

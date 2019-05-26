@@ -23,7 +23,7 @@
 
       </a>
 
-      <button (click)="openSidebar()" class="site-menu--open" type="button" name="button">
+      <button (click)="sidebarService.toggleSidebarStatus()" class="site-menu--open" type="button" name="button">
 
         <svg width="28" height="19">
 
@@ -194,7 +194,7 @@
 
       </div>
 
-      <button (click)="closeSidebar()"
+      <button (click)="sidebarService.toggleSidebarStatus()"
           class="site-menu--close" type="button"
           name="site menu close"
           aria-label="Close Menu">

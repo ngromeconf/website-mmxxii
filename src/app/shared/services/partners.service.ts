@@ -133,6 +133,13 @@ export class PartnersService {
       visible: true,
       image: './assets/images/agile-talks.png'
     },
+    {
+      websiteUrl: 'https://www.meetup.com/it-IT/DotNetCode/',
+      name: 'DotNetCode',
+      description: '',
+      visible: true,
+      image: './assets/images/DotNetCode.png'
+    },
   ];
 
   getPartner(){
