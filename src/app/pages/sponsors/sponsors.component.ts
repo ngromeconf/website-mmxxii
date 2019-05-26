@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PartnersService } from 'src/app/shared/services/partners.service';
+import { NgAnimateScrollService } from 'src/app/shared/services/ng-animate-scroll.service';
 
 @Component({
   selector: 'ngrome-sponsors',
@@ -15,9 +16,15 @@ import { PartnersService } from 'src/app/shared/services/partners.service';
 })
 export class SponsorsComponent implements OnInit {
 
-  constructor(public partnerService: PartnersService) { }
+  constructor(
+    public partnerService: PartnersService,
+    private animateScrollService: NgAnimateScrollService) { }
 
   ngOnInit() {
+  }
+
+  scrollTo(el:string, duration?:number) {
+    this.animateScrollService.scrollToElement(el, duration);
   }
 
 }
