@@ -25,8 +25,8 @@
 <section>
   <div class="site-content__wrap">
     <h1 class="site-content__section__title">Main Partners</h1>
-    <ul class="sponsors__list--full">
-      <li *ngFor="let sponsor of sponsorService.getSponsors('main')">
+    <ul class="sponsors__list">
+      <li *ngFor="let sponsor of sponsorService.getSponsors('main')" class="main">
         <a rel="noopener"
         href="{{ sponsor.websiteUrl }}"
         target="_blank"
@@ -42,8 +42,8 @@
 <section>
   <div class="site-content__wrap">
     <h1 class="site-content__section__title">Gold Sponsors</h1>
-    <ul class="sponsors__list--full">
-      <li *ngFor="let sponsor of sponsorService.getSponsors('gold')">
+    <ul class="sponsors__list">
+      <li *ngFor="let sponsor of sponsorService.getSponsors('gold')" class="main">
         <a rel="noopener"
         href="{{ sponsor.websiteUrl }}"
         target="_blank"

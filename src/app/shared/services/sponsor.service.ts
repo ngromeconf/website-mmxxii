@@ -24,7 +24,7 @@ export class SponsorService {
       type: 'main'
     },
     {
-      image: './assets/images/blexin.jpg',
+      image: './assets/images/blexin_cropped.svg',
       name: 'Blexin',
       description: '',
       visible: true,

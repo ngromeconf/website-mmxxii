@@ -5,15 +5,7 @@ import { SponsorService } from 'src/app/shared/services/sponsor.service';
 
 @Component({
   selector: 'ngrome-sponsors',
-  templateUrl: './sponsors.component.html',
-  styles: [`
-    section {
-      margin-top: 40px;
-    }
-    img {
-      max-width: 106px;
-    }
-  `]
+  templateUrl: './sponsors.component.html'
 })
 export class SponsorsComponent implements OnInit {
 
