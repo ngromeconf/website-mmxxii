@@ -6,6 +6,7 @@ export interface Sponsor{
   description: string;
   visible: boolean;
   websiteUrl: string;
+  type: string;
 }
 
 @Injectable({
@@ -20,10 +21,32 @@ export class SponsorService {
       description: '',
       visible: true,
       websiteUrl: 'https://www.skaffolder.com/',
+      type: 'main'
+    },
+    {
+      image: './assets/images/blexin.jpg',
+      name: 'Blexin',
+      description: '',
+      visible: true,
+      websiteUrl: 'https://www.blexin.com/',
+      type: 'gold'
     }
   ];
 
-  getSponsors(): Sponsor[] {
-    return this.sponsorList;
+  getSponsors(type=null): Sponsor[] {
+    let sponsors = this.sponsorList;
+
+    if (type === 'gold'){
+      sponsors = this.sponsorList.filter( (e) => {
+        return (e.type === type);
+      });
+    }
+    if (type === 'main'){
+      sponsors = this.sponsorList.filter( (e) => {
+        return (e.type === type);
+      });
+    }
+
+    return sponsors;
   }
 }

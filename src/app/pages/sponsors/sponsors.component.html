@@ -24,6 +24,40 @@
 
 <section>
   <div class="site-content__wrap">
+    <h1 class="site-content__section__title">Main Partners</h1>
+    <ul class="sponsors__list--full">
+      <li *ngFor="let sponsor of sponsorService.getSponsors('main')">
+        <a rel="noopener"
+        href="{{ sponsor.websiteUrl }}"
+        target="_blank"
+        title="{{ sponsor.name }}"
+        *ngIf="sponsor.type == 'main'">
+          <img src="{{ sponsor.image }}" alt="{{ sponsor.name }}" />
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="site-content__wrap">
+    <h1 class="site-content__section__title">Gold Sponsors</h1>
+    <ul class="sponsors__list--full">
+      <li *ngFor="let sponsor of sponsorService.getSponsors('gold')">
+        <a rel="noopener"
+        href="{{ sponsor.websiteUrl }}"
+        target="_blank"
+        title="{{ sponsor.name }}"
+        *ngIf="sponsor.type == 'gold'">
+          <img src="{{ sponsor.image }}" alt="{{ sponsor.name }}" />
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="site-content__wrap">
     <h1 class="site-content__section__title">Community Partners</h1>
     <ul class="sponsors__list">
       <li *ngFor="let partner of partnerService.getPartner(); let isOdd = odd">
