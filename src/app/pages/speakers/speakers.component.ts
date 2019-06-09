@@ -26,10 +26,11 @@ import { MessagingService } from 'src/app/shared/services/messaging.service';
         </div>
       </div>
     </section>
-    <ngrome-speakers-list
-    class="site-content__section"
-    [speakerFilter]="speakerFilter">
+
+    <ngrome-speakers-list class="site-content__section"
+      [speakerFilter]="speakerFilter">
     </ngrome-speakers-list>
+
     <ngrome-tickets class="site-content__section" id="tickets"></ngrome-tickets>
   `,
   styles: [`

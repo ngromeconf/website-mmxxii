@@ -1,0 +1,33 @@
+@import
+  '../../../../scss/variables/palette',
+  '../../../../scss/variables/devices',
+  '../../../../scss/variables/typeface';
+
+@import
+  '../../../../scss/mixins/clearfix',
+  '../../../../scss/mixins/antialias',
+  '../../../../scss/mixins/assistive',
+  '../../../../scss/mixins/breakpoint';
+
+.speaker__time{
+  writing-mode: horizontal-tb;
+  position: relative;
+  top: inherit;
+}
+
+.talk-info{
+  .title {
+
+    margin-top: 8px;
+    font-weight: 700;
+    font-size: 18px;
+
+    @include breakpoint-m {
+
+      margin-top: 10px;
+      font-size: 21px;
+
+    }
+
+  }
+}
