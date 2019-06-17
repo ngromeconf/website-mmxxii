@@ -1,0 +1,68 @@
+
+  <ng-template #emptyPrevious>
+    <div class="speaker__element__empty">
+      <div class="speaker">
+        <div class="speaker__info__full">
+          <h2 class="speaker__name">OPENING REMARKS</h2>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+
+  <ng-template
+    [ngIf]="previousSpeaker$" [ngIfElse]="emptyPrevious">
+    <div class="speaker__element"
+    *ngFor="let speaker of previousSpeaker$ | async">
+
+    <div class="speaker">
+
+      <div class="speaker__face">
+
+        <img [src]="speaker.image" alt="{{speaker.name}}">
+
+      </div>
+
+      <div class="speaker__info">
+
+        <h2 class="speaker__name">{{speaker.name}}</h2>
+        <a class="speaker__twitter"
+          [routerLink]="['/speakers/speaker-detail',speaker.name]"
+          routerLinkActive="router-link-active">
+
+          <span>Read more + </span>
+
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+</ng-template>
+
+  <div class="speaker__element"
+    *ngFor="let speaker of nextSpeaker$ | async">
+
+    <div class="speaker">
+
+        <div class="speaker__face">
+
+          <img [src]="speaker.image" alt="{{speaker.name}}">
+
+        </div>
+
+        <div class="speaker__info">
+
+          <h2 class="speaker__name">{{speaker.name}}</h2>
+          <a class="speaker__twitter"
+            [routerLink]="['/speakers/speaker-detail',speaker.name]"
+            routerLinkActive="router-link-active">
+
+            <span>Read more + </span>
+
+          </a>
+
+        </div>
+      </div>
+
+  </div>
+

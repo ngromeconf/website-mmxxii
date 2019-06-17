@@ -15,7 +15,7 @@
   top: inherit;
 }
 
-.talk-info{
+.talk__info{
   .title {
 
     margin-top: 8px;
@@ -30,4 +30,14 @@
     }
 
   }
+}
+
+.speakers__suggestion{
+  // border: 1px solid red;
+  min-height: 120px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: row;
+
 }

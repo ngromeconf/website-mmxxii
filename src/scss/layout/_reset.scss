@@ -32,6 +32,13 @@ footer, header, hgroup, menu, nav, section {
   display: block;
 
 }
+input, button, submit {
+
+  outline: none;
+  box-shadow: none;
+
+}
+
 
 *, *:before, *:after {
 

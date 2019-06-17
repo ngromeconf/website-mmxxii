@@ -7,11 +7,13 @@ import { CommonModule } from '@angular/common';
 import { SpeakersComponent } from './speakers.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { SpeakerDetailComponent } from './speaker-detail/speaker-detail.component';
+import { SpeakerSuggestionComponent } from './speaker-suggestion/speaker-suggestion.component';
 
 @NgModule({
   declarations: [
     SpeakersComponent,
-    SpeakerDetailComponent
+    SpeakerDetailComponent,
+    SpeakerSuggestionComponent
   ],
   imports: [
     CommonModule,

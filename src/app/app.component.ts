@@ -9,7 +9,7 @@ import { PWAService } from './shared/services/pwa.service';
   selector: 'app-root',
   template: `
     <ngrome-header></ngrome-header>
-    <ngrome-logo (animationToggled)='showContainer()'></ngrome-logo>
+    <!-- ngrome-logo (animationToggled)='showContainer()'></ngrome-logo -->
     <main
       class="site-content"
       role="main"
@@ -85,6 +85,8 @@ export class AppComponent {
     this.siteMenuClose.nativeElement.addEventListener('click', ()=>{
       this.sidebarService.toggleSidebarStatus();
     });
+
+    this.showContainer();
 
   }
 

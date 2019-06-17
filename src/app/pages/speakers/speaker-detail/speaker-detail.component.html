@@ -4,7 +4,7 @@
     *ngFor="let speaker of speaker$ | async">
 
     <div class="site-content__intro">
-      <header class="site-content__intro__head">
+      <header class="site-content__intro__head__inner">
         <span class="speaker__time">
           H 14:00
         </span>
@@ -32,7 +32,7 @@
       </div>
 
       <div class="speaker__info">
-        <p class="speaker__desc">{{speaker.description}}</p>
+        <p class="speaker__desc">{{speaker.fullDescription}}</p>
 
         <a class="read__more" href="javascript:void(0);">Read More</a>
 
@@ -55,14 +55,26 @@
     </div>
 
 
-    <div class="talk-info">
+    <div class="talk__info">
       <h1 class="title">{{speaker.talkTitle}}</h1>
-      <p>{{speaker.talkDescription}}
-      </p>
+      <p>{{speaker.talkDescription}}</p>
     </div>
 
   </div>
 </section>
+
+<section class="site-content__section">
+    <div class="site-content__wrap">
+      <h1 class="site-content__section__title">Look at these</h1>
+
+      <ngrome-speaker-suggestion
+        *ngIf="speaker$ | async"
+        class="speakers__suggestion"
+        [previous]="previous"
+        [next]="next"></ngrome-speaker-suggestion>
+
+    </div>
+  </section>
 
 
 <ngrome-tickets class="site-content__section" id="tickets"></ngrome-tickets>
