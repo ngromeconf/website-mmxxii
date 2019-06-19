@@ -9,6 +9,16 @@
     </div>
   </ng-template>
 
+  <ng-template #emptyNext>
+    <div class="speaker__element__empty">
+      <div class="speaker">
+        <div class="speaker__info__full">
+          <h2 class="speaker__name">CLOSING REMARKS</h2>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+
   <ng-template
     [ngIf]="previousSpeaker$" [ngIfElse]="emptyPrevious">
     <div class="speaker__element"
@@ -41,6 +51,9 @@
   </div>
 </ng-template>
 
+<ng-template
+    [ngIf]="nextSpeaker$" [ngIfElse]="emptyNext">
+
   <div class="speaker__element"
     *ngFor="let speaker of nextSpeaker$ | async">
 
@@ -70,4 +83,4 @@
       </div>
 
   </div>
-
+</ng-template>
