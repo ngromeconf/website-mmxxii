@@ -90,6 +90,7 @@
 
         .speaker__time {
 
+
           left: -20px;
           right: auto;
 
@@ -163,6 +164,19 @@
       .speaker__name{
         font-family: $font-primary;
         font-size: 20px;
+      }
+
+      .speaker__time{
+        font-family: $font-secondary;
+        font-size: 14px;
+        letter-spacing: 5px;
+        color: $ribbon;
+        white-space: nowrap;
+        transform: none;
+        position: relative;
+        top: auto;
+        right: 0;
+        writing-mode: horizontal-tb;
       }
 
       @include breakpoint-m {
@@ -248,8 +262,8 @@
       writing-mode: vertical-rl;
       white-space: nowrap;
 
-      display: none;
-      visibility: hidden;
+      display: block;
+      visibility: visible;
 
 
     }

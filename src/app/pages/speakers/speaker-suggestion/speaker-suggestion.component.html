@@ -23,7 +23,9 @@
       </div>
 
       <div class="speaker__info">
-
+        <span class="speaker__time">
+          PREVIOUS / H {{speaker.time}}
+        </span>
         <h2 class="speaker__name">{{speaker.name}}</h2>
         <a class="speaker__twitter"
           [routerLink]="['/speakers/speaker-detail',speaker.name]"
@@ -52,6 +54,9 @@
 
         <div class="speaker__info">
 
+          <span class="speaker__time">
+            NEXT / H {{speaker.time}}
+          </span>
           <h2 class="speaker__name">{{speaker.name}}</h2>
           <a class="speaker__twitter"
             [routerLink]="['/speakers/speaker-detail',speaker.name]"
