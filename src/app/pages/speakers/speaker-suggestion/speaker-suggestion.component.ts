@@ -32,21 +32,26 @@ export class SpeakerSuggestionComponent implements OnInit {
   ngOnInit() {
     console.log('suggestion:',this.previous, this.next);
 
-    this.previousSpeaker$ =
+    if (this.previous != 0){
+      this.previousSpeaker$ =
       this.afs.collection('speakers',
           ref => {
             let query : firebase.firestore.CollectionReference | firebase.firestore.Query = ref;
             query = query.where('position', '==', this.previous);
             return query;
           }).valueChanges();
+    }
 
-    this.nextSpeaker$ =
-      this.afs.collection('speakers',
-          ref => {
-            let query : firebase.firestore.CollectionReference | firebase.firestore.Query = ref;
-            query = query.where('position', '==', this.next);
-            return query;
-          }).valueChanges();
+
+    if (this.next <= 16){
+      this.nextSpeaker$ =
+        this.afs.collection('speakers',
+            ref => {
+              let query : firebase.firestore.CollectionReference | firebase.firestore.Query = ref;
+              query = query.where('position', '==', this.next);
+              return query;
+            }).valueChanges();
+    }
 
   }
 
