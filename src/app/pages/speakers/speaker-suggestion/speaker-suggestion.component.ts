@@ -13,19 +13,13 @@ export class SpeakerSuggestionComponent implements OnInit {
   nextSpeaker$: Observable<any[]>;
   previousSpeaker$: Observable<any[]>;
 
-  public emptyPrevious = false;
-  public emptyNext = false;
-
   constructor(private afs: AngularFirestore) {
-    if (this.current === 0) {
-      this.emptyPrevious = true;
-    }
   }
 
   ngOnInit() {
     console.log('suggestion:', this.current);
 
-    if (this.current !== 0) {
+    if ((this.current-1) !== 0) {
       this.previousSpeaker$ = this.afs
         .collection('speakers', ref => {
           let query: firebase.firestore.CollectionReference | firebase.firestore.Query = ref;
@@ -35,7 +29,7 @@ export class SpeakerSuggestionComponent implements OnInit {
         .valueChanges();
     }
 
-    if (this.current <= 16) {
+    if ((this.current+1) <= 16) {
       this.nextSpeaker$ = this.afs
         .collection('speakers', ref => {
           let query: firebase.firestore.CollectionReference | firebase.firestore.Query = ref;
