@@ -127,6 +127,20 @@ export class PartnersService {
       image: './assets/images/roma-js.png'
     },
     {
+      websiteUrl: 'https://www.meetup.com/GDG-Toulouse/',
+      name: 'GDG Toulouse',
+      description: '',
+      visible: true,
+      image: './assets/images/gdg-toulouse.png'
+    },
+    {
+      websiteUrl: 'http://www.gdgreggioemilia.it/',
+      name: 'GDG Reggio Emilia',
+      description: '',
+      visible: true,
+      image: './assets/images/gdg-reggio-emilia.png'
+    },
+    {
       websiteUrl: 'https://www.meetup.com/it-IT/Agile_Talks/',
       name: 'Swiss Angular',
       description: '',
