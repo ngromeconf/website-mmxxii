@@ -12,10 +12,19 @@
 
 
 .speaker__element{
-  flex-basis: 50%;
-  max-width: 50%;
+  flex-basis: 100%;
+  max-width: 100%;
   // border:1px solid black;
   min-height: 180px;
+  padding-bottom: 20px;
+
+  @include breakpoint-l {
+
+    flex-basis: 50%;
+    max-width: 50%;
+
+  }
+
 
 
   &__empty{
@@ -177,6 +186,7 @@
         top: auto;
         right: 0;
         writing-mode: horizontal-tb;
+        margin-top: 10px;
       }
 
       @include breakpoint-m {
