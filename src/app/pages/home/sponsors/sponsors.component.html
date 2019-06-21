@@ -7,12 +7,15 @@
     <ul class="sponsors__list sponsors__list--full">
 
       <li *ngFor="let sponsor of sponsorService.getSponsors(); let isOdd = odd">
+
         <a rel="noopener" href="{{sponsor.websiteUrl}}" target="_blank" title="{{sponsor.name}}">
-
           <img src="{{sponsor.image}}" alt="{{sponsor.name}}">
-
         </a>
       </li>
+
+    </ul>
+
+    <ul class="sponsors__list sponsors__list--full">
 
       <li>
 

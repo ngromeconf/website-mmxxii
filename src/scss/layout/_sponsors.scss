@@ -66,55 +66,26 @@
   }
 
   &--full {
-
-    justify-content: space-between;
-
     li {
       a {
+
+        &.button{
+          padding-bottom: 10px;
+        }
+
         img {
 
           @include breakpoint-s {
-            max-height: 120px;
-            max-width: 170px;
+            max-height: 170px;
+            max-width: 210px;
+          }
+          @include breakpoint-m {
+            max-height: 190px;
+            max-width: 250px;
           }
 
         }
       }
-    }
-
-    li:first-child {
-
-      @include breakpoint-m {
-
-        a {
-
-          padding-bottom: 0;
-
-        }
-
-      }
-
-    }
-
-    li:last-child {
-
-      @include breakpoint-s {
-
-        margin-top: 16px;
-        flex: 0 1 100%;
-
-        a {
-          padding-bottom: 12px;
-        }
-
-      }
-
-      @include breakpoint-m {
-        a {
-          padding-bottom: 20px;
-        }
-      }
-
     }
 
   }
