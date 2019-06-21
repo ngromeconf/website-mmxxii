@@ -1,0 +1,329 @@
+@import
+  '../../../../scss/variables/palette',
+  '../../../../scss/variables/devices',
+  '../../../../scss/variables/typeface';
+
+@import
+  '../../../../scss/mixins/clearfix',
+  '../../../../scss/mixins/antialias',
+  '../../../../scss/mixins/assistive',
+  '../../../../scss/mixins/breakpoint';
+
+
+
+.speaker__element{
+  flex-basis: 100%;
+  max-width: 100%;
+  // border:1px solid black;
+  min-height: 180px;
+  padding-bottom: 20px;
+
+  @include breakpoint-l {
+
+    flex-basis: 50%;
+    max-width: 50%;
+
+  }
+
+
+
+  &__empty{
+    flex-basis: 50%;
+    max-width: 50%;
+    background-color: $white;
+
+    .speaker .speaker__info__full{
+      width: 100%;
+      .speaker__name{
+        text-align: center;
+        font-size: 20px;
+      }
+    }
+  }
+
+
+  .speaker {
+
+    display: block; // :( Maledetti componenti
+
+    @include breakpoint-m {
+
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+
+    }
+
+    & + & {
+
+      margin-top: 60px;
+
+      @include breakpoint-m {
+
+        margin-top: 80px;
+
+      }
+
+      @include breakpoint-l {
+
+        margin-top: 100px;
+
+      }
+
+    }
+
+    &:nth-child(even) {
+
+
+
+      @include breakpoint-m {
+
+        flex-direction: row-reverse;
+
+        .speaker__face {
+
+          padding-right: 0;
+          padding-left: 13px;
+
+        }
+
+        .speaker__info {
+
+          padding-left: 0;
+          padding-right: 25px;
+
+        }
+
+
+
+        .speaker__time {
+
+
+          left: -20px;
+          right: auto;
+
+        }
+
+      }
+
+      @include breakpoint-l {
+
+        .speaker__face {
+
+          padding-left: 26px;
+
+        }
+
+        .speaker__info {
+
+          padding-right: 25px;
+
+        }
+
+        .speaker__time {
+
+          left: -20px;
+          right: auto;
+
+        }
+
+      }
+
+    }
+
+    &__face {
+
+      position: relative;
+
+      @include breakpoint-s {
+
+        padding-right: 80px;
+
+      }
+
+      @include breakpoint-m {
+
+        flex-basis: 50%;
+        max-width: 50%;
+        padding-right: 45px;
+
+
+      }
+
+      @include breakpoint-l {
+
+
+        padding-right: 25px;
+
+      }
+
+      img {
+
+        // display: block;
+        max-width: 100%;
+        object-fit: cover;
+
+      }
+
+    }
+
+    &__info {
+
+      .speaker__name{
+        font-family: $font-primary;
+        font-size: 20px;
+      }
+
+      .speaker__time{
+        font-family: $font-secondary;
+        font-size: 14px;
+        letter-spacing: 5px;
+        color: $ribbon;
+        white-space: nowrap;
+        transform: none;
+        position: relative;
+        top: auto;
+        right: 0;
+        writing-mode: horizontal-tb;
+        margin-top: 10px;
+      }
+
+      @include breakpoint-m {
+
+        flex-basis: 50%;
+        max-width: 50%;
+        padding-left: 45px;
+
+      }
+
+      @include breakpoint-l {
+
+        padding-left: 15px;
+
+      }
+
+    }
+
+    &__name {
+
+      font-family: $font-primary;
+      font-weight: 700;
+      font-size: 22px;
+      margin-top: 12px;
+
+      @include breakpoint-m {
+
+        font-size: 32px;
+
+      }
+
+    }
+
+    &__job {
+
+      margin-top: 8px;
+
+      @include breakpoint-m {
+
+        margin-top: 16px;
+
+      }
+
+      font-family: $font-secondary;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+
+      span {
+
+        display: block;
+
+        + span {
+
+          position: relative;
+          margin-top: 4px;
+
+          &:before {
+
+            content: " - ";
+            display: inline-block;
+            margin-right: 8px;
+
+
+          }
+
+        }
+
+      }
+
+    }
+
+    &__time {
+
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      font-family: $font-secondary;
+      font-size: 14px;
+      letter-spacing: 5px;
+      color: $ribbon;
+      writing-mode: vertical-rl;
+      white-space: nowrap;
+
+      display: block;
+      visibility: visible;
+
+
+    }
+
+    &__desc {
+
+      @include breakpoint-s {
+
+        @include assistive();
+
+      }
+
+      margin-top: 36px;
+
+    }
+
+    &__twitter {
+
+      display: flex;
+      align-items: center;
+      margin-top: 16px;
+      font-size: 14px;
+      color: $radiance;
+
+      @include breakpoint-m {
+
+        margin-top: 32px;
+
+      }
+
+      span {
+        margin-left: 6px;
+      }
+
+    }
+    .read__more {
+
+      display: none;
+      visibility: hidden;
+
+      margin-top: 16px;
+
+      @include breakpoint-m {
+
+        margin-top: 32px;
+
+      }
+
+    }
+
+  }
+
+}

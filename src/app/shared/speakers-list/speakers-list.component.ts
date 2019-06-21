@@ -1,7 +1,6 @@
 import { Component, ElementRef, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { Speaker } from '../services/speaker.service';
 import { Observable, BehaviorSubject, combineLatest } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 
@@ -29,7 +28,7 @@ import { switchMap } from 'rxjs/operators';
           </p>
         </aside>
       </div>
-    </section>  
+    </section>
   `,
   styles: [``]
 })
@@ -39,7 +38,6 @@ export class SpeakerListComponent {
   speakerList$: Observable<any[]>;
 
   constructor(
-    el: ElementRef,
     private router: Router,
     private afs: AngularFirestore
   ) {

@@ -208,6 +208,50 @@ ngrome-logo{
 
   }
 
+  &__intro__head__inner {
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    // height: 100vh;
+
+    @include breakpoint-s {
+
+      padding-top: 200px;
+      padding-bottom: 20px;
+
+    }
+
+    @include breakpoint-m {
+
+      padding-top: 220px;
+      padding-bottom: 40px;
+
+    }
+
+    @include breakpoint-l {
+
+      padding-top: 250px;
+      padding-bottom: 60px;
+
+    }
+
+    .button {
+
+      margin-top: 30px;
+      @include breakpoint-m {
+        margin-top: 40px;
+      }
+      @include breakpoint-l {
+        margin-top: 60px;
+      }
+      align-self: flex-start;
+
+    }
+
+  }
+
   &__intro__title {
 
     font-size: 28px;
@@ -357,6 +401,30 @@ ngrome-logo{
 
   }
 
+  &__intro__info__inner {
+
+    // margin-top: 40px;
+    margin-bottom: 60px;
+
+    p {
+
+      font-size: 18px;
+      @include breakpoint-m {
+        font-size: 21px;
+      }
+
+
+      line-height: 1.6;
+      max-width: 800px;
+
+      + p  {
+        margin-top: 32px;
+      }
+
+    }
+
+  }
+
 }
 
 .button {
@@ -455,16 +523,16 @@ ngrome-logo{
 
 #intro {
 
-  // background-image: url('/assets/images/confetti-mobile.png');
-  // background-position: top left;
-  // background-repeat: no-repeat;
-  // background-size: contain;
+  background-image: url('/assets/images/confetti-mobile.png');
+  background-position: top left;
+  background-repeat: no-repeat;
+  //background-size: cover;
 
   @include breakpoint-m {
 
-    //background-image: url('/assets/images/confetti.png');
-    //background-position: top -60px left -30px;
-    //background-repeat: no-repeat;
+    background-image: url('/assets/images/confetti.png');
+    background-position: top -60px left -30px;
+    background-repeat: no-repeat;
 
   }
 }

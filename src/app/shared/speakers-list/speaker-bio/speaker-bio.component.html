@@ -9,8 +9,9 @@
   </div>
 
   <div class="speaker__info">
-
-    <h2 class="speaker__name">{{speaker.name}}</h2>
+    <a [routerLink]="['speaker-detail',speaker.name]" routerLinkActive="router-link-active" >
+      <h2 class="speaker__name">{{speaker.name}}</h2>
+    </a>
 
     <div class="speaker__job">
 
