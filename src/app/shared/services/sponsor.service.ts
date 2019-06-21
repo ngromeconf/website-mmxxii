@@ -28,7 +28,7 @@ export class SponsorService {
       name: 'Blexin',
       description: '',
       visible: true,
-      websiteUrl: 'https://www.blexin.com/',
+      websiteUrl: 'https://www.blexin.com/en-US/Home',
       type: 'gold'
     }
   ];
