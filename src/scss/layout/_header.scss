@@ -50,66 +50,22 @@
 
 .site-menu {
 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  z-index: 5;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background-color: $ribbon;
   color: white;
-  padding: 22px 34px 34px;
+  padding: 0;
   min-width: 280px;
   max-width: 280px;
-  height: 100vh;
 
   @include breakpoint-m {
 
     min-width: 720px;
     max-width: 720px;
-    padding: 44px 64px 64px;
+    padding: 20px 0;
 
   }
 
-  will-change: transform;
-  opacity: 0;
-  transform: translateX(280px);
-  transition-delay: .25s;
-  transition: transform .2s ease-out, opacity .3s ease ;
 
-  @include breakpoint-m {
+  opacity: 1;
 
-    transform: translateX(720px);
-
-  }
-
-  &--show {
-
-    opacity: 1;
-
-    transform: translateX(0);
-
-    .site-menu__nav li {
-
-      opacity: 1;
-      transform: translateY(0);
-
-    }
-
-    @for $i from 1 to 8 {
-
-      .site-menu__nav li:nth-child(#{$i}) {
-
-        transition-delay: $i * 0.15s;
-
-      }
-
-    }
-
-  }
 
   &__logo {
 
@@ -130,18 +86,15 @@
 
     li {
 
-      opacity: 0;
-      will-change: transform;
-      transform: translateY(50px);
-      transition: opacity .3s cubic-bezier(.215,.61,.355,1),transform .3s cubic-bezier(.215,.61,.355,1);
+      opacity: 1;
 
       + li {
 
-        margin-top: 12px;
+        margin-top: 10px;
 
         @include breakpoint-m {
 
-          margin-top: 25px;
+          margin-top: 10px;
 
         }
 
@@ -196,7 +149,7 @@
     width: 40px;
     background-color: transparent;
     border: 0;
-    margin: 15px 0 0;
+    margin: 0;
     padding: 0;
     cursor: pointer;
 
@@ -209,8 +162,8 @@
   &--close {
 
     position: absolute;
-    top: 45px;
-    right: 35px;
+    top: 30px;
+    right: 28px;
     height: 40px;
     width: 40px;
     background-color: transparent;

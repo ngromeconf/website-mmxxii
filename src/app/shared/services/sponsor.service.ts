@@ -36,15 +36,14 @@ export class SponsorService {
   getSponsors(type=null): Sponsor[] {
     let sponsors = this.sponsorList;
 
-    if (type === 'gold'){
+    // console.log(type);
+
+    if (type){
       sponsors = this.sponsorList.filter( (e) => {
         return (e.type === type);
       });
-    }
-    if (type === 'main'){
-      sponsors = this.sponsorList.filter( (e) => {
-        return (e.type === type);
-      });
+
+      // console.log(type, sponsors);
     }
 
     return sponsors;
