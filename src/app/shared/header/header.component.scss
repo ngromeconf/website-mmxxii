@@ -12,40 +12,73 @@
 
 
 .header{
-  width: 180px;
-  height: 100px;
+
+  width: 120px;
+  height: 70px;
   position: fixed;
   top: 0;
   right: 0;
   background-color: $ribbon;
   z-index: 10;
   .logo{
-    width: 45%;
+    width: 50%;
     float: left;
-    padding: 17px 25px;
+    padding: 14px 15px;
     img{
-      width: 56px;
+      width: 40px;
     }
   }
   .menu{
-    width: 45%;
+    width: 50%;
     float: right;
-    padding: 28px 20px
+    padding: 16px 10px
+  }
+
+  @include breakpoint-m {
+    width: 180px;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: $ribbon;
+    z-index: 10;
+    .logo{
+      width: 45%;
+      float: left;
+      padding: 17px 25px;
+      img{
+        width: 56px;
+      }
+    }
+    .menu{
+      width: 45%;
+      float: right;
+      padding: 28px 20px
+    }
   }
 }
 
 .details-wrap {
+  display: none;
   position: absolute;
   top: 0;
   right: 0;
   pointer-events: none;
-	z-index: 10000;
+  z-index: 10000;
+
+  &--open{
+    display: block;
+	  pointer-events: auto;
+  }
 }
 
 .details {
-  width: auto;
+  width: 90%;
   grid-template-columns: 8rem 8rem;
-  grid-template-rows: 110px 125px 7rem 3.5rem;
+  grid-template-rows: 80px 80px 80px 80px;
+
+  grid-template-rows: 16vh 16vh 16vh 16vh;
+
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -54,9 +87,6 @@
 	overflow: hidden;
 }
 
-.details-wrap--open .details--current {
-	pointer-events: auto;
-}
 
 .details__item {
   overflow: hidden;
@@ -181,8 +211,8 @@
 	}
 	.details {
 		width: auto;
-		grid-template-columns: 8rem 8rem 8rem 13rem;
-		grid-template-rows: 110px 125px 7rem 3.5rem;
+		grid-template-columns: 11rem 10rem 11rem 11rem;
+		grid-template-rows: 18vh 18vh 18vh 18vh;
   }
   .details__inner--logo {
     img{
