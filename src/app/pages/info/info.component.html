@@ -1,57 +1,75 @@
-<div class="site-content">
-  <div class="featured">
-    <p class="labelBig">Info</p>
-  </div>
-
-    <h1>Teatro Italia, Roma</h1>
-    <p>Via Bari, 18, 00161 Roma</p>
-    <div class="">&nbsp;</div>
-
-    <h3>400+ Attendee</h3>
-    <h3>1 Days</h3>
-    <h3>14 Session</h3>
-    <h3>1 Track</h3>
-    <div class="">&nbsp;</div>
-
-
-    <p>Info about the conference....</p>
-    <div class="">&nbsp;</div>
-    <h3>Maps</h3>
-
-    <div class="">&nbsp;</div>
-
-    <div class="featured">
-      <p class="labelBig">Transport</p>
-    </div>
-
-      <div class="container">
-        <div class="row middle-xs">
-          <div class="col-xs-12 col-sm-6">
-              <div class="box">
-                  <h3>By Train</h3>
-                  ...
-              </div>
-          </div>
-          <div class="col-xs-12 col-sm-6">
-            <div class="box">
-                <h3>By Underground</h3>
-                  ...
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-6">
-            <div class="box">
-                <h3>By Car</h3>
-                  ...
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-6">
-            <div class="box">
-                <h3>By Air</h3>
-                  ...
-            </div>
-          </div>
-        </div>
+<section id="intro" class="site-content__section">
+  <div class="site-content__wrap">
+    <div class="site-content__intro">
+      <header class="site-content__intro__head__inner">
+        <h1 class="site-content__intro__title">Infos</h1>
+      </header>
+      <div class="site-content__intro__info__inner">
+        <p> Here you can find all the information about the biggest <strong>Angular</strong> conference in Rome, venue, accommodation and much more... </p>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="site-content__section">
+  <div class="site-content__wrap">
+    <h1 class="site-content__section__title">When</h1>
+    <p>October 7th, 2019</p><br>
+    <div class="site-content__intro__description">
+      <a class="button" (click)="addToCalendar()"
+      title="Add to calendar">
+        <span id="go-to-tickets-text">Add to your calendar</span>
+        <svg width="11" height="12">
+          <path fill="none" fill-rule="evenodd" stroke="#0086FF"
+          stroke-width="2" d="M1 1l7.358 5L1 11"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="site-content__section">
+  <div class="site-content__wrap">
+    <h1 class="site-content__section__title">Where</h1>
+    <div class="site-content__intro__description">
+      <p>TEATRO ITALIA<br>
+        Via Bari, 18 - Roma.
+      </p><br>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.173037741984!2d12.512820750404616!3d41.91063877125543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f617119ab6277%3A0xf62a6b3f006b5083!2sTeatro+Italia!5e0!3m2!1sit!2sit!4v1561300889783!5m2!1sit!2sit" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<section class="site-content__section">
+  <div class="site-content__wrap">
+    <h1 class="site-content__section__title">Accommodation</h1>
+    <div class="site-content__intro__description info">
+
+      <div class="info__image">
+        <img src="../../../assets/images/hotels.com.png">
+      </div>
+      <div class="info__text">
+        <strong>Hotels.com</strong> give us a <strong>10% of discount</strong> for accommodation near Teatro Italia.<br>
+        Use the promo code <span class="red">HCOMAGILE</span> at checkout.<br>
+
+        <a class="read__more" href="javascript:void(0);">Read terms and conditions</a>
+        <br>
+
+        <a class="button" href="https://it.hotels.com/de1750353/hotel-in-zona-piazza-bologna-roma-italia/"
+          target="_blank"
+          rel="noopener"
+          title="Add to calendar">
+            <span id="go-to-tickets-text">Book Now</span>
+            <svg width="11" height="12">
+              <path fill="none" fill-rule="evenodd" stroke="#0086FF"
+              stroke-width="2" d="M1 1l7.358 5L1 11"/>
+            </svg>
+          </a>
+
+      </div>
+    </div>
+  </div>
+</section>
 
 
-</div>
+<ngrome-tickets class="site-content__section" id="tickets"></ngrome-tickets>

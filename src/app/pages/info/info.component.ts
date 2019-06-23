@@ -12,4 +12,8 @@ export class InfoComponent implements OnInit {
   ngOnInit() {
   }
 
+  addToCalendar(){
+    console.log('event added to calendar');
+  }
+
 }

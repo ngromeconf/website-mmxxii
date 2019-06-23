@@ -1,3 +1,180 @@
+@import
+  '../../../scss/variables/palette',
+  '../../../scss/variables/devices',
+  '../../../scss/variables/typeface';
+
+@import
+  '../../../scss/mixins/clearfix',
+  '../../../scss/mixins/antialias',
+  '../../../scss/mixins/assistive',
+  '../../../scss/mixins/breakpoint';
+
 iframe{
   width: 100%;
+}
+
+.info {
+
+  display: block; // :( Maledetti componenti
+
+  @include breakpoint-m {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+
+  }
+
+  & + & {
+
+    margin-top: 60px;
+
+    @include breakpoint-m {
+
+      margin-top: 80px;
+
+    }
+
+    @include breakpoint-l {
+
+      margin-top: 100px;
+
+    }
+
+  }
+
+  &:nth-child(even) {
+
+
+    @include breakpoint-m {
+
+      .info__image {
+
+        padding: 50px;
+
+      }
+
+      .info__text {
+
+        padding: 50px;
+
+      }
+
+    }
+
+    @include breakpoint-l {
+
+      .info__image {
+
+        padding-left: 26px;
+
+      }
+
+      .info__text {
+
+        padding-right: 95px;
+
+      }
+
+    }
+
+  }
+
+  &__image {
+
+    position: relative;
+
+    @include breakpoint-s {
+
+      padding-right: 80px;
+
+    }
+
+    @include breakpoint-m {
+
+      flex-basis: 50%;
+      max-width: 50%;
+      padding-right: 45px;
+
+
+    }
+
+    @include breakpoint-l {
+
+
+      padding-right: 95px;
+
+    }
+
+    img {
+
+      // display: block;
+      max-width: 100%;
+      object-fit: cover;
+
+    }
+
+  }
+
+  &__text {
+
+    strong{
+      font-weight: 600;
+    }
+
+    .red{
+      color: $ribbon;
+    }
+
+    @include breakpoint-m {
+
+      flex-basis: 50%;
+      max-width: 50%;
+      padding-left: 45px;
+
+    }
+
+    @include breakpoint-l {
+
+      padding-left: 95px;
+
+    }
+
+  }
+
+  &__twitter {
+
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+    font-size: 14px;
+    color: $radiance;
+
+    @include breakpoint-m {
+
+      margin-top: 32px;
+
+    }
+
+    span {
+      margin-left: 6px;
+    }
+
+  }
+  .read__more {
+
+    display: block;
+    visibility: visible;
+
+    margin-top: 16px;
+
+    @include breakpoint-m {
+
+      margin-top: 32px;
+
+    }
+
+  }
+
 }
