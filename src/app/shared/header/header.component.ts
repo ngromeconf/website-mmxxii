@@ -48,8 +48,4 @@ export class HeaderComponent implements OnInit {
     this.renderer.removeClass(document.body, 'site-menu--show');
     this.renderer.removeClass(this.sitemenu.nativeElement, 'site-menu--show');
   }
-
-
-
-
 }
