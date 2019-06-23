@@ -52,7 +52,9 @@
         <strong>Hotels.com</strong> give us a <strong>10% of discount</strong> for accommodation near Teatro Italia.<br>
         Use the promo code <span class="red">HCOMAGILE</span> at checkout.<br>
 
-        <a class="read__more" href="javascript:void(0);">Read terms and conditions</a>
+        <a class="read__more"
+        (click)="openModal('ngrome-hotels-terms')"
+        title="Hotels.com Terms & Condition">Read terms and condition</a>
         <br>
 
         <a class="button" href="https://it.hotels.com/de1750353/hotel-in-zona-piazza-bologna-roma-italia/"
@@ -73,3 +75,12 @@
 
 
 <ngrome-tickets class="site-content__section" id="tickets"></ngrome-tickets>
+
+<ngrome-modal id="ngrome-hotels-terms">
+    <input type="image"
+    width="20"
+    src="./assets/icons/error.svg"
+    class="close"
+    (click)="closeModal('ngrome-hotels-terms')" />
+    <ngrome-hotels-terms></ngrome-hotels-terms>
+  </ngrome-modal>

@@ -4,9 +4,10 @@ import { InfoComponent } from './info.component';
 import { RouterModule } from '@angular/router';
 
 import { SharedModule } from 'src/app/shared/shared.module';
+import { HotelsTermsComponent } from './hotels-terms/hotels-terms.component';
 
 @NgModule({
-  declarations: [InfoComponent],
+  declarations: [InfoComponent, HotelsTermsComponent],
   imports: [
     CommonModule,
     RouterModule.forChild([

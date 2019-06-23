@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalService } from 'src/app/shared/services/modal.service';
 
 @Component({
   selector: 'ngrome-info',
@@ -7,7 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InfoComponent implements OnInit {
 
-  constructor() { }
+  modalOpened = false;
+  constructor(private modalService:ModalService) { }
+
+  openModal(id: string) {
+    this.modalOpened = true;
+    this.modalService.open(id);
+  }
+
+  closeModal(id: string) {
+    this.modalOpened = false;
+    this.modalService.close(id);
+  }
 
   ngOnInit() {
   }
