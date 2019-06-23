@@ -57,8 +57,7 @@
         max-width: 270px;
 
         @include breakpoint-s {
-          max-height: 320px;
-          max-width: 370px;
+          width: 100%;
         }
       }
     }
@@ -66,55 +65,37 @@
   }
 
   &--full {
-
     justify-content: space-between;
-
     li {
+
+      flex: 0 1 100%;
+
+      @include breakpoint-m {
+        flex: 0 1 33%;
+      }
+
+
+
       a {
+
+        &.button{
+          padding-bottom: 10px;
+        }
+
         img {
 
           @include breakpoint-s {
-            max-height: 120px;
-            max-width: 170px;
+            width: 100%;
+            max-height: none;
+            max-width: none;
+          }
+          @include breakpoint-m {
+            max-height: 190px;
+            max-width: 250px;
           }
 
         }
       }
-    }
-
-    li:first-child {
-
-      @include breakpoint-m {
-
-        a {
-
-          padding-bottom: 0;
-
-        }
-
-      }
-
-    }
-
-    li:last-child {
-
-      @include breakpoint-s {
-
-        margin-top: 16px;
-        flex: 0 1 100%;
-
-        a {
-          padding-bottom: 12px;
-        }
-
-      }
-
-      @include breakpoint-m {
-        a {
-          padding-bottom: 20px;
-        }
-      }
-
     }
 
   }

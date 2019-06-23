@@ -1,6 +1,6 @@
-import { Component, OnInit, Renderer2, ViewChild, ElementRef, Input } from '@angular/core';
+import { Component, OnInit, Renderer2, ViewChild, ElementRef } from '@angular/core';
 import { SideBarService } from '../services/sidebar.service';
-import { Linear, TimelineLite, TweenLite } from "gsap";
+import { TweenLite } from "gsap";
 
 @Component({
   selector: 'ngrome-header',
@@ -210,6 +210,5 @@ export class HeaderComponent implements OnInit {
 
 
   }
-
-
 }
+

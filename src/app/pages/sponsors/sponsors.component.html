@@ -5,7 +5,11 @@
         <h1 class="site-content__intro__title">Sponsors</h1>
       </header>
       <div class="site-content__intro__info__inner">
-        <p>We want to say thank you to our sponsors! They make <strong>NG Rome Conference</strong> possible. Come and say hello the day of the conference.</p>
+        <p>
+          We want to say thank you to our Sponsors and Community Partners! 
+          They help make <strong>NG Rome Conference</strong> possible.
+        </p>
+        <p>Come and say "Ciao" the day of the conference.</p>
       </div>
     </div>
   </div>
@@ -16,13 +20,12 @@
 <section>
   <div class="site-content__wrap">
     <h1 class="site-content__section__title">Main Partners</h1>
-    <ul class="sponsors__list">
+    <ul class="sponsors__list sponsors__list--full">
       <li *ngFor="let sponsor of sponsorService.getSponsors('main')" class="main">
         <a rel="noopener"
         href="{{ sponsor.websiteUrl }}"
         target="_blank"
-        title="{{ sponsor.name }}"
-        *ngIf="sponsor.type == 'main'">
+        title="{{ sponsor.name }}">
           <img src="{{ sponsor.image }}" alt="{{ sponsor.name }}" />
         </a>
       </li>
@@ -33,13 +36,28 @@
 <section>
   <div class="site-content__wrap">
     <h1 class="site-content__section__title">Gold Sponsors</h1>
-    <ul class="sponsors__list">
+    <ul class="sponsors__list sponsors__list--full">
       <li *ngFor="let sponsor of sponsorService.getSponsors('gold')" class="main">
         <a rel="noopener"
         href="{{ sponsor.websiteUrl }}"
         target="_blank"
-        title="{{ sponsor.name }}"
-        *ngIf="sponsor.type == 'gold'">
+        title="{{ sponsor.name }}">
+          <img src="{{ sponsor.image }}" alt="{{ sponsor.name }}" />
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="site-content__wrap">
+    <h1 class="site-content__section__title">Silver Sponsors</h1>
+    <ul class="sponsors__list">
+      <li *ngFor="let sponsor of sponsorService.getSponsors('silver')" class="main">
+        <a rel="noopener"
+          href="{{ sponsor.websiteUrl }}"
+          target="_blank"
+          title="{{ sponsor.name }}">
           <img src="{{ sponsor.image }}" alt="{{ sponsor.name }}" />
         </a>
       </li>

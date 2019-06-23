@@ -28,24 +28,27 @@ export class SponsorService {
       name: 'Blexin',
       description: '',
       visible: true,
-      websiteUrl: 'https://www.blexin.com/',
+      websiteUrl: 'https://www.blexin.com/en-US/Home',
       type: 'gold'
+    },
+    {
+      image: './assets/images/keypartner.svg',
+      name: 'KEYPARTNER',
+      description: '',
+      visible: true,
+      websiteUrl: 'https://www.keypartner.com',
+      type: 'silver'
     }
   ];
 
-  getSponsors(type=null): Sponsor[] {
+  getSponsors(type?:string): Sponsor[] {
     let sponsors = this.sponsorList;
-
-    // console.log(type);
-
     if (type){
       sponsors = this.sponsorList.filter( (e) => {
         return (e.type === type);
       });
-
-      // console.log(type, sponsors);
     }
-
     return sponsors;
   }
+
 }

@@ -20,13 +20,6 @@ import { switchMap } from 'rxjs/operators';
         </div>
         <aside class="speakers__list__more" role="complementary">
         </aside>
-        <aside class="speakers__list__more" role="complementary"
-          *ngIf="this.actualPage != 'home'">
-          <h1>More Speaker TBA</h1>
-          <p>
-            We will announce more speaker soon. <br>Stay tuned!
-          </p>
-        </aside>
       </div>
     </section>
   `,

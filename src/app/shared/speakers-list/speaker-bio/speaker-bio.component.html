@@ -1,43 +1,29 @@
-  <div class="speaker__face">
-
-    <img [src]="speaker.image" alt="{{speaker.name}}">
-
-    <span class="speaker__time">
-      H 14:00
-    </span>
-
+<a class="speaker__face"
+[routerLink]="['speaker-detail',speaker.name]" 
+routerLinkActive="router-link-active">
+  <img [src]="speaker.image" alt="{{speaker.name}}">
+  <span class="speaker__time">
+    H {{speaker.time}}
+  </span>
+</a>
+<div class="speaker__info">
+  <a [routerLink]="['speaker-detail',speaker.name]" 
+  routerLinkActive="router-link-active">
+    <h2 class="speaker__name">{{speaker.name}}</h2>
+  </a>
+  <div class="speaker__job">
+    <span>{{speaker.job}}</span>
+    <span>{{speaker.company}}</span>
   </div>
-
-  <div class="speaker__info">
-    <a [routerLink]="['speaker-detail',speaker.name]" routerLinkActive="router-link-active" >
-      <h2 class="speaker__name">{{speaker.name}}</h2>
-    </a>
-
-    <div class="speaker__job">
-
-      <span>{{speaker.job}}</span>
-
-      <span>{{speaker.company}}</span>
-
-    </div>
-
-    <p class="speaker__desc">{{speaker.description}}</p>
-
-    <a class="read__more" href="javascript:void(0);">Read More</a>
-
-    <a class="speaker__twitter"
-      href="https://twitter.com/{{speaker.twitter}}"
-      target="_blank"
-      rel="noopener">
-
-      <svg width="21" height="17">
-
-        <path fill="#0086FF" fill-rule="evenodd" d="M20.4 2.013a8.175 8.175 0 0 1-2.403.675 4.282 4.282 0 0 0 1.84-2.374 8.243 8.243 0 0 1-2.66 1.04A4.127 4.127 0 0 0 14.124 0C11.813 0 9.94 1.922 9.94 4.291c0 .337.035.664.107.978C6.57 5.089 3.486 3.383 1.42.783a4.37 4.37 0 0 0-.566 2.16 4.32 4.32 0 0 0 1.862 3.572A4.11 4.11 0 0 1 .819 5.98v.053c0 2.08 1.443 3.815 3.359 4.208-.351.1-.721.15-1.103.15-.27 0-.533-.025-.788-.076.533 1.705 2.078 2.946 3.91 2.98A8.264 8.264 0 0 1 0 15.072 11.653 11.653 0 0 0 6.416 17c7.699 0 11.908-6.538 11.908-12.21 0-.187-.004-.373-.011-.556A8.59 8.59 0 0 0 20.4 2.013"/>
-
-      </svg>
-
-      <span>@{{speaker.twitter}}</span>
-
-    </a>
-
-  </div>
+  <p class="speaker__desc">{{speaker.description}}</p>
+  <a class="read__more" href="javascript:void(0);">Read More</a>
+  <a class="speaker__twitter"
+  href="https://twitter.com/{{speaker.twitter}}"
+  target="_blank"
+  rel="noopener">
+    <svg width="21" height="17">
+      <path fill="#0086FF" fill-rule="evenodd" d="M20.4 2.013a8.175 8.175 0 0 1-2.403.675 4.282 4.282 0 0 0 1.84-2.374 8.243 8.243 0 0 1-2.66 1.04A4.127 4.127 0 0 0 14.124 0C11.813 0 9.94 1.922 9.94 4.291c0 .337.035.664.107.978C6.57 5.089 3.486 3.383 1.42.783a4.37 4.37 0 0 0-.566 2.16 4.32 4.32 0 0 0 1.862 3.572A4.11 4.11 0 0 1 .819 5.98v.053c0 2.08 1.443 3.815 3.359 4.208-.351.1-.721.15-1.103.15-.27 0-.533-.025-.788-.076.533 1.705 2.078 2.946 3.91 2.98A8.264 8.264 0 0 1 0 15.072 11.653 11.653 0 0 0 6.416 17c7.699 0 11.908-6.538 11.908-12.21 0-.187-.004-.373-.011-.556A8.59 8.59 0 0 0 20.4 2.013"/>
+    </svg>
+    <span>@{{speaker.twitter}}</span>
+  </a>
+</div>

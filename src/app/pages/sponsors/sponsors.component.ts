@@ -4,7 +4,7 @@ import { NgAnimateScrollService } from 'src/app/shared/services/ng-animate-scrol
 import { SponsorService } from 'src/app/shared/services/sponsor.service';
 
 @Component({
-  selector: 'ngrome-sponsors',
+  selector: 'ngrome-pages-sponsors',
   templateUrl: './sponsors.component.html'
 })
 export class SponsorsComponent implements OnInit {

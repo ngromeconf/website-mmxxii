@@ -14,7 +14,7 @@ import { Router } from '@angular/router';
     </ngrome-tickets>
 
     <ngrome-sponsors class="site-content__section"></ngrome-sponsors>
-    <ngrome-partners class="site-content__section"></ngrome-partners>
+    <!-- ngrome-partners class="site-content__section"></ngrome-partners -->
   `
 })
 export class HomeComponent implements OnInit {

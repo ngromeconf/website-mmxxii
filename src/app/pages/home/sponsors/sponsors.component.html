@@ -2,20 +2,55 @@
 
   <div class="site-content__wrap">
 
-    <h1 class="site-content__section__title">Sponsors</h1>
+    <h1 class="site-content__section__title">Main Partners</h1>
 
     <ul class="sponsors__list sponsors__list--full">
 
-      <li *ngFor="let sponsor of sponsorService.getSponsors(); let isOdd = odd">
+      <li *ngFor="let sponsor of sponsorService.getSponsors('main'); let isOdd = odd">
+
         <a rel="noopener" href="{{sponsor.websiteUrl}}" target="_blank" title="{{sponsor.name}}">
-
           <img src="{{sponsor.image}}" alt="{{sponsor.name}}">
-
         </a>
       </li>
 
-      <li>
+    </ul>
 
+  </div>
+
+  <div class="site-content__wrap">
+
+    <h1 class="site-content__section__title">Gold Sponsors</h1>
+
+    <ul class="sponsors__list sponsors__list--full">
+
+      <li *ngFor="let sponsor of sponsorService.getSponsors('gold'); let isOdd = odd">
+
+        <a rel="noopener" href="{{sponsor.websiteUrl}}" target="_blank" title="{{sponsor.name}}">
+          <img src="{{sponsor.image}}" alt="{{sponsor.name}}">
+        </a>
+      </li>
+
+    </ul>
+
+  </div>
+
+  <div class="site-content__wrap">
+
+    <h1 class="site-content__section__title">Silver Sponsors</h1>
+
+    <ul class="sponsors__list">
+
+      <li *ngFor="let sponsor of sponsorService.getSponsors('silver')" class="main">
+
+        <a rel="noopener" href="{{sponsor.websiteUrl}}" target="_blank" title="{{sponsor.name}}">
+          <img src="{{sponsor.image}}" alt="{{sponsor.name}}">
+        </a>
+      </li>
+
+    </ul>
+
+    <ul class="sponsors__list sponsors__list--full">
+      <li>
         <a class="button" href="mailto:angularroma@gmail.com" title="Became a Sponsor">
 
           <span>Become a Sponsor</span>
@@ -27,9 +62,7 @@
           </svg>
 
         </a>
-
       </li>
-
     </ul>
 
   </div>

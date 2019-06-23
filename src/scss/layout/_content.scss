@@ -497,8 +497,13 @@ ngrome-logo{
 
 }
 
-.site-menu--close--full {
+.site-menu--show {
+  position: fixed;
+  right: 0;
+  overflow: hidden;
+}
 
+.site-menu--close--full {
   opacity: 0;
   transition: opacity .25s ease;
   position: fixed;
@@ -511,14 +516,11 @@ ngrome-logo{
   cursor: url('/assets/icons/cursor-close-menu.svg') 40 40, auto;
 
   .site-menu--show & {
-
-    transition: opacity .25s ease;
+    background-color: lighten($ribbon, 50%);
     opacity: .90;
     pointer-events: all;
-    background-color: lighten($ribbon, 50%);
-
+    transition: opacity .25s ease;
   }
-
 }
 
 #intro {

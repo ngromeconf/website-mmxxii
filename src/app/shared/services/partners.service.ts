@@ -43,11 +43,11 @@ export class PartnersService {
       image: './assets/images/ng-vienna.png'
     },
     {
-      websiteUrl: 'https://twitter.com/swissangular',
-      name: 'Swiss Angular',
+      websiteUrl: 'http://ng-girls.org/',
+      name: 'ngGirls',
       description: '',
       visible: true,
-      image: './assets/images/swiss-angular.png'
+      image: './assets/images/ng-girls.png'
     },
     {
       websiteUrl: 'https://ngvikings.org',
@@ -69,6 +69,13 @@ export class PartnersService {
       description: '',
       visible: true,
       image: './assets/images/ng-bucharest.png'
+    },
+    {
+      websiteUrl: 'https://twitter.com/swissangular',
+      name: 'Swiss Angular',
+      description: '',
+      visible: true,
+      image: './assets/images/swiss-angular.png'
     },
     {
       image: './assets/images/gdg-roma.png',

@@ -14,6 +14,7 @@ export interface Speaker {
   position: number;
   twitter: string;
   visible: boolean;
+  time: string;
 }
 
 @Injectable({
