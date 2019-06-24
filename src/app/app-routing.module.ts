@@ -12,7 +12,7 @@ const routes: Routes = [
   },
   {
     path: 'about',
-    loadChildren: './about/about.module#AboutModule'
+    loadChildren: './pages/about/about.module#AboutModule'
   },
   {
     path: 'sponsors',
