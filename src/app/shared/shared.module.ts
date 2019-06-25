@@ -21,7 +21,7 @@ import { TicketsComponent } from './tickets/tickets.component';
     ConductComponent,
     SpeakerListComponent,
     SpeakerBioComponent,
-    TicketsComponent
+    TicketsComponent,
   ],
   imports: [CommonModule, RouterModule],
   exports: [
@@ -33,7 +33,7 @@ import { TicketsComponent } from './tickets/tickets.component';
     ConductComponent,
     SpeakerListComponent,
     SpeakerBioComponent,
-    TicketsComponent
+    TicketsComponent,
   ],
 })
 export class SharedModule {}

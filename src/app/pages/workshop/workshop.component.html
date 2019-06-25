@@ -1,0 +1,39 @@
+<section id="intro" class="site-content__section">
+  <div class="site-content__wrap">
+    <div class="site-content__intro">
+      <header class="site-content__intro__head__inner">
+        <h1 class="site-content__intro__title">Workshop</h1>
+      </header>
+      <div class="site-content__intro__info__inner">
+        <p>
+          Here you can find all the information about the biggest
+          <strong>Angular</strong> conference in Rome, venue, accommodation and much more...
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="site-content__section">
+  <div class="site-content__wrap">
+    <h1 class="site-content__section__title">Workshop</h1>
+    <div class="workshop__list" *ngFor="let w of workshop$ | async">
+      <a class="workshop__logo">
+        <img [src]="w.image" alt="" />
+        <span class="workshop__time"> H {{ w.start_time }} -> {{ w.end_time }} </span>
+      </a>
+      <div class="workshop__info">
+        <a>
+          <h2 class="workshop__name">{{ w.name }}</h2>
+        </a>
+
+        <p class="workshop_desc">{{ w.description }}</p>
+        <a class="read__more" [routerLink]="'workshop-detail'" [state]="{ workshop: w }"
+          >Read More</a
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
+<ngrome-tickets class="site-content__section" id="tickets"></ngrome-tickets>

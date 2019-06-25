@@ -1,0 +1,16 @@
+<section class="site-content__section" *ngIf="workshop">
+  <div class="site-content__wrap">
+    <h1 class="site-content__section__title">{{ workshop?.name }}</h1>
+    <span>{{ workshop?.start_time }} - {{ workshop?.end_time }}</span>
+    <span>{{ workshop.location }}</span>
+
+    <div class="workshop__info">
+      <img [src]="workshop.image" alt="" />
+      <p class="workshop_desc">{{ workshop.description }}</p>
+    </div>
+
+    <div [innerHTML]="workshop.fullDescription"></div>
+  </div>
+</section>
+
+<ngrome-tickets class="site-content__section" id="tickets"></ngrome-tickets>
