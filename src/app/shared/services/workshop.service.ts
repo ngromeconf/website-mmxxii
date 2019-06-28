@@ -39,7 +39,9 @@ export class WorkshopService {
     },
   ];
 
-  getWorkshop(): Observable<Workshop[]> {
-    return of(this.workshop);
+  getWorkshops():Workshop[] {
+    console.log(this.workshop);
+    return this.workshop;
+
   }
 }

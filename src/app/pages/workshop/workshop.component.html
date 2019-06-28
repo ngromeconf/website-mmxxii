@@ -17,20 +17,22 @@
 <section class="site-content__section">
   <div class="site-content__wrap">
     <h1 class="site-content__section__title">Workshop</h1>
-    <div class="workshop__list" *ngFor="let w of workshop$ | async">
-      <a class="workshop__logo">
-        <img [src]="w.image" alt="" />
-        <span class="workshop__time"> H {{ w.start_time }} -> {{ w.end_time }} </span>
-      </a>
-      <div class="workshop__info">
-        <a>
-          <h2 class="workshop__name">{{ w.name }}</h2>
+    <div class="speakers__list">
+      <div class="speaker" *ngFor="let workshopElement of workshopService.getWorkshops()">
+        <a class="speaker__face">
+          <img [src]="workshopElement.image" alt="{{ workshopElement.name }}" />
         </a>
 
-        <p class="workshop_desc">{{ w.description }}</p>
-        <a class="read__more" [routerLink]="'workshop-detail'" [state]="{ workshop: w }"
-          >Read More</a
-        >
+        <div class="speaker__info">
+          <span class="workshop__time"> H {{ workshopElement.start_time }} -> {{ workshopElement.end_time }} </span>
+          <a [routerLink]="['workshop-detail',workshopElement.name]"
+          routerLinkActive="router-link-active">
+            <h2 class="speaker__name">{{workshopElement.name}}</h2>
+          </a>
+
+          <p class="speaker__desc">{{ workshopElement.fullDescription }}</p>
+          <a class="read__more" href="javascript:void(0);">Read More</a>
+        </div>
       </div>
     </div>
   </div>

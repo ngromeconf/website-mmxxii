@@ -5,17 +5,14 @@ import { Router } from '@angular/router';
 
 @Component({
   templateUrl: './workshop.component.html',
+  styleUrls: ['./workshop.component.scss'],
 })
 export class WorkshopComponent implements OnInit {
-  workshop$: Observable<Workshop[]>;
 
-  constructor(private router: Router, private workshopService: WorkshopService) {}
+  constructor(
+    public workshopService: WorkshopService) {}
 
   ngOnInit() {
-    this.workshop$ = this.workshopService.getWorkshop();
   }
 
-  navigateToWorkshopDetail(workshop: Workshop) {
-    this.router.navigateByUrl(`/workshop/${workshop.name}`, { state: { workshop } });
-  }
 }
