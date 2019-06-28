@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Workshop, WorkshopService } from 'src/app/shared/services/workshop.service';
-import { Observable } from 'rxjs';
-import { Router } from '@angular/router';
+import { WorkshopService } from 'src/app/shared/services/workshop.service';
 
 @Component({
   templateUrl: './workshop.component.html',

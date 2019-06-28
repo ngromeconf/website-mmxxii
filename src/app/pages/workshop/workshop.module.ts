@@ -11,7 +11,7 @@ import { WorkshopDetailComponent } from './workshop-detail/workshop-detail.compo
     CommonModule,
     RouterModule.forChild([
       { path: '', component: WorkshopComponent, pathMatch: 'full' },
-      { path: 'workshop-detail', component: WorkshopDetailComponent },
+      { path: 'workshop-detail/:name', component: WorkshopDetailComponent },
     ]),
     SharedModule,
   ],

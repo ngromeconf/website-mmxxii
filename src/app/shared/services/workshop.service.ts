@@ -39,9 +39,14 @@ export class WorkshopService {
     },
   ];
 
-  getWorkshops():Workshop[] {
-    console.log(this.workshop);
-    return this.workshop;
-
+  getWorkshops(filter?):Workshop[]{
+      let workshops = this.workshop;
+      console.log(filter);
+      if (filter){
+        workshops = this.workshop.filter( (e) => {
+          return (e.name === filter.name);
+        });
+      }
+      return workshops;
   }
 }
