@@ -28,7 +28,7 @@ export class WorkshopService {
       end_time: '18:00',
     },
     {
-      image: 'https://i.ytimg.com/vi/1awD6ADnEWo/hqdefault.jpg',
+      image: 'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/speaker%2Fdan-john.png?alt=media&token=1c969c7b-5bb8-40ca-9811-1a15bc81f0e4',
       name: 'Angular Architecture',
       description: 'A short description',
       fullDescription: 'A full description with <h1 class="ticket__title">H1 Title</h1> section.',

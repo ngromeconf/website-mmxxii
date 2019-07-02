@@ -13,16 +13,55 @@ iframe{
   width: 100%;
 }
 
+.site-content{
+
+  &__wrap{
+    img{
+      width: 100%;
+    }
+
+  }
+
+  &__description{
+    max-width: 700px;
+    margin: auto;
+
+    padding: 20px 0px;
+
+    h1 {
+
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1.1;
+      padding: 20px 0;
+
+    }
+    @include breakpoint-m {
+
+      h1 {
+
+        font-size: 32px;
+        flex-basis: 40%;
+        padding-right: 80px;
+
+      }
+    }
+  }
+
+}
+
 .info {
 
   display: block; // :( Maledetti componenti
+  max-width: 700px;
+  margin: auto;
 
   @include breakpoint-m {
 
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
 
   }
 
@@ -44,68 +83,20 @@ iframe{
 
   }
 
-  &:nth-child(even) {
-
-
-    @include breakpoint-m {
-
-      .info__image {
-
-        padding: 50px;
-
-      }
-
-      .info__text {
-
-        padding: 50px;
-
-      }
-
-    }
-
-    @include breakpoint-l {
-
-      .info__image {
-
-        padding-left: 26px;
-
-      }
-
-      .info__text {
-
-        padding-right: 95px;
-
-      }
-
-    }
-
-  }
 
   &__image {
 
     position: relative;
 
-    @include breakpoint-s {
-
-      padding-right: 80px;
-
-    }
 
     @include breakpoint-m {
 
-      flex-basis: 50%;
-      max-width: 50%;
-      padding-right: 45px;
-
-
-    }
-
-    @include breakpoint-l {
-
-
-      padding-right: 95px;
+      flex-basis: 35%;
+      width: 100%;
+      padding-right: 20px;
 
     }
+
 
     img {
 
@@ -119,6 +110,8 @@ iframe{
 
   &__text {
 
+    width: 100%;
+
     strong{
       font-weight: 600;
     }
@@ -129,15 +122,8 @@ iframe{
 
     @include breakpoint-m {
 
-      flex-basis: 50%;
-      max-width: 50%;
+      flex-basis: 65%;
       padding-left: 45px;
-
-    }
-
-    @include breakpoint-l {
-
-      padding-left: 95px;
 
     }
 
