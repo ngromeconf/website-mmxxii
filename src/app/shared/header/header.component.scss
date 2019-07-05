@@ -112,10 +112,14 @@
   display: none;
   grid-area: 1 / 3 / 3 / 4;
 }
+
 .details__item-spacebottom{
   grid-area: 2 / 3 / 2 / 5;
 }
-
+.details__item-spaceaddtocart{
+  display: none;
+  grid-area: 3 / 3 / 5 / 5;
+}
 .details__item-menu {
   grid-area: 3 / 1 / 7 / 5;
   @include breakpoint-m {
@@ -129,7 +133,7 @@
 
 .details__item--addtocart {
   display: none;
-  grid-area: 3 / 3 / 7 / 5;
+  grid-area: 5 / 3 / 8 / 5;
 }
 .details__item--close {
   grid-area: 2 / 3 / 1 / 5;
