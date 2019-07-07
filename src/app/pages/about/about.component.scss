@@ -1,4 +1,17 @@
+@import
+  '../../../scss/variables/palette',
+  '../../../scss/variables/devices',
+  '../../../scss/variables/typeface';
+
+@import
+  '../../../scss/mixins/clearfix',
+  '../../../scss/mixins/antialias',
+  '../../../scss/mixins/assistive',
+  '../../../scss/mixins/breakpoint';
+
 .site-content{
+
+
 
   &__wrap{
     img{
@@ -8,7 +21,26 @@
   }
 
   &__description{
-    max-width: 600px;
+    max-width: 700px;
+    margin: auto;
+
+    h1 {
+
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1.1;
+
+    }
+    @include breakpoint-m {
+
+      h1 {
+
+        font-size: 32px;
+        flex-basis: 40%;
+        padding-right: 80px;
+
+      }
+    }
   }
 
 

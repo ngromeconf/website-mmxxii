@@ -16,6 +16,10 @@ export class SideBarService {
     return;
   }
 
+  public getSidebarStatus(){
+    return this.sidebarStatus;
+  }
+
   updateSidebarStatus = () => this.sidebarStatus = this.sidebarStatus === 'hidden' ? 'visible' : 'hidden';
 
 }

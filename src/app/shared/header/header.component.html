@@ -1,21 +1,22 @@
 <div class="header">
   <div class="logo">
-    <a [routerLink]="['/']" routerLinkActive="router-link-active"  title="NG-Rome">
-      <img src="./assets/logo/logo-white.svg">
+    <a [routerLink]="['/']" routerLinkActive="router-link-active" title="NG-Rome">
+      <img src="./assets/logo/logo-white.svg" />
     </a>
   </div>
   <div class="menu">
-    <button (click)="sidebarService.toggleSidebarStatus()" class="site-menu--open" type="button" name="button">
-
+    <button
+      (click)="sidebarService.toggleSidebarStatus()"
+      class="site-menu--open"
+      type="button"
+      name="button"
+    >
       <svg width="28" height="19">
-
         <g fill="none" fill-rule="evenodd">
-          <path d="M-6-11h40v40H-6z"/>
-          <path fill="#FFF" d="M0 8h28v3H0zM0 16h21v3H0zM0 0h21v3H0z"/>
+          <path d="M-6-11h40v40H-6z" />
+          <path fill="#FFF" d="M0 8h28v3H0zM0 16h21v3H0zM0 0h21v3H0z" />
         </g>
-
       </svg>
-
     </button>
   </div>
 </div>
@@ -27,28 +28,27 @@
         <div></div>
         <div></div>
         <div>
-          <button (click)="sidebarService.toggleSidebarStatus()"
-              class="site-menu--close" type="button"
-              name="site menu close"
-              aria-label="Close Menu">
-
+          <button
+            (click)="sidebarService.toggleSidebarStatus()"
+            class="site-menu--close"
+            type="button"
+            name="site menu close"
+            aria-label="Close Menu"
+          >
             <svg width="21" height="21">
-
               <g fill="#FFF" fill-rule="evenodd">
-                <path d="M.368 18.717L18.753.332l1.414 1.415L1.782 20.13z"/>
-                <path d="M1.782.869l18.385 18.384-1.414 1.415L.368 2.283z"/>
+                <path d="M.368 18.717L18.753.332l1.414 1.415L1.782 20.13z" />
+                <path d="M1.782.869l18.385 18.384-1.414 1.415L.368 2.283z" />
               </g>
-
             </svg>
-
           </button>
         </div>
       </div>
     </div>
     <div class="details__item details__item-spacebottom" data-direction="ttb">
-        <div class="details__inner details__inner--grid">
-          <div></div>
-        </div>
+      <div class="details__inner details__inner--grid">
+        <div></div>
+      </div>
     </div>
     <div class="details__item details__item-spacetop" data-direction="rtl">
       <div class="details__inner details__inner--grid">
@@ -63,28 +63,28 @@
     </div>
     <div class="details__item details__item--addtocart" data-direction="ttb">
       <div class="details__inner details__inner--grid details__inner--ticket">
-          <div class="site-menu__info">
+        <div class="site-menu__info">
+          <p>October 7th, 2019 Teatro Italia, Rome Italy</p>
+          <br />
 
-              <p>October 7th, 2019 Teatro Italia, Rome Italy</p><br>
+          <a
+            class="button button--white"
+            rel="noopener"
+            target="_blank"
+            href="https://www.eventbrite.it/e/ng-rome-mmxix-angular-conference-tickets-54968197358"
+            title="Get Ticket"
+          >
+            <svg width="20" height="14">
+              <g fill="none" fill-rule="evenodd" stroke="#EE0C3E" stroke-width="2">
+                <path
+                  d="M18.422 9.819c-1.12-.422-1.91-1.53-1.91-2.819s.79-2.397 1.91-2.819V1H1.312v3.181c1.119.422 1.91 1.53 1.91 2.819s-.791 2.397-1.91 2.819V13h17.11V9.819zM7 1.462V13"
+                />
+              </g>
+            </svg>
 
-              <a class="button button--white"
-                rel="noopener"
-                target="_blank"
-                href="https://www.eventbrite.it/e/ng-rome-mmxix-angular-conference-tickets-54968197358" title="Get Ticket">
-
-                <svg width="20" height="14">
-
-                  <g fill="none" fill-rule="evenodd" stroke="#EE0C3E" stroke-width="2">
-                    <path d="M18.422 9.819c-1.12-.422-1.91-1.53-1.91-2.819s.79-2.397 1.91-2.819V1H1.312v3.181c1.119.422 1.91 1.53 1.91 2.819s-.791 2.397-1.91 2.819V13h17.11V9.819zM7 1.462V13"/>
-                  </g>
-
-                </svg>
-
-                Get Ticket
-
-              </a>
-
-            </div>
+            Get Ticket
+          </a>
+        </div>
       </div>
     </div>
     <div class="details__item details__item-logo" data-direction="rtl">
@@ -99,55 +99,67 @@
     <div class="details__item details__item-menu" data-direction="rtl">
       <div class="details__inner details__inner--grid details__inner--menu">
         <nav class="site-menu">
-        <ul class="site-menu__nav">
+          <ul class="site-menu__nav">
             <li>
               <a routerLink="/speakers" title="Speaker">
-
                 <svg width="18" height="25">
-
-                  <g fill="none" fill-rule="evenodd" stroke="#FFF" stroke-width="2" transform="translate(-4 -.5)">
-                    <path d="M21 9v2.857C21 15.802 17.744 19 13.727 19h-1.454C8.256 19 5 15.802 5 11.857V9"/>
-                    <rect width="8" height="13" x="9" y="2" rx="4"/>
-                    <path stroke-linecap="square" d="M13 20v4M16.943 24H9"/>
+                  <g
+                    fill="none"
+                    fill-rule="evenodd"
+                    stroke="#FFF"
+                    stroke-width="2"
+                    transform="translate(-4 -.5)"
+                  >
+                    <path
+                      d="M21 9v2.857C21 15.802 17.744 19 13.727 19h-1.454C8.256 19 5 15.802 5 11.857V9"
+                    />
+                    <rect width="8" height="13" x="9" y="2" rx="4" />
+                    <path stroke-linecap="square" d="M13 20v4M16.943 24H9" />
                   </g>
-
                 </svg>
 
                 Speaker
-
               </a>
             </li>
             <li>
-              <a [routerLink]="['/sponsors']" routerLinkActive="router-link-active"  title="Sponsors">
-
+              <a
+                [routerLink]="['/sponsors']"
+                routerLinkActive="router-link-active"
+                title="Sponsors"
+              >
                 <svg width="20" height="21">
-
-                  <path fill="none" fill-rule="evenodd" stroke="#FFF" stroke-width="2" d="M1 20.5v-17a2 2 0 0 1 2-2h14l-3.068 4.35L17 9.5H4"/>
-
+                  <path
+                    fill="none"
+                    fill-rule="evenodd"
+                    stroke="#FFF"
+                    stroke-width="2"
+                    d="M1 20.5v-17a2 2 0 0 1 2-2h14l-3.068 4.35L17 9.5H4"
+                  />
                 </svg>
 
                 Sponsors
-
               </a>
             </li>
-            <li>
+            <!-- li>
               <a href="javascript:void(0);" title="Agenda">
-
                 <svg width="20" height="21">
-
-                  <g fill="none" fill-rule="evenodd" stroke="#FFF" stroke-width="2" transform="translate(-3 -2.5)">
-                    <rect width="16" height="18" x="6" y="4" rx="2"/>
-                    <path stroke-linecap="square" d="M5.786 9H4M5.786 17H4M10 4v18"/>
+                  <g
+                    fill="none"
+                    fill-rule="evenodd"
+                    stroke="#FFF"
+                    stroke-width="2"
+                    transform="translate(-3 -2.5)"
+                  >
+                    <rect width="16" height="18" x="6" y="4" rx="2" />
+                    <path stroke-linecap="square" d="M5.786 9H4M5.786 17H4M10 4v18" />
                   </g>
-
                 </svg>
 
                 Agenda
-
               </a>
-            </li>
+            </li -->
             <li>
-                <a href="javascript:void(0);" title="Workshop">
+              <a [routerLink]="['/workshop']" title="Workshop">
 
                   <svg width="24" height="18">
 
@@ -165,37 +177,32 @@
                   </svg>
 
                   Workshop
-
-                </a>
-              </li>
-            <li>
-              <a [routerLink]="['/about']" routerLinkActive="router-link-active"  title="About">
-
-                <svg width="20" height="23">
-
-                  <g fill="none" fill-rule="evenodd" stroke="#FFF" stroke-width="2">
-                    <path d="M0 1.5h20M6 5.5h8M6 9.5h4M0 14.5h20M3 2.1v11.4M17 2.1v11.4M8 17.5l-2.5 4.583M12 17.5l2.5 4.583M10 17.5V22"/>
-                  </g>
-
-                </svg>
-
-                About
-
               </a>
             </li>
             <li>
-              <a [routerLink]="['/info']" routerLinkActive="router-link-active"  title="Info">
-
-                <svg width="22" height="21">
-
+              <a [routerLink]="['/about']" routerLinkActive="router-link-active" title="About">
+                <svg width="20" height="23">
                   <g fill="none" fill-rule="evenodd" stroke="#FFF" stroke-width="2">
-                    <path d="M20.016 4.47l-6.005-2.862-7.006 3.34L1 2.083v14.451l6.005 2.863 7.006-3.34 6.005 2.863V4.471zM7 5v14.878M14 2.031V17.84"/>
+                    <path
+                      d="M0 1.5h20M6 5.5h8M6 9.5h4M0 14.5h20M3 2.1v11.4M17 2.1v11.4M8 17.5l-2.5 4.583M12 17.5l2.5 4.583M10 17.5V22"
+                    />
                   </g>
+                </svg>
 
+                About
+              </a>
+            </li>
+            <li>
+              <a [routerLink]="['/info']" routerLinkActive="router-link-active" title="Info">
+                <svg width="22" height="21">
+                  <g fill="none" fill-rule="evenodd" stroke="#FFF" stroke-width="2">
+                    <path
+                      d="M20.016 4.47l-6.005-2.862-7.006 3.34L1 2.083v14.451l6.005 2.863 7.006-3.34 6.005 2.863V4.471zM7 5v14.878M14 2.031V17.84"
+                    />
+                  </g>
                 </svg>
 
                 Info
-
               </a>
             </li>
             <!-- <li class="newsroom">
@@ -218,6 +225,6 @@
         </nav>
       </div>
     </div>
-
-  </div><!-- /details -->
+  </div>
+  <!-- /details -->
 </div>

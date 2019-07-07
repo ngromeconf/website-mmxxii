@@ -58,7 +58,6 @@ export class AppComponent {
           //console.log('NavigationStart');
           this.hideContainer();
           window.scroll(0,0);
-          this.sidebarService.toggleSidebarStatus(true);
         }
 
         if (event instanceof NavigationEnd) {
@@ -67,6 +66,11 @@ export class AppComponent {
             this.showContainer();
           }
           this.logoAlreadyAnimated = true;
+
+          //close the sidebar if is open after the navigation is complete
+          if(this.sidebarService.getSidebarStatus() === 'visible'){
+            this.sidebarService.toggleSidebarStatus(true);
+          }
         }
 
         if (event instanceof NavigationError) {

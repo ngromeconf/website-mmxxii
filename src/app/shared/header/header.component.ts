@@ -25,27 +25,25 @@ export class HeaderComponent implements OnInit {
   sitemenu: ElementRef;
 
 
-  ngOnInit() {}
-    // this.sidebarService.sidebarStatus$.subscribe((e) => {
-    //   //console.log('sidebarStatus$: ',e);
-    //   if (e === 'visible'){
-    //     this.openSidebar();
-    //   }
-    //   else {
-    //     this.closeSidebar();
-    //   }
-    // });
+  ngOnInit() {
+    this.isAnimating = false;
+  }
+
   ngAfterContentInit(){
     this.el = this.elementRef.nativeElement;
     // The details boxes.
     this.detailsItems = Array.from(this.el.querySelectorAll('.details__item'));
-    console.log(this.detailsItems);
     this.totalDetailItems = this.detailsItems.length;
-    console.log(this.totalDetailItems);
-
 
     this.sidebarService.sidebarStatus$.subscribe(value => {
+
       console.log('openCloseSidebar: ' + value);
+      console.log('openCloseSidebar - isAnimating' + this.isAnimating);
+
+      if (this.isAnimating === true) {
+        return false;
+      }
+
       this.isSidebarOpen = value === 'hidden' ? true : false;
       if (value === 'visible') {
         this.el.querySelector('.details-wrap').classList.add('details-wrap--open');
@@ -89,6 +87,8 @@ export class HeaderComponent implements OnInit {
             resolve();
             return false;
         }
+
+        this.isAnimating = true;
 
         // We want to achieve here the same reveal/unreveal effect of the slideshow.
         // The item animates from 100% to 0% (top,bottom,left or right) while its inner element does the reverse movement.
@@ -156,6 +156,8 @@ export class HeaderComponent implements OnInit {
           resolve();
           return false;
       }
+
+      this.isAnimating = true;
 
       const processItem = (item,pos) => {
           return new Promise((resolve, reject) => {

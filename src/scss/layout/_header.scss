@@ -51,7 +51,7 @@
 .site-menu {
   color: white;
   padding: 0;
-  min-width: 280px;
+  //min-width: 280px;
   max-width: 280px;
 
   @include breakpoint-m {
@@ -161,8 +161,8 @@
   &--close {
 
     position: absolute;
-    top: 30px;
-    right: 28px;
+    top: 20px;
+    right: 20px;
     height: 40px;
     width: 40px;
     background-color: transparent;
@@ -171,6 +171,13 @@
     padding: 0;
     cursor: pointer;
     z-index: 2;
+
+    @include breakpoint-m {
+
+      top: 25px;
+      right: 28px;
+
+    }
 
   }
 
