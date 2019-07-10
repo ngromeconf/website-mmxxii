@@ -19,7 +19,7 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  //use this boolean if we want to filter the speaker for homepage
+  // Use this boolean if we want to filter the speaker for homepage
   public speakerFilter = true;
   actualPage: string;
 
@@ -32,5 +32,4 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }

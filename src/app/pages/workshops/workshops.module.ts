@@ -2,17 +2,17 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from 'src/app/shared/shared.module';
-import { WorkshopComponent } from './workshop.component';
+import { WorkshopsComponent } from './workshops.component';
 import { TicketsComponent } from './tickets/tickets.component';
 
 @NgModule({
-  declarations: [WorkshopComponent, TicketsComponent],
+  declarations: [WorkshopsComponent, TicketsComponent],
   imports: [
     CommonModule,
     RouterModule.forChild([
-      { path: '', component: WorkshopComponent, pathMatch: 'full' },
+      { path: '', component: WorkshopsComponent, pathMatch: 'full' },
     ]),
     SharedModule,
   ],
 })
-export class WorkshopModule {}
+export class WorkshopsModule {}

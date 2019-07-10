@@ -77,7 +77,7 @@ import { ModalService } from 'src/app/shared/services/modal.service';
               href="https://ngrome.slack.com/join/shared_invite/enQtNjMyOTI4MDc0MTk3LTcwZjQ0ZTQxNzU5ZmJkMDEzNTA5MjUzM2FjZmM1Zjk5MDdhZDJlNWQ0ZjFjNGQwNDRiYWRmNDYwMWM0Zjk4YzQ"
               target="_blank"
               title="Slack" >
-                <img src="./assets/images/slack.png" />
+                <img src="./assets/images/slack.png" class="img--slack" />
                 <span>Slack</span>
               </a>
             </li>
@@ -106,6 +106,10 @@ import { ModalService } from 'src/app/shared/services/modal.service';
     .site-footer__nav img {
       height: 22px;
       width: 22px;
+    }
+    .site-footer__nav img.img--slack {
+      height: 24px;
+      width: 24px;
     }
   `]
 })
