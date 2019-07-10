@@ -16,14 +16,16 @@ figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video,
 ngrome-sponsors,ngrome-call-for-paper,ngrome-speakers {
-
   margin: 0;
 	padding: 0;
 	border: 0;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+}
 
+b {
+  font-weight: bold;
 }
 
 article, aside, details, figcaption, figure,

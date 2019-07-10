@@ -6,38 +6,38 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: './pages/home/home.module#HomeModule',
-    data: { title: 'NG Rome October 7th - The Italian Angular Conference' }
+    data: { title: 'NG Rome MMXIX - The Italian Angular Conference' }
   },
   {
     path: 'info',
     loadChildren: './pages/info/info.module#InfoModule',
-    data: { title: 'NG Rome October 7th - Info'}
+    data: { title: 'NG Rome MMXIX - Info'}
   },
   {
     path: 'about',
     loadChildren: './pages/about/about.module#AboutModule',
-    data: { title: 'NG Rome October 7th - About'}
+    data: { title: 'NG Rome MMXIX - About'}
   },
   {
     path: 'sponsors',
     loadChildren: './pages/sponsors/sponsors.module#SponsorsModule',
-    data: { title: 'NG Rome October 7th - Sponsors'}
+    data: { title: 'NG Rome MMXIX - Sponsors'}
   },
   {
     path: 'speakers',
     loadChildren: './pages/speakers/speakers.module#SpeakersModule',
-    data: { title: 'NG Rome October 7th - Speakers'}
+    data: { title: 'NG Rome MMXIX - Speakers'}
   },
   {
     path: 'workshops',
     loadChildren: './pages/workshops/workshops.module#WorkshopsModule',
-    data: { title: 'NG Rome October 7th - Workshops'}
+    data: { title: 'NG Rome MMXIX - Workshops'}
   },
   {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full',
-    data: { title: 'NG Rome October 7th - The Italian Angular Conference' }
+    data: { title: 'NG Rome MMXIX - The Italian Angular Conference' }
   },
 ];
 
