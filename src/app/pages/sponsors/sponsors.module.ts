@@ -4,7 +4,6 @@ import { RouterModule } from '@angular/router';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { SponsorsComponent } from './sponsors.component';
 
-
 @NgModule({
   declarations: [SponsorsComponent],
   imports: [

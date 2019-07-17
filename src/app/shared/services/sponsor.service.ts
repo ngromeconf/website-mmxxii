@@ -38,6 +38,14 @@ export class SponsorService {
       visible: true,
       websiteUrl: 'https://www.keypartner.com',
       type: 'silver'
+    },
+    {
+      image: './assets/images/briebug.png',
+      name: 'Briebug',
+      description: 'Angular Consulting | Training | Architectural Reviews',
+      visible: true,
+      websiteUrl: 'https://www.briebug.com/',
+      type: 'diversity'
     }
   ];
 
