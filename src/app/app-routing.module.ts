@@ -34,6 +34,11 @@ const routes: Routes = [
     data: { title: 'NG Rome MMXIX - Workshops'}
   },
   {
+    path: 'agenda',
+    loadChildren: './pages/agenda/agenda.module#AgendaModule',
+    data: { title: 'NG Rome MMXIX - Agenda'}
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full',

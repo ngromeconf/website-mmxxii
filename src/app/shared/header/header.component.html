@@ -1,6 +1,6 @@
 <header class="site-header" role="banner">
   <h1 class="site-logo">
-    <a [routerLink]="['/']" routerLinkActive="router-link-active" 
+    <a [routerLink]="['/']" routerLinkActive="router-link-active"
     title="Go to NGRome Homepage">
       <svg width="56" height="60" viewBox="0 0 56 60" preserveAspectratio="xMinYMin">
         <g fill="none" fill-rule="evenodd">
@@ -13,7 +13,7 @@
       </svg>
       <span>NG-Rome</span>
     </a>
-    <button (click)="sidebarService.toggleSidebarStatus()" 
+    <button (click)="sidebarService.toggleSidebarStatus()"
     alt="Toggle NGRome Menu"
     class="site-menu--open" type="button" name="button">
       <svg width="28" height="19">
@@ -57,7 +57,7 @@
         </a>
       </li>
       <li>
-        <a [routerLink]="['/sponsors']" routerLinkActive="router-link-active" 
+        <a [routerLink]="['/sponsors']" routerLinkActive="router-link-active"
         title="Go to NGRome Sponsors page">
           <svg width="20" height="21">
             <path fill="none" fill-rule="evenodd" stroke="#FFF" stroke-width="2" d="M1 20.5v-17a2 2 0 0 1 2-2h14l-3.068 4.35L17 9.5H4"/>
@@ -65,8 +65,8 @@
           Sponsors
         </a>
       </li>
-      <!--li>
-        <a href="javascript:void(0);" title="Agenda">
+      <li>
+        <a [routerLink]="['/agenda']" routerLinkActive="router-link-active"  title="Agenda">
           <svg width="20" height="21">
             <g fill="none" fill-rule="evenodd" stroke="#FFF" stroke-width="2" transform="translate(-3 -2.5)">
               <rect width="16" height="18" x="6" y="4" rx="2"/>
@@ -75,9 +75,9 @@
           </svg>
           Agenda
         </a>
-      </li -->
+      </li>
       <li>
-        <a [routerLink]="['/workshops']" routerLinkActive="router-link-active"  
+        <a [routerLink]="['/workshops']" routerLinkActive="router-link-active"
         title="Go to NGRome Workshops page">
           <svg width="22" height="24">
             <g fill="none" fill-rule="evenodd" stroke="#FFF" stroke-width="2" transform="translate(-2, 0)">
@@ -101,7 +101,7 @@
         </a>
       </li>
       <li>
-        <a [routerLink]="['/info']" routerLinkActive="router-link-active" 
+        <a [routerLink]="['/info']" routerLinkActive="router-link-active"
         title="Go to NGRome Info page">
           <svg width="22" height="21">
             <g fill="none" fill-rule="evenodd" stroke="#FFF" stroke-width="2">

@@ -1,0 +1,85 @@
+@import
+  '../../../scss/variables/palette',
+  '../../../scss/variables/devices',
+  '../../../scss/variables/typeface';
+
+@import
+  '../../../scss/mixins/clearfix',
+  '../../../scss/mixins/antialias',
+  '../../../scss/mixins/assistive',
+  '../../../scss/mixins/breakpoint';
+
+
+.agenda__item {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-top: 10px;
+
+  .agenda__activity,
+  .agenda__talk{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    >*{
+      padding: 10px 20px;
+    }
+
+    .agenda__time{
+      flex-basis: auto;
+      min-width: 200px;
+    }
+    .agenda__image{
+      flex-basis: auto;
+      min-width: 150px;
+    }
+    .agenda__detail{
+      flex:1;
+
+      .agenda_speaker__name{
+        font-family: $font-secondary;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+      }
+      h1{
+        font-family: $font-primary;
+        font-weight: 700;
+        font-size: 22px;
+
+        @include breakpoint-m {
+
+          font-size: 32px;
+
+        }
+      }
+    }
+
+  }
+
+  .agenda__activity{
+
+    background: $ribbon;
+    color: $white;
+
+    .speaker__name,
+    .read__more{
+      display: none;
+      visibility: hidden;
+    }
+    .agenda__detail{
+      h1{
+        font-size: 15px;
+        @include breakpoint-m {
+          font-size: 18px;
+        }
+      }
+    }
+
+  }
+}
