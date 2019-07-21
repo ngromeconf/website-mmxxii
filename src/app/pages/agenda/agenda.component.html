@@ -25,8 +25,13 @@
         'agenda__activity': isActivity(agenda.type)
       }">
 
-        <div class="agenda__time">{{agenda.startTime.seconds * 1000 | date:'shortTime'}}</div>
-        <div class="agenda__image"></div>
+        <div class="agenda__time">
+          {{agenda.startTime.seconds * 1000 | date:'shortTime'}}<br>
+          <span>{{agenda.endTime.seconds * 1000 | date:'hh:mm'}}</span>
+        </div>
+        <div class="agenda__image">
+            <img [src]="agenda.image" alt="{{agenda.speakerName}}">
+        </div>
         <div class="agenda__detail">
           <span class="agenda_speaker__name">{{agenda.speakerName}}</span>
           <h1>{{agenda.title}}</h1>

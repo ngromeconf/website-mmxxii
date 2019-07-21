@@ -20,6 +20,12 @@
 
   margin-top: 10px;
 
+  .agenda__talk{
+    .agenda__duration{
+      color: $ribbon;
+    }
+  }
+
   .agenda__activity,
   .agenda__talk{
     width: 100%;
@@ -30,23 +36,36 @@
       padding: 10px 20px;
     }
 
+    .agenda__duration,
+    .agenda_speaker__name{
+      font-family: $font-secondary;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+    }
+
+
     .agenda__time{
       flex-basis: auto;
       min-width: 200px;
+      font-size: 14px;
+      span{
+        font-family: $font-secondary;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+      }
     }
     .agenda__image{
       flex-basis: auto;
-      min-width: 150px;
+      min-width: 200px;
+      img{
+        max-width: 150px;
+      }
     }
     .agenda__detail{
       flex:1;
 
-      .agenda_speaker__name{
-        font-family: $font-secondary;
-        font-size: 14px;
-        text-transform: uppercase;
-        letter-spacing: 5px;
-      }
       h1{
         font-family: $font-primary;
         font-weight: 700;
