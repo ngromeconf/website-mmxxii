@@ -20,18 +20,14 @@
 
   margin-top: 10px;
 
-  .agenda__talk{
-    .agenda__duration{
-      color: $ribbon;
-    }
-  }
+
 
   .agenda__activity,
   .agenda__talk{
     width: 100%;
     display: flex;
     justify-content: space-between;
-
+    flex-flow: row wrap;
     >*{
       padding: 10px 20px;
     }
@@ -44,10 +40,21 @@
       letter-spacing: 5px;
     }
 
+    .agenda__duration{
+      justify-content: flex-end;
+    }
+
 
     .agenda__time{
-      flex-basis: auto;
-      min-width: 200px;
+      flex: 0 0 100%;
+      @include breakpoint-m{
+        flex-basis: auto;
+        min-width: 100px;
+      }
+      @include breakpoint-l{
+        flex-basis: auto;
+        min-width: 200px;
+      }
       font-size: 14px;
       span{
         font-family: $font-secondary;
@@ -57,11 +64,16 @@
       }
     }
     .agenda__image{
+      display: none;
       flex-basis: auto;
       min-width: 200px;
+      @include breakpoint-m{
+       display: block;
+      }
       img{
         max-width: 150px;
       }
+
     }
     .agenda__detail{
       flex:1;
@@ -77,8 +89,25 @@
 
         }
       }
+      .read__more{
+        display: none;
+      }
     }
 
+  }
+
+  .agenda__talk{
+    .agenda__duration{
+      color: $ribbon;
+    }
+    &:nth-child(odd) {
+      /*
+         Selects the first 3 elements
+         applied not to ALL children but
+         only to those matching .picture
+      */
+      border-bottom: 1px solid $grey;
+    }
   }
 
   .agenda__activity{
@@ -86,8 +115,11 @@
     background: $ribbon;
     color: $white;
 
-    .speaker__name,
-    .read__more{
+    .read__more,
+    .agenda__duration,
+    .agenda__time-end,
+    .agenda_speaker__name
+    {
       display: none;
       visibility: hidden;
     }
@@ -100,5 +132,14 @@
       }
     }
 
+    .agenda__image{
+      text-align: center;
+      img{
+        max-width: 33px;
+        max-height: 33px;
+      }
+    }
+
   }
+
 }
