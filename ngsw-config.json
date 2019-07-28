@@ -19,7 +19,8 @@
       "updateMode": "prefetch",
       "resources": {
         "files": [
-          "/assets/**"
+          "/assets/**",
+          "https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/**"
         ]
       }
     }, {
