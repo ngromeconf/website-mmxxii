@@ -30,11 +30,14 @@
           <span class="agenda__time-end">→{{agenda.endTime.seconds * 1000 | date:'hh:mm'}}</span>
         </div>
         <div class="agenda__image">
+          <a [routerLink]="['/speakers/speaker-detail',agenda.speakerName]" routerLinkActive="router-link-active" >
             <img [src]="agenda.image" alt="{{agenda.speakerName}}">
+          </a>
         </div>
         <div class="agenda__detail">
+          <a [routerLink]="['/speakers/speaker-detail',agenda.speakerName]" routerLinkActive="router-link-active" >
           <span class="agenda_speaker__name">{{agenda.speakerName}}<br>
-          - {{agenda.company}}</span>
+          - {{agenda.company}}</span></a>
           <h1>{{agenda.title}}</h1>
           <a class="read__more"
           title="Read more about the talk">Read more</a>
