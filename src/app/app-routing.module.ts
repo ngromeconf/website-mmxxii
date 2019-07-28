@@ -44,6 +44,10 @@ const routes: Routes = [
     pathMatch: 'full',
     data: { title: 'NG Rome MMXIX - The Italian Angular Conference' }
   },
+  {
+    path: '**',
+    redirectTo: 'home',
+  }
 ];
 
 // Perfume.js config, supports AOT and DI
