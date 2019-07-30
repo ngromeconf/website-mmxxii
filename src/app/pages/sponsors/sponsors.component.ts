@@ -14,7 +14,7 @@ import { SponsorService } from 'src/app/shared/services/sponsor.service';
         </header>
         <div class="site-content__intro__info__inner">
           <p>
-            We want to say thank you to our Sponsors and Community Partners! 
+            We want to say thank you to our Sponsors and Community Partners!
             They help make <strong>NG Rome Conference</strong> possible.
           </p>
           <p>Come and say "Ciao" the day of the conference.</p>
@@ -78,6 +78,22 @@ import { SponsorService } from 'src/app/shared/services/sponsor.service';
       <h1 class="site-content__section__title">Diversity Sponsors</h1>
       <ul class="sponsors__list sponsors__list--full">
         <li *ngFor="let sponsor of sponsorService.getSponsors('diversity')" class="main">
+          <a rel="noopener"
+          href="{{ sponsor.websiteUrl }}"
+          target="_blank"
+          title="{{ sponsor.name }}">
+            <img src="{{ sponsor.image }}" alt="{{ sponsor.name }}" />
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="site-content__wrap">
+      <h1 class="site-content__section__title">Partners</h1>
+      <ul class="sponsors__list sponsors__list--full">
+        <li *ngFor="let sponsor of sponsorService.getSponsors('other')" class="main">
           <a rel="noopener"
           href="{{ sponsor.websiteUrl }}"
           target="_blank"

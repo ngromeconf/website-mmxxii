@@ -6,7 +6,7 @@ import { SponsorService } from 'src/app/shared/services/sponsor.service';
   template: `
   <section class="site-content__section">
     <div class="site-content__wrap">
-      <h1 class="site-content__section__title">Main Partners</h1>
+      <h1 class="site-content__section__title">Main Partner</h1>
       <ul class="sponsors__list sponsors__list--full">
         <li *ngFor="let sponsor of sponsorService.getSponsors('main'); let isOdd = odd">
           <a rel="noopener" href="{{sponsor.websiteUrl}}" target="_blank" title="{{sponsor.name}}">
@@ -39,6 +39,19 @@ import { SponsorService } from 'src/app/shared/services/sponsor.service';
       <h1 class="site-content__section__title">Diversity Sponsors</h1>
       <ul class="sponsors__list sponsors__list--full">
         <li *ngFor="let sponsor of sponsorService.getSponsors('diversity')" class="main">
+          <a rel="noopener"
+          href="{{ sponsor.websiteUrl }}"
+          target="_blank"
+          title="{{ sponsor.name }}">
+            <img src="{{ sponsor.image }}" alt="{{ sponsor.name }}" />
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="site-content__wrap">
+      <h1 class="site-content__section__title">Event Partners</h1>
+      <ul class="sponsors__list">
+        <li *ngFor="let sponsor of sponsorService.getSponsors('other')" class="main">
           <a rel="noopener"
           href="{{ sponsor.websiteUrl }}"
           target="_blank"

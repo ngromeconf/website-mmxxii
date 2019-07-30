@@ -15,20 +15,6 @@ export class PartnersService {
 
   partners: Partner[]  = [
     {
-      websiteUrl: 'https://twitter.com/angularrome',
-      name: 'Angular Roma',
-      description: '',
-      visible: true,
-      image: './assets/images/ng-rome.png'
-    },
-    {
-      websiteUrl: 'https://twitter.com/angularsf',
-      name: 'Angular San Francisco',
-      description: '',
-      visible: true,
-      image: './assets/images/ng-sf.png'
-    },
-    {
       websiteUrl: 'https://www.codemotion.com/',
       name: 'Codemotion',
       description: '',

@@ -16,6 +16,22 @@ export class SponsorService {
 
   sponsorList: Sponsor[] = [
     {
+      image: './assets/images/ng-rome.png',
+      name: 'Angular Roma',
+      description: '',
+      visible: true,
+      websiteUrl: 'https://twitter.com/angularroma',
+      type: 'main'
+    },
+    {
+      image: './assets/images/ng-sf.png',
+      name: 'Angular San Francisco',
+      description: '',
+      visible: true,
+      websiteUrl: 'https://twitter.com/angularsf',
+      type: 'main'
+    },
+    {
       image: './assets/images/skaffolder_logo-nero.svg',
       name: 'Skaffolder',
       description: '',
@@ -46,6 +62,22 @@ export class SponsorService {
       visible: true,
       websiteUrl: 'https://www.briebug.com/',
       type: 'diversity'
+    },
+    {
+      image: './assets/images/02-sticker-mule.svg',
+      name: 'Sticker Mule',
+      description: 'Thousands of people trust us to make kick ass stickers, labels, magnets & more. Get free proofs, free shipping, 4 day turnaround & 24/7 customer support.',
+      visible: true,
+      websiteUrl: 'http://stickermule.com/supports/ngrome19-sponsorship',
+      type: 'other'
+    },
+    {
+      image: './assets/images/hotels.com.png',
+      name: 'Hotels.com',
+      description: 'Hotels.com - Deals & Discounts for Hotel Reservations from Luxury Hotels to Budget Accommodations',
+      visible: true,
+      websiteUrl: 'https://it.hotels.com/de1750353/hotel-in-zona-piazza-bologna-roma-italia/',
+      type: 'other'
     }
   ];
 
