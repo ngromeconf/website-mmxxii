@@ -19,7 +19,8 @@ import { WorkshopsService } from 'src/app/shared/services/workshops.service';
     <div class="site-content__wrap">
       <h1 class="site-content__section__title">Workshops</h1>
       <div class="speakers__list">
-        <div class="speaker" *ngFor="let workshopElement of workshopService.getWorkshops()">
+        <div class="speaker speaker--start" 
+        *ngFor="let workshopElement of workshopService.getWorkshops()">
           <a class="speaker__face"
             [href]="workshopElement.targetUrl"
             rel="noopener"
@@ -58,6 +59,19 @@ import { WorkshopsService } from 'src/app/shared/services/workshops.service';
   styles: [`
     .workshop--list{
       padding-bottom: 80px;
+    }
+    .speaker--start {
+      align-items: start;
+    }
+    .speaker__info {
+      flex-basis: 60%;
+      max-width: 60%;
+    }
+    .speaker__face {
+      flex-basis: 40%;
+      max-width: 40%;
+      padding-left: 0!important;
+      padding-right: 0;
     }
   `],
 })
