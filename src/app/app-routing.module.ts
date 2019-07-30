@@ -39,6 +39,11 @@ const routes: Routes = [
     data: { title: 'NG Rome MMXIX - Agenda'}
   },
   {
+    path: 'diversity',
+    loadChildren: './pages/diversity/diversity.module#DiversityModule',
+    data: { title: 'NG Rome MMXIX - Diversity'}
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full',
