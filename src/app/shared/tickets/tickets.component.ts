@@ -31,7 +31,7 @@ import { MessagingService } from 'src/app/shared/services/messaging.service';
             <h2 class="ticket__title">Regular Tickets</h2>
             <span class="ticket__price">€ 112,00</span>
             <p class="ticket__info">
-              <span>45/80 sold</span>
+              <span>55/70 sold</span>
               Sales ends on Jul 31
             </p>
             <span class="button" title="Buy Now">
