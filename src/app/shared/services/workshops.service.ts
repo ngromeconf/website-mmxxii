@@ -60,6 +60,34 @@ export class WorkshopsService {
         and how to solve some of the more challenging tasks that come up.
         <br /><br />
         That’s the purpose of this workshop.
+        <br /><br />
+        <b>Who should attend</b><br />
+        This one day workshop is for developers who are skilled in the basics of Angular 
+        but are looking to take the next steps.
+        <br /><br />
+        <b>Prerequisites</b><br />
+        JavaScript skills, Angular experience, a laptop with Node.js 
+        LTS installed and the latest version of the Angular CLI
+        Participants can find instructions on how to prepare for the class here:
+        <a href="https://gist.github.com/johnpapa/5968d567c4450ab786f324980ab07b46">
+          https://gist.github.com/johnpapa/5968d567c4450ab786f324980ab07b46
+        </a>
+        <br /><br />
+        <b>What will you learn</b><br />
+        This workshop will provide guidance to help you think through the 
+        process of building a solid application architecture with Angular 
+        (version 8+) that is easy to refactor and maintain.
+        <br /><br />
+        Some of the topics covered include:
+        <br />- Planning your application architecture
+        <br />- Structuring features and modules
+        <br />- Optimizing routes
+        <br />- Component communication
+        <br />- State management
+        <br /><br />
+        Come and engage in a day of in-depth discussions and hands-on examples of 
+        different architecture concepts and best practices that 
+        can be applied to your Angular applications.
       `,
       visible: true,
       location: 'We are hosted at...',
