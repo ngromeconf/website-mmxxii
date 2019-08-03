@@ -14,7 +14,7 @@ import { MessagingService } from 'src/app/shared/services/messaging.service';
             <h2 class="ticket__title">Diversity Tickets</h2>
             <span class="ticket__price">€ 32,00</span>
             <p class="ticket__info">
-              <span>25/50 sold</span>
+              <span>30/80 sold</span>
               Student or Women tickets<br>Sales ends on Sep 20th
             </p>
             <span class="button" title="Buy Now">
