@@ -13,7 +13,7 @@ import { Component, OnInit } from '@angular/core';
             <h2 class="ticket__title">Regular ticket + ngGirls Workshop</h2>
             <span class="ticket__price">€ 32,00</span>
             <p class="ticket__info">
-              <span>20/50 sold</span>
+              <span>25/50 sold</span>
               Only Women tickets<br>Sales ends on Sep 20th
             </p>
             <span class="button" title="Buy Now">
@@ -30,8 +30,8 @@ import { Component, OnInit } from '@angular/core';
             <h2 class="ticket__title">Angular Architecture - Early Bird</h2>
             <span class="ticket__price">€ 280,00</span>
             <p class="ticket__info">
-              <span>13/15 sold</span>
-              Sales ends on Aug 4th
+              <span>18/20 sold</span>
+              Sales ends on Aug 8th
             </p>
             <span class="button" title="Buy Now">
               <span>Buy Now</span>
