@@ -14,7 +14,7 @@ import { MessagingService } from 'src/app/shared/services/messaging.service';
             <h2 class="ticket__title">Diversity Tickets</h2>
             <span class="ticket__price">€ 32,00</span>
             <p class="ticket__info">
-              <span>20/50 sold</span>
+              <span>26/50 sold</span>
               Student or Women tickets<br>Sales ends on Sep 20th
             </p>
             <span class="button" title="Buy Now">
@@ -31,8 +31,8 @@ import { MessagingService } from 'src/app/shared/services/messaging.service';
             <h2 class="ticket__title">Regular Tickets</h2>
             <span class="ticket__price">€ 112,00</span>
             <p class="ticket__info">
-              <span>55/70 sold</span>
-              Sales ends on Jul 31
+              <span>60/70 sold</span>
+              Sales ends on Aug 12
             </p>
             <span class="button" title="Buy Now">
               <span>Buy Now</span>
@@ -61,7 +61,7 @@ import { MessagingService } from 'src/app/shared/services/messaging.service';
       </div>
     </div>
   </section>
-  ` 
+  `
 })
 export class TicketsComponent implements OnInit {
 

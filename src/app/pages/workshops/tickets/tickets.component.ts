@@ -30,7 +30,7 @@ import { Component, OnInit } from '@angular/core';
             <h2 class="ticket__title">Angular Architecture - Early Bird</h2>
             <span class="ticket__price">€ 280,00</span>
             <p class="ticket__info">
-              <span>15/20 sold</span>
+              <span>13/15 sold</span>
               Sales ends on Aug 4th
             </p>
             <span class="button" title="Buy Now">
