@@ -78,6 +78,14 @@ export class SponsorService {
       visible: true,
       websiteUrl: 'https://it.hotels.com/de1750353/hotel-in-zona-piazza-bologna-roma-italia/',
       type: 'other'
+    },
+    {
+      image: './assets/images/jetbrains.svg',
+      name: 'JetBrains',
+      description: 'JetBrains: Developer Tools for Professionals and Teams',
+      visible: true,
+      websiteUrl: 'https://www.jetbrains.com',
+      type: 'other'
     }
   ];
 

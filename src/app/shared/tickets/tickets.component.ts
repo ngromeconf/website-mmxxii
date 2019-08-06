@@ -31,7 +31,7 @@ import { MessagingService } from 'src/app/shared/services/messaging.service';
             <h2 class="ticket__title">Regular Tickets</h2>
             <span class="ticket__price">€ 112,00</span>
             <p class="ticket__info">
-              <span>75/85 sold</span>
+              <span>78/90 sold</span>
               Sales ends on Aug 18th
             </p>
             <span class="button" title="Buy Now">
@@ -48,7 +48,7 @@ import { MessagingService } from 'src/app/shared/services/messaging.service';
             <h2 class="ticket__title">Late Bird</h2>
             <span class="ticket__price">€ 128,00</span>
             <p class="ticket__info">
-              <span>0/60 sold</span>
+              <span>0/80 sold</span>
               Sales ends on Sep 30th
             </p>
             <span class="button" title="Buy Now">
