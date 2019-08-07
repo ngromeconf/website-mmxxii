@@ -10,7 +10,11 @@ import { WorkshopsService } from 'src/app/shared/services/workshops.service';
           <h1 class="site-content__intro__title">Workshops</h1>
         </header>
         <div class="site-content__intro__info__inner">
-          <p>October 6th. 1 day workshops, sold each separately.</p>
+          <p>
+          October 6th. 1 day workshops, sold each separately.<br>
+          Location: <a href="https://talentgarden.org/it/campus/italia/roma-ostiense/"
+              rel="noopener"
+              target="_blank">Talent Garden Ostiense, Via Ostiense, 92 - 00154 Roma RM</a></p>
         </div>
       </div>
     </div>
@@ -19,7 +23,7 @@ import { WorkshopsService } from 'src/app/shared/services/workshops.service';
     <div class="site-content__wrap">
       <h1 class="site-content__section__title">Workshops</h1>
       <div class="speakers__list">
-        <div class="speaker speaker--start" 
+        <div class="speaker speaker--start"
         *ngFor="let workshopElement of workshopService.getWorkshops()">
           <a class="speaker__face"
             [href]="workshopElement.targetUrl"
