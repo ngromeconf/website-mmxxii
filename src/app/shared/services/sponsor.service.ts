@@ -16,7 +16,7 @@ export class SponsorService {
 
   sponsorList: Sponsor[] = [
     {
-      image: './assets/images/ng-rome.png',
+      image: './assets/images/sponsor_resized/logo_ng.svg',
       name: 'Angular Roma',
       description: '',
       visible: true,
@@ -32,7 +32,7 @@ export class SponsorService {
       type: 'main'
     },
     {
-      image: './assets/images/skaffolder_logo-nero.svg',
+      image: './assets/images/sponsor_resized/logo_skaffolder.svg',
       name: 'Skaffolder',
       description: '',
       visible: true,
@@ -40,15 +40,24 @@ export class SponsorService {
       type: 'main'
     },
     {
-      image: './assets/images/blexin_cropped.svg',
+      image: './assets/images/sponsor_resized/logo_blexin.svg',
       name: 'Blexin',
       description: '',
       visible: true,
       websiteUrl: 'https://www.blexin.com/en-US/Home',
       type: 'gold'
     },
+    ,
     {
-      image: './assets/images/keypartner.svg',
+      image: './assets/images/sponsor_resized/logo_tag.svg',
+      name: 'Talent Garden',
+      description: '',
+      visible: true,
+      websiteUrl: 'https://talentgarden.org/en-it/',
+      type: 'gold'
+    },
+    {
+      image: './assets/images/sponsor_resized/logo_kp-mod.svg',
       name: 'KEYPARTNER',
       description: '',
       visible: true,
@@ -64,7 +73,7 @@ export class SponsorService {
       type: 'diversity'
     },
     {
-      image: './assets/images/02-sticker-mule.svg',
+      image: './assets/images/sponsor_resized/logo_stickermule.svg',
       name: 'Sticker Mule',
       description: 'Thousands of people trust us to make kick ass stickers, labels, magnets & more. Get free proofs, free shipping, 4 day turnaround & 24/7 customer support.',
       visible: true,
@@ -72,7 +81,7 @@ export class SponsorService {
       type: 'other'
     },
     {
-      image: './assets/images/hotels.com.png',
+      image: './assets/images/sponsor_resized/logo_hotels.svg',
       name: 'Hotels.com',
       description: 'Hotels.com - Deals & Discounts for Hotel Reservations from Luxury Hotels to Budget Accommodations',
       visible: true,
@@ -80,7 +89,7 @@ export class SponsorService {
       type: 'other'
     },
     {
-      image: './assets/images/jetbrains.svg',
+      image: './assets/images/sponsor_resized/logo_jetbrains.svg',
       name: 'JetBrains',
       description: 'JetBrains: Developer Tools for Professionals and Teams',
       visible: true,

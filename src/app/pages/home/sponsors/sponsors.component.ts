@@ -27,7 +27,7 @@ import { SponsorService } from 'src/app/shared/services/sponsor.service';
     </div>
     <div class="site-content__wrap">
       <h1 class="site-content__section__title">Silver Sponsors</h1>
-      <ul class="sponsors__list">
+      <ul class="sponsors__list sponsors__list--full">
         <li *ngFor="let sponsor of sponsorService.getSponsors('silver')" class="main">
           <a rel="noopener" href="{{sponsor.websiteUrl}}" target="_blank" title="{{sponsor.name}}">
             <img src="{{sponsor.image}}" alt="{{sponsor.name}}">
