@@ -89,7 +89,7 @@ import { ModalService } from 'src/app/shared/services/modal.service';
             </li>
             <li>
               <a rel="noopener"
-              href="https://ngrome.slack.com/join/shared_invite/enQtNjMyOTI4MDc0MTk3LTcwZjQ0ZTQxNzU5ZmJkMDEzNTA5MjUzM2FjZmM1Zjk5MDdhZDJlNWQ0ZjFjNGQwNDRiYWRmNDYwMWM0Zjk4YzQ"
+              href="https://join.slack.com/t/ngrome/shared_invite/enQtNzIzNTAzNzMzNDI2LTliODkyZmI1ZDNjYmJkNzYyYzIxOTlmNzc2MTRlMTk2NDVhNDllMWU2Y2RjNDFmZGJkNjc2ZDFlMGQxYWViNmU"
               target="_blank"
               title="Slack" >
                 <img src="./assets/images/slack.png" class="img--slack" />
