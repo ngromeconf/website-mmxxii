@@ -41,36 +41,52 @@ import { Component, OnInit, ElementRef } from '@angular/core';
         <h1 class="site-content__section__title">The TEAM</h1>
         <ul class="team__list">
           <li>
-            <img src="./assets/images/team/zizzamia.png"><br>
-            <span>Leonardo Zizzamia</span>
+            <a href="https://twitter.com/zizzamia" target="_blank">
+              <img src="./assets/images/team/zizzamia.png"><br>
+              <span>@zizzamia</span>
+            </a>
           </li>
           <li>
-            <img src="./assets/images/team/kraus.png"><br>
-            <span>Martina Kraus</span>
+            <a href="https://twitter.com/MartinaKraus11" target="_blank">
+              <img src="./assets/images/team/kraus.png"><br>
+              <span>@MartinaKraus11</span>
+            </a>
           </li>
           <li>
-            <img src="./assets/images/team/murruni.png"><br>
-            <span>Luciano Murruni</span>
+            <a href="https://twitter.com/lucianomurruni" target="_blank">
+              <img src="./assets/images/team/murruni.png"><br>
+              <span>@lucianomurruni</span>
+            </a>
           </li>
           <li>
-            <img src="./assets/images/team/bertaina.png"><br>
-            <span>Michela Bertaina</span>
+            <a href="https://twitter.com/BertainaMichela" target="_blank">
+              <img src="./assets/images/team/bertaina.png"><br>
+              <span>@BertainaMichela</span>
+            </a>
           </li>
           <li>
-            <img src="./assets/images/team/carducci.png"><br>
-            <span>Luca Carducci</span>
+            <a href="https://twitter.com/carducci91" target="_blank">
+              <img src="./assets/images/team/carducci.png"><br>
+              <span>@carducci91</span>
+            </a>
           </li>
           <li>
-            <img src="./assets/images/team/franceschini.png"><br>
-            <span>Lorenzo Franceschini</span>
+            <a href="https://twitter.com/lorfran" target="_blank">
+              <img src="./assets/images/team/franceschini.png"><br>
+              <span>@lorfran</span>
+            </a>
           </li>
           <li>
-            <img src="./assets/images/team/matascioli.png"><br>
-            <span>Marco Matascioli</span>
+            <a href="https://twitter.com/soniyj" target="_blank">
+              <img src="./assets/images/team/matascioli.png"><br>
+              <span>@soniyj</span>
+            </a>
           </li>
           <li>
-            <img src="./assets/images/team/natili.png"><br>
-            <span>Giorgio Natili</span>
+            <a href="https://twitter.com/giorgionatili" target="_blank">
+              <img src="./assets/images/team/natili.png"><br>
+              <span>@giorgionatili</span>
+            </a>
           </li>
         </ul>
       </div>
