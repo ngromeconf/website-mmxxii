@@ -147,6 +147,55 @@ export class PartnersService {
       visible: true,
       image: './assets/images/DotNetCode.png'
     },
+    {
+      websiteUrl: 'https://gdgtorino.it/',
+      name: 'GDG Torino',
+      description: '',
+      visible: true,
+      image: './assets/images/gdg-torino.png'
+    },
+    {
+      websiteUrl: 'https://www.meetup.com/it-IT/GDG-Venezia/',
+      name: 'GDG Venezia',
+      description: '',
+      visible: true,
+      image: './assets/images/gdg-venezia.png'
+    },
+    {
+      websiteUrl: 'https://gdgtrento.it/',
+      name: 'GDG Trento',
+      description: '',
+      visible: true,
+      image: './assets/images/gdg-trento.png'
+    },
+    {
+      websiteUrl: 'https://gdgpisa.it/',
+      name: 'GDG Pisa',
+      description: '',
+      visible: true,
+      image: './assets/images/gdg-pisa.png'
+    },
+    {
+      websiteUrl: 'https://www.facebook.com/womentechmakersit/',
+      name: 'Women Tech Maker - Italia',
+      description: '',
+      visible: true,
+      image: './assets/images/wtm-italia.png'
+    },
+    {
+      websiteUrl: 'https://www.gdgcatania.org/',
+      name: 'GDG Catania',
+      description: '',
+      visible: true,
+      image: './assets/images/gdg-catania.jpg'
+    },
+    {
+      websiteUrl: 'http://www.gdgnebrodi.info/',
+      name: 'GDG Nebrodi',
+      description: '',
+      visible: true,
+      image: './assets/images/gdg-nebrodi.png'
+    },
   ];
 
   getPartner(){
