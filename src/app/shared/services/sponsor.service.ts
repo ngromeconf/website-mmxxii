@@ -73,6 +73,14 @@ export class SponsorService {
       type: 'diversity'
     },
     {
+      image: './assets/images/gdg-logo.png',
+      name: 'GDG',
+      description: 'Google Developes Groups',
+      visible: true,
+      websiteUrl: 'https://developers.google.com/community/gdg/',
+      type: 'diversity'
+    },
+    {
       image: './assets/images/sponsor_resized/logo_stickermule.svg',
       name: 'Sticker Mule',
       description: 'Thousands of people trust us to make kick ass stickers, labels, magnets & more. Get free proofs, free shipping, 4 day turnaround & 24/7 customer support.',
