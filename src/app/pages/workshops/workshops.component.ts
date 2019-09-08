@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { WorkshopsService } from 'src/app/shared/services/workshops.service';
+import { SeoService } from 'src/app/shared/services/seo.service';
 
 @Component({
   template: `
@@ -83,8 +84,16 @@ export class WorkshopsComponent implements OnInit {
 
   constructor(
     public workshopService: WorkshopsService,
+    private seoService: SeoService
   ) {}
 
   ngOnInit() {
+
+    this.seoService.generateTags({
+      title: 'NG-Rome October 7th 2019 - Workshops',
+      image: 'https://angularconnect.com/perch/resources/nggirls.png',
+      description: 'We\'re hosting two full-day workshops to for even more in-depth learning. Angular Architecture by John Papa and Dan Wahlin + ngGirls Workshop'
+    });
+
   }
 }

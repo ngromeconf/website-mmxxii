@@ -22,20 +22,24 @@ export class WorkshopsService {
     {
       image: 'https://angularconnect.com/perch/resources/nggirls.png',
       targetUrl: 'http://ng-girls.org/ngRome-2019/',
-      name: 'Ng Girls Workshop',
+      name: 'Ng Girls Workshop [FREE]',
       description: 'A short description',
       fullDescription: `
        We believe that the IT industry will greatly benefit from bringing more women into technology. \n
-       We want to give you an opportunity to learn how to program and become a programmer. 
+       We want to give you an opportunity to learn how to program and become a programmer.
        Our plan is to offer a workshop in Rome. <br /><br />
        <b>Who is it for?</b>
        <br /><br />
-       Are you a woman interested in learning how to build web applications with the latest technologies? 
+       Are you a woman interested in learning how to build web applications with the latest technologies?
        We have good news for you: We are holding a one-day workshop for beginners!
        <br /><br />
-       It will take place on Sunday, October 6th, at the Teatro Italia in Rome, Italy. 
-       We believe that the IT industry will greatly benefit from bringing more women into technology. 
-       We want to give you an opportunity to learn how to program and become a programmer.
+       It will take place on Sunday, October 6th, at the Teatro Italia in Rome, Italy.
+       We believe that the IT industry will greatly benefit from bringing more women into technology.
+       We want to give you an opportunity to learn how to program and become a programmer.<br><br>
+
+       The workshop is free of charge. Just fill out the <a href="https://forms.gle/gZi9USYY8R6M5C6q8" target="_blank" rel="noopener"><u>application form</u></a>. NGROME is giving discounter tickets for participants of the ngGirls workshop tickets for the <a href="https://www.eventbrite.it/e/ng-rome-mmxix-angular-conference-tickets-54968197358?aff=ebdssbdestsearch" target="_blank" rel="noopener"><u>NG Rome MMXIX</u></a> in Rome, Italy on 7th October.
+       <br><br>Don’t wait too long - you can apply for a pass only until October 1st, 2019!
+       <br>You are welcome to join the ngGirls <a href="http://www.meetup.com/ngGirls/" target="_blank" rel="noopener"><u>meetup group</u></a> to get informed about future events.
       `,
       visible: true,
       location: 'We are hosted at...',
@@ -50,7 +54,7 @@ export class WorkshopsService {
       description: 'A short description',
       fullDescription: `
         Are you building Angular apps today?
-        Are you following established best practices? 
+        Are you following established best practices?
         How easy will it be to maintain and refactor the application in the future?
         <br /><br />
         If you’re starting a new application from scratch, what application architecture should be used?
@@ -62,11 +66,11 @@ export class WorkshopsService {
         That’s the purpose of this workshop.
         <br /><br />
         <b>Who should attend</b><br />
-        This one day workshop is for developers who are skilled in the basics of Angular 
+        This one day workshop is for developers who are skilled in the basics of Angular
         but are looking to take the next steps.
         <br /><br />
         <b>Prerequisites</b><br />
-        JavaScript skills, Angular experience, a laptop with Node.js 
+        JavaScript skills, Angular experience, a laptop with Node.js
         LTS installed and the latest version of the Angular CLI
         Participants can find instructions on how to prepare for the class here:
         <a href="https://gist.github.com/johnpapa/5968d567c4450ab786f324980ab07b46">
@@ -74,8 +78,8 @@ export class WorkshopsService {
         </a>
         <br /><br />
         <b>What will you learn</b><br />
-        This workshop will provide guidance to help you think through the 
-        process of building a solid application architecture with Angular 
+        This workshop will provide guidance to help you think through the
+        process of building a solid application architecture with Angular
         (version 8+) that is easy to refactor and maintain.
         <br /><br />
         Some of the topics covered include:
@@ -85,8 +89,8 @@ export class WorkshopsService {
         <br />- Component communication
         <br />- State management
         <br /><br />
-        Come and engage in a day of in-depth discussions and hands-on examples of 
-        different architecture concepts and best practices that 
+        Come and engage in a day of in-depth discussions and hands-on examples of
+        different architecture concepts and best practices that
         can be applied to your Angular applications.
       `,
       visible: true,
