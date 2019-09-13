@@ -49,10 +49,10 @@ export class SponsorService {
     },
     {
       image: './assets/images/logo_ict-group.svg',
-      name: 'Talent Garden',
+      name: 'ICT Group',
       description: '',
       visible: true,
-      websiteUrl: 'https://talentgarden.org/en-it/',
+      websiteUrl: 'https://www.ict-group.it/',
       type: 'gold'
     },
     {
