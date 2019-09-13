@@ -47,7 +47,14 @@ export class SponsorService {
       websiteUrl: 'https://www.blexin.com/en-US/Home',
       type: 'gold'
     },
-    ,
+    {
+      image: './assets/images/logo_ict-group.svg',
+      name: 'Talent Garden',
+      description: '',
+      visible: true,
+      websiteUrl: 'https://talentgarden.org/en-it/',
+      type: 'gold'
+    },
     {
       image: './assets/images/sponsor_resized/logo_tag.svg',
       name: 'Talent Garden',
