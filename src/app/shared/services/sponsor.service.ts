@@ -88,6 +88,14 @@ export class SponsorService {
       type: 'diversity'
     },
     {
+      image: './assets/images/GestaltEventi.svg',
+      name: 'Gestalt Eventi',
+      description: 'Gestalt Eventi - idee, servizi e soluzioni per eventi',
+      visible: true,
+      websiteUrl: 'http://www.gestalteventi.it/',
+      type: 'other'
+    },
+    {
       image: './assets/images/sponsor_resized/logo_stickermule.svg',
       name: 'Sticker Mule',
       description: 'Thousands of people trust us to make kick ass stickers, labels, magnets & more. Get free proofs, free shipping, 4 day turnaround & 24/7 customer support.',
