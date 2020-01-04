@@ -11,9 +11,9 @@ import { NgAnimateScrollService } from 'src/app/shared/services/ng-animate-scrol
         <div class="site-content__intro">
           <header class="site-content__intro__head">
             <h1 class="site-content__intro__title">
-              The biggest <strong> Italian </strong> conference about <strong>Angular</strong> is coming...<br>
+              The largest <strong> Italian Angular Conference</strong>
               is taking place at <strong>NG Rome MMXX</strong>
-              on <strong>October 17th</strong> in <strong>Rome, Italy.</strong>
+              in <strong>October 2020</strong> - <strong>Rome, Italy.</strong>
             </h1>
             <div class="site-content__intro__description">
               <a class="button" id="go-to-tickets" (click)="scrollTo('tickets', 300)"
@@ -28,18 +28,15 @@ import { NgAnimateScrollService } from 'src/app/shared/services/ng-animate-scrol
             <span class="site-content__intro__scroller"></span>
           </header>
           <div class="site-content__intro__info">
-            <p>We will have <b>15 talks</b> about the latest version of
-            Angular.</p>
-            <p>Whether you are a beginner, intermediate, or an expert,
-            this will be the best opportunity to learn about the last
-            trends in the <b>Angular</b> world and <b>Web Technologies</b>.</p>
-            <p>We will cover <b>topics</b> like: Blockchain, GraphQL, Machine Learning, NgRx,
-            New Angular features, Progressive Web Apps, RxJs, Testing, Web Performance,
-            Ionic, How to learn Javascript, etc.</p>
-            <p>A <b>full day</b> of news and tips about Angular and the possibility
-            to share ideas and meet top <b>Italian</b> and International developers.</p>
+            <p>Whether you are a beginner, intermediate, or an expert, this will be the best opportunity
+              to learn about the <b>last trends</b> in the Angular world and Web Technologies.
+
+              A full day of news and tips about <b>Angular</b>
+              and the possibility to share ideas and meet top <b>Italian and International developers</b>.
+            </p>
+
           </div>
-          <div class="site-content__intro__description">
+          <!-- <div class="site-content__intro__description">
               <a class="button"
               routerLink="/speakers"
               routerLinkActive="router-link-active"
@@ -50,7 +47,7 @@ import { NgAnimateScrollService } from 'src/app/shared/services/ng-animate-scrol
                   stroke-width="2" d="M1 1l7.358 5L1 11"/>
                 </svg>
               </a>
-            </div>
+            </div> -->
         </div>
       </div>
     </section>

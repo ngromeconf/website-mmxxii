@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
     <ngrome-tickets class="site-content__section" id="tickets">
     </ngrome-tickets>
 
-    <ngrome-sponsors class="site-content__section"></ngrome-sponsors>
+    <!-- <ngrome-sponsors class="site-content__section"></ngrome-sponsors> -->
     <!-- ngrome-partners class="site-content__section"></ngrome-partners -->
   `
 })
