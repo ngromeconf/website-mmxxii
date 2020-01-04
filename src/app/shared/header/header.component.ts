@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit {
     public sidebarService: SideBarService) { }
 
 
-  @ViewChild('sitemenu')
+  @ViewChild('sitemenu', { static: true })
   sitemenu: ElementRef;
 
 

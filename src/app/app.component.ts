@@ -45,7 +45,7 @@ export class AppComponent {
 		return this._active;
   }
 
-  @ViewChild('siteMenuClose')
+  @ViewChild('siteMenuClose', { static: true })
   siteMenuClose: ElementRef;
 
   constructor(
