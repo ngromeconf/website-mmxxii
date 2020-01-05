@@ -65,27 +65,9 @@ import { Component, OnInit, ElementRef } from '@angular/core';
             </a>
           </li>
           <li>
-            <a href="https://twitter.com/carducci91" target="_blank">
-              <img src="./assets/images/team/carducci.png"><br>
-              <span>@carducci91</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://twitter.com/lorfran" target="_blank">
-              <img src="./assets/images/team/franceschini.png"><br>
-              <span>@lorfran</span>
-            </a>
-          </li>
-          <li>
             <a href="https://twitter.com/soniyj" target="_blank">
               <img src="./assets/images/team/matascioli.png"><br>
               <span>@soniyj</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://twitter.com/giorgionatili" target="_blank">
-              <img src="./assets/images/team/natili.png"><br>
-              <span>@giorgionatili</span>
             </a>
           </li>
         </ul>
@@ -93,7 +75,7 @@ import { Component, OnInit, ElementRef } from '@angular/core';
     </div>
   </section>
 
-  <ngrome-tickets class="site-content__section" id="tickets"></ngrome-tickets>
+  <!-- <ngrome-tickets class="site-content__section" id="tickets"></ngrome-tickets> -->
   `,
   styles: [`
     .site-content {

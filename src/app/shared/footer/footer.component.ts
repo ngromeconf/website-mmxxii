@@ -33,15 +33,15 @@ import { ModalService } from 'src/app/shared/services/modal.service';
               <li>
                 <a (click)="openModal('ngrome-terms')" title="Terms & Privacy">Terms & Privacy</a>
               </li>
-              <li>
+              <!-- <li>
                 <a [routerLink]="['/speakers']" title="Go to NGRome Speakers page">Speakers</a>
-              </li>
-              <li>
+              </li> -->
+              <!-- <li>
                 <a [routerLink]="['/sponsors']" title="Go to NGRome Sponsors page">Sponsors</a>
-              </li>
-              <li>
+              </li> -->
+              <!-- <li>
                 <a [routerLink]="['/workshops']" title="Go to NGRome Workshops page">Workshops</a>
-              </li>
+              </li> -->
               <li>
                 <a [routerLink]="['/about']" title="Go to NGRome About page">About</a>
               </li>
