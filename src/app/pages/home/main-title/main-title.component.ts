@@ -13,7 +13,7 @@ import { NgAnimateScrollService } from 'src/app/shared/services/ng-animate-scrol
             <h1 class="site-content__intro__title">
               The largest <strong> Italian Angular Conference</strong>
               is taking place at <strong>NG Rome MMXX</strong>
-              in <strong>October 2020</strong> &nbsp; Rome, Italy.
+              in <strong>October 24th 2020</strong> &nbsp; Rome, Italy.
             </h1>
             <!-- <div class="site-content__intro__description">
               <a class="button" id="go-to-tickets" (click)="scrollTo('tickets', 300)"
