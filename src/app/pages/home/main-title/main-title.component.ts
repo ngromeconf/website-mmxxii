@@ -13,9 +13,9 @@ import { NgAnimateScrollService } from 'src/app/shared/services/ng-animate-scrol
             <h1 class="site-content__intro__title">
               The largest <strong> Italian Angular Conference</strong>
               is taking place at <strong>NG Rome MMXX</strong>
-              in <strong>October 24th 2020</strong> &nbsp; Rome, Italy.
+              in <strong>October 24th 2020</strong> Rome, Italy.
             </h1>
-            <!-- <div class="site-content__intro__description">
+            <div class="site-content__intro__description">
               <a class="button" id="go-to-tickets" (click)="scrollTo('tickets', 300)"
               title="Get Ticket Now">
                 <span id="go-to-tickets-text">Get Ticket Now</span>
@@ -24,7 +24,7 @@ import { NgAnimateScrollService } from 'src/app/shared/services/ng-animate-scrol
                   stroke-width="2" d="M1 1l7.358 5L1 11"/>
                 </svg>
               </a>
-            </div> -->
+            </div>
             <span class="site-content__intro__scroller"></span>
           </header>
           <div class="site-content__intro__info">

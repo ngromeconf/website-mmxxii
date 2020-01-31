@@ -13,7 +13,7 @@ export class SeoService {
     tags = {
       card: '',
       description: 'For the first time ever, the biggest Italian Angular Conference is taking place at NG Rome MMXIX, this year on October 7th at the Teatro Italia in Rome, Italy',
-      title: 'NG-Rome October 17th 2020 - The Italian Angular Conference',
+      title: 'NG-Rome October 24th 2020 - The Italian Angular Conference',
       site: '@ngromeconf',
       slug: '',
       creator: '@ngromeconf',

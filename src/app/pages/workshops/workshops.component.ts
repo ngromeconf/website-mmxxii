@@ -90,7 +90,7 @@ export class WorkshopsComponent implements OnInit {
   ngOnInit() {
 
     this.seoService.generateTags({
-      title: 'NG-Rome October 17th 2020 - Workshops',
+      title: 'NG-Rome October 24th 2020 - Workshops',
       image: 'https://angularconnect.com/perch/resources/nggirls.png',
       description: 'We\'re hosting two full-day workshops to for even more in-depth learning. Angular Architecture by John Papa and Dan Wahlin + ngGirls Workshop'
     });
