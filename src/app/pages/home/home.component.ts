@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
   selector: 'ngrome-home',
   template: `
   <ngrome-main-title class="site-content__section"></ngrome-main-title>
+    <ngrome-past-edition-video class="site-content__section"></ngrome-past-edition-video>
     <ngrome-speakers-list class="site-content__section"
     *ngIf="actualPage === 'speakers'"
     [speakerFilter]="speakerFilter">
