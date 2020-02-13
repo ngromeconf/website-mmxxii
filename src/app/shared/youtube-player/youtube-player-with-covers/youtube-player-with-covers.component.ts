@@ -1,20 +1,28 @@
-import {Component, EventEmitter, Input, OnInit} from '@angular/core';
+import {AfterContentInit, AfterViewInit, Component, ElementRef, EventEmitter, HostListener, Input, OnInit, ViewChild} from '@angular/core';
 import {debounceTime} from 'rxjs/operators';
 import {animate, state, style, transition, trigger} from '@angular/animations';
+import {YouTubePlayer} from '@angular/youtube-player';
 
 @Component({
   selector: 'ngrome-youtube-player-with-covers',
   templateUrl: './youtube-player-with-covers.component.html',
   styleUrls: ['./youtube-player-with-covers.component.scss']
 })
-export class YoutubePlayerWithCoversComponent implements OnInit {
+export class YoutubePlayerWithCoversComponent implements OnInit, AfterViewInit {
   @Input() videoId: string;
   playerRef: YT.Player;
   playing = false;
   playCount = 0;
   playingChange$ = new EventEmitter<boolean>();
 
+  @ViewChild('container', {static: true}) container: ElementRef;
+  fixedHeight: number;
+  fixedWidth: number;
   constructor() { }
+
+  ngAfterViewInit(): void {
+    this.computePlayerDimensions();
+  }
 
   ngOnInit() {
     // From: https://github.com/angular/components/blob/8.2.3/src/youtube-player/README.md
@@ -26,8 +34,20 @@ export class YoutubePlayerWithCoversComponent implements OnInit {
     document.body.appendChild(tag);
 
     this.playingChange$
-      .pipe(debounceTime(300))
+      .pipe(debounceTime(100))
       .subscribe((playing) => this.playing = playing);
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.computePlayerDimensions();
+  }
+
+  private computePlayerDimensions() {
+    setTimeout(() => {
+      this.fixedWidth = this.container.nativeElement.offsetWidth;
+      this.fixedHeight = Math.trunc(this.fixedWidth * 9 / 16); /* 16:9 Aspect Ratio */
+    }, 1);
   }
 
   onReady($evt: YT.PlayerEvent) {
