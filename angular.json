@@ -17,6 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "aot": true,
             "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -59,6 +60,10 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
                 }
               ],
               "serviceWorker": true
@@ -142,5 +147,8 @@
       }
     }
   },
-  "defaultProject": "ngRome2020"
+  "defaultProject": "ngRome2020",
+  "cli": {
+    "analytics": "38239a67-4067-4aa6-a91f-229bf33dc635"
+  }
 }
