@@ -25,7 +25,7 @@ import { MessagingService } from 'src/app/shared/services/messaging.service';
           </a>
         </article>
         <article class="ticket ticket--ready">
-          <a href="https://www.eventbrite.it/e/ng-rome-mmxix-angular-conference-tickets-54968197358"
+          <a href="https://ti.to/ngrome-conf/mmxx"
             title="Ticket">
             <h2 class="ticket__title">Conference ticket - Blind Early Bird</h2>
             <span class="ticket__price">€ 68,00</span>
@@ -57,7 +57,7 @@ import { MessagingService } from 'src/app/shared/services/messaging.service';
           </a>
         </article> -->
         <article class="ticket ticket--ready">
-          <a href="https://www.eventbrite.it/e/ng-rome-mmxix-angular-conference-tickets-54968197358"
+          <a href="https://ti.to/ngrome-conf/mmxx"
             title="Ticket">
             <h2 class="ticket__title">ONLY WOMEN: Regular ticket + ngGirls Workshop</h2>
             <span class="ticket__price">€ 42,00</span>
