@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LogoNgromeComponent } from './logo-ngrome/logo-ngrome.component';
 import { FooterComponent } from './footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { TermsComponent } from './terms/terms.component';
@@ -13,7 +12,6 @@ import { TicketsComponent } from './tickets/tickets.component';
 
 @NgModule({
   declarations: [
-    LogoNgromeComponent,
     FooterComponent,
     TermsComponent,
     ModalComponent,
@@ -25,7 +23,6 @@ import { TicketsComponent } from './tickets/tickets.component';
   ],
   imports: [CommonModule, RouterModule],
   exports: [
-    LogoNgromeComponent,
     FooterComponent,
     TermsComponent,
     ModalComponent,
