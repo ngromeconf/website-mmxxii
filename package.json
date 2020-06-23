@@ -13,7 +13,9 @@
     "build:ssr": "npm run build:client-and-server-bundles && npm run webpack:server",
     "serve:ssr": "node dist/server.js",
     "build:client-and-server-bundles": "ng build --prod && ng run ngRome2020:server",
-    "webpack:server": "webpack --config webpack.server.config.js --progress --colors"
+    "webpack:server": "webpack --config webpack.server.config.js --progress --colors",
+    "scully": "scully",
+    "scully:serve": "scully serve"
   },
   "dependencies": {
     "@angular/animations": "^9.0.1",
@@ -28,8 +30,12 @@
     "@angular/router": "^9.0.1",
     "@angular/service-worker": "^9.0.1",
     "@angular/upgrade": "^9.0.1",
+    "@angular/youtube-player": "^9.2.4",
     "@nguniversal/express-engine": "^8.2.6",
     "@nguniversal/module-map-ngfactory-loader": "^8.2.6",
+    "@scullyio/init": "0.0.28",
+    "@scullyio/ng-lib": "latest",
+    "@scullyio/scully": "latest",
     "@types/youtube": "0.0.38",
     "angular-in-memory-web-api": "^0.9.0",
     "core-js": "^2.6.11",
