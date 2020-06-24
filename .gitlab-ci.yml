@@ -10,6 +10,7 @@ pages:
     - npm install -g @angular/cli@9.1.7
     - npm install
     - ng build --prod --base-href '/ngrome2019/'
+    - npm run scully
     - mv dist/static/* public/
 
   artifacts:
@@ -25,6 +26,7 @@ deploy_production:
     - npm install -g @angular/cli@9.1.7
     - npm install -g firebase-tools
     - npm install
-    - ng build --prod
+    - npm run build
+    - npm run scully
     - firebase use --token $FIREBASE_DEPLOY_KEY production
     - firebase deploy -m "Pipeline $CI_PIPELINE_ID, build $CI_BUILD_ID" --non-interactive --token $FIREBASE_DEPLOY_KEY
