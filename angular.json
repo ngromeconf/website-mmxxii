@@ -17,7 +17,8 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist",
+            "aot": true,
+            "outputPath": "dist/ngRome2020",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -30,12 +31,8 @@
               "src/sitemap.xml",
               "src/robots.txt"
             ],
-            "styles": [
-              "src/styles.scss"
-            ],
-            "scripts": [
-              "node_modules/gsap/src/uncompressed/TweenMax.js"
-            ]
+            "styles": ["src/styles.scss"],
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -59,6 +56,10 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
                 }
               ],
               "serviceWorker": true
@@ -89,9 +90,7 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
-            "styles": [
-              "src/styles.scss"
-            ],
+            "styles": ["src/styles.scss"],
             "assets": [
               "src/favicon.ico",
               "src/assets",
@@ -103,13 +102,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "src/tsconfig.app.json",
-              "src/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "tsConfig": ["src/tsconfig.app.json", "src/tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
@@ -142,5 +136,8 @@
       }
     }
   },
-  "defaultProject": "ngRome2020"
+  "defaultProject": "ngRome2020",
+  "cli": {
+    "analytics": "38239a67-4067-4aa6-a91f-229bf33dc635"
+  }
 }

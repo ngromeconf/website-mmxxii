@@ -5,42 +5,42 @@ import { NgPerfume, PerfumeModule, PerfumeAfterViewInit } from 'perfume.js/angul
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: './pages/home/home.module#HomeModule',
+    loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule),
     data: { title: 'NG Rome MMXIX - The Italian Angular Conference' }
   },
   {
     path: 'info',
-    loadChildren: './pages/info/info.module#InfoModule',
+    loadChildren: () => import('./pages/info/info.module').then(m => m.InfoModule),
     data: { title: 'NG Rome MMXIX - Info'}
   },
   {
     path: 'about',
-    loadChildren: './pages/about/about.module#AboutModule',
+    loadChildren: () => import('./pages/about/about.module').then(m => m.AboutModule),
     data: { title: 'NG Rome MMXIX - About'}
   },
   {
     path: 'sponsors',
-    loadChildren: './pages/sponsors/sponsors.module#SponsorsModule',
+    loadChildren: () => import('./pages/sponsors/sponsors.module').then(m => m.SponsorsModule),
     data: { title: 'NG Rome MMXIX - Sponsors'}
   },
   {
     path: 'speakers',
-    loadChildren: './pages/speakers/speakers.module#SpeakersModule',
+    loadChildren: () => import('./pages/speakers/speakers.module').then(m => m.SpeakersModule),
     data: { title: 'NG Rome MMXIX - Speakers'}
   },
   {
     path: 'workshops',
-    loadChildren: './pages/workshops/workshops.module#WorkshopsModule',
+    loadChildren: () => import('./pages/workshops/workshops.module').then(m => m.WorkshopsModule),
     data: { title: 'NG Rome MMXIX - Workshops'}
   },
   {
     path: 'agenda',
-    loadChildren: './pages/agenda/agenda.module#AgendaModule',
+    loadChildren: () => import('./pages/agenda/agenda.module').then(m => m.AgendaModule),
     data: { title: 'NG Rome MMXIX - Agenda'}
   },
   {
     path: 'diversity',
-    loadChildren: './pages/diversity/diversity.module#DiversityModule',
+    loadChildren: () => import('./pages/diversity/diversity.module').then(m => m.DiversityModule),
     data: { title: 'NG Rome MMXIX - Diversity'}
   },
   {

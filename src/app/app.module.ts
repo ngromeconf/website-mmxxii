@@ -15,6 +15,7 @@ import { AngularFireStorageModule, StorageBucket } from '@angular/fire/storage';
 import { AngularFireModule } from '@angular/fire';
 import { MessagingService } from './shared/services/messaging.service';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { ScullyLibModule } from '@scullyio/ng-lib';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     AngularFireStorageModule,
     AngularFireMessagingModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule.enablePersistence()
+    AngularFirestoreModule.enablePersistence(),
+    ScullyLibModule
   ],
   providers: [SideBarService, ModalService, MessagingService,
     {

@@ -2,7 +2,7 @@
 // 🔥 ANIMATED LOGO
 // ------------------------------
 
-ngrome-logo{
+ngrome-logo {
   height: 100vh;
   width: 100%;
   position: absolute;
@@ -30,31 +30,25 @@ ngrome-logo{
 // ------------------------------
 
 .site {
-
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   width: 100%;
   height: 100%;
-
 }
 
 .site-content {
-
   //add opacity for the beginning of the animation
   //opacity should be 1 when the logo animation finish
   opacity: 0;
   min-height: 100vh;
 
   &__wrap {
-
     padding-left: 20px;
     padding-right: 20px;
 
     @include breakpoint-m {
-
       padding-left: 40px;
       padding-right: 40px;
-
     }
 
     margin-left: auto;
@@ -62,42 +56,29 @@ ngrome-logo{
     max-width: 1080px;
 
     &--flow {
-
       @include breakpoint-s {
-
         padding-right: 0;
-
       }
-
     }
-
   }
 
   &__section {
-
     position: relative;
     display: block; // Maledetto Angular
 
     & + & {
-
       margin-top: 65px;
 
       @include breakpoint-m {
-
         margin-top: 80px;
-
       }
 
       @include breakpoint-l {
-
         margin-top: 120px;
-
       }
-
     }
 
     &--full {
-
       color: $white;
       background-color: $ribbon;
 
@@ -113,13 +94,10 @@ ngrome-logo{
         padding-top: 80px;
         padding-bottom: 80px;
       }
-
     }
-
   }
 
   &__section__title {
-
     position: relative;
     padding-top: 20px;
     padding-left: 10px;
@@ -128,25 +106,20 @@ ngrome-logo{
     font-size: 20px;
 
     @include breakpoint-m {
-
       font-size: 27px;
       padding-top: 26px;
       padding-left: 20px;
-
     }
 
     @include breakpoint-l {
-
       margin-left: 70px;
       letter-spacing: 10px;
-
     }
 
     text-transform: uppercase;
     letter-spacing: 7px;
 
     &:before {
-
       content: "";
       position: absolute;
       top: 0;
@@ -154,21 +127,16 @@ ngrome-logo{
       height: 10px;
       width: 90px;
       background-color: $ribbon;
-
     }
-
   }
 
   &__intro {
-
     max-width: 890px;
     margin-left: auto;
     margin-right: auto;
-
   }
 
   &__intro__head {
-
     position: relative;
     display: flex;
     flex-direction: column;
@@ -176,25 +144,18 @@ ngrome-logo{
     height: 100vh;
 
     @include breakpoint-s {
-
       padding-bottom: 20px;
-
     }
 
     @include breakpoint-m {
-
       padding-bottom: 40px;
-
     }
 
     @include breakpoint-l {
-
       padding-bottom: 60px;
-
     }
 
     .button {
-
       margin-top: 30px;
       @include breakpoint-m {
         margin-top: 40px;
@@ -203,13 +164,10 @@ ngrome-logo{
         margin-top: 60px;
       }
       align-self: flex-start;
-
     }
-
   }
 
   &__intro__head__inner {
-
     position: relative;
     display: flex;
     flex-direction: column;
@@ -217,28 +175,21 @@ ngrome-logo{
     // height: 100vh;
 
     @include breakpoint-s {
-
       padding-top: 200px;
       padding-bottom: 20px;
-
     }
 
     @include breakpoint-m {
-
       padding-top: 220px;
       padding-bottom: 40px;
-
     }
 
     @include breakpoint-l {
-
       padding-top: 250px;
       padding-bottom: 60px;
-
     }
 
     .button {
-
       margin-top: 30px;
       @include breakpoint-m {
         margin-top: 40px;
@@ -247,71 +198,54 @@ ngrome-logo{
         margin-top: 60px;
       }
       align-self: flex-start;
-
     }
-
   }
 
   &__intro__title {
-
     font-size: 28px;
     font-weight: 700;
 
     @include breakpoint-m {
-
       font-size: 48px;
-
     }
 
     @include breakpoint-l {
-
       font-size: 52px;
-
     }
 
     strong {
-
       //
       // @include breakpoint-s {
       //   display: block;
       // }
 
       color: $ribbon;
-
     }
-
   }
 
   &__intro__scroller {
-
     width: 40px;
     height: 40px;
     position: absolute;
     right: 0;
 
     @include breakpoint-s {
-
       bottom: 20px;
-
     }
 
     @include breakpoint-m {
-
       bottom: 40px;
       height: 60px;
-
     }
 
-    &:before, &:after {
-
+    &:before,
+    &:after {
       content: "";
       display: block;
       position: absolute;
-
     }
 
     &:before {
-
       width: 4px;
       height: 34px;
       border-radius: 4px;
@@ -320,115 +254,90 @@ ngrome-logo{
       transform: translateX(-50%);
       background: $radiance;
       animation: scroller 1.2s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
-
     }
 
     @keyframes scroller {
-
-      0%, 50%, 60% {
-
+      0%,
+      50%,
+      60% {
         transform: scaleY(0.118);
-
       }
 
       30% {
-
         transform: scaleY(1);
-
       }
 
-      0%, 29.99% {
-
+      0%,
+      29.99% {
         transform-origin: top;
-
       }
 
-      30%, 100% {
-
+      30%,
+      100% {
         transform-origin: bottom;
-
       }
 
-      90%, 100% {
-
+      90%,
+      100% {
         transform: scaleY(0.118) translateY(-255px);
-
       }
     }
   }
 
   &__intro__info {
-
     // margin-top: 40px;
     margin-bottom: 60px;
 
     @include breakpoint-s {
-
       margin-top: 64px;
-
     }
 
     @include breakpoint-m {
-
       margin-top: 60px;
       margin-bottom: 80px;
-
     }
 
     @include breakpoint-l {
-
       margin-top: 80px;
       margin-bottom: 100px;
-
     }
 
     p {
-
       font-size: 18px;
       @include breakpoint-m {
         font-size: 21px;
       }
 
-
       line-height: 1.6;
       max-width: 800px;
 
-      + p  {
+      + p {
         margin-top: 32px;
       }
-
     }
-
   }
 
   &__intro__info__inner {
-
     // margin-top: 40px;
     margin-bottom: 60px;
 
     p {
-
       font-size: 18px;
       @include breakpoint-m {
         font-size: 21px;
       }
 
-
       line-height: 1.6;
       max-width: 800px;
 
-      + p  {
+      + p {
         margin-top: 32px;
       }
-
     }
-
   }
-
 }
 
 .button {
-
   display: inline-block;
   padding: 12px 22px;
   @include breakpoint-m {
@@ -446,9 +355,7 @@ ngrome-logo{
   cursor: pointer;
 
   span {
-
     margin-right: 16px;
-
   }
 
   svg {
@@ -457,44 +364,65 @@ ngrome-logo{
   }
 
   &--white {
-
     border-color: $white;
     color: $white;
 
-    svg, path {
+    svg,
+    path {
       stroke: $white;
     }
+  }
 
+  &--green {
+    border-color: $green;
+    color: $white;
+    border-radius: 38px;
+
+    svg,
+    path {
+      stroke: $white;
+    }
   }
 
   &--fill {
-
     padding: 14px 42px;
     background-color: $white;
     color: $ribbon;
     border-color: $ribbon;
 
-    svg, path {
+    svg,
+    path {
       stroke: $ribbon;
     }
 
     span {
-
       margin-right: 0;
       margin-left: 16px;
-
     }
-
   }
 
+  &--fill-green {
+    padding: 8px 42px;
+    background-color: $green;
+    color: $white;
+    border-color: $green;
+
+    svg,
+    path {
+      stroke: $white;
+    }
+
+    span {
+      margin-right: 0;
+      margin-left: 16px;
+    }
+  }
 }
 
 .read__more {
-
   display: inline-block;
   color: $radiance;
   font-size: 14px;
-
 }
 
 .site-menu--show {
@@ -506,7 +434,7 @@ ngrome-logo{
 
 .site-menu--close--full {
   opacity: 0;
-  transition: opacity .25s ease;
+  transition: opacity 0.25s ease;
   position: fixed;
   top: 0;
   right: 0;
@@ -514,28 +442,20 @@ ngrome-logo{
   left: 0;
   pointer-events: none;
   z-index: 3;
-  cursor: url('/assets/icons/cursor-close-menu.svg') 40 40, auto;
+  cursor: url("/assets/icons/cursor-close-menu.svg") 40 40, auto;
 
   .site-menu--show & {
     background-color: lighten($ribbon, 50%);
-    opacity: .90;
+    opacity: 0.9;
     pointer-events: all;
-    transition: opacity .25s ease;
+    transition: opacity 0.25s ease;
   }
 }
 
 #intro {
-
-  background-image: url('/assets/images/confetti-mobile.png');
+  background-image: url("/assets/images/confetti.svg");
   background-position: top left;
+  background-size: cover;
   background-repeat: no-repeat;
   //background-size: cover;
-
-  @include breakpoint-m {
-
-    background-image: url('/assets/images/confetti.png');
-    background-position: top -60px left -30px;
-    background-repeat: no-repeat;
-
-  }
 }
