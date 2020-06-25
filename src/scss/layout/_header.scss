@@ -48,7 +48,10 @@
     margin-top: 15px;
     display: none;
     @include breakpoint-m {
-      display: block;
+      display: flex;
+    }
+    svg {
+      margin-left: 5px; 
     }
   }
 
