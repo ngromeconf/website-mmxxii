@@ -4,7 +4,6 @@ import { FooterComponent } from './footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { TermsComponent } from './terms/terms.component';
 import { ModalComponent } from './modal/modal.component';
-import { HeaderComponent } from './header/header.component';
 import { ConductComponent } from './conduct/conduct.component';
 import { SpeakerListComponent } from './speakers-list/speakers-list.component';
 import { SpeakerBioComponent } from './speakers-list/speaker-bio/speaker-bio.component';
@@ -15,7 +14,6 @@ import { TicketsComponent } from './tickets/tickets.component';
     FooterComponent,
     TermsComponent,
     ModalComponent,
-    HeaderComponent,
     ConductComponent,
     SpeakerListComponent,
     SpeakerBioComponent,
@@ -26,7 +24,6 @@ import { TicketsComponent } from './tickets/tickets.component';
     FooterComponent,
     TermsComponent,
     ModalComponent,
-    HeaderComponent,
     ConductComponent,
     SpeakerListComponent,
     SpeakerBioComponent,
