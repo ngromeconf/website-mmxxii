@@ -1,25 +1,24 @@
 import { Component, Output, EventEmitter, NgZone, OnInit, ElementRef } from '@angular/core';
-import { Linear, TimelineLite, TweenLite } from "gsap";
 
 @Component({
   selector: 'ngrome-logo',
   templateUrl: './logo-ngrome.component.html',
   styleUrls: ['./logo-ngrome.component.scss'],
 })
-export class LogoNgromeComponent implements OnInit{
+export class LogoNgromeComponent implements OnInit {
 
-    @Output()
-    public animationToggled = new EventEmitter();
+  @Output()
+  public animationToggled = new EventEmitter();
 
   public get isActive(): boolean {
-		return this._active;
-	}
+    return this._active;
+  }
 
-	public get isAnimating(): boolean {
-		return this._animating;
-	}
+  public get isAnimating(): boolean {
+    return this._animating;
+  }
 
-	private _active: boolean;
+  private _active: boolean;
   private _animating: boolean;
 
   /**
@@ -31,7 +30,7 @@ export class LogoNgromeComponent implements OnInit{
    * @memberof LogoNgromeComponent
    */
   private get logo(): HTMLElement {
-		return this.logoElement.nativeElement;
+    return this.logoElement.nativeElement;
   }
 
   private _tl = new TimelineLite();
@@ -48,15 +47,15 @@ export class LogoNgromeComponent implements OnInit{
   }
 
   private setState() {
-		this._active = Math.random() > 0.5;
-		if (this.isActive) {
-			TweenLite.set(this.logoElement, { className: "active" });
-		} else {
-			TweenLite.set(this.logoElement, { className: "" });
-		}
+    this._active = Math.random() > 0.5;
+    if (this.isActive) {
+      TweenLite.set(this.logoElement, { className: "active" });
+    } else {
+      TweenLite.set(this.logoElement, { className: "" });
+    }
   }
 
-  private animateLogo(){
+  private animateLogo() {
 
     //console.log('animate logo');
     this._animating = true;
@@ -82,25 +81,25 @@ export class LogoNgromeComponent implements OnInit{
     //this._tl.to(blast, stagger, { scale: 1 }, 0);
     this._tl.to(blast, stagger, { scale: 0, autoAlpha: 1 }, stagger);
 
-    let logoElementsToAnimate = Array.prototype.slice.call( logoElement[0].children );
+    let logoElementsToAnimate = Array.prototype.slice.call(logoElement[0].children);
 
-    logoElementsToAnimate.forEach( (element,i) => {
+    logoElementsToAnimate.forEach((element, i) => {
       //console.log('3-forEach element ',i);
       var element_bbox = element.getBBox();
       var scale = 1;
       var toBlur = false;
 
       //define the element to blur
-      if (i%2==0 && element.className.baseVal === 'toBlur'){
+      if (i % 2 == 0 && element.className.baseVal === 'toBlur') {
         scale = Math.random() * 3.5 + 1;
-        if (scale > 1.7){
+        if (scale > 1.7) {
           toBlur = true;
           //console.log('4-blur this element ',element);
         }
       }
 
       //this item should be not visible
-      if (element.className.baseVal === 'long'){
+      if (element.className.baseVal === 'long') {
         scale = 0;
       }
 
@@ -113,18 +112,18 @@ export class LogoNgromeComponent implements OnInit{
       //console.log('6-scalar ', scalar);
       var itemRotation = Math.floor(Math.random() * 365);
       //console.log('7-rotate this element ', itemRotation);
-      var rotation = itemRotation+"_short";
+      var rotation = itemRotation + "_short";
 
       this._tl.to(element, 1, {
         autoAlpha: 1,
         x: (element_bbox.x - center.x) * scalar,
         y: (element_bbox.y - center.y) * scalar,
-        directionalRotation:rotation,
+        directionalRotation: rotation,
         scale: scale
       }, delay);
 
 
-      if(toBlur){
+      if (toBlur) {
         setTimeout(() => {
           //console.log('show container');
           element.classList.add('blur');
@@ -141,12 +140,12 @@ export class LogoNgromeComponent implements OnInit{
     this._active = !this.isActive;
 
     return new TimelineLite().add(animation).add(() =>
-			this.ngZone.run(() => {
+      this.ngZone.run(() => {
         this.animationToggled.emit(true);
         this._animating = false;
         //console.log('animation complete');
-			})
-		);
+      })
+    );
 
   }
 
@@ -175,19 +174,19 @@ export class LogoNgromeComponent implements OnInit{
    * @returns
    * @memberof LogoNgromeComponent
    */
-  private getCenter(bounds){
+  private getCenter(bounds) {
     //on mobile we have less space on top...
     //console.log(window.innerHeight);
-    let centerY = bounds.x + bounds.width /2;
+    let centerY = bounds.x + bounds.width / 2;
     //centerY = centerY + 0.25 * centerY;
 
-    let centerX = bounds.x + bounds.width /2;
+    let centerX = bounds.x + bounds.width / 2;
     //centerX = centerX + 0.55 * centerX;
 
-    return {x: centerX, y: centerY};
+    return { x: centerX, y: centerY };
   }
 
-  public activate(){
+  public activate() {
     //console.log('activate');
     return TweenLite.fromTo(this._tl, 2, { className: "" }, { className: "active" });
   }

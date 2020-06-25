@@ -7,6 +7,8 @@ import { HomeComponent } from './home.component';
 import { RouterModule } from '@angular/router';
 import { PartnersComponent } from './partners/partners.component';
 import { SharedModule } from '../../shared/shared.module';
+import {YoutubePlayerModule} from '../../shared/youtube-player/youtube-player.module';
+import { PastEditionVideoComponent } from './past-edition-video/past-edition-video.component';
 
 @NgModule({
   declarations: [
@@ -14,15 +16,17 @@ import { SharedModule } from '../../shared/shared.module';
     SponsorsComponent,
     CallForPaperComponent,
     HomeComponent,
-    PartnersComponent
+    PartnersComponent,
+    PastEditionVideoComponent
   ],
-  imports: [
-    CommonModule,
-    RouterModule.forChild([
-      {path: '', component: HomeComponent, pathMatch: 'full'}
-    ]),
-    SharedModule
-  ],
+    imports: [
+        CommonModule,
+        RouterModule.forChild([
+            {path: '', component: HomeComponent, pathMatch: 'full'}
+        ]),
+        SharedModule,
+        YoutubePlayerModule
+    ],
   exports: [],
 })
 export class HomeModule {}

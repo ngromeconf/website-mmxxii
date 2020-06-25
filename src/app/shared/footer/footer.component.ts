@@ -25,7 +25,7 @@ import { ModalService } from 'src/app/shared/services/modal.service';
             <span>NG-Rome</span>
           </h1>
           <div class="site-footer__copy">
-            <p>Copyright 2020 © Skaffolder Srl - All Rights Reserved.</p>
+            <p>Copyright 2020 © SATYRICON FACTORY LTD - All Rights Reserved.</p>
             <ul class="site-footer__nav">
               <li>
                 <a (click)="openModal('ngrome-conduct')" title="Code of Conduct">Code of Conduct</a>
