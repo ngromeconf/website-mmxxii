@@ -1,7 +1,7 @@
 {
   "hosting": {
     "site": "ngrome-2020",
-    "public": "dist/ngRome2020",
+    "public": "dist/static",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
       {
