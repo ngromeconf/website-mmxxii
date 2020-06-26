@@ -1,4 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'ngrome-menu',
@@ -8,7 +10,20 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class MenuComponent implements OnInit {
   @Output() toggleSidebar = new EventEmitter();
 
-  constructor() {}
+  menuList$: Observable<any[]>;
+
+  constructor(private afs: AngularFirestore) {
+    this.menuList$ = afs
+      .collection('configuration2020', (ref) => {
+        let query:
+          | firebase.firestore.CollectionReference
+          | firebase.firestore.Query = ref;
+        query = query.where('active', '==', true);
+        // query = query.orderBy('startTime', 'asc');
+        return query;
+      })
+      .valueChanges();
+  }
 
   ngOnInit(): void {}
 
