@@ -10,11 +10,11 @@ import {YouTubePlayer} from '@angular/youtube-player';
 })
 export class YoutubePlayerWithCoversComponent implements OnInit, AfterViewInit {
   @Input() videoId: string;
-  playerRef: YT.Player;
+  @ViewChild('playerYt', {static: true}) playerYt: YouTubePlayer;
   playing = false;
   playCount = 0;
-  playingChange$ = new EventEmitter<boolean>();
 
+  playingChange$ = new EventEmitter<boolean>();
   @ViewChild('container', {static: true}) container: ElementRef;
   fixedHeight: number;
   fixedWidth: number;
@@ -50,11 +50,6 @@ export class YoutubePlayerWithCoversComponent implements OnInit, AfterViewInit {
     }, 1);
   }
 
-  onReady($evt: YT.PlayerEvent) {
-    console.log('player-ready', $evt);
-    this.playerRef = $evt.target;
-  }
-
   onStateChange($evt: YT.OnStateChangeEvent) {
     console.log('player-state-change', $evt);
     this.playingChange$.emit(($evt.data === YT.PlayerState.PLAYING || $evt.data === YT.PlayerState.BUFFERING));
@@ -70,14 +65,21 @@ export class YoutubePlayerWithCoversComponent implements OnInit, AfterViewInit {
       case YT.PlayerState.ENDED:
         console.log('youtube stop');
         // Stop the video on ending so recommended videos don't pop up
-        this.playerRef.stopVideo();
+        this.playerYt.stopVideo();
         break;
     }
   }
 
   public playVideo() {
-    if (this.playerRef) {
-      this.playerRef.playVideo();
+    if (this.playerYt) {
+      this.playerYt.playVideo();
+    } else {
+      console.log('reference to player is missing');
     }
   }
+
+  onError($event: YT.OnErrorEvent) {
+    console.log('Error YT player', $event);
+  }
+
 }
