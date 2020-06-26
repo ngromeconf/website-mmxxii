@@ -140,8 +140,8 @@ ngrome-logo {
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    height: 100vh;
+    justify-content: center;
+    height: 70vh;
 
     @include breakpoint-s {
       padding-bottom: 20px;
@@ -164,6 +164,9 @@ ngrome-logo {
         margin-top: 60px;
       }
       align-self: flex-start;
+    }
+    .img {
+      align-self: flex-end;
     }
   }
 
@@ -202,15 +205,16 @@ ngrome-logo {
   }
 
   &__intro__title {
-    font-size: 28px;
-    font-weight: 700;
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center;
 
     @include breakpoint-m {
-      font-size: 48px;
+      font-size: 26px;
     }
 
     @include breakpoint-l {
-      font-size: 52px;
+      font-size: 30px;
     }
 
     strong {
