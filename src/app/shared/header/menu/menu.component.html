@@ -1,0 +1,52 @@
+<a
+  [routerLink]="['/']"
+  routerLinkActive="router-link-active"
+  title="Go to NGRome Homepage"
+>
+  <h1 class="site-menu__logo">
+    <img src="assets/logo/logo-white-text.svg" />
+    <span>Ng Rome - Menu di navigazione</span>
+  </h1>
+</a>
+<ul class="site-menu__nav">
+  <li *ngFor="let menuItem of menuList$ | async">
+    <a [routerLink]="menuItem.url" [title]="menuItem.title">
+      <img src="assets/icons/site-icons/{{ menuItem.icon }}" />
+      {{ menuItem.name }}
+    </a>
+  </li>
+</ul>
+<div class="site-menu__info">
+  <p>October 24th, 2020 Teatro Italia, Rome Italy</p>
+  <a
+    class="button button--white button--fill"
+    rel="noopener"
+    target="_blank"
+    href="https://ti.to/ngrome-conf/mmxx"
+    title="Go to Tickets Page"
+  >
+    <svg width="20" height="14">
+      <g fill="none" fill-rule="evenodd" stroke="#EE0C3E" stroke-width="2">
+        <path
+          d="M18.422 9.819c-1.12-.422-1.91-1.53-1.91-2.819s.79-2.397 1.91-2.819V1H1.312v3.181c1.119.422 1.91 1.53 1.91 2.819s-.791 2.397-1.91 2.819V13h17.11V9.819zM7 1.462V13"
+        />
+      </g>
+    </svg>
+    Get Ticket
+  </a>
+</div>
+<button
+  (click)="toggleSidebarStatus($event)"
+  alt="Close Menu"
+  class="site-menu--close"
+  type="button"
+  name="site menu close"
+  aria-label="Close Menu"
+>
+  <svg width="21" height="21">
+    <g fill="#FFF" fill-rule="evenodd">
+      <path d="M.368 18.717L18.753.332l1.414 1.415L1.782 20.13z" />
+      <path d="M1.782.869l18.385 18.384-1.414 1.415L.368 2.283z" />
+    </g>
+  </svg>
+</button>

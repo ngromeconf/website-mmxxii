@@ -1,10 +1,22 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
-import { trigger, transition, state, useAnimation, style } from '@angular/animations';
+import {
+  trigger,
+  transition,
+  state,
+  useAnimation,
+  style,
+} from '@angular/animations';
 import { Title } from '@angular/platform-browser';
-import { Router, Event, NavigationStart, NavigationEnd, NavigationError } from '@angular/router';
+import {
+  Router,
+  Event,
+  NavigationStart,
+  NavigationEnd,
+  NavigationError,
+} from '@angular/router';
 import { fadeIn, fadeOut } from 'ng-animate';
 
-import { SideBarService} from './shared/services/sidebar.service';
+import { SideBarService } from './shared/services/sidebar.service';
 import { PWAService } from './shared/services/pwa.service';
 
 @Component({
@@ -16,7 +28,7 @@ import { PWAService } from './shared/services/pwa.service';
       class="site-content"
       role="main"
       [@animateContainer]="containerStatus"
-      >
+    >
       <router-outlet></router-outlet>
     </main>
     <ngrome-footer></ngrome-footer>
@@ -24,16 +36,22 @@ import { PWAService } from './shared/services/pwa.service';
   `,
   animations: [
     trigger('animateContainer', [
-      state('visible', style({ 'opacity': 1})),
-      state('hidden', style({ 'opacity': 0})),
-      transition('visible => hidden', useAnimation(fadeOut, {
-        params: { timing: 0.1, delay: 0.1 }
-      })),
-      transition('hidden => visible', useAnimation(fadeIn, {
-        params: { timing: 2, delay: 0.1 }
-      })),
+      state('visible', style({ opacity: 1 })),
+      state('hidden', style({ opacity: 0 })),
+      transition(
+        'visible => hidden',
+        useAnimation(fadeOut, {
+          params: { timing: 0.1, delay: 0.1 },
+        })
+      ),
+      transition(
+        'hidden => visible',
+        useAnimation(fadeIn, {
+          params: { timing: 2, delay: 0.1 },
+        })
+      ),
     ]),
-  ]
+  ],
 })
 export class AppComponent {
   title = 'ng-rome-MMXIX';
@@ -42,7 +60,7 @@ export class AppComponent {
   private _active: boolean = false;
 
   public get isActive(): boolean {
-		return this._active;
+    return this._active;
   }
 
   @ViewChild('siteMenuClose', { static: true })
@@ -52,52 +70,54 @@ export class AppComponent {
     private sidebarService: SideBarService,
     private router: Router,
     private pwaService: PWAService,
-    private titleService: Title,
+    private titleService: Title
   ) {
-      this.router.events.subscribe( (event: Event) => {
-        if (event instanceof NavigationStart) {
-          // Show loading indicator
-          this.hideContainer();
-          window.scroll(0,0);
+    this.router.events.subscribe((event: Event) => {
+      if (event instanceof NavigationStart) {
+        // Show loading indicator
+        this.hideContainer();
+        window.scroll(0, 0);
+      }
+      if (event instanceof NavigationEnd) {
+        if (this.logoAlreadyAnimated === true) {
+          this.showContainer();
         }
-        if (event instanceof NavigationEnd) {
-          if (this.logoAlreadyAnimated === true){
-            this.showContainer();
-          }
-          this.logoAlreadyAnimated = true;
-          //close the sidebar if is open after the navigation is complete
-          if(this.sidebarService.getSidebarStatus() === 'visible'){
-            this.sidebarService.toggleSidebarStatus(true);
-          }
+        this.logoAlreadyAnimated = true;
+        //close the sidebar if is open after the navigation is complete
+        if (this.sidebarService.getSidebarStatus() === 'visible') {
+          this.sidebarService.toggleSidebarStatus(true);
         }
-        if (event instanceof NavigationEnd) {
-          if (router.routerState.root.snapshot && 
-              router.routerState.root.snapshot.data && 
-              router.routerState.root.snapshot.data.title) {
-            titleService.setTitle(router.routerState.root.snapshot.data.title);
-          }
+      }
+      if (event instanceof NavigationEnd) {
+        if (
+          router.routerState.root.snapshot &&
+          router.routerState.root.snapshot.data &&
+          router.routerState.root.snapshot.data.title
+        ) {
+          titleService.setTitle(router.routerState.root.snapshot.data.title);
         }
+      }
     });
   }
 
-  ngOnInit(){
+  ngOnInit() {
     //check if is available a new version
     this.pwaService.checkUpdateAvailable();
-    this.siteMenuClose.nativeElement.addEventListener('click', ()=>{
+    this.siteMenuClose.nativeElement.addEventListener('click', () => {
       this.sidebarService.toggleSidebarStatus();
     });
     this.showContainer();
   }
 
-  showContainer(){
-    if (this.containerStatus !== 'visible'){
+  showContainer() {
+    if (this.containerStatus !== 'visible') {
       setTimeout(() => {
         this.containerStatus = 'visible';
       });
     }
   }
 
-  hideContainer(){
+  hideContainer() {
     this.containerStatus = 'hidden';
   }
 

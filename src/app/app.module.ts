@@ -16,17 +16,19 @@ import { AngularFireModule } from '@angular/fire';
 import { MessagingService } from './shared/services/messaging.service';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { ScullyLibModule } from '@scullyio/ng-lib';
+import { HeaderModule } from './shared/header/header.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    HeaderModule,
     AppRoutingModule,
     SharedModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+    }),
     // firebase  modules
     AngularFireDatabaseModule,
     AngularFireAuthModule,
@@ -34,13 +36,17 @@ import { ScullyLibModule } from '@scullyio/ng-lib';
     AngularFireMessagingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule.enablePersistence(),
-    ScullyLibModule
+    ScullyLibModule,
   ],
-  providers: [SideBarService, ModalService, MessagingService,
+  providers: [
+    SideBarService,
+    ModalService,
+    MessagingService,
     {
       provide: StorageBucket,
-      useValue: 'gs://ngrome-79ce3.appspot.com'
-    }],
-  bootstrap: [AppComponent]
+      useValue: 'gs://ngrome-79ce3.appspot.com',
+    },
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
