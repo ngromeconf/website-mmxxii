@@ -137,24 +137,15 @@ ngrome-logo {
   }
 
   &__intro__head {
+    margin: 70px 0;
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    height: 70vh;
+    justify-content: start;
 
-    @include breakpoint-s {
-      padding-bottom: 20px;
+    img {
+      padding: 40px 0;
     }
-
-    @include breakpoint-m {
-      padding-bottom: 40px;
-    }
-
-    @include breakpoint-l {
-      padding-bottom: 60px;
-    }
-
     .button {
       margin-top: 30px;
       @include breakpoint-m {
@@ -191,23 +182,13 @@ ngrome-logo {
       padding-top: 250px;
       padding-bottom: 60px;
     }
-
-    .button {
-      margin-top: 30px;
-      @include breakpoint-m {
-        margin-top: 40px;
-      }
-      @include breakpoint-l {
-        margin-top: 60px;
-      }
-      align-self: flex-start;
-    }
   }
 
   &__intro__title {
     font-size: 20px;
     font-weight: normal;
     text-align: center;
+    padding: 120px 40px 30px;
 
     @include breakpoint-m {
       font-size: 26px;
@@ -224,6 +205,43 @@ ngrome-logo {
       // }
 
       color: $ribbon;
+    }
+  }
+
+  &__intro__description {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center;
+    padding: 50px 40px;
+
+    @include breakpoint-m {
+      font-size: 26px;
+    }
+
+    @include breakpoint-l {
+      font-size: 30px;
+    }
+    strong {
+      @include breakpoint-s {
+        display: block;
+      }
+
+      color: $ribbon;
+    }
+
+    span {
+      display: block;
+      font-size: 18px;
+      line-height: 12px;
+    }
+
+    .button {
+      margin: 5px 0;
+      padding-top: 10px;
+      padding-bottom: 10px;
     }
   }
 
