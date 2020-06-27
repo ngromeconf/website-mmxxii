@@ -1,0 +1,8 @@
+<svg width="22" height="24" preserveAspectratio="xMinYMin" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g fill="none" fill-rule="evenodd" stroke="#FFF" stroke-width="2" transform="translate(-2, 0)">
+      <g>
+          <path d="M4,15 L22,15 L22,5 C22,4.44771525 21.5522847,4 21,4 L5,4 C4.44771525,4 4,4.44771525 4,5 L4,15 Z" id="Rectangle"></path>
+          <path d="M3.55800376,15 L2.06464946,18.6185123 C2.01471792,18.7395003 1.98902339,18.8691136 1.98902339,19 C1.98902339,19.5522847 2.43673864,20 2.98902339,20 L23.0255734,20 C23.1549356,20 23.2830689,19.9749003 23.4028703,19.9260924 C23.9143369,19.717717 24.160041,19.1341698 23.9516657,18.6227031 L22.4757496,15 L3.55800376,15 Z" id="Rectangle-Copy"></path>
+      </g>
+  </g>
+</svg>

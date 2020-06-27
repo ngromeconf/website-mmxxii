@@ -8,7 +8,7 @@ import {NgAnimateScrollService} from '../../../shared/services/ng-animate-scroll
   templateUrl: 'past-edition-video.component.html'
 })
 export class PastEditionVideoComponent implements OnInit {
-  @ViewChild(YoutubePlayerWithCoversComponent, {static: true}) player;
+  @ViewChild(YoutubePlayerWithCoversComponent, {static: true}) player: YoutubePlayerWithCoversComponent;
 
   constructor(private animateScrollService: NgAnimateScrollService) { }
 
@@ -22,5 +22,4 @@ export class PastEditionVideoComponent implements OnInit {
   scrollTo(el: string, duration?: number) {
     this.animateScrollService.scrollToElement(el, duration);
   }
-
 }
