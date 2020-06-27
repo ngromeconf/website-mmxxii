@@ -1,27 +1,50 @@
-import { Component, OnInit } from "@angular/core";
-import { ModalService } from "src/app/shared/services/modal.service";
+import { Component, OnInit } from '@angular/core';
+import { ModalService } from 'src/app/shared/services/modal.service';
 
 @Component({
-  selector: "ngrome-footer",
+  selector: 'ngrome-footer',
   template: `
     <footer class="site-footer" role="contentinfo">
-      <div class="site-footer--main">
-        <picture>
-          <source srcset="assets/images/roma-detail.webp" type="image/webp" />
-          <source srcset="assets/images/roma-detail.jpg" type="image/jpeg" />
-          <img
-            src="assets/images/roma-detail.jpg"
-            alt="my image"
-            width="100"
-            height="100"
+      <div class="site-footer__main">
+        <svg
+          id="confetti-footer-1"
+          width="120"
+          height="118"
+          viewBox="0 0 120 118"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            x="24.3201"
+            width="133"
+            height="35"
+            transform="rotate(44.0158 24.3201 0)"
+            fill="#DD0031"
           />
-        </picture>
-        <p>A presto!</p>
-        <h2>NG ROME</h2>
-        <p>MMXX></p>
+        </svg>
+        <svg
+          id="confetti-footer-2"
+          width="120"
+          height="118"
+          viewBox="0 0 120 118"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            x="24.3201"
+            width="133"
+            height="35"
+            transform="rotate(44.0158 24.3201 0)"
+            fill="#DD0031"
+          />
+        </svg>
+
+        <div class="site-footer__main__content">
+          <p>A presto!</p>
+          <img src="assets/logo/logo-text-white.svg" />
+        </div>
       </div>
       <div class="site-content__wrap">
-        <h1 class="site-content__section__title">MMXIX</h1>
         <nav class="site-footer__menu">
           <h1 class="site-footer__logo">
             <svg width="55" height="58">
