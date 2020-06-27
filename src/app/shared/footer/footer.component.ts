@@ -1,10 +1,25 @@
-import { Component, OnInit } from '@angular/core';
-import { ModalService } from 'src/app/shared/services/modal.service';
+import { Component, OnInit } from "@angular/core";
+import { ModalService } from "src/app/shared/services/modal.service";
 
 @Component({
-  selector: 'ngrome-footer',
+  selector: "ngrome-footer",
   template: `
     <footer class="site-footer" role="contentinfo">
+      <div class="site-footer--main">
+        <picture>
+          <source srcset="assets/images/roma-detail.webp" type="image/webp" />
+          <source srcset="assets/images/roma-detail.jpg" type="image/jpeg" />
+          <img
+            src="assets/images/roma-detail.jpg"
+            alt="my image"
+            width="100"
+            height="100"
+          />
+        </picture>
+        <p>A presto!</p>
+        <h2>NG ROME</h2>
+        <p>MMXX></p>
+      </div>
       <div class="site-content__wrap">
         <h1 class="site-content__section__title">MMXIX</h1>
         <nav class="site-footer__menu">
@@ -28,10 +43,14 @@ import { ModalService } from 'src/app/shared/services/modal.service';
             <p>Copyright 2020 © SATYRICON FACTORY LTD - All Rights Reserved.</p>
             <ul class="site-footer__nav">
               <li>
-                <a (click)="openModal('ngrome-conduct')" title="Code of Conduct">Code of Conduct</a>
+                <a (click)="openModal('ngrome-conduct')" title="Code of Conduct"
+                  >Code of Conduct</a
+                >
               </li>
               <li>
-                <a (click)="openModal('ngrome-terms')" title="Terms & Privacy">Terms & Privacy</a>
+                <a (click)="openModal('ngrome-terms')" title="Terms & Privacy"
+                  >Terms & Privacy</a
+                >
               </li>
               <!-- <li>
                 <a [routerLink]="['/speakers']" title="Go to NGRome Speakers page">Speakers</a>
@@ -43,19 +62,25 @@ import { ModalService } from 'src/app/shared/services/modal.service';
                 <a [routerLink]="['/workshops']" title="Go to NGRome Workshops page">Workshops</a>
               </li> -->
               <li>
-                <a [routerLink]="['/about']" title="Go to NGRome About page">About</a>
+                <a [routerLink]="['/about']" title="Go to NGRome About page"
+                  >About</a
+                >
               </li>
               <li>
-                <a [routerLink]="['/info']" title="Go to NGRome Info page">Info</a>
+                <a [routerLink]="['/info']" title="Go to NGRome Info page"
+                  >Info</a
+                >
               </li>
             </ul>
           </div>
           <ul class="site-footer__nav site-footer__nav--social">
             <li>
-              <a rel="noopener"
-              href="https://www.facebook.com/ngromeconf"
-              target="_blank"
-              title="Facebook" >
+              <a
+                rel="noopener"
+                href="https://www.facebook.com/ngromeconf"
+                target="_blank"
+                title="Facebook"
+              >
                 <svg width="20" height="20">
                   <g fill="none" fill-rule="evenodd">
                     <path fill="#FFF" d="M-1075-4687H365V72h-1440z" />
@@ -70,10 +95,12 @@ import { ModalService } from 'src/app/shared/services/modal.service';
               </a>
             </li>
             <li>
-              <a rel="noopener"
-              href="https://twitter.com/ngromeconf"
-              target="_blank"
-              title="Twitter" >
+              <a
+                rel="noopener"
+                href="https://twitter.com/ngromeconf"
+                target="_blank"
+                title="Twitter"
+              >
                 <svg width="21" height="20">
                   <g fill="none" fill-rule="evenodd">
                     <path fill="#FFF" d="M-1150-4689H290V70h-1440z" />
@@ -88,11 +115,38 @@ import { ModalService } from 'src/app/shared/services/modal.service';
               </a>
             </li>
             <li>
-              <a rel="noopener"
-              href="https://join.slack.com/t/ngrome/shared_invite/enQtNzIzNTAzNzMzNDI2LTliODkyZmI1ZDNjYmJkNzYyYzIxOTlmNzc2MTRlMTk2NDVhNDllMWU2Y2RjNDFmZGJkNjc2ZDFlMGQxYWViNmU"
-              target="_blank"
-              title="Slack" >
-                <svg width="21" height="21" class="c-nav--footer__svgicon c-slackhash" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M19.712.133a5.381 5.381 0 0 0-5.376 5.387 5.381 5.381 0 0 0 5.376 5.386h5.376V5.52A5.381 5.381 0 0 0 19.712.133m0 14.365H5.376A5.381 5.381 0 0 0 0 19.884a5.381 5.381 0 0 0 5.376 5.387h14.336a5.381 5.381 0 0 0 5.376-5.387 5.381 5.381 0 0 0-5.376-5.386" fill="#36C5F0"></path><path d="M53.76 19.884a5.381 5.381 0 0 0-5.376-5.386 5.381 5.381 0 0 0-5.376 5.386v5.387h5.376a5.381 5.381 0 0 0 5.376-5.387m-14.336 0V5.52A5.381 5.381 0 0 0 34.048.133a5.381 5.381 0 0 0-5.376 5.387v14.364a5.381 5.381 0 0 0 5.376 5.387 5.381 5.381 0 0 0 5.376-5.387" fill="#2EB67D"></path><path d="M34.048 54a5.381 5.381 0 0 0 5.376-5.387 5.381 5.381 0 0 0-5.376-5.386h-5.376v5.386A5.381 5.381 0 0 0 34.048 54m0-14.365h14.336a5.381 5.381 0 0 0 5.376-5.386 5.381 5.381 0 0 0-5.376-5.387H34.048a5.381 5.381 0 0 0-5.376 5.387 5.381 5.381 0 0 0 5.376 5.386" fill="#ECB22E"></path><path d="M0 34.249a5.381 5.381 0 0 0 5.376 5.386 5.381 5.381 0 0 0 5.376-5.386v-5.387H5.376A5.381 5.381 0 0 0 0 34.25m14.336-.001v14.364A5.381 5.381 0 0 0 19.712 54a5.381 5.381 0 0 0 5.376-5.387V34.25a5.381 5.381 0 0 0-5.376-5.387 5.381 5.381 0 0 0-5.376 5.387" fill="#E01E5A"></path></g></svg>
+              <a
+                rel="noopener"
+                href="https://join.slack.com/t/ngrome/shared_invite/enQtNzIzNTAzNzMzNDI2LTliODkyZmI1ZDNjYmJkNzYyYzIxOTlmNzc2MTRlMTk2NDVhNDllMWU2Y2RjNDFmZGJkNjc2ZDFlMGQxYWViNmU"
+                target="_blank"
+                title="Slack"
+              >
+                <svg
+                  width="21"
+                  height="21"
+                  class="c-nav--footer__svgicon c-slackhash"
+                  viewBox="0 0 54 54"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g fill="none" fill-rule="evenodd">
+                    <path
+                      d="M19.712.133a5.381 5.381 0 0 0-5.376 5.387 5.381 5.381 0 0 0 5.376 5.386h5.376V5.52A5.381 5.381 0 0 0 19.712.133m0 14.365H5.376A5.381 5.381 0 0 0 0 19.884a5.381 5.381 0 0 0 5.376 5.387h14.336a5.381 5.381 0 0 0 5.376-5.387 5.381 5.381 0 0 0-5.376-5.386"
+                      fill="#36C5F0"
+                    ></path>
+                    <path
+                      d="M53.76 19.884a5.381 5.381 0 0 0-5.376-5.386 5.381 5.381 0 0 0-5.376 5.386v5.387h5.376a5.381 5.381 0 0 0 5.376-5.387m-14.336 0V5.52A5.381 5.381 0 0 0 34.048.133a5.381 5.381 0 0 0-5.376 5.387v14.364a5.381 5.381 0 0 0 5.376 5.387 5.381 5.381 0 0 0 5.376-5.387"
+                      fill="#2EB67D"
+                    ></path>
+                    <path
+                      d="M34.048 54a5.381 5.381 0 0 0 5.376-5.387 5.381 5.381 0 0 0-5.376-5.386h-5.376v5.386A5.381 5.381 0 0 0 34.048 54m0-14.365h14.336a5.381 5.381 0 0 0 5.376-5.386 5.381 5.381 0 0 0-5.376-5.387H34.048a5.381 5.381 0 0 0-5.376 5.387 5.381 5.381 0 0 0 5.376 5.386"
+                      fill="#ECB22E"
+                    ></path>
+                    <path
+                      d="M0 34.249a5.381 5.381 0 0 0 5.376 5.386 5.381 5.381 0 0 0 5.376-5.386v-5.387H5.376A5.381 5.381 0 0 0 0 34.25m14.336-.001v14.364A5.381 5.381 0 0 0 19.712 54a5.381 5.381 0 0 0 5.376-5.387V34.25a5.381 5.381 0 0 0-5.376-5.387 5.381 5.381 0 0 0-5.376 5.387"
+                      fill="#E01E5A"
+                    ></path>
+                  </g>
+                </svg>
                 <span>Slack</span>
               </a>
             </li>
@@ -101,36 +155,42 @@ import { ModalService } from 'src/app/shared/services/modal.service';
       </div>
     </footer>
     <ngrome-modal id="ngrome-terms">
-      <input type="image"
-      width="20"
-      src="./assets/icons/error.svg"
-      class="close"
-      (click)="closeModal('ngrome-terms')" />
+      <input
+        type="image"
+        width="20"
+        src="./assets/icons/error.svg"
+        class="close"
+        (click)="closeModal('ngrome-terms')"
+      />
       <ngrome-terms></ngrome-terms>
     </ngrome-modal>
     <ngrome-modal id="ngrome-conduct">
-      <input type="image"
-      width="20"
-      src="./assets/icons/error.svg"
-      class="close"
-      (click)="closeModal('ngrome-conduct')" />
+      <input
+        type="image"
+        width="20"
+        src="./assets/icons/error.svg"
+        class="close"
+        (click)="closeModal('ngrome-conduct')"
+      />
       <ngrome-conduct></ngrome-conduct>
     </ngrome-modal>
   `,
-  styles: [`
-    .site-footer__nav img {
-      height: 22px;
-      width: 22px;
-    }
-    .site-footer__nav img.img--slack {
-      height: 24px;
-      width: 24px;
-    }
-  `]
+  styles: [
+    `
+      .site-footer__nav img {
+        height: 22px;
+        width: 22px;
+      }
+      .site-footer__nav img.img--slack {
+        height: 24px;
+        width: 24px;
+      }
+    `,
+  ],
 })
 export class FooterComponent {
   modalOpened = false;
-  constructor(private modalService:ModalService) { }
+  constructor(private modalService: ModalService) {}
 
   openModal(id: string) {
     this.modalOpened = true;
@@ -141,5 +201,4 @@ export class FooterComponent {
     this.modalOpened = false;
     this.modalService.close(id);
   }
-
 }
