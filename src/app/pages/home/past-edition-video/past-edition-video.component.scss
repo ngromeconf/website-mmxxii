@@ -1,5 +1,5 @@
 @import '../../../../scss/variables/palette';
-.cover{
+.cover {
   width: 100%;
   background-image: url('/assets/images/intro-video.png');
   background-position: center center;
@@ -25,6 +25,7 @@
     text-align: center;
     top: 50%;
     padding-top: 32px;
+    text-transform: uppercase;
   }
 
   p {
@@ -36,7 +37,7 @@
   }
 
   .button {
-    background: #FFFFFF;
+    background: #ffffff;
     margin-bottom: 10px;
   }
 
