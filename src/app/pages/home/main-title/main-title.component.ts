@@ -1,17 +1,21 @@
-import { Component } from "@angular/core";
-import { Router } from "@angular/router";
-import { NgAnimateScrollService } from "src/app/shared/services/ng-animate-scroll.service";
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { NgAnimateScrollService } from 'src/app/shared/services/ng-animate-scroll.service';
 
 @Component({
-  selector: "ngrome-main-title",
+  selector: 'ngrome-main-title',
   template: `
-    <section id="intro" class="site-content__section">
+    <section class="site-content__section">
       <div class="site-content__wrap">
         <div class="site-content__intro">
           <header class="site-content__intro__head">
             <h1 class="site-content__intro__title">
-              The largest online Italian<br />
-              Angular Conference is taking place at
+              The largest online
+              <b
+                >Italian<br />
+                Angular Conference</b
+              >
+              is taking place at
             </h1>
             <img src="assets/logo/logo-mmxx-red.svg" />
             <div class="site-content__intro__description">
@@ -21,7 +25,7 @@ import { NgAnimateScrollService } from "src/app/shared/services/ng-animate-scrol
               </div>
               <div>
                 <span>when</span>
-                <strong>October 24th 2020</strong>
+                <strong>October 20th 2020</strong>
               </div>
               <a
                 class="button button--green button--fill-green"
@@ -90,9 +94,9 @@ export class MainTitleComponent {
     private router: Router
   ) {
     const urlTree = this.router.parseUrl(this.router.url);
-    this.actualPage = urlTree.root.children["primary"].segments
+    this.actualPage = urlTree.root.children['primary'].segments
       .map((it) => it.path)
-      .join("/");
+      .join('/');
   }
 
   scrollTo(el: string, duration?: number) {

@@ -39,7 +39,7 @@ ngrome-logo {
 .site-content {
   //add opacity for the beginning of the animation
   //opacity should be 1 when the logo animation finish
-  opacity: 0;
+  opacity: 1;
   min-height: 100vh;
 
   &__wrap {
@@ -68,14 +68,6 @@ ngrome-logo {
 
     & + & {
       margin-top: 65px;
-
-      @include breakpoint-m {
-        margin-top: 80px;
-      }
-
-      @include breakpoint-l {
-        margin-top: 120px;
-      }
     }
 
     &--full {
@@ -120,7 +112,7 @@ ngrome-logo {
     letter-spacing: 7px;
 
     &:before {
-      content: "";
+      content: '';
       position: absolute;
       top: 0;
       left: 0;
@@ -262,7 +254,7 @@ ngrome-logo {
 
     &:before,
     &:after {
-      content: "";
+      content: '';
       display: block;
       position: absolute;
     }
@@ -464,7 +456,7 @@ ngrome-logo {
   left: 0;
   pointer-events: none;
   z-index: 3;
-  cursor: url("/assets/icons/cursor-close-menu.svg") 40 40, auto;
+  cursor: url('/assets/icons/cursor-close-menu.svg') 40 40, auto;
 
   .site-menu--show & {
     background-color: lighten($ribbon, 50%);
@@ -475,7 +467,7 @@ ngrome-logo {
 }
 
 #intro {
-  background-image: url("/assets/images/confetti.svg");
+  background-image: url('/assets/images/confetti.svg');
   background-position: top left;
   background-size: cover;
   background-repeat: no-repeat;
