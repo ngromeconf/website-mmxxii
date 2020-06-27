@@ -100,13 +100,13 @@
   @include breakpoint-m {
     min-width: 720px;
     max-width: 720px;
-    padding: 44px 64px 15px;
+    padding: 24px 64px 15px;
   }
 
   @include breakpoint-xl {
     min-width: 720px;
     max-width: 720px;
-    padding: 44px 64px 24px;
+    padding: 24px 64px 24px;
   }
 
   will-change: transform;
@@ -129,7 +129,7 @@
       transform: translateY(0);
     }
 
-    @for $i from 1 to 8 {
+    @for $i from 1 to 9 {
       .site-menu__nav li:nth-child(#{$i}) {
         transition-delay: $i * 0.15s;
       }
@@ -183,7 +183,7 @@
         align-items: center;
         text-transform: uppercase;
 
-        svg {
+        img {
           margin-right: 20px;
         }
       }
@@ -214,8 +214,8 @@
 
   &--close {
     position: absolute;
-    top: 45px;
-    right: 35px;
+    top: 16px;
+    right: 16px;
     height: 40px;
     width: 40px;
     background-color: transparent;
