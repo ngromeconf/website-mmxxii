@@ -1,6 +1,13 @@
 <div #container style="width: 100%">
-  <youtube-player [style.display]="playing ? 'block' : 'none'" [videoId]="videoId" [width]="fixedWidth" [height]="fixedHeight" (ready)="onReady($event)" (stateChange)="onStateChange($event)"></youtube-player>
-
   <ng-content *ngIf="!playing && playCount === 0" select="[intro-cover]"></ng-content>
   <ng-content *ngIf="!playing && playCount !== 0" select="[end-cover]"></ng-content>
+  <youtube-player
+    #playerYt
+    [style.display]="playing ? 'block' : 'none'"
+    [videoId]="videoId"
+    [width]="fixedWidth" [height]="fixedHeight"
+    (stateChange)="onStateChange($event)"
+    (error)="onError($event)"
+  ></youtube-player>
+
 </div>
