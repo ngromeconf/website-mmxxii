@@ -202,20 +202,29 @@ ngrome-logo {
 
   &__intro__description {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     font-size: 20px;
     font-weight: normal;
     text-align: center;
     padding: 50px 40px;
 
+    & > * {
+      padding: 20px 0;
+    }
+
     @include breakpoint-m {
+      flex-direction: row;
       font-size: 26px;
+      & > * {
+        padding: 0;
+      }
     }
 
     @include breakpoint-l {
       font-size: 30px;
     }
+
     strong {
       @include breakpoint-s {
         display: block;
@@ -416,10 +425,15 @@ ngrome-logo {
   }
 
   &--fill-green {
-    padding: 8px 42px;
+    padding: 0;
     background-color: $green;
     color: $white;
     border-color: $green;
+    width: 100%;
+    @include breakpoint-m {
+      padding: 8px 42px;
+      width: auto;
+    }
 
     svg,
     path {
