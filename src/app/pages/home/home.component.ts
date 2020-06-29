@@ -15,10 +15,10 @@ import { Router } from '@angular/router';
     >
     </ngrome-speakers-list>
 
-    <!-- <ngrome-call-for-paper
+    <ngrome-call-for-paper
       id="cfp"
       class="site-content__section"
-    ></ngrome-call-for-paper> -->
+    ></ngrome-call-for-paper>
     <!-- <ngrome-tickets class="site-content__section" id="tickets">
     </ngrome-tickets> -->
 

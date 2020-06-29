@@ -16,7 +16,7 @@ import { SideBarService } from '../services/sidebar.service';
         <img src="assets/logo/logo-horizontal.svg" />
       </div>
       <div class="cta">
-        <a
+        <!-- <a
           class="button button--green button--fill-green"
           rel="noopener"
           target="_blank"
@@ -37,7 +37,7 @@ import { SideBarService } from '../services/sidebar.service';
               fill="#F9F9F9"
             />
           </svg>
-        </a>
+        </a> -->
       </div>
       <div class="site-menu-button">
         <button

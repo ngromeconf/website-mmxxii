@@ -11,10 +11,7 @@ import { NgAnimateScrollService } from 'src/app/shared/services/ng-animate-scrol
           <header class="site-content__intro__head">
             <h1 class="site-content__intro__title">
               The largest online
-              <b
-                >Italian<br />
-                Angular Conference</b
-              >
+              <b>Italian Angular Conference</b>
               is taking place at
             </h1>
             <img src="assets/logo/logo-mmxx-red.svg" />
