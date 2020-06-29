@@ -1,24 +1,40 @@
-import {AfterContentInit, AfterViewInit, Component, ElementRef, EventEmitter, HostListener, Input, OnInit, ViewChild} from '@angular/core';
-import {debounceTime} from 'rxjs/operators';
-import {animate, state, style, transition, trigger} from '@angular/animations';
-import {YouTubePlayer} from '@angular/youtube-player';
+import {
+  AfterContentInit,
+  AfterViewInit,
+  Component,
+  ElementRef,
+  EventEmitter,
+  HostListener,
+  Input,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
+import { debounceTime } from 'rxjs/operators';
+import {
+  animate,
+  state,
+  style,
+  transition,
+  trigger,
+} from '@angular/animations';
+import { YouTubePlayer } from '@angular/youtube-player';
 
 @Component({
   selector: 'ngrome-youtube-player-with-covers',
   templateUrl: './youtube-player-with-covers.component.html',
-  styleUrls: ['./youtube-player-with-covers.component.scss']
+  styleUrls: ['./youtube-player-with-covers.component.scss'],
 })
 export class YoutubePlayerWithCoversComponent implements OnInit, AfterViewInit {
   @Input() videoId: string;
-  @ViewChild('playerYt', {static: true}) playerYt: YouTubePlayer;
+  @ViewChild('playerYt', { static: true }) playerYt: YouTubePlayer;
   playing = false;
   playCount = 0;
 
   playingChange$ = new EventEmitter<boolean>();
-  @ViewChild('container', {static: true}) container: ElementRef;
+  @ViewChild('container', { static: true }) container: ElementRef;
   fixedHeight: number;
   fixedWidth: number;
-  constructor() { }
+  constructor() {}
 
   ngAfterViewInit(): void {
     this.computePlayerDimensions();
@@ -30,12 +46,12 @@ export class YoutubePlayerWithCoversComponent implements OnInit, AfterViewInit {
     // https://developers.google.com/youtube/iframe_api_reference#Getting_Started
     const tag = document.createElement('script');
 
-    tag.src = 'https://www.youtube.com/iframe_api';
+    tag.src = '//www.youtube.com/iframe_api';
     document.body.appendChild(tag);
 
     this.playingChange$
       .pipe(debounceTime(100))
-      .subscribe((playing) => this.playing = playing);
+      .subscribe((playing) => (this.playing = playing));
   }
 
   @HostListener('window:resize', ['$event'])
@@ -46,13 +62,18 @@ export class YoutubePlayerWithCoversComponent implements OnInit, AfterViewInit {
   private computePlayerDimensions() {
     setTimeout(() => {
       this.fixedWidth = this.container.nativeElement.offsetWidth;
-      this.fixedHeight = Math.trunc(this.fixedWidth * 9 / 16); /* 16:9 Aspect Ratio */
+      this.fixedHeight = Math.trunc(
+        (this.fixedWidth * 9) / 16
+      ); /* 16:9 Aspect Ratio */
     }, 1);
   }
 
   onStateChange($evt: YT.OnStateChangeEvent) {
     console.log('player-state-change', $evt);
-    this.playingChange$.emit(($evt.data === YT.PlayerState.PLAYING || $evt.data === YT.PlayerState.BUFFERING));
+    this.playingChange$.emit(
+      $evt.data === YT.PlayerState.PLAYING ||
+        $evt.data === YT.PlayerState.BUFFERING
+    );
 
     switch ($evt.data) {
       case YT.PlayerState.PLAYING:
@@ -81,5 +102,4 @@ export class YoutubePlayerWithCoversComponent implements OnInit, AfterViewInit {
   onError($event: YT.OnErrorEvent) {
     console.log('Error YT player', $event);
   }
-
 }
