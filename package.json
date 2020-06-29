@@ -31,8 +31,6 @@
     "@angular/service-worker": "^9.1.11",
     "@angular/upgrade": "^9.1.11",
     "@angular/youtube-player": "^9.2.4",
-    "@nguniversal/express-engine": "^8.2.6",
-    "@nguniversal/module-map-ngfactory-loader": "^8.2.6",
     "@scullyio/init": "0.0.28",
     "@scullyio/ng-lib": "latest",
     "@scullyio/scully": "latest",
