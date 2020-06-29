@@ -4,34 +4,20 @@
 
 // 1. Import variables
 
-@import
-  'scss/variables/palette',
-  'scss/variables/devices',
+@import 'scss/variables/palette', 'scss/variables/devices',
   'scss/variables/typeface';
-
 
 // 2. Import mixins
 
-@import
-  'scss/mixins/clearfix',
-  'scss/mixins/antialias',
-  'scss/mixins/assistive',
-  'scss/mixins/breakpoint';
+@import 'scss/mixins/clearfix', 'scss/mixins/antialias', 'scss/mixins/assistive',
+  'scss/mixins/breakpoint', 'scss/mixins/bgurl';
 
 // 3. Import layout
 
-@import
-  'scss/layout/reset',
-  'scss/layout/header',
-  'scss/layout/content',
-  'scss/layout/speaker',
-  'scss/layout/ticket',
-  'scss/layout/candidate',
-  'scss/layout/sponsors',
-  'scss/layout/team',
-  'scss/layout/news',
-  'scss/layout/modal',
-  'scss/layout/footer';
+@import 'scss/layout/reset', 'scss/layout/header', 'scss/layout/content',
+  'scss/layout/speaker', 'scss/layout/ticket', 'scss/layout/candidate',
+  'scss/layout/sponsors', 'scss/layout/team', 'scss/layout/news',
+  'scss/layout/modal', 'scss/layout/footer';
 
 // ------------------------------
 // 🔥 Angular Rome Ends
