@@ -45,10 +45,10 @@
 
     #confetti-footer-1 {
       position: absolute;
-      width: 83px;
-      height: 83px;
-      left: 47.32px;
-      top: -20px;
+      width: 63px;
+      height: 63px;
+      left: 27.32px;
+      top: -10px;
       @include breakpoint-m {
         left: 107.32px;
         top: -40px;
@@ -58,10 +58,10 @@
     }
     #confetti-footer-2 {
       position: absolute;
-      width: 83px;
-      height: 83px;
-      right: 37.32px;
-      bottom: 130px;
+      width: 63px;
+      height: 63px;
+      right: 27.32px;
+      bottom: 180px;
       z-index: -1;
       @include breakpoint-m {
         right: 80.32px;
