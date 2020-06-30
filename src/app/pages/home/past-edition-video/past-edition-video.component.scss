@@ -1,7 +1,14 @@
 @import '../../../../scss/variables/palette';
+@import '../../../../scss/mixins/bgurl';
+
 .cover {
   width: 100%;
-  background-image: url('/assets/images/intro-video.png');
+  @include bg-url(
+    '/assets/images/video-cover-image.jpg',
+    '/assets/images/video-cover-image.jpg',
+    '/assets/images/video-cover-image.webp',
+    '/assets/images/video-cover-image.webp'
+  );
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -18,13 +25,15 @@
     margin-top: -32px;
   }
 
-  h1 {
+  h2 {
     color: white;
     position: absolute;
     width: 100%;
     text-align: center;
     top: 50%;
-    padding-top: 32px;
+    padding-top: 37px;
+    font-weight: 600;
+    font-size: 37px;
     text-transform: uppercase;
   }
 
