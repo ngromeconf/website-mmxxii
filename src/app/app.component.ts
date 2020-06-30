@@ -20,7 +20,6 @@ import {
   NavigationEnd,
   NavigationError,
 } from '@angular/router';
-import { fadeIn, fadeOut } from 'ng-animate';
 
 import { SideBarService } from './shared/services/sidebar.service';
 import { PWAService } from './shared/services/pwa.service';
