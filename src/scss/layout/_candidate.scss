@@ -3,48 +3,39 @@
 // ------------------------------
 
 .candidate {
-
   max-width: 890px;
   margin-left: auto;
   margin-right: auto;
 
   @include breakpoint-m {
-
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-
   }
 
   &__affordance {
-
     @include breakpoint-m {
       flex-basis: 20%;
       padding-right: 110px;
     }
 
     svg {
-
       width: 65px;
       height: 95px;
 
       @include breakpoint-m {
         width: 161px;
         height: 236px;
-
       }
-
     }
-
   }
 
   &__info {
-
     @include breakpoint-m {
       flex-basis: 60%;
     }
 
-    h1 {
+    h2 {
       font-weight: 700;
       font-size: 22px;
       margin-top: 32px;
@@ -69,16 +60,10 @@
     }
 
     .button {
-
       @include breakpoint-s {
-
         text-align: center;
         width: 100%;
-
       }
-
     }
-
   }
-
 }
