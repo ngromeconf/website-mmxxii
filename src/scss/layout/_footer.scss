@@ -27,8 +27,6 @@
     font-weight: 700;
     font-size: 36.92px;
 
-    background-image: url('/assets/images/roma-detail.webp') no-repeat center
-      center fixed;
     @include bg-url(
       '/assets/images/roma-detail.jpg',
       '/assets/images/roma-detail_2x.jpg',
