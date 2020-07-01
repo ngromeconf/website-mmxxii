@@ -22,7 +22,7 @@ import { Component, OnInit } from '@angular/core';
             <a
               rel="noopener"
               class="button button--white"
-              href="https://goo.gl/forms/oWAbHxQpewphppdY2"
+              href="https://forms.gle/CDaLhFVAUENeQ1we6"
               target="_blank"
               title="Candidate now for NG Rome MMXX"
             >
