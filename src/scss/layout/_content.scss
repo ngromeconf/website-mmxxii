@@ -39,7 +39,7 @@ ngrome-logo {
 .site-content {
   //add opacity for the beginning of the animation
   //opacity should be 1 when the logo animation finish
-  opacity: 0;
+  opacity: 1;
   min-height: 100vh;
 
   &__wrap {
@@ -68,14 +68,6 @@ ngrome-logo {
 
     & + & {
       margin-top: 65px;
-
-      @include breakpoint-m {
-        margin-top: 80px;
-      }
-
-      @include breakpoint-l {
-        margin-top: 120px;
-      }
     }
 
     &--full {
@@ -120,7 +112,7 @@ ngrome-logo {
     letter-spacing: 7px;
 
     &:before {
-      content: "";
+      content: '';
       position: absolute;
       top: 0;
       left: 0;
@@ -137,24 +129,15 @@ ngrome-logo {
   }
 
   &__intro__head {
+    margin: 70px 0;
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    height: 100vh;
+    justify-content: flex-start;
 
-    @include breakpoint-s {
-      padding-bottom: 20px;
+    img {
+      padding: 40px 0;
     }
-
-    @include breakpoint-m {
-      padding-bottom: 40px;
-    }
-
-    @include breakpoint-l {
-      padding-bottom: 60px;
-    }
-
     .button {
       margin-top: 30px;
       @include breakpoint-m {
@@ -164,6 +147,9 @@ ngrome-logo {
         margin-top: 60px;
       }
       align-self: flex-start;
+    }
+    .img {
+      align-self: flex-end;
     }
   }
 
@@ -188,29 +174,21 @@ ngrome-logo {
       padding-top: 250px;
       padding-bottom: 60px;
     }
-
-    .button {
-      margin-top: 30px;
-      @include breakpoint-m {
-        margin-top: 40px;
-      }
-      @include breakpoint-l {
-        margin-top: 60px;
-      }
-      align-self: flex-start;
-    }
   }
 
   &__intro__title {
-    font-size: 28px;
-    font-weight: 700;
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center;
+    padding: 60px 40px 30px;
 
     @include breakpoint-m {
-      font-size: 48px;
+      padding: 120px 140px 30px;
+      font-size: 26px;
     }
 
     @include breakpoint-l {
-      font-size: 52px;
+      font-size: 30px;
     }
 
     strong {
@@ -220,6 +198,52 @@ ngrome-logo {
       // }
 
       color: $ribbon;
+    }
+  }
+
+  &__intro__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center;
+    padding: 50px 40px;
+
+    & > * {
+      padding: 20px 0;
+    }
+
+    @include breakpoint-m {
+      flex-direction: row;
+      font-size: 26px;
+      & > * {
+        padding: 0;
+      }
+    }
+
+    @include breakpoint-l {
+      font-size: 30px;
+    }
+
+    strong {
+      @include breakpoint-s {
+        display: block;
+      }
+
+      color: $ribbon;
+    }
+
+    span {
+      display: block;
+      font-size: 18px;
+      line-height: 12px;
+    }
+
+    .button {
+      margin: 5px 0;
+      padding-top: 10px;
+      padding-bottom: 10px;
     }
   }
 
@@ -240,7 +264,7 @@ ngrome-logo {
 
     &:before,
     &:after {
-      content: "";
+      content: '';
       display: block;
       position: absolute;
     }
@@ -305,7 +329,7 @@ ngrome-logo {
     p {
       font-size: 18px;
       @include breakpoint-m {
-        font-size: 21px;
+        font-size: 24px;
       }
 
       line-height: 1.6;
@@ -402,10 +426,15 @@ ngrome-logo {
   }
 
   &--fill-green {
-    padding: 8px 42px;
+    padding: 0;
     background-color: $green;
     color: $white;
     border-color: $green;
+    width: 100%;
+    @include breakpoint-m {
+      padding: 8px 42px;
+      width: auto;
+    }
 
     svg,
     path {
@@ -442,7 +471,7 @@ ngrome-logo {
   left: 0;
   pointer-events: none;
   z-index: 3;
-  cursor: url("/assets/icons/cursor-close-menu.svg") 40 40, auto;
+  cursor: url('/assets/icons/cursor-close-menu.svg') 40 40, auto;
 
   .site-menu--show & {
     background-color: lighten($ribbon, 50%);
@@ -453,7 +482,7 @@ ngrome-logo {
 }
 
 #intro {
-  background-image: url("/assets/images/confetti.svg");
+  background-image: url('/assets/images/confetti.svg');
   background-position: top left;
   background-size: cover;
   background-repeat: no-repeat;

@@ -1,0 +1,25 @@
+// bg-url
+// The .webp class increases your css specificity,
+// so remember when you change a background-image or remove it
+// within a @media-query a simple background-image: none;
+// will still show your WebP image.
+@mixin bg-url($url, $url2x: false, $webp1x: false, $webp2x: false) {
+  background-image: url($url);
+  @if $webp1x {
+    .webp & {
+      background-image: url($webp1x);
+    }
+  }
+  @if $url2x {
+    @media screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url($url2x);
+      @if $webp2x {
+        .webp & {
+          background-image: url($webp2x);
+        }
+      }
+    }
+  }
+}
