@@ -6,14 +6,10 @@
       "installMode": "prefetch",
       "updateMode": "prefetch",
       "resources": {
-        "files": [
-          "/favicon.ico",
-          "/index.html",
-          "/*.css",
-          "/*.js"
-        ]
+        "files": ["/favicon.ico", "/*.html", "/*.css", "/*.js"]
       }
-    }, {
+    },
+    {
       "name": "assets",
       "installMode": "lazy",
       "updateMode": "prefetch",
@@ -23,7 +19,8 @@
           "https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/**"
         ]
       }
-    }, {
+    },
+    {
       "name": "fonts",
       "resources": {
         "urls": [
