@@ -46,7 +46,7 @@ import { ModalService } from 'src/app/shared/services/modal.service';
       </div>
       <div class="site-content__wrap">
         <nav class="site-footer__menu">
-          <h1 class="site-footer__logo">
+          <p class="site-footer__logo">
             <svg width="55" height="58">
               <g fill="#DD0031" fill-rule="evenodd">
                 <path
@@ -61,7 +61,7 @@ import { ModalService } from 'src/app/shared/services/modal.service';
               </g>
             </svg>
             <span>NG-Rome</span>
-          </h1>
+          </p>
           <div class="site-footer__copy">
             <p>Copyright 2020 © SATYRICON FACTORY LTD - All Rights Reserved.</p>
             <ul class="site-footer__nav">
