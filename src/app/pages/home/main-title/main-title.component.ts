@@ -9,11 +9,11 @@ import { NgAnimateScrollService } from 'src/app/shared/services/ng-animate-scrol
       <div class="site-content__wrap">
         <div class="site-content__intro">
           <header class="site-content__intro__head">
-            <h1 class="site-content__intro__title">
+            <h2 class="site-content__intro__title">
               The largest online
               <b>Italian Angular Conference</b>
-              is taking place at
-            </h1>
+              is taking place at <span class="assistive">NG Rome MMXX</span>
+            </h2>
             <img src="assets/logo/logo-mmxx-red.svg" />
             <div class="site-content__intro__description">
               <div>
