@@ -488,3 +488,7 @@ ngrome-logo {
   background-repeat: no-repeat;
   //background-size: cover;
 }
+
+.assistive {
+  @include assistive();
+}
