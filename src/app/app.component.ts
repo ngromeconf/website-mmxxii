@@ -5,13 +5,6 @@ import {
   OnInit,
   OnDestroy,
 } from '@angular/core';
-import {
-  trigger,
-  transition,
-  state,
-  useAnimation,
-  style,
-} from '@angular/animations';
 import { Title } from '@angular/platform-browser';
 import {
   Router,
@@ -55,6 +48,14 @@ export class AppComponent implements OnInit, OnDestroy {
     private pwaService: PWAService,
     private titleService: Title
   ) {
+    if (window.navigator && navigator.serviceWorker) {
+      navigator.serviceWorker.getRegistrations().then((registrations) => {
+        for (let registration of registrations) {
+          registration.unregister();
+        }
+      });
+    }
+
     this.router.events.subscribe((event: Event) => {
       if (event instanceof NavigationStart) {
         // Show loading indicator
@@ -62,7 +63,7 @@ export class AppComponent implements OnInit, OnDestroy {
       }
       if (event instanceof NavigationEnd) {
         this.logoAlreadyAnimated = true;
-        //close the sidebar if is open after the navigation is complete
+        // close the sidebar if is open after the navigation is complete
         if (this.sidebarService.getSidebarStatus() === 'visible') {
           this.sidebarService.toggleSidebarStatus(true);
         }
