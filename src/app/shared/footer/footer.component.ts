@@ -75,6 +75,20 @@ import { ModalService } from 'src/app/shared/services/modal.service';
                   >Terms & Privacy</a
                 >
               </li>
+              <li>
+                <a
+                  [routerLink]="['/diversity']"
+                  title="Go to NGRome Diversity page"
+                  >Diversity</a
+                >
+              </li>
+              <li>
+                <a
+                  [routerLink]="['/sponsors']"
+                  title="Go to NGRome Sponsors page"
+                  >Sponsors</a
+                >
+              </li>
               <!-- <li>
                 <a [routerLink]="['/speakers']" title="Go to NGRome Speakers page">Speakers</a>
               </li> -->
