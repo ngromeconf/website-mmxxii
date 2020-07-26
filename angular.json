@@ -29,7 +29,8 @@
               "src/manifest.json",
               "src/firebase-messaging-sw.js",
               "src/sitemap.xml",
-              "src/robots.txt"
+              "src/robots.txt",
+              "src/google52e27203cffc2c9f.html"
             ],
             "styles": ["src/styles.scss"],
             "scripts": []
@@ -46,10 +47,10 @@
               "outputHashing": "all",
               "sourceMap": false,
               "extractCss": true,
-              "namedChunks": false,
+              "namedChunks": true,
               "aot": true,
               "extractLicenses": true,
-              "vendorChunk": false,
+              "vendorChunk": true,
               "buildOptimizer": true,
               "budgets": [
                 {
