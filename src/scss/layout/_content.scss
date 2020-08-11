@@ -152,7 +152,6 @@ ngrome-logo {
       align-self: flex-end;
     }
   }
-
   &__intro__head__inner {
     position: relative;
     display: flex;
@@ -176,6 +175,17 @@ ngrome-logo {
     }
   }
 
+  &__intro__head__inner-sub {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    // height: 100vh;
+
+    padding-top: 100px;
+    padding-bottom: 20px;
+  }
+
   &__intro__title {
     font-size: 20px;
     font-weight: normal;
@@ -189,6 +199,33 @@ ngrome-logo {
 
     @include breakpoint-l {
       font-size: 30px;
+    }
+
+    strong {
+      //
+      // @include breakpoint-s {
+      //   display: block;
+      // }
+
+      color: $ribbon;
+    }
+  }
+
+  &__intro__title-sub {
+    font-weight: bold;
+    font-size: 30px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: #de0031;
+    padding: 20px;
+
+    @include breakpoint-m {
+      padding: 20px 140px 30px 0;
+      font-size: 66px;
+    }
+
+    @include breakpoint-l {
+      font-size: 80px;
     }
 
     strong {
@@ -347,8 +384,9 @@ ngrome-logo {
 
     p {
       font-size: 18px;
+      color: #dd0031;
       @include breakpoint-m {
-        font-size: 21px;
+        font-size: 36px;
       }
 
       line-height: 1.6;

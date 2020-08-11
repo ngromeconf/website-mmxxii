@@ -1,11 +1,15 @@
 <section id="intro" class="site-content__section">
   <div class="site-content__wrap">
     <div class="site-content__intro">
-      <header class="site-content__intro__head__inner">
-        <h1 class="site-content__intro__title">Infos</h1>
+      <header class="site-content__intro__head__inner-sub">
+        <h1 class="site-content__intro__title-sub">Information</h1>
       </header>
       <div class="site-content__intro__info__inner">
-        <p> Here you can find all the information about the biggest <strong>Angular</strong> conference in Rome, venue, accommodation and much more... </p>
+        <p>
+          Here you can find all the information about the biggest
+          <strong>Angular</strong> conference in Rome, venue, accommodation and
+          much more...
+        </p>
       </div>
     </div>
   </div>
@@ -14,8 +18,8 @@
 <section class="site-content__section">
   <div class="site-content__wrap">
     <div class="site-content__description">
-      <h1>When</h1>
-      <p>October 24th 2020</p>
+      <h1>1. When?</h1>
+      <p>October 20th 2020</p>
       <!-- a class="button" href="https://calendar.google.com/event?action=TEMPLATE&amp;tmeid=XzZ0bG5hcXJsZTVwNmNwYjRkaG1qNHBocGVocTc4cmhoZDRvbWVyamplMWlqOHE5a2VsajY2b3BvZDlqbjhxcmU2cG02dXJyMWNwaW4yb3I5NzFpN2FkYjI2NWluY3Jqa2Rrb25jZWI4Y3BrajAgYW5ndWxhcnJvbWFAbQ&amp;tmsrc=angularroma%40gmail.com"
         target="_blank"
         rel="noopener"
@@ -32,12 +36,14 @@
 
 <section class="site-content__section">
   <div class="site-content__wrap">
-
     <div class="site-content__description">
-        <h1>Where</h1>
-        <p>We are working to find the best solution for NG ROME MMXX</p>
-      </div>
-      <!-- <p>TEATRO ITALIA<br>
+      <h1>2. Where?</h1>
+      <p>
+        Due to COVID-19, on October 20th we have an half day online edition of
+        NG ROME MMXX
+      </p>
+    </div>
+    <!-- <p>TEATRO ITALIA<br>
         Via Bari, 18 - Roma.
       </p>
 
@@ -82,14 +88,15 @@
   </div>
 </section>
 
-
 <!-- <ngrome-tickets class="site-content__section" id="tickets"></ngrome-tickets> -->
 
 <ngrome-modal id="ngrome-hotels-terms">
-    <input type="image"
+  <input
+    type="image"
     width="20"
     src="./assets/icons/error.svg"
     class="close"
-    (click)="closeModal('ngrome-hotels-terms')" />
-    <ngrome-hotels-terms></ngrome-hotels-terms>
-  </ngrome-modal>
+    (click)="closeModal('ngrome-hotels-terms')"
+  />
+  <ngrome-hotels-terms></ngrome-hotels-terms>
+</ngrome-modal>

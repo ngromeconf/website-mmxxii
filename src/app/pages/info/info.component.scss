@@ -1,136 +1,101 @@
-@import
-  '../../../scss/variables/palette',
-  '../../../scss/variables/devices',
+@import '../../../scss/variables/palette', '../../../scss/variables/devices',
   '../../../scss/variables/typeface';
 
-@import
-  '../../../scss/mixins/clearfix',
-  '../../../scss/mixins/antialias',
-  '../../../scss/mixins/assistive',
-  '../../../scss/mixins/breakpoint';
+@import '../../../scss/mixins/clearfix', '../../../scss/mixins/antialias',
+  '../../../scss/mixins/assistive', '../../../scss/mixins/breakpoint';
 
-iframe{
+iframe {
   width: 100%;
 }
 
-.site-content{
-
-  &__wrap{
-    img{
+.site-content {
+  &__wrap {
+    img {
       width: 100%;
     }
-
   }
 
-  &__description{
+  &__description {
     max-width: 700px;
     margin: auto;
 
     padding: 20px 0px;
 
     h1 {
-
       font-size: 24px;
       font-weight: 700;
       line-height: 1.1;
       padding: 20px 0;
-
     }
     @include breakpoint-m {
-
       h1 {
-
         font-size: 32px;
         flex-basis: 40%;
         padding-right: 80px;
-
+        color: $ribbon;
       }
     }
   }
-
 }
 
 .info {
-
   display: block; // :( Maledetti componenti
   max-width: 700px;
   margin: auto;
 
   @include breakpoint-m {
-
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
-
   }
 
   & + & {
-
     margin-top: 60px;
 
     @include breakpoint-m {
-
       margin-top: 80px;
-
     }
 
     @include breakpoint-l {
-
       margin-top: 100px;
-
     }
-
   }
 
-
   &__image {
-
     position: relative;
 
-
     @include breakpoint-m {
-
       flex-basis: 35%;
       width: 100%;
       padding-right: 20px;
-
     }
 
-
     img {
-
       // display: block;
       max-width: 100%;
       object-fit: cover;
-
     }
-
   }
 
   &__text {
-
     width: 100%;
 
-    strong{
+    strong {
       font-weight: 600;
     }
 
-    .red{
+    .red {
       color: $ribbon;
     }
 
     @include breakpoint-m {
-
       flex-basis: 65%;
       padding-left: 45px;
-
     }
-
   }
 
   &__twitter {
-
     display: flex;
     align-items: center;
     margin-top: 16px;
@@ -138,29 +103,21 @@ iframe{
     color: $radiance;
 
     @include breakpoint-m {
-
       margin-top: 32px;
-
     }
 
     span {
       margin-left: 6px;
     }
-
   }
   .read__more {
-
     display: block;
     visibility: visible;
 
     margin-top: 16px;
 
     @include breakpoint-m {
-
       margin-top: 32px;
-
     }
-
   }
-
 }
