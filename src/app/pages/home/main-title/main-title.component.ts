@@ -18,7 +18,7 @@ import { NgAnimateScrollService } from 'src/app/shared/services/ng-animate-scrol
             <div class="site-content__intro__description">
               <div>
                 <span>where</span>
-                <strong>Rome, Italy</strong>
+                <strong>Online</strong>
               </div>
               <div>
                 <span>when</span>
