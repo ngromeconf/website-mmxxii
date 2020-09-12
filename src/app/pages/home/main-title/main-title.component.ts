@@ -27,10 +27,10 @@ import { NgAnimateScrollService } from 'src/app/shared/services/ng-animate-scrol
               <a
                 class="button button--green button--fill-green"
                 rel="noopener"
+                href="https://ti.to/ngrome-conf/NGRome-Conf-MMXX-Online/with/ujp-ev2-cqs"
                 target="_blank"
-                (click)="scrollTo('cfp', 300)"
-                title="Call for paper"
-                >Call for paper
+                title="Register"
+                >Register for free
               </a>
             </div>
             <!-- <span class="site-content__intro__scroller"></span> -->
