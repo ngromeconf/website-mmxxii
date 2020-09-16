@@ -30,6 +30,14 @@ export class SponsorService {
       websiteUrl: 'https://twitter.com/angularsf',
       type: 'main',
     },
+    {
+      image: './assets/images/partners/logo_ict-group.svg',
+      name: 'ICT GROUP',
+      description: '',
+      visible: true,
+      websiteUrl: 'https://ict-group.it/',
+      type: 'gold',
+    },
   ];
 
   getSponsors(type?: string): Sponsor[] {

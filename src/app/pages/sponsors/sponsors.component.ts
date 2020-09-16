@@ -9,8 +9,8 @@ import { SponsorService } from 'src/app/shared/services/sponsor.service';
     <section id="intro" class="site-content__section">
       <div class="site-content__wrap">
         <div class="site-content__intro">
-          <header class="site-content__intro__head__inner">
-            <h1 class="site-content__intro__title">Sponsors</h1>
+          <header class="site-content__intro__head__inner-sub">
+            <h1 class="site-content__intro__title-sub">Sponsors</h1>
           </header>
           <div class="site-content__intro__info__inner">
             <p>
@@ -22,9 +22,7 @@ import { SponsorService } from 'src/app/shared/services/sponsor.service';
         </div>
       </div>
     </section>
-
     <!-- sponsor here -->
-
     <section>
       <div class="site-content__wrap">
         <h1 class="site-content__section__title">Main Partners</h1>
@@ -46,7 +44,7 @@ import { SponsorService } from 'src/app/shared/services/sponsor.service';
       </div>
     </section>
 
-    <!-- <section>
+    <section>
     <div class="site-content__wrap">
       <h1 class="site-content__section__title">Gold Sponsors</h1>
       <ul class="sponsors__list sponsors__list--full">
@@ -60,7 +58,7 @@ import { SponsorService } from 'src/app/shared/services/sponsor.service';
         </li>
       </ul>
     </div>
-  </section> -->
+  </section>
 
     <!-- <section>
       <div class="site-content__wrap">
