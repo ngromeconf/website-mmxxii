@@ -1,17 +1,10 @@
-@import
-  '../../../scss/variables/palette',
-  '../../../scss/variables/devices',
+@import '../../../scss/variables/palette', '../../../scss/variables/devices',
   '../../../scss/variables/typeface';
 
-@import
-  '../../../scss/mixins/clearfix',
-  '../../../scss/mixins/antialias',
-  '../../../scss/mixins/assistive',
-  '../../../scss/mixins/breakpoint';
-
+@import '../../../scss/mixins/clearfix', '../../../scss/mixins/antialias',
+  '../../../scss/mixins/assistive', '../../../scss/mixins/breakpoint';
 
 .agenda__item {
-
   display: flex;
 
   align-items: center;
@@ -21,112 +14,105 @@
   margin-top: 10px;
 
   .agenda__activity,
-  .agenda__talk{
+  .agenda__talk {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-flow: row wrap;
-    >*{
+    > * {
       padding: 10px 10px;
-      @include breakpoint-m{
+      @include breakpoint-m {
         padding: 10px 20px;
       }
     }
 
     .agenda__duration,
-    .agenda_speaker__name{
+    .agenda_speaker__name {
       font-family: $font-secondary;
       font-size: 12px;
       text-transform: uppercase;
       letter-spacing: 5px;
     }
 
-    .agenda__duration{
+    .agenda__duration {
       justify-content: flex-end;
     }
 
-
-    .agenda__time{
-
+    .agenda__time {
       flex: 0 0 100%;
       padding-bottom: 30px;
       max-width: 107px;
 
-      @include breakpoint-m{
+      @include breakpoint-m {
         padding-bottom: 0px;
         flex-basis: auto;
         min-width: 100px;
       }
-      @include breakpoint-l{
+      @include breakpoint-l {
         padding-bottom: 0px;
         flex-basis: auto;
         min-width: 200px;
       }
       font-size: 14px;
-      span{
+      span {
         font-family: $font-secondary;
         font-size: 12px;
         text-transform: uppercase;
         letter-spacing: 5px;
       }
-      .agenda__time-end{
+      .agenda__time-end {
         display: none;
         visibility: hidden;
-        @include breakpoint-m{
+        @include breakpoint-m {
           display: block;
           visibility: visible;
         }
       }
     }
 
-    .agenda__image{
+    .agenda__image {
       flex: 1;
       align-self: center;
       text-align: center;
-      img{
+      img {
         max-width: 100%;
-        @include breakpoint-m{
+        @include breakpoint-m {
           max-width: 150px;
         }
-
       }
-
     }
-    .agenda__detail{
-      flex:1;
+    .agenda__detail {
+      flex: 1;
       padding-bottom: 30px;
       @include breakpoint-m {
         padding-bottom: 0px;
       }
 
-      h1{
+      h1 {
         font-family: $font-primary;
         font-weight: 700;
         font-size: 22px;
 
         @include breakpoint-m {
-
           font-size: 32px;
-
         }
       }
-      .read__more{
+      .read__more {
         display: none;
       }
     }
-
   }
 
-  .agenda__talk{
-    .agenda__image{
+  .agenda__talk {
+    .agenda__image {
       flex: 0 0 100%;
       display: block;
       @include breakpoint-m {
         flex: 1;
       }
     }
-    .agenda__duration{
+    .agenda__duration {
       display: none;
       visibility: hidden;
       color: $ribbon;
@@ -145,41 +131,41 @@
     }
   }
 
-  .agenda__activity{
-
+  .agenda__activity {
     background: $ribbon;
     color: $white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 14px;
 
-    .agenda__duration{
+    .agenda__duration {
       color: $ribbon;
       display: none;
       visibility: hidden;
-      @include breakpoint-m{
+      @include breakpoint-m {
         display: block;
         visibility: visible;
       }
     }
 
     .read__more,
-    .agenda_speaker__name
-    {
+    .agenda_speaker__name {
       display: none;
       visibility: hidden;
     }
 
-    .agenda__time{
+    .agenda__time {
       padding-bottom: 0px;
       flex: 1;
-      .agenda__time-end{
+      .agenda__time-end {
         display: none;
         visibility: hidden;
       }
     }
-    .agenda__detail{
+    .agenda__detail {
       padding-bottom: 0px;
       min-width: 180px;
 
-      h1{
+      h1 {
         font-size: 15px;
         @include breakpoint-m {
           font-size: 18px;
@@ -187,8 +173,8 @@
       }
     }
 
-    .agenda__image{
-      img{
+    .agenda__image {
+      img {
         max-width: 22px;
         max-height: 22px;
         @include breakpoint-m {
@@ -197,7 +183,5 @@
         }
       }
     }
-
   }
-
 }
