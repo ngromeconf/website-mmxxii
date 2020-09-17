@@ -23,127 +23,21 @@ import { SponsorService } from 'src/app/shared/services/sponsor.service';
       </div>
     </section>
     <!-- sponsor here -->
-    <section>
-      <div class="site-content__wrap">
-        <h1 class="site-content__section__title">Main Partners</h1>
-        <ul class="sponsors__list sponsors__list--full">
-          <li
-            *ngFor="let sponsor of sponsorService.getSponsors('main')"
-            class="main"
-          >
-            <a
-              rel="noopener"
-              href="{{ sponsor.websiteUrl }}"
-              target="_blank"
-              title="{{ sponsor.name }}"
-            >
-              <img src="{{ sponsor.image }}" alt="{{ sponsor.name }}" />
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section>
-    <div class="site-content__wrap">
-      <h1 class="site-content__section__title">Gold Sponsors</h1>
-      <ul class="sponsors__list sponsors__list--full">
-        <li *ngFor="let sponsor of sponsorService.getSponsors('gold')" class="main">
-          <a rel="noopener"
-          href="{{ sponsor.websiteUrl }}"
-          target="_blank"
-          title="{{ sponsor.name }}">
-            <img src="{{ sponsor.image }}" alt="{{ sponsor.name }}" />
-          </a>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-    <!-- <section>
-      <div class="site-content__wrap">
-        <h1 class="site-content__section__title">Silver Sponsors</h1>
-        <ul class="sponsors__list">
-          <li
-            *ngFor="let sponsor of sponsorService.getSponsors('silver')"
-            class="main"
-          >
-            <a
-              rel="noopener"
-              href="{{ sponsor.websiteUrl }}"
-              target="_blank"
-              title="{{ sponsor.name }}"
-            >
-              <img src="{{ sponsor.image }}" alt="{{ sponsor.name }}" />
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section> -->
-
-    <!-- <section>
-      <div class="site-content__wrap">
-        <h1 class="site-content__section__title">Diversity Sponsors</h1>
-        <ul class="sponsors__list sponsors__list--full">
-          <li
-            *ngFor="let sponsor of sponsorService.getSponsors('diversity')"
-            class="main"
-          >
-            <a
-              rel="noopener"
-              href="{{ sponsor.websiteUrl }}"
-              target="_blank"
-              title="{{ sponsor.name }}"
-            >
-              <img src="{{ sponsor.image }}" alt="{{ sponsor.name }}" />
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section> -->
-
-    <!-- <section>
-      <div class="site-content__wrap">
-        <h1 class="site-content__section__title">Partners</h1>
-        <ul class="sponsors__list sponsors__list--full">
-          <li
-            *ngFor="let sponsor of sponsorService.getSponsors('other')"
-            class="main"
-          >
-            <a
-              rel="noopener"
-              href="{{ sponsor.websiteUrl }}"
-              target="_blank"
-              title="{{ sponsor.name }}"
-            >
-              <img src="{{ sponsor.image }}" alt="{{ sponsor.name }}" />
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section> -->
-
-    <!-- <section>
-      <div class="site-content__wrap">
-        <h1 class="site-content__section__title">Community Partners</h1>
-        <ul class="sponsors__list">
-          <li
-            *ngFor="let partner of partnerService.getPartner(); let isOdd = odd"
-          >
-            <a
-              rel="noopener"
-              href="{{ partner.websiteUrl }}"
-              target="_blank"
-              title="{{ partner.name }}"
-            >
-              <img src="{{ partner.image }}" alt="{{ partner.name }}" />
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section> -->
-
-    <!-- end sponsor -->
+    <ngrome-sponsors-section
+      [title]="'main partners'"
+      [sponsors]="sponsorService.getSponsors('main')"
+      headerColor="sponsor-title__main-partners"
+    ></ngrome-sponsors-section>
+    <ngrome-sponsors-section
+      [title]="'gold sponsors'"
+      [sponsors]="sponsorService.getSponsors('main')"
+      headerColor="sponsor-title__gold"
+    ></ngrome-sponsors-section>
+    <ngrome-sponsors-section
+      [title]="'platinum sponsors'"
+      [sponsors]="sponsorService.getSponsors('main')"
+      headerColor="sponsor-title__platinum"
+    ></ngrome-sponsors-section>
 
     <!-- <ngrome-tickets class="site-content__section" id="tickets"></ngrome-tickets> -->
   `,
