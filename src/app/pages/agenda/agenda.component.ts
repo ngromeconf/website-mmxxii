@@ -22,7 +22,7 @@ import { Observable } from 'rxjs';
     </section>
 
     <div class="site-content__wrap">
-      <h1 class="site-content__section__title">October 24th 2020</h1>
+      <h1 class="site-content__section__title">October 20th 2020</h1>
 
       <ul class="speakers__list">
         <li class="agenda__item" *ngFor="let agenda of agendaList$ | async">
