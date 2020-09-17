@@ -47,23 +47,26 @@ export class SpeakerListComponent {
     const visible$ = new BehaviorSubject(null);
 
     this.speakerList$ = combineLatest(
-      homepage$,
-      visible$
+      [homepage$, visible$]
     ).pipe(
       switchMap(([homepage, visible]) =>
-        afs.collection('speakers',
+        afs.collection('speakers2020',
           ref => {
             let query : firebase.firestore.CollectionReference | firebase.firestore.Query = ref;
-            if (homepage) { query = query.where('homepage', '==', true) };
-            if (visible) { query = query.where('visible', '==', true)};
+            if (homepage) {
+              query = query.where('homepage', '==', true);
+            }
+            if (visible) {
+              query = query.where('visible', '==', true);
+            };
             query = query.orderBy('position', 'asc');
-            //console.log(query);
+            console.log(query);
             return query;
           }).valueChanges()
       )
     );
 
-    //console.log(this.actualPage);
+    // console.log(this.actualPage);
     if (this.actualPage === 'home') {
       // trigger the query
       homepage$.next(true);
