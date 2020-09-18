@@ -13,8 +13,8 @@ import { Observable } from 'rxjs';
           <div class="site-content__intro__info__inner">
             <p>
               One track, one day, filled with talks of the
-              <strong>Angular</strong> engineers who build the most
-              <strong>performant</strong> apps and web experiences.
+              <strong>Angular</strong> engineers who build the most <strong>performant</strong> apps and web
+              experiences.
             </p>
           </div>
         </div>
@@ -34,37 +34,18 @@ import { Observable } from 'rxjs';
           >
             <div class="agenda__time">
               {{ agenda.startTime.seconds * 1000 | date: 'shortTime' }}<br />
-              <span class="agenda__time-end"
-                >→{{ agenda.endTime.seconds * 1000 | date: 'hh:mm' }}</span
-              >
+              <span class="agenda__time-end">→{{ agenda.endTime.seconds * 1000 | date: 'hh:mm' }}</span>
             </div>
             <div class="agenda__image">
-              <a
-                [routerLink]="['/speakers/speaker-detail', agenda.speakerName]"
-                routerLinkActive="router-link-active"
-              >
-                <img [src]="agenda.image" alt="{{ agenda.speakerName }}" />
-              </a>
+              <img [src]="agenda.image" alt="{{ agenda.speakerName }}" />
             </div>
             <div class="agenda__detail">
-              <a
-                [routerLink]="['/speakers/speaker-detail', agenda.speakerName]"
-                routerLinkActive="router-link-active"
-              >
-                <span class="agenda_speaker__name"
-                  >{{ agenda.speakerName }}<br />
-                  - {{ agenda.company }}</span
-                ></a
-              >
+              <span class="agenda_speaker__name"> {{ agenda.speakerName }}<br />- {{ agenda.company }} </span>
               <h1>{{ agenda.title }}</h1>
-              <a class="read__more" title="Read more about the talk"
-                >Read more</a
-              >
+              <a class="read__more" title="Read more about the talk">Read more</a>
               <div class="agenra__talk__detail"></div>
             </div>
-            <div class="agenda__duration">
-              {{ getDuration(agenda.startTime, agenda.endTime) }}''
-            </div>
+            <div class="agenda__duration">{{ getDuration(agenda.startTime, agenda.endTime) }}''</div>
           </div>
         </li>
       </ul>
@@ -77,9 +58,7 @@ export class AgendaComponent implements OnInit {
   constructor(private afs: AngularFirestore) {
     this.agendaList$ = afs
       .collection('agenda2020', (ref) => {
-        let query:
-          | firebase.firestore.CollectionReference
-          | firebase.firestore.Query = ref;
+        let query: firebase.firestore.CollectionReference | firebase.firestore.Query = ref;
         query = query.where('visible', '==', true);
         query = query.orderBy('startTime', 'asc');
         return query;
