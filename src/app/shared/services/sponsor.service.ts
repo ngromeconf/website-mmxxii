@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { Observable } from 'rxjs/internal/Observable';
 
 export interface Sponsor {
   image: string;
@@ -13,40 +15,15 @@ export interface Sponsor {
   providedIn: 'root',
 })
 export class SponsorService {
-  sponsorList: Sponsor[] = [
-    {
-      image: './assets/images/sponsor_resized/logo_ng.svg',
-      name: 'Angular Roma',
-      description: '',
-      visible: true,
-      websiteUrl: 'https://twitter.com/angularroma',
-      type: 'main',
-    },
-    {
-      image: './assets/images/communities/ng-sf.png',
-      name: 'Angular San Francisco',
-      description: '',
-      visible: true,
-      websiteUrl: 'https://twitter.com/angularsf',
-      type: 'main',
-    },
-    {
-      image: './assets/images/partners/logo_ict-group.svg',
-      name: 'ICT GROUP',
-      description: '',
-      visible: true,
-      websiteUrl: 'https://ict-group.it/',
-      type: 'gold',
-    },
-  ];
+  constructor(private afs: AngularFirestore) {}
 
-  getSponsors(type?: string): Sponsor[] {
-    let sponsors = this.sponsorList;
-    if (type) {
-      sponsors = this.sponsorList.filter((e) => {
-        return e.type === type;
-      });
-    }
-    return sponsors;
+  getSponsors(): Observable<Array<any>> {
+    return this.afs
+      .collection('sponsor2020', (ref) => {
+        let query: firebase.firestore.CollectionReference | firebase.firestore.Query = ref;
+        query = query.where('visible', '==', true);
+        return query;
+      })
+      .valueChanges();
   }
 }

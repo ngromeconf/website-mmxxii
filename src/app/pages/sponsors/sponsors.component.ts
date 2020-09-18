@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PartnersService } from 'src/app/shared/services/partners.service';
 import { NgAnimateScrollService } from 'src/app/shared/services/ng-animate-scroll.service';
-import { SponsorService } from 'src/app/shared/services/sponsor.service';
+import { Sponsor, SponsorService } from 'src/app/shared/services/sponsor.service';
 
 @Component({
   selector: 'ngrome-pages-sponsors',
@@ -14,8 +14,8 @@ import { SponsorService } from 'src/app/shared/services/sponsor.service';
           </header>
           <div class="site-content__intro__info__inner">
             <p>
-              We want to say thank you to our Sponsors and Community Partners!
-              They help make <strong>NG Rome Conference</strong> possible.
+              We want to say thank you to our Sponsors and Community Partners! They help make
+              <strong>NG Rome Conference</strong> possible.
             </p>
             <p>Come and say "Ciao" the day of the conference.</p>
           </div>
@@ -25,17 +25,17 @@ import { SponsorService } from 'src/app/shared/services/sponsor.service';
     <!-- sponsor here -->
     <ngrome-sponsors-section
       [title]="'main partners'"
-      [sponsors]="sponsorService.getSponsors('main')"
+      [sponsors]="mainPartners"
       headerColor="sponsor-title__main-partners"
     ></ngrome-sponsors-section>
     <ngrome-sponsors-section
       [title]="'gold sponsors'"
-      [sponsors]="sponsorService.getSponsors('main')"
+      [sponsors]="goldSponsor"
       headerColor="sponsor-title__gold"
     ></ngrome-sponsors-section>
     <ngrome-sponsors-section
       [title]="'platinum sponsors'"
-      [sponsors]="sponsorService.getSponsors('main')"
+      [sponsors]="platinumSponsor"
       headerColor="sponsor-title__platinum"
     ></ngrome-sponsors-section>
 
@@ -43,11 +43,21 @@ import { SponsorService } from 'src/app/shared/services/sponsor.service';
   `,
 })
 export class SponsorsComponent implements OnInit {
+  public mainPartners: Array<Sponsor>;
+  public goldSponsor: Array<Sponsor>;
+  public platinumSponsor: Array<Sponsor>;
+
   constructor(
     public partnerService: PartnersService,
     public sponsorService: SponsorService,
     private animateScrollService: NgAnimateScrollService
-  ) {}
+  ) {
+    sponsorService.getSponsors().subscribe((sponsors: Array<Sponsor>) => {
+      this.mainPartners = sponsors.filter((s) => s.type === 'main-partner');
+      this.goldSponsor = sponsors.filter((s) => s.type === 'gold');
+      this.mainPartners = sponsors.filter((s) => s.type === 'platinum');
+    });
+  }
 
   ngOnInit() {}
 
