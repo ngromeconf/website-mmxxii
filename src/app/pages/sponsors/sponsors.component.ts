@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PartnersService } from 'src/app/shared/services/partners.service';
 import { NgAnimateScrollService } from 'src/app/shared/services/ng-animate-scroll.service';
-import { SponsorService } from 'src/app/shared/services/sponsor.service';
 
 @Component({
   selector: 'ngrome-pages-sponsors',
@@ -25,29 +23,25 @@ import { SponsorService } from 'src/app/shared/services/sponsor.service';
     <!-- sponsor here -->
     <ngrome-sponsors-section
       [title]="'main partners'"
-      [sponsors]="sponsorService.getSponsors('main')"
+      [sponsorType]="'main-partner'"
       headerColor="sponsor-title__main-partners"
     ></ngrome-sponsors-section>
     <ngrome-sponsors-section
       [title]="'gold sponsors'"
-      [sponsors]="sponsorService.getSponsors('main')"
-      headerColor="sponsor-title__gold"
+      [sponsorType]="'platinum'"
+      headerColor="sponsor-title__platinum"
     ></ngrome-sponsors-section>
     <ngrome-sponsors-section
       [title]="'platinum sponsors'"
-      [sponsors]="sponsorService.getSponsors('main')"
-      headerColor="sponsor-title__platinum"
+      [sponsorType]="'gold'"
+      headerColor="sponsor-title__gold"
     ></ngrome-sponsors-section>
 
     <!-- <ngrome-tickets class="site-content__section" id="tickets"></ngrome-tickets> -->
   `,
 })
 export class SponsorsComponent implements OnInit {
-  constructor(
-    public partnerService: PartnersService,
-    public sponsorService: SponsorService,
-    private animateScrollService: NgAnimateScrollService
-  ) {}
+  constructor(private animateScrollService: NgAnimateScrollService) {}
 
   ngOnInit() {}
 

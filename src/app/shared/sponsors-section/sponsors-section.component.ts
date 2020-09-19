@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Sponsor } from '../services/sponsor.service';
+import { Observable } from 'rxjs';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { tap, map } from 'rxjs/operators';
 
 @Component({
   selector: 'ngrome-sponsors-section',
@@ -12,9 +14,9 @@ import { Sponsor } from '../services/sponsor.service';
 
         <div class="sponsors-section__list">
           <div
-            *ngFor="let sponsor of sponsors"
+            *ngFor="let sponsor of sponsors$ | async"
             class="sponsors-section__item"
-            [ngClass]="{ 'two-items-row': sponsors.length === 2 }"
+            [ngClass]="{ 'two-items-row': sponsor.$index === 2 }"
           >
             <a
               rel="noopener"
@@ -35,8 +37,26 @@ import { Sponsor } from '../services/sponsor.service';
 export class SponsorsSectionComponent implements OnInit {
   @Input() title: string;
   @Input() headerColor: string;
-  @Input() sponsors: Array<Sponsor>;
-  constructor() {}
+  @Input() sponsorType: string;
 
-  ngOnInit(): void {}
+  sponsors$: Observable<any>;
+
+  constructor(private afs: AngularFirestore) {}
+
+  ngOnInit(): void {
+    this.getSponsors();
+  }
+
+  getSponsors() {
+    this.sponsors$ = this.afs
+      .collection('sponsor2020', (ref) => {
+        let query:
+          | firebase.firestore.CollectionReference
+          | firebase.firestore.Query = ref;
+        query = query.where('type', '==', this.sponsorType);
+        console.log(query);
+        return query;
+      })
+      .valueChanges();
+  }
 }
