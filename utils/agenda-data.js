@@ -1,292 +1,184 @@
-const firebase = require("firebase");
+const firebase = require('firebase');
 // Required for side-effects
-require("firebase/firestore");
+require('firebase/firestore');
 
 // Initialize Cloud Firestore through Firebase
-firebase.initializeApp();
+firebase.initializeApp({
+  projectId: 'ngrome-79ce3',
+});
 
 var db = firebase.firestore();
 
+var agenda = [
+  {
+    speakerName: '',
+    company: '',
+    startTime: '10 20 2020 14:00:00 UTC+2',
+    endTime: '10 20 2020 14:10:00 UTC+2',
+    title: 'Opening Remarks',
+    description: '',
+    image: '',
+    type: 'Activity',
+    visible: true,
+  },
+  {
+    speakerName: 'Manfred Steyer',
+    company: 'Freelance',
+    startTime: '10 20 2020 14:10:00 UTC+2',
+    endTime: '10 20 2020 14:40:00 UTC+2',
+    title: 'Coming soon',
+    description: '',
+    image:
+      'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/speaker%2Fmmxx%2Fmanfredsteyer.png?alt=media&token=6f6138f5-531e-403e-ba73-b1487aedd8a4',
+    type: 'Talk',
+    visible: true,
+  },
+  {
+    speakerName: 'Ermanno Battista',
+    company: '',
+    startTime: '10 20 2020 14:40:00 UTC+2',
+    endTime: '10 20 2020 14:50:00 UTC+2',
+    title: '',
+    description: '',
+    image:
+      'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/speaker%2Fmmxx%2Fermannobattista.png?alt=media&token=084c9072-5262-43c8-8ff8-957f4db568ec',
+    type: 'Talk',
+    visible: true,
+  },
+  {
+    speakerName: 'Sam Vloeberghs',
+    company: '',
+    startTime: '10 20 2020 14:50:00 UTC+2',
+    endTime: '10 20 2020 15:20:00 UTC+2',
+    title: '',
+    description: '',
+    image:
+      'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/speaker%2Fmmxx%2Fsamvloeberghs.png?alt=media&token=e0eecd5a-4bdf-43aa-8df2-fa9124669318',
+    type: 'Talk',
+    visible: true,
+  },
+  {
+    speakerName: 'Nishu Goel',
+    company: '',
+    startTime: '10 20 2020 15:20:00 UTC+2',
+    endTime: '10 20 2020 15:35:00 UTC+2',
+    title: 'Angular libraries with v10',
+    description:
+      "Building and packaging libraries using Angular. We will also see what's new with peer dependencies starting Angular v10. Does it break already existing Angular libraries? Join me to explore more!",
+    image:
+      'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/speaker%2Fmmxx%2FNishugoel.png?alt=media&token=75e2d022-99e0-414f-ba6b-5cad1ee73128',
+    type: 'Talk',
+    visible: true,
+  },
+  {
+    speakerName: '',
+    company: '',
+    startTime: '10 20 2020 15:35:00 UTC+2',
+    endTime: '10 20 2020 16:05:00 UTC+2',
+    title: 'Speaker Panel',
+    description: '',
+    image: '',
+    type: 'Activity',
+    visible: true,
+  },
+  {
+    speakerName: '',
+    company: '',
+    startTime: '10 20 2020 16:05:00 UTC+2',
+    endTime: '10 20 2020 16:20:00 UTC+2',
+    title: 'Coffee Break',
+    description: '',
+    image: '',
+    type: 'Activity',
+    visible: true,
+  },
+  {
+    speakerName: 'Juri Strumpflohner',
+    company: '',
+    startTime: '10 20 2020 16:20:00 UTC+2',
+    endTime: '10 20 2020 16:50:00 UTC+2',
+    title: '',
+    description: '',
+    image:
+      'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/speaker%2Fjuri.png?alt=media&token=63c66548-b1f7-4a2f-a120-7e73ddff6910',
+    type: 'Talk',
+    visible: true,
+  },
+  {
+    speakerName: 'Jennifer Wadella',
+    company: '',
+    startTime: '10 20 2020 16:50:00 UTC+2',
+    endTime: '10 20 2020 17:20:00 UTC+2',
+    title: '',
+    description: '',
+    image:
+      'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/speaker%2Fmmxx%2Fjennifer%20wadella.png?alt=media&token=b7370df3-5cd7-4c40-a8f0-69fe5adbeb61',
+    type: 'Talk',
+    visible: true,
+  },
+  {
+    speakerName: 'Brian Love',
+    company: '',
+    startTime: '10 20 2020 17:20:00 UTC+2',
+    endTime: '10 20 2020 17:40:00 UTC+2',
+    title: '',
+    description: '',
+    image:
+      'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/speaker%2Fmmxx%2Fbrianlove.png?alt=media&token=5ea63a65-6e27-49e0-877c-f4c3ccc8fc21',
+    type: 'Talk',
+    visible: true,
+  },
+  {
+    speakerName: 'Minko Gechev',
+    company: '',
+    startTime: '10 20 2020 17:40:00 UTC+2',
+    endTime: '10 20 2020 18:20:00 UTC+2',
+    title: 'Closing Keynote',
+    description: 'Coming soon',
+    image:
+      'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/speaker%2Fmmxx%2FMinkogechev.jpg?alt=media&token=ab028b4d-81ff-4e2a-94df-dcb4a64d0caf',
+    type: 'Talk',
+    visible: true,
+  },
+  {
+    speakerName: '',
+    company: '',
+    startTime: '10 20 2020 18:20:00 UTC+2',
+    endTime: '10 20 2020 18:50:00 UTC+2',
+    title: 'Speaker Panel',
+    description: '',
+    image: '',
+    type: 'Activity',
+    visible: true,
+  },
+  {
+    speakerName: '',
+    company: '',
+    startTime: '10 20 2020 18:50:00 UTC+2',
+    endTime: '10 20 2020 19:00:00 UTC+2',
+    title: 'Closing Remarks',
+    description: '',
+    image: '',
+    type: 'Activity',
+    visible: true,
+  },
+];
 
-var agenda =[
-  {
-    speakerName: "",
-    company: "",
-    startTime: "7 10 2019 08:00:00 UTC+2",
-    endTime: "7 10 2019 09:00:00 UTC+2",
-    title: "Registration & Coffee",
-    description: "",
-    image: "",
-    type: "Activity",
-    visible: true,
-  },{
-    speakerName: "",
-    company: "",
-    startTime: "7 10 2019 09:00:00 UTC+2",
-    endTime: "7 10 2019 09:15:00 UTC+2",
-    title: "Opening Remarks",
-    description: "",
-    image: "",
-    type: "Activity",
-    visible: true,
-  },{
-    speakerName: "Matias Niemelä",
-    company: "Google",
-    startTime: "7 10 2019 09:15:00 UTC+2",
-    endTime: "7 10 2019 09:55:00 UTC+2",
-    title: "Opening Keynote",
-    description: "Coming soon",
-    image: "https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/speaker%2Fmatias.png?alt=media&token=000450b4-2526-40df-ba03-2067fa181289",
-    type: "Talk",
-    visible: true,
-  },
-  {
-    speakerName: "Fabian Gosebrink",
-    company: "Freelance",
-    startTime: "7 10 2019 09:55:00 UTC+2",
-    endTime: "7 10 2019 10:20:00 UTC+2",
-    title: "Architecting Angular Applications with Angular Libraries",
-    description: "Angular offers a large ecosystem when it comes to separation and architecture of your application. There are often pieces of code that you don't just want to reuse within your application, but to make available to other applications in your organization or via package managers like npm over the Internet. This is where angular libraries come into play. In this talk, Fabian Gosebrink explores the way Angular Libraries are built, what the Angular Package format is good for, and how we can move code from an existing application to an Angular Library to reuse the code across multiple applications. This makes scaling and the architecture of angular applications a breeze.",
-    image: "https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/speaker%2Ffabian.png?alt=media&token=07824755-f922-41af-910b-d6b5aefd0cac",
-    type: "Talk",
-    visible: true,
-  },
-  {
-    speakerName: "Juri Strumpflohner",
-    company: "Freelance",
-    startTime: "7 10 2019 10:20:00 UTC+2",
-    endTime: "7 10 2019 10:45:00 UTC+2",
-    title: "Coming soon",
-    description: "",
-    image: "https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/speaker%2Fjuri.png?alt=media&token=63c66548-b1f7-4a2f-a120-7e73ddff6910",
-    type: "Talk",
-    visible: true,
-  },
-  {
-    speakerName: "Josie Nagy",
-    company: "BITCROWD",
-    startTime: "7 10 2019 10:45:00 UTC+2",
-    endTime: "7 10 2019 10:55:00 UTC+2",
-    title: "Learning JavaScript through your notebook",
-    description: "Learning new stuff on your own is hard, especially when your job as a developer constantly demands it. I started keeping a notebook one year ago as a way to improve my learning habits and keep track of my progress learning web development. It turned out to be fun and useful, and I've been doing it ever since. In this talk, I will share my handwritten notes, explain how the process of making them works and why they are such a useful learning tool. Give it a try and don't worry, no artistic skills needed.",
-    image: "https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/speaker%2FJosie.png?alt=media&token=e0c026a9-3e6a-40f2-9f85-354641bf10a6",
-    type: "Talk",
-    visible: true,
-  },
-  {
-    speakerName: "",
-    company: "",
-    startTime: "7 10 2019 10:55:00 UTC+2",
-    endTime: "7 10 2019 11:25:00 UTC+2",
-    title: "Coffee Break",
-    description: "",
-    image: "",
-    type: "Activity",
-    visible: true,
-  },
-  {
-    speakerName: "Bonnie Brennan & Samantha Brennan",
-    company: "https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/speaker%2Fsamantha-bonnie.png?alt=media&token=5ca346ba-f45b-4ac9-b718-fd6d1958e436",
-    startTime: "7 10 2019 11:25:00 UTC+2",
-    endTime: "7 10 2019 11:50:00 UTC+2",
-    title: "State Management w/ NGRX & GraphQL",
-    description: "In this talk, we will discuss when you should use NGRX, when it might not be the best option, and everything in between. We will compare cost vs. benefits of NGRX and GraphQL for state management (spoiler - we love them both!). We will also show examples of how we can use NGRX and GraphQL together in a hybrid app or transition from one to the other.",
-    image: "",
-    type: "Talk",
-    visible: true,
-  },
-  {
-    speakerName: "Pamela Ocampo",
-    company: "https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/speaker%2Fpamela.png?alt=media&token=ff47b8f9-4533-49cb-8841-4f2f97c2afe9",
-    startTime: "7 10 2019 12:15:00 UTC+2",
-    endTime: "7 10 2019 12:15:00 UTC+2",
-    title: "Why You Should Care About ChangeDetection in Your Migration Journey",
-    description: "In this talk you will learn about the role ChangeDetection played in the migration of an application for charting patient medical history and data.",
-    image: "",
-    type: "Talk",
-    visible: true,
-  },
-  {
-    speakerName: "Leonardo Zizzamia",
-    company: "COINBASE",
-    startTime: "7 10 2019 12:15:00 UTC+2",
-    endTime: "7 10 2019 12:25:00 UTC+2",
-    title: "Writing your first Decentralized Application",
-    description: "Coming soon",
-    image: "https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/speaker%2Fleonardo.png?alt=media&token=7a88cc24-03d3-4027-af8b-3c56fa978552",
-    type: "Talk",
-    visible: true,
-  },
-  {
-    speakerName: "",
-    company: "",
-    startTime: "7 10 2019 12:25:00 UTC+2",
-    endTime: "7 10 2019 13:50:00 UTC+2",
-    title: "Lunch Break",
-    description: "",
-    image: "",
-    type: "Activity",
-    visible: true,
-  },
-  {
-    speakerName: "Mike Ryan",
-    company: "SYNAPSE",
-    startTime: "7 10 2019 13:50:00 UTC+2",
-    endTime: "7 10 2019 14:15:00 UTC+2",
-    title: "Coming soon",
-    description: "Coming soon",
-    image: "https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/speaker%2Fmike.png?alt=media&token=e802a870-088b-41b3-af39-3c9827588ed0",
-    type: "Talk",
-    visible: true,
-  },
-  {
-    speakerName: "Marta Wiśniewska",
-    company: "COSMOSE AI",
-    startTime: "7 10 2019 14:15:00 UTC+2",
-    endTime: "7 10 2019 14:40:00 UTC+2",
-    title: "Offline first in Angular",
-    description: "Are your apps fast and stable where the network isn't? Let's take a deep dive into Progressive Web Apps and Offline First approach! I'll show you some tricks how to handle offline state and manage your app and its resources in various network conditions. We'll build fast and reliable apps using Angular and PWA features.",
-    image: "https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/speaker%2Fmarta.png?alt=media&token=5aa6f1fe-0845-4caa-8aea-5af8efbfb9d8",
-    type: "Talk",
-    visible: true,
-  },
-  {
-    speakerName: "Ayşegül Yönet",
-    company: "MICROSOFT",
-    startTime: "7 10 2019 14:40:00 UTC+2",
-    endTime: "7 10 2019 15:05:00 UTC+2",
-    title: "Coming soon",
-    description: "Coming soon",
-    image: "https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/speaker%2Faysegul.png?alt=media&token=9f7bde62-b47c-43e0-a0ee-ef72354d06c7",
-    type: "Talk",
-    visible: true,
-  },
-  {
-    speakerName: "Giorgio Natili",
-    company: "AMAZON",
-    startTime: "7 10 2019 15:05:00 UTC+2",
-    endTime: "7 10 2019 15:15:00 UTC+2",
-    title: "Coming soon",
-    description: "Coming soon",
-    image: "https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/speaker%2Fgiorgio.png?alt=media&token=cc781853-1229-4c12-a1ee-b8fec56471e8",
-    type: "Talk",
-    visible: true,
-  },
-  {
-    speakerName: "",
-    company: "",
-    startTime: "7 10 2019 15:15:00 UTC+2",
-    endTime: "7 10 2019 15:45:00 UTC+2",
-    title: "Coffee Break",
-    description: "",
-    image: "",
-    type: "Activity",
-    visible: true,
-  },
-  {
-    speakerName: "Juan Herrera",
-    company: "YUXIGLOBAL",
-    startTime: "7 10 2019 15:45:00 UTC+2",
-    endTime: "7 10 2019 16:10:00 UTC+2",
-    title: "RxJS: Mastering the asynchronous nature of JavaScript",
-    description: "Join us to learn the main obstacles of writing asynchronous code in JavaScript and how RxJS help us solve them in a clean and elegant way. :man_in_tuxedo: We will evidence the most common problems you will find in the industry, we'll compare them with real-life analogies, and we'll fix them together: :robot_face: Ensure the order of the messages :alien: Sync asynchronous tasks :space_invader: Cancel on-going asynchronous processes :hankey: Gracefully handling errors And all the above in an interactive way, so get your phone ready!",
-    image: "https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/speaker%2Fjuan.png?alt=media&token=aa67bddf-04da-459e-a737-06ad07e722c1",
-    type: "Talk",
-    visible: true,
-  },
-  {
-    speakerName: "Maurizio Vitale",
-    company: "ALFRESCO",
-    startTime: "7 10 2019 16:10:00 UTC+2",
-    endTime: "7 10 2019 16:35:00 UTC+2",
-    title: "Tensorflow.js and Angular",
-    description: "In this talk, you’ll learn how to use Tensorflow.js and Angular to build a web app with a Machine Learning feature. I will show how you can localise and identify multiple objects in a single image using an object detect model and how to build a smart viewer component that highlights those info.",
-    image: "https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/speaker%2FMaurizio.png?alt=media&token=3961bc03-2293-45d4-b053-c13e16e033e7",
-    type: "Talk",
-    visible: true,
-  },
-  {
-    speakerName: "Horacio Gonzalez",
-    company: "OVH",
-    startTime: "7 10 2019 16:35:00 UTC+2",
-    endTime: "7 10 2019 17:00:00 UTC+2",
-    title: "Use Capacitor to transform your PWA in native mobile app in 10 minutes",
-    description: "Ah, Ionic's Capacitor, what a beautiful idea, an alternative to Cordova easier to use, easier to integrate in any framework, fully integrated with Ionic… Well, not really for me, at least at the beginning. After having developed lots of PWA these last years, I was a bit skeptic about the pertinence of native or hybrid apps, so when I heard of Capacitor I put it in the cool techno not really for me basket. Until I when to the website and I read: “Build web apps that run equally well on iOS, Android, Electron, and as Progressive Web Apps”. Oh, that really grabbed my interest. So I decided to use Capacitor on some of my PWA projects, to see if I could transform them in native iOS or Android apps. And this talk is the feedback of this process, my first steps with Capacitor in some real life applications, what did work for me and what didn’t, and what I learnt in the process.",
-    image: "https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/speaker%2FHoracio.png?alt=media&token=7d4bf88d-9be0-4966-ae7f-91cb57e59a7a",
-    type: "Talk",
-    visible: true,
-  },
-  ,
-  {
-    speakerName: "John Papa",
-    company: "MICROSOFT",
-    startTime: "7 10 2019 17:00:00 UTC+2",
-    endTime: "7 10 2019 17:40:00 UTC+2",
-    title: "Closing Keynote",
-    description: "Coming soon",
-    image: "https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/speaker%2Fjohn.png?alt=media&token=a890fae4-4f1f-44ea-9d61-f18d5b683ef8",
-    type: "Talk",
-    visible: true,
-  },
-  {
-    speakerName: "",
-    company: "",
-    startTime: "7 10 2019 17:40:00 UTC+2",
-    endTime: "7 10 2019 18:00:00 UTC+2",
-    title: "Coffee Break",
-    description: "",
-    image: "",
-    type: "Activity",
-    visible: true,
-  },
-  {
-    speakerName: "",
-    company: "",
-    startTime: "7 10 2019 18:00:00 UTC+2",
-    endTime: "7 10 2019 18:30:00 UTC+2",
-    title: "Speaker Panel",
-    description: "",
-    image: "",
-    type: "Activity",
-    visible: true,
-  },{
-    speakerName: "",
-    company: "",
-    startTime: "7 10 2019 18:30:00 UTC+2",
-    endTime: "7 10 2019 18:40:00 UTC+2",
-    title: "Closing Remarks",
-    description: "",
-    image: "",
-    type: "Activity",
-    visible: true,
-  },{
-    speakerName: "",
-    company: "",
-    startTime: "7 10 2019 18:40:00 UTC+2",
-    endTime: "7 10 2019 20:00:00 UTC+2",
-    title: "Angular Beer",
-    description: "",
-    image: "",
-    type: "Activity",
-    visible: true,
-  },
- ];
+agenda.forEach(function (obj) {
+  console.log('Write the item: ', obj.speakerName);
 
-agenda.forEach(function(obj) {
+  let startTime = new Date(obj.startTime);
+  let endTime = new Date(obj.endTime);
 
-    console.log('Write the item: ', obj.speakerName);
+  obj.startTime = firebase.firestore.Timestamp.fromDate(startTime);
+  obj.endTime = firebase.firestore.Timestamp.fromDate(endTime);
 
-    let startTime = new Date(obj.startTime);
-    let endTime = new Date(obj.endTime);
-
-    obj.startTime = firebase.firestore.Timestamp.fromDate(startTime);
-    obj.endTime = firebase.firestore.Timestamp.fromDate(endTime);
-
-
-    db.collection("agenda").add(obj).then(function(docRef) {
-        console.log("Document written with ID: ", docRef.id);
+  db.collection('agenda2020')
+    .add(obj)
+    .then(function (docRef) {
+      console.log('Document written with ID: ', docRef.id);
     })
-    .catch(function(error) {
-        console.error("Error adding document: ", error);
+    .catch(function (error) {
+      console.error('Error adding document: ', error);
     });
 });

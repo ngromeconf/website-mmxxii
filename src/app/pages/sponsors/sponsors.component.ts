@@ -12,8 +12,8 @@ import { NgAnimateScrollService } from 'src/app/shared/services/ng-animate-scrol
           </header>
           <div class="site-content__intro__info__inner">
             <p>
-              We want to say thank you to our Sponsors and Community Partners!
-              They help make <strong>NG Rome Conference</strong> possible.
+              We want to say thank you to our Sponsors and Community Partners! They help make
+              <strong>NG Rome Conference</strong> possible.
             </p>
             <p>Come and say "Ciao" the day of the conference.</p>
           </div>
@@ -27,12 +27,12 @@ import { NgAnimateScrollService } from 'src/app/shared/services/ng-animate-scrol
       headerColor="sponsor-title__main-partners"
     ></ngrome-sponsors-section>
     <ngrome-sponsors-section
-      [title]="'gold sponsors'"
+      [title]="'platinum sponsors'"
       [sponsorType]="'platinum'"
       headerColor="sponsor-title__platinum"
     ></ngrome-sponsors-section>
     <ngrome-sponsors-section
-      [title]="'platinum sponsors'"
+      [title]="'gold sponsors'"
       [sponsorType]="'gold'"
       headerColor="sponsor-title__gold"
     ></ngrome-sponsors-section>

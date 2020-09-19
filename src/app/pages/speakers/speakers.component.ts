@@ -34,7 +34,7 @@ import { MessagingService } from 'src/app/shared/services/messaging.service';
   `]
 })
 export class SpeakersComponent {
-  //use this boolean if we want to filter the speaker for homepage
+  // use this boolean if we want to filter the speaker for homepage
   public speakerFilter = false;
 
   constructor(
@@ -45,7 +45,7 @@ export class SpeakersComponent {
     this.messagingService.receiveMessage();
   }
 
-  scrollTo(el:string, duration?:number) {
+  scrollTo(el: string, duration?: number) {
     this.animateScrollService.scrollToElement(el, duration);
   }
 }
