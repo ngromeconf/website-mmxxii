@@ -49,13 +49,13 @@ export class SponsorsComponent implements OnInit {
 
   constructor(
     public partnerService: PartnersService,
-    public sponsorService: SponsorService,
+    private sponsorService: SponsorService,
     private animateScrollService: NgAnimateScrollService
   ) {
-    sponsorService.getSponsors().subscribe((sponsors: Array<Sponsor>) => {
+    this.sponsorService.getSponsors().subscribe((sponsors: Array<Sponsor>) => {
       this.mainPartners = sponsors.filter((s) => s.type === 'main-partner');
       this.goldSponsor = sponsors.filter((s) => s.type === 'gold');
-      this.mainPartners = sponsors.filter((s) => s.type === 'platinum');
+      this.platinumSponsor = sponsors.filter((s) => s.type === 'platinum');
     });
   }
 
