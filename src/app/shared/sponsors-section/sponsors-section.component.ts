@@ -53,7 +53,6 @@ export class SponsorsSectionComponent implements OnInit {
           | firebase.firestore.CollectionReference
           | firebase.firestore.Query = ref;
         query = query.where('type', '==', this.sponsorType);
-        console.log(query);
         return query;
       })
       .valueChanges();
