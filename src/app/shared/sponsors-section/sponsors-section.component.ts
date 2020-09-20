@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { tap, map } from 'rxjs/operators';
 
 @Component({
   selector: 'ngrome-sponsors-section',
@@ -14,9 +13,9 @@ import { tap, map } from 'rxjs/operators';
 
         <div class="sponsors-section__list">
           <div
-            *ngFor="let sponsor of sponsors$ | async"
+            *ngFor="let sponsor of sponsors$ | async as sponsors"
             class="sponsors-section__item"
-            [ngClass]="{ 'two-items-row': sponsor.$index === 2 }"
+            [ngClass]="{ 'two-items-row': sponsors.length === 2 }"
           >
             <a
               rel="noopener"
@@ -47,7 +46,7 @@ export class SponsorsSectionComponent implements OnInit {
     this.getSponsors();
   }
 
-  getSponsors() {
+  private getSponsors() {
     this.sponsors$ = this.afs
       .collection('sponsor2020', (ref) => {
         let query:
