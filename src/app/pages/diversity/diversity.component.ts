@@ -13,13 +13,18 @@ import { SponsorService } from 'src/app/shared/services/sponsor.service';
           <div class="site-content__intro__info__inner">
           <p>We are running our <b>Diversity Program</b>,
           which provides individuals from underrepresented groups with
-          support to attend NGRome MMXIX.</p>
+          support to attend NGRome editions.</p>
           <p>We are very grateful and would like to say a big
-          Thank You to the companies and individuals who donate
-          to our Diversity Program. We are going to give over <b>80 tickets</b>
-          at discounted price or even free.</p>
-          <p><b>Students</b> and <b>Women</b> in Tech are invited to
-          buy a diversity ticket and join us to an incredible conference on Oct 7th in Rome.</p>
+          "Thank You" to the companies and individuals who donate
+          to our Diversity Program.</p>
+
+          <p>In the last edition, NGRome MMXIX, we gave over <b>80 tickets</b>
+          at discounted price or even free.
+          <b>Students</b> and <b>Women</b> in Tech were invited to buy a diversity ticket and joined us on Oct 7th 2019 in Rome.</p>
+          
+          <p>Even though <b>NGRome MMXX</b> is a virtual edition, we are still committed to our Diversity Program,
+          and are willing to offer our support.<br />
+          Moreover, we will be running the program also for the next edition which we hope will be held in Rome.</p>
           </div>
         </div>
       </div>
@@ -49,7 +54,7 @@ import { SponsorService } from 'src/app/shared/services/sponsor.service';
     </section -->
     <!-- <ngrome-tickets class="site-content__section" id="tickets"></ngrome-tickets> -->
   `,
-  styles: []
+  styles: ['p {text-align: justify;}']
 })
 export class DiversityComponent implements OnInit {
   constructor(public sponsorService: SponsorService) { }
