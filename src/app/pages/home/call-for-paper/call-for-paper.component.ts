@@ -11,15 +11,17 @@ import { Component, OnInit } from '@angular/core';
           </div>
 
           <div class="candidate__info">
-            <h2>Interested in being a speaker for NG Rome MMXX?</h2>
+            <h2>
+              We are going to announce the official schedule by the end of
+              August!
+            </h2>
 
             <p>
-              Applications for NG Rome MMXX will be closed on July 30th. Be one
-              of the heroes for 2020 and send us your paper.
+              Applications for NG Rome MMXX are closed.
               <br />
             </p>
 
-            <a
+            <!-- <a
               rel="noopener"
               class="button button--white"
               href="https://forms.gle/CDaLhFVAUENeQ1we6"
@@ -37,7 +39,7 @@ import { Component, OnInit } from '@angular/core';
                   d="M1 1l7.358 5L1 11"
                 />
               </svg>
-            </a>
+            </a> -->
           </div>
         </div>
       </div>

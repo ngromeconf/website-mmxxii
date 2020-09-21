@@ -13,7 +13,7 @@ import { SideBarService } from '../services/sidebar.service';
   template: ` <header class="site-header" role="banner">
     <div class="site-logo">
       <div class="logo">
-        <img src="assets/logo/logo-horizontal.svg" />
+        <a routerLink="/"><img src="assets/logo/logo-horizontal.svg" /></a>
       </div>
       <div class="cta">
         <!-- <a

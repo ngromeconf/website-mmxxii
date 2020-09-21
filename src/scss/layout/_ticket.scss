@@ -114,3 +114,85 @@
     }
   }
 }
+
+.tickets_title {
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 37px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #DD0031;
+}
+
+.ticket_card_list {
+  display: inline-flex;
+  flex-wrap: wrap;
+  margin-top: 19px;
+  gap: 25px;
+
+  .ticket_card {
+    @include breakpoint-s {
+      width: 100%;
+    }
+    width: 300px;
+    height: 549px;
+    background: #F5F5F5;
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.12), -3px -5px 11px #FFFFFF;
+    border-radius: 8px;
+    padding: 35px 24px;
+    font-style: normal;
+    font-family: $font-secondary;
+    .ticket_card_header {
+      height: 173px;
+      font-weight: 900;
+      font-size: 30px;
+
+      .ticket_card_title {
+        font-family: $font-primary;
+        line-height: 37px;
+        color: #000000;
+      }
+
+      .ticket_card_price {
+        line-height: 35px;
+        color: #DD0031;
+      }
+    }
+
+    .ticket_card_info {
+      margin-top: 19px;
+      height: 173px;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 162.9%;
+      color: #272727;
+    }
+
+    .ticket_card_button {
+      margin-top: 69px;
+      width: 100%;
+      height: 52px;
+      background: #00AE65;
+      border-radius: 44px;
+      border:none;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 23px;
+      text-align: center;
+      color: #F9F9F9;
+      cursor: pointer;
+    }
+    .ticket_card_icon {
+      vertical-align: middle;
+    }
+  }
+}
+
+
+
+
+
+
+
+

@@ -5,7 +5,6 @@ import { Observable } from 'rxjs';
 @Component({
   selector: 'ngrome-menu',
   templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.css'],
 })
 export class MenuComponent implements OnInit {
   @Output() toggleSidebar = new EventEmitter();

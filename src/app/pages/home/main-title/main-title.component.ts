@@ -9,16 +9,16 @@ import { NgAnimateScrollService } from 'src/app/shared/services/ng-animate-scrol
       <div class="site-content__wrap">
         <div class="site-content__intro">
           <header class="site-content__intro__head">
-            <h1 class="site-content__intro__title">
+            <h2 class="site-content__intro__title">
               The largest online
               <b>Italian Angular Conference</b>
-              is taking place at
-            </h1>
+              is taking place at <span class="assistive">NG Rome MMXX</span>
+            </h2>
             <img src="assets/logo/logo-mmxx-red.svg" />
             <div class="site-content__intro__description">
               <div>
                 <span>where</span>
-                <strong>Rome, Italy</strong>
+                <strong>Online</strong>
               </div>
               <div>
                 <span>when</span>
@@ -27,10 +27,10 @@ import { NgAnimateScrollService } from 'src/app/shared/services/ng-animate-scrol
               <a
                 class="button button--green button--fill-green"
                 rel="noopener"
+                href="https://ti.to/ngrome-conf/NGRome-Conf-MMXX-Online/with/ujp-ev2-cqs"
                 target="_blank"
-                (click)="scrollTo('cfp', 300)"
-                title="Call for paper"
-                >Call for paper
+                title="Register"
+                >Register for free
               </a>
             </div>
             <!-- <span class="site-content__intro__scroller"></span> -->
