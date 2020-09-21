@@ -33,7 +33,7 @@
 
 .sponsors-section__list {
   @include breakpoint-s {
-    margin-top: 20px;
+    gap: 70px;
   }
 
   margin-top: 40px;
@@ -43,7 +43,9 @@
   justify-content: center;
 
   .two-items-row {
-    width: 500px !important;
+    @include breakpoint-l {
+      width: 450px !important;
+    }
   }
 
   .sponsors-section__item {
