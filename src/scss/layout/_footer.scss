@@ -27,12 +27,6 @@
     font-weight: 700;
     font-size: 36.92px;
 
-    @include bg-url(
-      '/assets/images/roma-detail.jpg',
-      '/assets/images/roma-detail_2x.jpg',
-      '/assets/images/roma-detail.webp',
-      '/assets/images/roma-detail_2x.webp'
-    );
     background-position: top left;
     background-size: cover;
     background-repeat: no-repeat;
@@ -47,6 +41,7 @@
       height: 63px;
       left: 27.32px;
       top: -10px;
+
       @include breakpoint-m {
         left: 107.32px;
         top: -40px;
@@ -54,6 +49,7 @@
         height: 133px;
       }
     }
+
     #confetti-footer-2 {
       position: absolute;
       width: 63px;
@@ -61,6 +57,7 @@
       right: 27.32px;
       bottom: 180px;
       z-index: -1;
+
       @include breakpoint-m {
         right: 80.32px;
         bottom: 70px;
@@ -72,13 +69,27 @@
     &__content {
       text-align: center;
       color: white;
+
       img {
         width: 80%;
+
         @include breakpoint-m {
           width: auto;
         }
       }
     }
+  }
+
+  &__main.common-footer {
+    @include bg-url('/assets/images/roma-detail.jpg',
+      '/assets/images/roma-detail_2x.jpg',
+      '/assets/images/roma-detail.webp',
+      '/assets/images/roma-detail_2x.webp'
+    );
+  }
+
+  &__main.sponsors-footer {
+    @include bg-url('/assets/images/footer-sponsors.svg');
   }
 
   &__menu {
@@ -149,7 +160,7 @@
         margin-right: 0;
         margin-bottom: 0;
 
-        + li {
+        +li {
           margin-left: 50px;
         }
       }
