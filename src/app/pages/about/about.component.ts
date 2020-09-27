@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef } from '@angular/core';
+import { Component, OnInit, ElementRef, AfterViewInit } from '@angular/core';
 import { SeoService } from 'src/app/shared/services/seo.service';
 
 @Component({
@@ -10,27 +10,25 @@ import { SeoService } from 'src/app/shared/services/seo.service';
       </header>
       <div class="about-text site-about__main">
         <p>
-          NG-Rome is a <b>non-profit community</b> conference run by a team of
-          volunteers. We are all active members of the tech community, and run
-          or contribute to various free local meetups, workshops, and education
-          initiatives.
+          NG-Rome is a <b>non-profit community</b> conference run by a team of volunteers. We are all active
+          members of the tech community, and run or contribute to various free local meetups, workshops, and
+          education initiatives.
         </p>
         <p>
           NG-Rome event is the <b>biggest International Angular Conference</b>
-          in Italy, helping bring together ideas and developers from all the
-          corners of Italy and Europe.
+          in Italy, helping bring together ideas and developers from all the corners of Italy and Europe.
         </p>
         <p>
-          The community is born by a group of passionate devs, JavaScript
-          lovers, and enthusiastic developer that use the Angular framework.
+          The community is born by a group of passionate devs, JavaScript lovers, and enthusiastic developer
+          that use the Angular framework.
         </p>
         <p>
           Our mission is to connect Italian developers to the
           <b>global community</b>.
         </p>
         <p>
-          Fostering new relationships within Italy, and across borders.
-          Simultaneously develop new skills and having
+          Fostering new relationships within Italy, and across borders. Simultaneously develop new skills and
+          having
           <b>moments of fun</b>.
         </p>
       </div>
@@ -38,22 +36,18 @@ import { SeoService } from 'src/app/shared/services/seo.service';
         <blockquote class="twitter-tweet" data-lang="en">
           <p lang="en" dir="ltr">
             A taste of
-            <a
-              href="https://twitter.com/hashtag/NGRomeMMXIX?src=hash&amp;ref_src=twsrc%5Etfw"
+            <a href="https://twitter.com/hashtag/NGRomeMMXIX?src=hash&amp;ref_src=twsrc%5Etfw"
               >#NGRomeMMXIX</a
             >
             🇮🇹
             <a href="https://t.co/9gaoN3AJer">pic.twitter.com/9gaoN3AJer</a>
           </p>
           &mdash; NGRomeConf (@ngromeconf)
-          <a
-            href="https://twitter.com/ngromeconf/status/1131316168487317505?ref_src=twsrc%5Etfw"
+          <a href="https://twitter.com/ngromeconf/status/1131316168487317505?ref_src=twsrc%5Etfw"
             >May 22, 2019</a
           >
         </blockquote>
-        <div class="site-about__twitter__text">
-          STAY INFORMED
-        </div>
+        <div class="site-about__twitter__text">STAY INFORMED</div>
       </div>
       <div class="site-about__team">
         <h1>The TEAM</h1>
@@ -122,6 +116,14 @@ import { SeoService } from 'src/app/shared/services/seo.service';
               <span>@elliotttran</span>
             </a>
           </div>
+          <div>
+            <a href="https://www.linkedin.com/in/ryan-jherome-burgos" target="_blank">
+              <img src="./assets/images/team/ryanburgos.jpg" /><br />
+            </a>
+            <a href="https://www.linkedin.com/in/ryan-jherome-burgos" target="_blank">
+              <span>@ryanjheromeburgos</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -129,13 +131,12 @@ import { SeoService } from 'src/app/shared/services/seo.service';
     <!-- <ngrome-tickets class="site-content__section" id="tickets"></ngrome-tickets> -->
   `,
 })
-export class AboutComponent implements OnInit {
+export class AboutComponent implements OnInit, AfterViewInit {
   constructor(private elementRef: ElementRef, private seoService: SeoService) {}
 
   ngOnInit() {
     this.seoService.generateTags({
-      title:
-        'About page: NG-Rome a non-profit community conference run by a team of volunteers.',
+      title: 'About page: NG-Rome a non-profit community conference run by a team of volunteers.',
     });
   }
 
