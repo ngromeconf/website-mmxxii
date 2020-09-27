@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef } from '@angular/core';
+import { Component, OnInit, ElementRef, AfterViewInit } from '@angular/core';
 import { SeoService } from 'src/app/shared/services/seo.service';
 
 @Component({
@@ -124,6 +124,14 @@ import { SeoService } from 'src/app/shared/services/seo.service';
               <span>@elliotttran</span>
             </a>
           </div>
+          <div>
+            <a href="https://www.linkedin.com/in/ryan-jherome-burgos" target="_blank">
+              <img src="./assets/images/team/ryanburgos.jpg" /><br />
+            </a>
+            <a href="https://www.linkedin.com/in/ryan-jherome-burgos" target="_blank">
+              <span>@ryanjheromeburgos</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -131,7 +139,7 @@ import { SeoService } from 'src/app/shared/services/seo.service';
     <!-- <ngrome-tickets class="site-content__section" id="tickets"></ngrome-tickets> -->
   `,
 })
-export class AboutComponent implements OnInit {
+export class AboutComponent implements OnInit, AfterViewInit {
   constructor(private elementRef: ElementRef, private seoService: SeoService) {}
 
   ngOnInit() {
