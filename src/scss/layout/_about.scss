@@ -35,13 +35,8 @@
     }
   }
 
-  &__main > p:first-child {
-    font-size: 36px;
-    color: #dd0031;
-  }
-
-  &__main > p:last-child {
-    margin-bottom: 200px;
+  &__main > p {
+    margin-bottom: 20px;
   }
 
   &__twitter {

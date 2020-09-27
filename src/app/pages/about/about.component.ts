@@ -4,16 +4,24 @@ import { SeoService } from 'src/app/shared/services/seo.service';
 @Component({
   selector: 'ngrome-about',
   template: `
+    <section class="site-content__section">
+      <div class="site-content__wrap">
+        <div class="site-content__intro">
+          <header class="site-content__intro__head__inner-sub">
+            <h1 class="site-content__intro__title-sub">About</h1>
+          </header>
+          <div class="site-content__intro__info__inner">
+            <p>
+              NG-Rome is a <b>non-profit community</b> conference run by a team of volunteers. <br />We are
+              all active members of the tech community, and run or contribute to various free local meetups,
+              workshops, and education initiatives.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
     <div class="site-about">
-      <header class="site-about__header">
-        <h1>About</h1>
-      </header>
       <div class="about-text site-about__main">
-        <p>
-          NG-Rome is a <b>non-profit community</b> conference run by a team of volunteers. We are all active
-          members of the tech community, and run or contribute to various free local meetups, workshops, and
-          education initiatives.
-        </p>
         <p>
           NG-Rome event is the <b>biggest International Angular Conference</b>
           in Italy, helping bring together ideas and developers from all the corners of Italy and Europe.
