@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef, AfterViewInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgAnimateScrollService } from 'src/app/shared/services/ng-animate-scroll.service';
+import { IntersectionObserverService } from '../../../shared/services/intersection-observer.service';
 
 @Component({
   selector: 'ngrome-main-title',
@@ -30,6 +31,7 @@ import { NgAnimateScrollService } from 'src/app/shared/services/ng-animate-scrol
                 href="https://ti.to/ngrome-conf/NGRome-Conf-MMXX-Online/with/ujp-ev2-cqs"
                 target="_blank"
                 title="Register"
+                #registerButton
                 >Register for free
               </a>
             </div>
@@ -41,17 +43,28 @@ import { NgAnimateScrollService } from 'src/app/shared/services/ng-animate-scrol
   `,
   styles: [``],
 })
-export class MainTitleComponent {
+export class MainTitleComponent implements AfterViewInit, OnDestroy {
+  @ViewChild('registerButton')
+  registerButton: ElementRef;
+
   actualPage: string;
 
   constructor(
     private animateScrollService: NgAnimateScrollService,
-    private router: Router
+    private router: Router,
+    private intersectionObserverService: IntersectionObserverService
   ) {
     const urlTree = this.router.parseUrl(this.router.url);
-    this.actualPage = urlTree.root.children['primary'].segments
-      .map((it) => it.path)
-      .join('/');
+    this.actualPage = urlTree.root.children['primary'].segments.map((it) => it.path).join('/');
+  }
+
+  ngAfterViewInit() {
+    this.intersectionObserverService.setObservedElement(this.registerButton.nativeElement);
+    this.intersectionObserverService.hideElementWhenObservedIsInView();
+  }
+
+  ngOnDestroy() {
+    this.intersectionObserverService.disconnectObserver();
   }
 
   scrollTo(el: string, duration?: number) {
