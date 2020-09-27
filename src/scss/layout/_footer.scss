@@ -81,7 +81,8 @@
   }
 
   &__main.common-footer {
-    @include bg-url('/assets/images/roma-detail.jpg',
+    @include bg-url(
+      '/assets/images/roma-detail.jpg',
       '/assets/images/roma-detail_2x.jpg',
       '/assets/images/roma-detail.webp',
       '/assets/images/roma-detail_2x.webp'
@@ -89,7 +90,12 @@
   }
 
   &__main.sponsors-footer {
-    @include bg-url('/assets/images/footer-sponsors.svg');
+    @include bg-url(
+      '/assets/images/banner-sponsor-footer.jpg',
+      '/assets/images/banner-sponsor-footer_2x.jpg',
+      '/assets/images/banner-sponsor-footer_.webp',
+      '/assets/images/banner-sponsor-footer_2x.webp'
+    );
   }
 
   &__menu {
@@ -160,7 +166,7 @@
         margin-right: 0;
         margin-bottom: 0;
 
-        +li {
+        + li {
           margin-left: 50px;
         }
       }
