@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NgAnimateScrollService } from 'src/app/shared/services/ng-animate-scroll.service';
 import { MessagingService } from 'src/app/shared/services/messaging.service';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'ngrome-speakers',
@@ -12,29 +14,37 @@ import { MessagingService } from 'src/app/shared/services/messaging.service';
             <h1 class="site-content__intro__title">Speaker</h1>
           </header>
           <div class="site-content__intro__info__inner">
-            <p>One track, one day, filled with talks of the <strong>Angular</strong> engineers who build the most <strong>performant</strong> apps and web experiences.</p>
+            <p>
+              One track, one day, filled with talks of the
+              <strong>Angular</strong> engineers who build the most
+              <strong>performant</strong> apps and web experiences.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <ngrome-speakers-list class="site-content__section"
-      [speakerFilter]="speakerFilter">
+    <ngrome-speakers-list
+      class="site-content__section"
+      [speakerFilter]="speakerFilter"
+    >
     </ngrome-speakers-list>
 
     <ngrome-tickets class="site-content__section" id="tickets"></ngrome-tickets>
   `,
-  styles: [`
-    .site-content__intro__description {
-      display: flex;
-    }
-    .site-content__intro__description a {
-      margin-right: 30px;
-    }
-  `]
+  styles: [
+    `
+      .site-content__intro__description {
+        display: flex;
+      }
+      .site-content__intro__description a {
+        margin-right: 30px;
+      }
+    `,
+  ],
 })
 export class SpeakersComponent {
-  //use this boolean if we want to filter the speaker for homepage
+  // use this boolean if we want to filter the speaker for homepage
   public speakerFilter = false;
 
   constructor(
@@ -45,7 +55,7 @@ export class SpeakersComponent {
     this.messagingService.receiveMessage();
   }
 
-  scrollTo(el:string, duration?:number) {
+  scrollTo(el: string, duration?: number) {
     this.animateScrollService.scrollToElement(el, duration);
   }
 }

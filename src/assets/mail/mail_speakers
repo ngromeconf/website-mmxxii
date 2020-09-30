@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <table
+      align="center"
+      width="100%"
+      border="0"
+      cellpadding="0"
+      cellspacing="0"
+      style="
+        width: 620px;
+        color: rgb(0, 0, 0);
+        font-family: 'Fira Sans', Helvetica, Arial, sans-serif;
+        font-size: 16px;
+        background-color: rgb(244, 244, 244);
+        margin: 0px auto;
+        max-width: 620px;
+      "
+    >
+      <tbody>
+        <tr>
+          <td
+            align="left"
+            valign="top"
+            style="vertical-align: top; padding: 0px 10px"
+          >
+            <table
+              border="0"
+              cellpadding="0"
+              cellspacing="0"
+              width="100%"
+              style="width: 600px"
+            >
+              <tbody>
+                <tr>
+                  <td
+                    valign="top"
+                    style="
+                      vertical-align: top;
+                      padding: 0px;
+                      height: 20px;
+                      font-size: 20px;
+                      line-height: 20px;
+                    "
+                  >
+                    &nbsp;
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <table border="0" cellspacing="0" cellpadding="0">
+              <tbody>
+                <tr>
+                  <td>
+                    <table
+                      border="0"
+                      cellpadding="0"
+                      cellspacing="0"
+                      width="100%"
+                      style="width: 600px"
+                    >
+                      <tbody>
+                        <tr>
+                          <td
+                            width="600"
+                            valign="top"
+                            bgcolor="#1B1B1B"
+                            style="
+                              vertical-align: top;
+                              background-color: rgb(27, 27, 27);
+                              background-image: url('https://ci5.googleusercontent.com/proxy/JRiABDn2QDzYbWABg_9pbcjAS40foNmq8OY2gMPg_F_9vx7i-IFVXFNKHWIpVzazFac5SOtpiILU-KSph_WS-xMnaPY=s0-d-e1-ft#https://ngrome.io/assets/mail/images/confetti.png');
+                              background-position: 50% 0%;
+                              background-size: cover;
+                              width: 600px;
+                            "
+                          >
+                            <div style="padding: 29px 26px 26px">
+                              <table
+                                border="0"
+                                cellpadding="0"
+                                cellspacing="0"
+                                width="100%"
+                                style="width: 548px"
+                              >
+                                <tbody>
+                                  <tr>
+                                    <td
+                                      valign="top"
+                                      style="
+                                        vertical-align: top;
+                                        font-size: 0px;
+                                      "
+                                    >
+                                      <div
+                                        style="
+                                          display: inline-block;
+                                          width: 548px;
+                                          vertical-align: top;
+                                        "
+                                      >
+                                        <table
+                                          border="0"
+                                          cellpadding="0"
+                                          cellspacing="0"
+                                          width="100%"
+                                          style="width: 548px"
+                                        >
+                                          <tbody>
+                                            <tr>
+                                              <td
+                                                valign="top"
+                                                style="
+                                                  vertical-align: top;
+                                                  padding: 20px 14px;
+                                                "
+                                              >
+                                                <img
+                                                  src="https://ci3.googleusercontent.com/proxy/0x0lWGI2xs5kgRgX1X6i8g9NREjpGjgaq55_Bb4HMVNyY0jBwd0kc4bph41T7zLWdvVyDx7yg1cbhh8iMMaSZ_7q8HqbqqI2qyQMcw=s0-d-e1-ft#https://ngrome.io/assets/mail/images/header-7-image-1.png"
+                                                  height="369"
+                                                  alt=""
+                                                  style="
+                                                    border: 0px;
+                                                    line-height: 14px;
+                                                    outline: 0px;
+                                                    font-family: 'Fira Sans',
+                                                      Helvetica, Arial,
+                                                      sans-serif;
+                                                    font-size: 14px;
+                                                    color: rgb(255, 255, 255);
+                                                    max-width: 100%;
+                                                    height: auto;
+                                                  "
+                                                />
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table
+                      border="0"
+                      cellpadding="0"
+                      cellspacing="0"
+                      width="100%"
+                      style="width: 600px"
+                    >
+                      <tbody>
+                        <tr>
+                          <td
+                            valign="top"
+                            bgcolor="#ffffff"
+                            style="
+                              vertical-align: top;
+                              padding: 0px 20px;
+                              background-color: rgb(255, 255, 255);
+                            "
+                          >
+                            <table
+                              border="0"
+                              cellpadding="0"
+                              cellspacing="0"
+                              width="100%"
+                              style="width: 560px"
+                            >
+                              <tbody>
+                                <tr>
+                                  <td
+                                    valign="top"
+                                    style="
+                                      vertical-align: top;
+                                      font-family: 'Fira Sans', Helvetica, Arial,
+                                        sans-serif;
+                                      font-size: 18px;
+                                      line-height: 1.56;
+                                      letter-spacing: -0.2px;
+                                      padding: 0px 20px;
+                                    "
+                                  >
+                                    <p>
+                                      Ciao $NAME,<br />
+                                      we're writing to let you know that your
+                                      talk proposal "$TITLE" was not selected
+                                      for the conference :(
+                                    </p>
+                                    <p>
+                                      It's been really tough to finalize our
+                                      program, we've had to turn down great
+                                      proposals.
+                                    </p>
+                                    <p>
+                                      We appreciate the time and effort put in
+                                      to share your fantastic ideas with us.
+                                    </p>
+                                    <p>
+                                      We hope to see you online at this edition,
+                                      once again, thank you.
+                                    </p>
+                                    <p>
+                                      A presto (See ya soon),<br />NG Rome Team
+                                      👋
+                                    </p>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table
+                      border="0"
+                      cellpadding="0"
+                      cellspacing="0"
+                      width="100%"
+                      style="width: 600px"
+                    >
+                      <tbody>
+                        <tr>
+                          <td
+                            valign="top"
+                            bgcolor="#ffffff"
+                            style="
+                              vertical-align: top;
+                              padding: 21px 20px 14px;
+                              background-color: rgb(255, 255, 255);
+                            "
+                          >
+                            <table
+                              border="0"
+                              cellpadding="0"
+                              cellspacing="0"
+                              width="100%"
+                              style="width: 560px"
+                            >
+                              <tbody>
+                                <tr>
+                                  <td
+                                    valign="top"
+                                    style="vertical-align: top; font-size: 0px"
+                                  >
+                                    <div
+                                      style="
+                                        display: inline-block;
+                                        width: 280px;
+                                        max-width: 280px;
+                                        vertical-align: top;
+                                      "
+                                    >
+                                      <table
+                                        border="0"
+                                        cellpadding="0"
+                                        cellspacing="0"
+                                        width="100%"
+                                        style="width: 280px"
+                                      >
+                                        <tbody>
+                                          <tr>
+                                            <td
+                                              valign="top"
+                                              style="
+                                                vertical-align: top;
+                                                padding: 20px;
+                                              "
+                                            >
+                                              <table
+                                                border="0"
+                                                cellpadding="0"
+                                                cellspacing="0"
+                                                width="100%"
+                                                style="width: 240px"
+                                              >
+                                                <tbody>
+                                                  <tr>
+                                                    <td
+                                                      valign="top"
+                                                      style="
+                                                        vertical-align: top;
+                                                        font-family: 'Fira Sans',
+                                                          Helvetica, Arial,
+                                                          sans-serif;
+                                                        font-size: 18px;
+                                                        line-height: 1.33;
+                                                        letter-spacing: -0.2px;
+                                                        color: rgb(27, 27, 27);
+                                                      "
+                                                    >
+                                                      Seguici.
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td
+                                                      valign="top"
+                                                      style="
+                                                        vertical-align: top;
+                                                        padding: 11px 0px 0px;
+                                                        font-family: 'Fira Sans',
+                                                          Helvetica, Arial,
+                                                          sans-serif;
+                                                        font-size: 14px;
+                                                        line-height: 1.43;
+                                                        letter-spacing: -0.2px;
+                                                        color: rgb(
+                                                          155,
+                                                          155,
+                                                          155
+                                                        );
+                                                      "
+                                                    >
+                                                      <a
+                                                        href="https://www.facebook.com/ngromeconf"
+                                                        style="
+                                                          text-decoration-line: none;
+                                                        "
+                                                        target="_blank"
+                                                        data-saferedirecturl="https://www.google.com/url?q=https://www.facebook.com/ngromeconf&amp;source=gmail&amp;ust=1601074366261000&amp;usg=AFQjCNHFUUQW3iLgCQLDGx2XM_Imp8-s4Q"
+                                                        ><img
+                                                          src="https://ci5.googleusercontent.com/proxy/IxNY88StRHkLOaDCvgecIceCq1SByDypY5v-TQlo2BFKPNqivFsctjtMjEKf_3cZCjCk0kVyTJM57h8jqC3NK_5lmoiqux4-lQ=s0-d-e1-ft#https://ngrome.io/assets/mail/images/facebook-gray.png"
+                                                          width="20"
+                                                          height="20"
+                                                          alt=""
+                                                          style="
+                                                            border: 0px;
+                                                            line-height: 14px;
+                                                            outline: 0px;
+                                                            color: rgb(
+                                                              21,
+                                                              21,
+                                                              21
+                                                            );
+                                                          "
+                                                        />&nbsp;</a
+                                                      >&nbsp;&nbsp;&nbsp;<a
+                                                        href="https://twitter.com/ngromeconf"
+                                                        style="
+                                                          text-decoration-line: none;
+                                                        "
+                                                        target="_blank"
+                                                        data-saferedirecturl="https://www.google.com/url?q=https://twitter.com/ngromeconf&amp;source=gmail&amp;ust=1601074366261000&amp;usg=AFQjCNFe5YwVYy-TWEG6YizE6e3E9ht45A"
+                                                        ><img
+                                                          src="https://ci5.googleusercontent.com/proxy/bxam2mGu4cuvYyYeHs1fiiKq81M06EcRM4FtdZsBLCMX8wObGgr5Ou3TuOz76Fu_Qtv38XR7CMeTKAj7dLHiLZLoopt8wI5k=s0-d-e1-ft#https://ngrome.io/assets/mail/images/twitter-gray.png"
+                                                          width="21"
+                                                          height="18"
+                                                          alt=""
+                                                          style="
+                                                            border: 0px;
+                                                            line-height: 14px;
+                                                            outline: 0px;
+                                                            color: rgb(
+                                                              21,
+                                                              21,
+                                                              21
+                                                            );
+                                                          "
+                                                        />&nbsp;</a
+                                                      >&nbsp;&nbsp;&nbsp;<a
+                                                        href="https://www.youtube.com/channel/UCZDKMwHkIAlVpVhhkVvdTYQ"
+                                                        style="
+                                                          text-decoration-line: none;
+                                                        "
+                                                        target="_blank"
+                                                        data-saferedirecturl="https://www.google.com/url?q=https://www.youtube.com/channel/UCZDKMwHkIAlVpVhhkVvdTYQ&amp;source=gmail&amp;ust=1601074366261000&amp;usg=AFQjCNGqjQ53-G9d3sU-Nc8hJyEoWmGrvA"
+                                                        ><img
+                                                          src="https://ci5.googleusercontent.com/proxy/A7zHptqGVYDnR_e1N-p-Snj6PgtkG_jlW3d9s1kVSoUiyjTTNAVJ3mWyCWuXG9eTSEDasT1g6jsH1GQAfiz_bNtbrNTVeCaz=s0-d-e1-ft#https://ngrome.io/assets/mail/images/youtube-gray.png"
+                                                          width="21"
+                                                          height="20"
+                                                          alt=""
+                                                          style="
+                                                            border: 0px;
+                                                            line-height: 14px;
+                                                            outline: 0px;
+                                                            color: rgb(
+                                                              21,
+                                                              21,
+                                                              21
+                                                            );
+                                                          "
+                                                      /></a>
+                                                    </td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                              <table
+                                                border="0"
+                                                cellpadding="0"
+                                                cellspacing="0"
+                                                width="100%"
+                                                style="width: 240px"
+                                              >
+                                                <tbody>
+                                                  <tr>
+                                                    <td
+                                                      valign="top"
+                                                      style="
+                                                        vertical-align: top;
+                                                        height: 57px;
+                                                        line-height: 57px;
+                                                        font-size: 57px;
+                                                      "
+                                                    >
+                                                      &nbsp;
+                                                    </td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                              <table
+                                                border="0"
+                                                cellpadding="0"
+                                                cellspacing="0"
+                                                width="100%"
+                                                style="width: 240px"
+                                              >
+                                                <tbody>
+                                                  <tr>
+                                                    <td
+                                                      valign="top"
+                                                      style="
+                                                        vertical-align: top;
+                                                        line-height: 1.3;
+                                                        font-family: 'Fira Sans',
+                                                          Helvetica, Arial,
+                                                          sans-serif;
+                                                        font-size: 19px;
+                                                      "
+                                                    ></td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                    &nbsp;
+                                    <div
+                                      style="
+                                        display: inline-block;
+                                        width: 280px;
+                                        max-width: 280px;
+                                        vertical-align: top;
+                                      "
+                                    >
+                                      <table
+                                        border="0"
+                                        cellpadding="0"
+                                        cellspacing="0"
+                                        width="100%"
+                                        style="width: 280px"
+                                      >
+                                        <tbody>
+                                          <tr>
+                                            <td
+                                              valign="top"
+                                              style="
+                                                vertical-align: top;
+                                                padding: 20px;
+                                              "
+                                            >
+                                              <table
+                                                border="0"
+                                                cellpadding="0"
+                                                cellspacing="0"
+                                                width="100%"
+                                                style="width: 240px"
+                                              >
+                                                <tbody>
+                                                  <tr></tr>
+                                                </tbody>
+                                              </table>
+                                              <table
+                                                border="0"
+                                                cellpadding="0"
+                                                cellspacing="0"
+                                                width="100%"
+                                                style="width: 240px"
+                                              >
+                                                <tbody>
+                                                  <tr>
+                                                    <td
+                                                      valign="top"
+                                                      style="
+                                                        vertical-align: top;
+                                                        height: 46px;
+                                                        line-height: 46px;
+                                                        font-size: 46px;
+                                                      "
+                                                    >
+                                                      &nbsp;
+                                                    </td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                              <table
+                                                border="0"
+                                                cellpadding="0"
+                                                cellspacing="0"
+                                                width="100%"
+                                                style="width: 240px"
+                                              >
+                                                <tbody>
+                                                  <tr></tr>
+                                                </tbody>
+                                              </table>
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
