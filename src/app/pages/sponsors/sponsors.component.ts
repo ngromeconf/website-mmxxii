@@ -36,6 +36,16 @@ import { NgAnimateScrollService } from 'src/app/shared/services/ng-animate-scrol
       [sponsorType]="'gold'"
       headerColor="sponsor-title__gold"
     ></ngrome-sponsors-section>
+    <ngrome-sponsors-section
+      [title]="'Event Partner'"
+      [sponsorType]="'partner'"
+      headerColor="sponsor-title__main-partners"
+    ></ngrome-sponsors-section>
+    <ngrome-sponsors-section
+      [title]="'Community Partner'"
+      [sponsorType]="'community-partner'"
+      headerColor="sponsor-title__main-partners"
+    ></ngrome-sponsors-section>
 
     <!-- <ngrome-tickets class="site-content__section" id="tickets"></ngrome-tickets> -->
   `,
