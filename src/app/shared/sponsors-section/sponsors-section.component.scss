@@ -32,10 +32,7 @@
 }
 
 .sponsors-section__list {
-  @include breakpoint-s {
-    gap: 70px;
-  }
-
+  gap: 50px;
   margin-top: 40px;
   display: flex;
   flex-flow: wrap;
@@ -49,7 +46,7 @@
   }
 
   .sponsors-section__item {
-    width: 330px;
+    width: 300px;
 
     img {
       display: block;
