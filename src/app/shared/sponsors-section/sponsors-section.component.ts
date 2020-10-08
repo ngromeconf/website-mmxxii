@@ -17,14 +17,9 @@ import { AngularFirestore } from '@angular/fire/firestore';
             class="sponsors-section__item"
             [ngClass]="{ 'two-items-row': sponsors.length === 2 }"
           >
-            <a
-              rel="noopener"
-              href="{{ sponsor.websiteUrl }}"
-              target="_blank"
-              title="{{ sponsor.name }}"
-            >
+            <a rel="noopener" href="{{ sponsor.websiteUrl }}" target="_blank" title="{{ sponsor.name }}">
               <img src="{{ sponsor.image }}" alt="{{ sponsor.name }}" />
-              <span>{{ sponsor.name }}</span>
+              <!--<span>{{ sponsor.name }}</span>-->
             </a>
           </div>
         </div>
@@ -49,9 +44,7 @@ export class SponsorsSectionComponent implements OnInit {
   private getSponsors() {
     this.sponsors$ = this.afs
       .collection('sponsor2020', (ref) => {
-        let query:
-          | firebase.firestore.CollectionReference
-          | firebase.firestore.Query = ref;
+        let query: firebase.firestore.CollectionReference | firebase.firestore.Query = ref;
         query = query.where('type', '==', this.sponsorType);
         return query;
       })
