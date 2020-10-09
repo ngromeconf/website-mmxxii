@@ -32,7 +32,6 @@
 }
 
 .sponsors-section__list {
-  gap: 50px;
   margin-top: 40px;
   display: flex;
   flex-flow: wrap;
@@ -47,6 +46,7 @@
 
   .sponsors-section__item {
     width: 300px;
+    margin: 15px;
 
     img {
       display: block;
