@@ -1,18 +1,6 @@
-import {
-  Component,
-  ViewChild,
-  ElementRef,
-  OnInit,
-  OnDestroy,
-} from '@angular/core';
+import { Component, ViewChild, ElementRef, OnInit, OnDestroy } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import {
-  Router,
-  Event,
-  NavigationStart,
-  NavigationEnd,
-  NavigationError,
-} from '@angular/router';
+import { Router, Event, NavigationStart, NavigationEnd, NavigationError } from '@angular/router';
 
 import { SideBarService } from './shared/services/sidebar.service';
 import { PWAService } from './shared/services/pwa.service';
@@ -48,13 +36,7 @@ export class AppComponent implements OnInit, OnDestroy {
     private pwaService: PWAService,
     private titleService: Title
   ) {
-    if (window.navigator && navigator.serviceWorker) {
-      navigator.serviceWorker.getRegistrations().then((registrations) => {
-        for (let registration of registrations) {
-          registration.unregister();
-        }
-      });
-    }
+    this.unregister();
 
     this.router.events.subscribe((event: Event) => {
       if (event instanceof NavigationStart) {
@@ -81,8 +63,8 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    //check if is available a new version
-    this.pwaService.checkUpdateAvailable();
+    // check if is available a new version
+    // this.pwaService.checkUpdateAvailable();
     this.siteMenuClose.nativeElement.addEventListener('click', () => {
       this.sidebarService.toggleSidebarStatus();
     });
@@ -94,5 +76,20 @@ export class AppComponent implements OnInit, OnDestroy {
 
   openCloseSidebar() {
     this.sidebarService.toggleSidebarStatus();
+  }
+
+  /**
+   * unregister method for the old website error
+   */
+  unregister() {
+    // Old browser might not support serviceWorker or serviceWorker.ready
+    if (!navigator.serviceWorker || !navigator.serviceWorker.ready) {
+      return;
+    }
+    navigator.serviceWorker.ready.then((registration) => {
+      registration.unregister().then(() => {
+        window.location.reload();
+      });
+    });
   }
 }
