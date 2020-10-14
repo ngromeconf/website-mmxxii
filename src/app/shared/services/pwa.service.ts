@@ -2,10 +2,9 @@ import { Injectable, HostListener } from '@angular/core';
 import { SwUpdate } from '@angular/service-worker';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class PWAService {
-
   deferredPrompt: any;
   showButton = false;
 
@@ -21,16 +20,13 @@ export class PWAService {
 
   constructor(private swUpdate: SwUpdate) {}
 
-  public checkUpdateAvailable(){
-    if (this.swUpdate.isEnabled){
-      this.swUpdate.available.subscribe( () => {
-        if (confirm("New version available, Load a new version?")){
+  public checkUpdateAvailable() {
+    if (this.swUpdate.isEnabled) {
+      this.swUpdate.available.subscribe(() => {
+        if (confirm('New version available, Load a new version?')) {
           window.location.reload();
         }
       });
     }
   }
-
-
-
 }

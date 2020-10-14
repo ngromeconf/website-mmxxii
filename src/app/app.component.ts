@@ -88,7 +88,7 @@ export class AppComponent implements OnInit, OnDestroy {
     }
     navigator.serviceWorker.ready.then((registration) => {
       registration.unregister().then(() => {
-        window.location.reload();
+        console.log('you should reboot your browser', registration);
       });
     });
   }
