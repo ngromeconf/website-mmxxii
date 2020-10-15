@@ -130,6 +130,7 @@
   flex-wrap: wrap;
   margin-top: 19px;
   gap: 25px;
+  padding-bottom: 80px;
 
   .ticket_card {
     @include breakpoint-s {
