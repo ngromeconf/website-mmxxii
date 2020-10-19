@@ -5,7 +5,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 @Component({
   selector: 'ngrome-sponsors-section',
   template: `
-    <section>
+    <section class="sponsor-container">
       <div class="site-content__wrap">
         <div class="sponsors-section__header" [ngClass]="headerColor">
           <h1 class="sponsors-section__title">{{ title }}</h1>
