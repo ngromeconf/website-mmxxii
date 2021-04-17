@@ -14,7 +14,7 @@ import { IntersectionObserverService } from '../services/intersection-observer.s
           class="button button--green button--fill-green"
           rel="noopener"
           target="_blank"
-          href="https://ti.to/ngrome-conf/NGRome-Conf-MMXX-Online"
+          href="https://ti.to/ngrome-conf/ngrome-conf-mmxxi-online-9th-july-2021"
           title="Go to Tickets Page"
           #getTickets
           >Get tickets

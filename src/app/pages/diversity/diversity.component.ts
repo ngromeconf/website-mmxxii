@@ -27,7 +27,7 @@ import { Component, OnInit } from '@angular/core';
             </p>
 
             <p>
-              Even though <b>NGRome MMXX</b> is a virtual edition, we are still committed to our Diversity
+              Even though <b>NGRome MMXXI</b> is a virtual edition, we are still committed to our Diversity
               Program, and are willing to offer our support.<br />
               Moreover, we will be running the program also for the next edition which we hope will be held in
               Rome.
