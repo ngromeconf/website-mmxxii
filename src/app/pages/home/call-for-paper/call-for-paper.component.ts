@@ -11,24 +11,24 @@ import { Component, OnInit } from '@angular/core';
           </div>
 
           <div class="candidate__info">
-            <h2>
-              We are going to announce the official schedule by the end of
-              August!
-            </h2>
+<!--            <h2>-->
+<!--              We are going to announce the official schedule by the end of-->
+<!--              August!-->
+<!--            </h2>-->
 
-            <p>
-              Applications for NG Rome MMXX are closed.
-              <br />
-            </p>
+<!--            <p>-->
+<!--              Applications for NG Rome MMXX are closed.-->
+<!--              <br />-->
+<!--            </p>-->
 
-            <!-- <a
+            <a
               rel="noopener"
               class="button button--white"
               href="https://forms.gle/CDaLhFVAUENeQ1we6"
               target="_blank"
-              title="Candidate now for NG Rome MMXX"
+              title="Candidate now for NG Rome MMXXI"
             >
-              <span>Candidate now NG Rome MMXX</span>
+              <span>Candidate now NG Rome MMXXI</span>
 
               <svg width="11" height="12">
                 <path
@@ -39,7 +39,7 @@ import { Component, OnInit } from '@angular/core';
                   d="M1 1l7.358 5L1 11"
                 />
               </svg>
-            </a> -->
+            </a>
           </div>
         </div>
       </div>

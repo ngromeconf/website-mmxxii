@@ -13,9 +13,9 @@ import { IntersectionObserverService } from '../../../shared/services/intersecti
             <h2 class="site-content__intro__title">
               The largest online
               <b>Italian Angular Conference</b>
-              is taking place at <span class="assistive">NG Rome MMXX</span>
+              is taking place at <span class="assistive">NG Rome MMXXI</span>
             </h2>
-            <img src="assets/logo/logo-mmxx-red.svg" />
+            <img src="assets/logo/logo-mmxxi-red.svg" />
             <div class="site-content__intro__description">
               <div>
                 <span>where</span>
@@ -23,12 +23,12 @@ import { IntersectionObserverService } from '../../../shared/services/intersecti
               </div>
               <div>
                 <span>when</span>
-                <strong>October 20th 2020</strong>
+                <strong>July 9th 2021</strong>
               </div>
               <a
                 class="button button--green button--fill-green"
                 rel="noopener"
-                href="https://ti.to/ngrome-conf/NGRome-Conf-MMXX-Online/with/ujp-ev2-cqs"
+                href="https://ti.to/ngrome-conf/ngrome-conf-mmxxi-online-9th-july-2021/with/ngrome-mmxxi-free-online-event"
                 target="_blank"
                 title="Register"
                 #registerButton
