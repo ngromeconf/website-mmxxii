@@ -11,26 +11,26 @@ import { Component, OnInit } from '@angular/core';
           </header>
           <div class="site-content__intro__info__inner">
             <p>
-              NG-Rome is a <b>non-profit community</b> conference run by a team
-              of volunteers. <br />We are all active members of the tech
-              community, and run or contribute to various free local meetups,
-              workshops, and education initiatives.
+              We are running our <b>Diversity Program</b>, which provides individuals from underrepresented
+              groups with support to attend NGRome editions.
             </p>
             <p>
-              We are running our <b>Diversity Program</b>, which provides
-              individuals from underrepresented groups with support to attend
-              NGRome MMXIX.
+              We are very grateful and would like to say a big "Thank You" to the companies and individuals
+              who donate to our Diversity Program.
             </p>
+
             <p>
-              We are very grateful and would like to say a big Thank You to the
-              companies and individuals who donate to our Diversity Program. We
-              are going to give over <b>80 tickets</b> at discounted price or
-              even free.
+              In the last edition, NGRome MMXIX, we gave over <b>80 tickets</b>
+              at discounted price or even free.
+              <b>Students</b> and <b>Women</b> in Tech were invited to buy a diversity ticket and joined us on
+              Oct 7th 2019 in Rome.
             </p>
+
             <p>
-              <b>Students</b> and <b>Women</b> in Tech are invited to buy a
-              diversity ticket and join us to an incredible conference on Oct
-              7th in Rome.
+              Even though <b>NGRome MMXX</b> is a virtual edition, we are still committed to our Diversity
+              Program, and are willing to offer our support.<br />
+              Moreover, we will be running the program also for the next edition which we hope will be held in
+              Rome.
             </p>
           </div>
         </div>
@@ -61,7 +61,7 @@ import { Component, OnInit } from '@angular/core';
     </section -->
     <!-- <ngrome-tickets class="site-content__section" id="tickets"></ngrome-tickets> -->
   `,
-  styles: [],
+  styles: ['p {text-align: justify;}'],
 })
 export class DiversityComponent implements OnInit {
   constructor() {}

@@ -1,12 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { tap, map } from 'rxjs/operators';
 
 @Component({
   selector: 'ngrome-sponsors-section',
   template: `
-    <section>
+    <section class="sponsor-container">
       <div class="site-content__wrap">
         <div class="sponsors-section__header" [ngClass]="headerColor">
           <h1 class="sponsors-section__title">{{ title }}</h1>
@@ -14,18 +13,13 @@ import { tap, map } from 'rxjs/operators';
 
         <div class="sponsors-section__list">
           <div
-            *ngFor="let sponsor of sponsors$ | async"
+            *ngFor="let sponsor of sponsors$ | async as sponsors"
             class="sponsors-section__item"
-            [ngClass]="{ 'two-items-row': sponsor.$index === 2 }"
+            [ngClass]="{ 'two-items-row': sponsors.length === 2 }"
           >
-            <a
-              rel="noopener"
-              href="{{ sponsor.websiteUrl }}"
-              target="_blank"
-              title="{{ sponsor.name }}"
-            >
+            <a rel="noopener" href="{{ sponsor.websiteUrl }}" target="_blank" title="{{ sponsor.name }}">
               <img src="{{ sponsor.image }}" alt="{{ sponsor.name }}" />
-              <span>{{ sponsor.name }}</span>
+              <!--<span>{{ sponsor.name }}</span>-->
             </a>
           </div>
         </div>
@@ -47,14 +41,11 @@ export class SponsorsSectionComponent implements OnInit {
     this.getSponsors();
   }
 
-  getSponsors() {
+  private getSponsors() {
     this.sponsors$ = this.afs
       .collection('sponsor2020', (ref) => {
-        let query:
-          | firebase.firestore.CollectionReference
-          | firebase.firestore.Query = ref;
+        let query: firebase.firestore.CollectionReference | firebase.firestore.Query = ref;
         query = query.where('type', '==', this.sponsorType);
-        console.log(query);
         return query;
       })
       .valueChanges();

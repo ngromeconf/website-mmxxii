@@ -31,8 +31,10 @@
 
   .logo {
     padding: 16px 28px 13px;
+
     img {
       height: 20px;
+
       @include breakpoint-m {
         height: 39px;
       }
@@ -42,16 +44,23 @@
   .cta {
     margin-left: auto;
     margin-right: 10px;
+
+    @include breakpoint-s {
+      display: none;
+    }
+
   }
 
   .button {
     margin-top: 15px;
     display: none;
+
     @include breakpoint-m {
       display: flex;
     }
+
     svg {
-      margin-left: 5px; 
+      margin-left: 5px;
     }
   }
 
@@ -69,11 +78,13 @@
           width: 24px;
         }
       }
+
       height: 38px;
       width: 38px;
-      @include breakpoint-m {
-      }
+
+      @include breakpoint-m {}
     }
+
     @include breakpoint-m {
       padding: 14px 18px;
     }
@@ -113,7 +124,8 @@
   opacity: 0;
   transform: translateX(280px);
   transition-delay: 0.25s;
-  transition: transform 0.2s ease-out, opacity 0.3s ease;
+  transition: transform 0.2s ease-out,
+  opacity 0.3s ease;
 
   @include breakpoint-m {
     transform: translateX(720px);
@@ -155,12 +167,13 @@
       transition: opacity 0.3s cubic-bezier(0.215, 0.61, 0.355, 1),
         transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
 
-      + li {
+      +li {
         margin-top: 12px;
 
         @include breakpoint-m {
           margin-top: 25px;
         }
+
         @include breakpoint-l {
           margin-top: 15px;
         }
@@ -174,6 +187,7 @@
           padding-top: 8px;
           padding-bottom: 8px;
         }
+
         @include breakpoint-l {
           padding-top: 6px;
           padding-bottom: 6px;
