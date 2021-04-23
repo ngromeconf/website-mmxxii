@@ -1,7 +1,11 @@
 {
   "name": "ng-rome2020",
-  "version": "1.0.0",
+  "version": "3.0.0",
   "private": true,
+  "volta": {
+    "node": "13.14.0",
+    "yarn": "1.19.2"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve --port 4201",
@@ -32,8 +36,8 @@
     "@angular/upgrade": "^9.1.11",
     "@angular/youtube-player": "^9.2.4",
     "@scullyio/init": "0.0.28",
-    "@scullyio/ng-lib": "latest",
-    "@scullyio/scully": "latest",
+    "@scullyio/ng-lib": "^1.1.1",
+    "@scullyio/scully": "^1.1.1",
     "@types/youtube": "0.0.38",
     "angular-in-memory-web-api": "^0.9.0",
     "core-js": "^2.6.11",
