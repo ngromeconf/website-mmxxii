@@ -1,11 +1,7 @@
 <header class="site-header" role="banner">
   <div class="site-logo">
     <div class="logo">
-      <a
-        [routerLink]="['/']"
-        routerLinkActive="router-link-active"
-        title="Go to NGRome Homepage"
-      >
+      <a [routerLink]="['/']" routerLinkActive="router-link-active" title="Go to NGRome Homepage">
         <img src="assets/logo/logo-horizontal.svg" />
       </a>
     </div>
@@ -14,7 +10,7 @@
         class="button button--green button--fill-green"
         rel="noopener"
         target="_blank"
-        href="https://ti.to/ngrome-conf/mmxx"
+        href="https://ti.to/ngrome-conf/ngrome-conf-mmxxi-online-9th-july-2021"
         title="Go to Tickets Page"
         >Get
         <img src="assets/icons/site-icons/tickets.svg" />
@@ -34,8 +30,6 @@
   </div>
 
   <nav class="site-menu" role="navigation" #sitemenu>
-    <ngrome-menu
-      (toggleSidebar)="sidebarService.toggleSidebarStatus()"
-    ></ngrome-menu>
+    <ngrome-menu (toggleSidebar)="sidebarService.toggleSidebarStatus()"></ngrome-menu>
   </nav>
 </header>

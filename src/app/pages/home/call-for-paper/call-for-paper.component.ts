@@ -11,20 +11,20 @@ import { Component, OnInit } from '@angular/core';
           </div>
 
           <div class="candidate__info">
-<!--            <h2>-->
-<!--              We are going to announce the official schedule by the end of-->
-<!--              August!-->
-<!--            </h2>-->
+            <!--            <h2>-->
+            <!--              We are going to announce the official schedule by the end of-->
+            <!--              August!-->
+            <!--            </h2>-->
 
-<!--            <p>-->
-<!--              Applications for NG Rome MMXX are closed.-->
-<!--              <br />-->
-<!--            </p>-->
+            <p>
+              Applications for NG Rome MMXXI are open.
+              <br />
+            </p>
 
             <a
               rel="noopener"
               class="button button--white"
-              href="https://forms.gle/CDaLhFVAUENeQ1we6"
+              href="https://forms.gle/J7Kr9hMiscduco6L9"
               target="_blank"
               title="Candidate now for NG Rome MMXXI"
             >
