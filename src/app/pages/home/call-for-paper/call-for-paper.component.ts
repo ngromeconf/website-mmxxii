@@ -17,7 +17,7 @@ import { Component, OnInit } from '@angular/core';
             <!--            </h2>-->
 
             <p>
-              Applications for NG Rome MMXX are open.
+              Applications for NG Rome MMXXI are open.
               <br />
             </p>
 
