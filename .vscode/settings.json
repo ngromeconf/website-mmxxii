@@ -1,0 +1,5 @@
+{
+    "terminal.integrated.automationShell.osx": "",
+    "terminal.integrated.fontFamily": "Source Code Pro for Powerline",
+    "terminal.integrated.shell.osx": "/bin/zsh"
+}
