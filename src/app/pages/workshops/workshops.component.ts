@@ -8,18 +8,19 @@ import { SeoService } from 'src/app/shared/services/seo.service';
       <div class="site-content__wrap">
         <div class="site-content__intro">
           <header class="site-content__intro__head__inner-sub">
-            <h1 class="site-content__intro__title-sub">Workshop</h1>
+            <h1 class="site-content__intro__title-sub">Workshops</h1>
           </header>
-          <div class="site-content__intro__info__inner" style="display:none">
+          <div class="site-content__intro__info__inner">
             <p>
-              We plan to have two online workshop for this conference.<br />
-              Location:
+              2 days of workshops, get your ticket for each of them!<br />
+              <!-- Location:
               <a
                 href="https://talentgarden.org/it/campus/italia/roma-ostiense/"
                 rel="noopener"
                 target="_blank"
                 >Talent Garden Ostiense, Via Ostiense, 92 - 00154 Roma RM</a
               >
+            </p> -->
             </p>
           </div>
         </div>
@@ -27,7 +28,6 @@ import { SeoService } from 'src/app/shared/services/seo.service';
     </section>
     <section class="site-content__section workshop--list">
       <div class="site-content__wrap">
-        <h1 class="site-content__section__title">Workshops</h1>
         <div class="speakers__list">
           <div class="speaker speaker--start" *ngFor="let workshopElement of workshopService.getWorkshops()">
             <a class="speaker__face" [href]="workshopElement.targetUrl" rel="noopener" target="_blank">
