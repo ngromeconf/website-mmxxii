@@ -14,9 +14,7 @@ export class MenuComponent implements OnInit {
   constructor(private afs: AngularFirestore) {
     this.menuList$ = afs
       .collection('configuration2020', (ref) => {
-        let query:
-          | firebase.firestore.CollectionReference
-          | firebase.firestore.Query = ref;
+        let query: firebase.firestore.CollectionReference | firebase.firestore.Query = ref;
         query = query.where('active', '==', true);
         // query = query.orderBy('startTime', 'asc');
         return query;

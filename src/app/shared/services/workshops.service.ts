@@ -41,7 +41,7 @@ export class WorkshopsService {
       location: 'We are hosted at...',
       start_time: '9:00',
       end_time: '17:00',
-      twitter: ['John_Papa'],
+      twitter: ['gerardsans'],
     },
   ];
 
