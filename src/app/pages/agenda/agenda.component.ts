@@ -23,32 +23,32 @@ import { Observable } from 'rxjs';
 
     <div class="site-content__wrap">
       <h1 class="site-content__section__title">July 9th 2021</h1>
-      <ul class="speakers__list"><li class="agenda__item"><p>Available at the end of the Call for papers!</p></li></ul>
-<!--      <ul class="speakers__list">-->
-<!--        <li class="agenda__item" *ngFor="let agenda of agendaList$ | async">-->
-<!--          <div-->
-<!--            [ngClass]="{-->
-<!--              agenda__talk: isTalk(agenda.type),-->
-<!--              agenda__activity: isActivity(agenda.type)-->
-<!--            }"-->
-<!--          >-->
-<!--            <div class="agenda__time">-->
-<!--              {{ agenda.startTime.seconds * 1000 | date: 'shortTime' }}<br />-->
-<!--              <span class="agenda__time-end">→{{ agenda.endTime.seconds * 1000 | date: 'hh:mm' }}</span>-->
-<!--            </div>-->
-<!--            <div class="agenda__image">-->
-<!--              <img [src]="agenda.image" alt="{{ agenda.speakerName }}" />-->
-<!--            </div>-->
-<!--            <div class="agenda__detail">-->
-<!--              <span class="agenda_speaker__name"> {{ agenda.speakerName }}<br />- {{ agenda.company }} </span>-->
-<!--              <h1>{{ agenda.title }}</h1>-->
-<!--              <a class="read__more" title="Read more about the talk">Read more</a>-->
-<!--              <div class="agenra__talk__detail"></div>-->
-<!--            </div>-->
-<!--            <div class="agenda__duration">{{ getDuration(agenda.startTime, agenda.endTime) }}''</div>-->
-<!--          </div>-->
-<!--        </li>-->
-<!--      </ul>-->
+      <!-- <ul class="speakers__list"><li class="agenda__item"><p>Available at the end of the Call for papers!</p></li></ul> -->
+      <ul class="speakers__list">
+        <li class="agenda__item" *ngFor="let agenda of agendaList$ | async">
+          <div
+            [ngClass]="{
+              agenda__talk: isTalk(agenda.type),
+              agenda__activity: isActivity(agenda.type)
+            }"
+          >
+            <div class="agenda__time">
+              {{ agenda.startTime.seconds * 1000 | date: 'shortTime' }}<br />
+              <span class="agenda__time-end">→{{ agenda.endTime.seconds * 1000 | date: 'hh:mm' }}</span>
+            </div>
+            <div class="agenda__image">
+              <img [src]="agenda.image" alt="{{ agenda.speakerName }}" />
+            </div>
+            <div class="agenda__detail">
+              <span class="agenda_speaker__name"> {{ agenda.speakerName }}<br />- {{ agenda.company }} </span>
+              <h1>{{ agenda.title }}</h1>
+              <a class="read__more" title="Read more about the talk">Read more</a>
+              <div class="agenra__talk__detail"></div>
+            </div>
+            <div class="agenda__duration">{{ getDuration(agenda.startTime, agenda.endTime) }}''</div>
+          </div>
+        </li>
+      </ul>
     </div>`,
   styleUrls: ['./agenda.component.scss'],
 })
@@ -57,7 +57,7 @@ export class AgendaComponent implements OnInit {
 
   constructor(private afs: AngularFirestore) {
     this.agendaList$ = afs
-      .collection('agenda2020', (ref) => {
+      .collection('agenda2021', (ref) => {
         let query: firebase.firestore.CollectionReference | firebase.firestore.Query = ref;
         query = query.where('visible', '==', true);
         query = query.orderBy('startTime', 'asc');
