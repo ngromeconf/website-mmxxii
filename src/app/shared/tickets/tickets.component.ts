@@ -20,7 +20,7 @@ import { MessagingService } from 'src/app/shared/services/messaging.service';
               <p class="ticket_card_info">This ticket gives access to whole online conference on July 9th.</p>
               <button class="ticket_card_button button button--green button--fill-green" title="Get tickets">
                 <span>
-                  Get tickets
+                  Get tickets!
                   <img class="ticket_card_icon" src="./assets/icons/ticket-icon.svg" />
                 </span>
               </button>

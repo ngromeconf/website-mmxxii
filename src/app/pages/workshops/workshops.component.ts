@@ -12,7 +12,7 @@ import { SeoService } from 'src/app/shared/services/seo.service';
           </header>
           <div class="site-content__intro__info__inner">
             <p>
-              2 days of workshops, get your ticket for each of them!<br />
+              3 days of workshops, get your ticket for each of them!<br />
               <!-- Location:
               <a
                 href="https://talentgarden.org/it/campus/italia/roma-ostiense/"

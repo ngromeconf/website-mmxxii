@@ -13,7 +13,7 @@ import { Component, OnInit } from '@angular/core';
               <span class="ticket__price">€ 28,00</span>
               <p class="ticket__info">Regular ticket<br />Sales ends on July 07th</p>
               <span class="button" title="Buy Now">
-                <span>Buy Now</span>
+                <span>Buy Now!</span>
                 <svg width="11" height="12">
                   <path
                     fill="none"
@@ -32,7 +32,28 @@ import { Component, OnInit } from '@angular/core';
               <span class="ticket__price">€ 28,00</span>
               <p class="ticket__info">Regular ticket<br />Sales ends on July 06th</p>
               <span class="button" title="Buy Now">
-                <span>Buy Now</span>
+                <span>Buy Now!</span>
+                <svg width="11" height="12">
+                  <path
+                    fill="none"
+                    fill-rule="evenodd"
+                    stroke="#0086FF"
+                    stroke-width="2"
+                    d="M1 1l7.358 5L1 11"
+                  />
+                </svg>
+              </span>
+            </a>
+          </article>
+          <article class="ticket ticket--ready">
+            <a href="https://ti.to/ngrome-conf/ngrome-conf-mmxxi-online-9th-july-2021" title="Ticket">
+              <h2 class="ticket__title">
+                Workshop - John Papa - Publish Your Angular App with Scale and Security!
+              </h2>
+              <span class="ticket__price">FREE</span>
+              <p class="ticket__info">Regular ticket<br />Sales ends on July 06th</p>
+              <span class="button" title="Buy Now">
+                <span>Get tickets!</span>
                 <svg width="11" height="12">
                   <path
                     fill="none"
