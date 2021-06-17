@@ -33,7 +33,7 @@ import { MessagingService } from 'src/app/shared/services/messaging.service';
             >
               <div class="ticket_card_header">
                 <h2 class="ticket_card_title">Workshop: Fullstack GraphQL using Angular v12</h2>
-                <span class="ticket_card_price">35,00€</span>
+                <span class="ticket_card_price">28,00€</span>
               </div>
               <p class="ticket_card_info">
                 This ticket gives access to the workshop on July 07 and whole online conference on July 9th.
@@ -53,7 +53,7 @@ import { MessagingService } from 'src/app/shared/services/messaging.service';
             >
               <div class="ticket_card_header">
                 <h2 class="ticket_card_title">Workshop: Angular Performance Tuning</h2>
-                <span class="ticket_card_price">35,00€</span>
+                <span class="ticket_card_price">28,00€</span>
               </div>
               <p class="ticket_card_info">
                 This ticket gives access to the workshop and whole online conference on July 9th.
