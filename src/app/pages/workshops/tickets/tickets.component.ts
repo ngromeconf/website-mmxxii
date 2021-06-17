@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
           <article class="ticket ticket--ready">
             <a href="https://ti.to/ngrome-conf/ngrome-conf-mmxxi-online-9th-july-2021" title="Ticket">
               <h2 class="ticket__title">Workshop - Gerard Sans - Fullstack GraphQL using Angular v12</h2>
-              <span class="ticket__price">€ 35,00</span>
+              <span class="ticket__price">€ 28,00</span>
               <p class="ticket__info">Regular ticket<br />Sales ends on July 07th</p>
               <span class="button" title="Buy Now">
                 <span>Buy Now</span>
@@ -29,7 +29,7 @@ import { Component, OnInit } from '@angular/core';
           <article class="ticket ticket--ready">
             <a href="https://ti.to/ngrome-conf/ngrome-conf-mmxxi-online-9th-july-2021" title="Ticket">
               <h2 class="ticket__title">Workshop - Stepan Suvorov - Angular Performance Tuning</h2>
-              <span class="ticket__price">€ 35,00</span>
+              <span class="ticket__price">€ 28,00</span>
               <p class="ticket__info">Regular ticket<br />Sales ends on July 06th</p>
               <span class="button" title="Buy Now">
                 <span>Buy Now</span>
