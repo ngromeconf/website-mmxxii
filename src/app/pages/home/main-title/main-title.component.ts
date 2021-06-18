@@ -28,7 +28,7 @@ import { IntersectionObserverService } from '../../../shared/services/intersecti
               <a
                 class="button button--green button--fill-green"
                 rel="noopener"
-                href="https://ti.to/ngrome-conf/ngrome-conf-mmxxi-online-9th-july-2021/with/ngrome-mmxxi-free-online-event"
+                href="https://ti.to/ngrome-conf/ngrome-conf-mmxxi-online-9th-july-2021"
                 target="_blank"
                 title="Register"
                 #registerButton
