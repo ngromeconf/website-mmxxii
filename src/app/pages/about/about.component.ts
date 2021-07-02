@@ -85,19 +85,20 @@ import { SeoService } from 'src/app/shared/services/seo.service';
             </a>
           </div>
           <div>
-            <a href="https://twitter.com/BertainaMichela" target="_blank">
-              <img src="./assets/images/team/bertaina.png" /><br />
-            </a>
-            <a href="https://twitter.com/BertainaMichela" target="_blank">
-              <span>@BertainaMichela</span>
-            </a>
-          </div>
-          <div>
             <a href="https://twitter.com/soniyj" target="_blank">
               <img src="./assets/images/team/matascioli.png" /><br />
             </a>
             <a href="https://twitter.com/soniyj" target="_blank">
               <span>@soniyj</span>
+            </a>
+          </div>
+
+          <div>
+            <a href="https://twitter.com/@MartinaCarta🌻" target="_blank">
+              <img src="./assets/images/team/martina-carta.jpeg" /><br />
+            </a>
+            <a href="https://twitter.com/@MartinaCarta🌻" target="_blank">
+              <span>@MartinaCarta🌻</span>
             </a>
           </div>
           <div>

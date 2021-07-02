@@ -38,7 +38,7 @@
   position: relative;
   opacity: 0.2;
 
-  &+& {
+  & + & {
     margin-left: 20px;
 
     @include breakpoint-m {
@@ -55,7 +55,7 @@
     flex: 0 1 33.33333%;
   }
 
-  >a {
+  > a {
     display: block;
     padding: 34px 24px 24px 24px;
     border: 2px solid #161616;
@@ -74,7 +74,7 @@
     }
 
     &:before {
-      content: "";
+      content: '';
       position: absolute;
       top: 0;
       left: 0;
@@ -122,7 +122,7 @@
   font-size: 37px;
   letter-spacing: 0.07em;
   text-transform: uppercase;
-  color: #DD0031;
+  color: #dd0031;
 }
 
 .ticket_card_list {
@@ -139,16 +139,15 @@
 
     width: 300px;
     height: 549px;
-    background: #F5F5F5;
-    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.12),
-    -3px -5px 11px #FFFFFF;
+    background: #f5f5f5;
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.12), -3px -5px 11px #ffffff;
     border-radius: 8px;
     padding: 35px 24px;
     font-style: normal;
     font-family: $font-secondary;
 
     .ticket_card_header {
-      height: 173px;
+      height: 200px;
       font-weight: 900;
       font-size: 30px;
 
@@ -160,7 +159,7 @@
 
       .ticket_card_price {
         line-height: 35px;
-        color: #DD0031;
+        color: #dd0031;
       }
     }
 
