@@ -27,8 +27,8 @@ export class WorkshopsService {
       fullDescription: ``,
       visible: true,
       location: 'We are hosted at...',
-      start_time: '9:00',
-      end_time: '11:00',
+      start_time: '14:00',
+      end_time: '16:00',
       twitter: ['John_Papa', 'craigshoemaker'],
     },
     {
