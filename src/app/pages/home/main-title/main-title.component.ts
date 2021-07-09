@@ -28,11 +28,11 @@ import { IntersectionObserverService } from '../../../shared/services/intersecti
               <a
                 class="button button--green button--fill-green"
                 rel="noopener"
-                href="https://ti.to/ngrome-conf/ngrome-conf-mmxxi-online-9th-july-2021"
+                routerLink="/live-streaming"
                 target="_blank"
-                title="Register"
+                title="Watch now!"
                 #registerButton
-                >Register for free
+                >Watch now!
               </a>
             </div>
             <!-- <span class="site-content__intro__scroller"></span> -->
