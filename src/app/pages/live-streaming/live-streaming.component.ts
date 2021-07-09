@@ -18,24 +18,17 @@ import { debounceTime } from 'rxjs/operators';
           <header class="site-content__intro__head__inner-sub">
             <h1 class="site-content__intro__title-sub">Live Streaming MMXXI</h1>
           </header>
-          <div class="site-content__intro__info__inner">
-            <p>
-              One track, three hours, filled with talks of the
-              <strong>Angular</strong> engineers who build the most <strong>performant</strong> apps and web
-              experiences.
-            </p>
-          </div>
         </div>
       </div>
     </section>
 
     <div class="site-content__wrap">
-      <h1 class="site-content__section__title">July 9th 2021</h1>
+      <h1 class="site-content__section__title" id="player">July 9th 2021</h1>
       <div #container style="width: 100%; height: 500px">
         <youtube-player
           #playerYt
           style.display="'block'"
-          videoId="8XqmTwuxGd0"
+          videoId="Suq507TcoVA"
           [width]="fixedWidth"
           [height]="fixedHeight"
         ></youtube-player>
