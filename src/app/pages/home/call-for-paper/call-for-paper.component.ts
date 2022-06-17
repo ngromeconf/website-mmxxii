@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EVENT_DATE } from 'src/app/constants';
 
 @Component({
   selector: 'ngrome-call-for-paper',
@@ -11,13 +12,13 @@ import { Component, OnInit } from '@angular/core';
           </div>
 
           <div class="candidate__info">
-            <!--            <h2>-->
-            <!--              We are going to announce the official schedule by the end of-->
-            <!--              August!-->
-            <!--            </h2>-->
+            <!-- <h2>
+            We are going to announce the official schedule by the end of
+            August
+            </h2> -->
 
             <p>
-              Applications for NG Rome MMXXI are open.
+              Applications for NG Rome {{romanicYear}} are open.
               <br />
             </p>
 
@@ -26,9 +27,9 @@ import { Component, OnInit } from '@angular/core';
               class="button button--white"
               href="https://forms.gle/J7Kr9hMiscduco6L9"
               target="_blank"
-              title="Candidate now for NG Rome MMXXI"
+              title="Candidate now for NG Rome {{romanicYear}}"
             >
-              <span>Candidate now NG Rome MMXXI</span>
+              <span>Candidate now NG Rome {{romanicYear}}</span>
 
               <svg width="11" height="12">
                 <path
@@ -45,9 +46,16 @@ import { Component, OnInit } from '@angular/core';
       </div>
     </section>
   `,
+  styles: [`
+  .site-content__section--full {
+    margin-bottom: 80px;
+  }
+  `],
 })
 export class CallForPaperComponent implements OnInit {
   constructor() {}
-
-  ngOnInit() {}
+  romanicYear: string;
+  ngOnInit() {
+    this.romanicYear = EVENT_DATE.romanYear;
+  }
 }

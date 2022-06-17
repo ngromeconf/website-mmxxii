@@ -1,6 +1,7 @@
 import { Component, OnInit, Renderer2, ViewChild, ElementRef, Input, AfterViewInit } from '@angular/core';
 import { SideBarService } from '../services/sidebar.service';
 import { IntersectionObserverService } from '../services/intersection-observer.service';
+import { TICKET, TicketType } from 'src/app/constants';
 
 @Component({
   selector: 'ngrome-header',
@@ -9,12 +10,12 @@ import { IntersectionObserverService } from '../services/intersection-observer.s
       <div class="logo">
         <a routerLink="/"><img src="assets/logo/logo-horizontal.svg" /></a>
       </div>
-      <div class="cta">
+      <div class="cta" *ngIf="ticketData.showButton">
         <a
           class="button button--green button--fill-green"
           rel="noopener"
           target="_blank"
-          href="https://ti.to/ngrome-conf/ngrome-conf-mmxxi-online-9th-july-2021"
+          [href]="ticketData.conferenceTicketLink"
           title="Go to Tickets Page"
           #getTickets
           >Get tickets
@@ -57,6 +58,7 @@ import { IntersectionObserverService } from '../services/intersection-observer.s
 export class HeaderComponent implements OnInit, AfterViewInit {
   @ViewChild('getTickets')
   getTickets: ElementRef;
+  ticketData: TicketType; //this object coontains link to the ti.to page and the boolean to (show/hide) ticket button
 
   constructor(
     private renderer: Renderer2,
@@ -68,6 +70,9 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   sitemenu: ElementRef;
 
   ngOnInit() {
+
+    this.ticketData = TICKET;
+
     this.sidebarService.sidebarStatus$.subscribe((e) => {
       if (e === 'visible') {
         this.openSidebar();
@@ -77,7 +82,8 @@ export class HeaderComponent implements OnInit, AfterViewInit {
     });
   }
   ngAfterViewInit() {
-    this.intersectionObserverService.setElementToHide(this.getTickets.nativeElement);
+    if (this.ticketData.showButton)
+      this.intersectionObserverService.setElementToHide(this.getTickets.nativeElement);
   }
 
   private openSidebar() {
