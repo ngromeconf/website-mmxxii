@@ -82,7 +82,9 @@ export class MainTitleComponent implements AfterViewInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.intersectionObserverService.disconnectObserver();
+    if (this.ticketData.showButton) {
+      this.intersectionObserverService.disconnectObserver();
+    }
   }
 
   scrollTo(el: string, duration?: number) {
