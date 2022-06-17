@@ -5,10 +5,9 @@ export interface EventDateType {
 }
 
 export interface TicketType {
-  url?: string;
+  conferenceTicketLink: string;
   showButton: boolean;
 }
-
 
 export const EVENT_DATE: EventDateType = {
   when: 'December 2nd 2022',
@@ -17,11 +16,6 @@ export const EVENT_DATE: EventDateType = {
 }
 
 export const TICKET: TicketType = {
-  url: '',
+  conferenceTicketLink: '',
   showButton: false,
-}
-
-export const CALLFORPAPER: TicketType = {
-  showButton: false,
-  url: ''
 }

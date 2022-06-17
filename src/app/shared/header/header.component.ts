@@ -15,7 +15,7 @@ import { TICKET, TicketType } from 'src/app/constants';
           class="button button--green button--fill-green"
           rel="noopener"
           target="_blank"
-          [href]="ticketData.url"
+          [href]="ticketData.conferenceTicketLink"
           title="Go to Tickets Page"
           #getTickets
           >Get tickets
