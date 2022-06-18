@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EventDateType, EVENT_DATE, TICKET, TicketType } from 'src/app/constants';
 import { ModalService } from 'src/app/shared/services/modal.service';
 
 
@@ -10,7 +11,13 @@ import { ModalService } from 'src/app/shared/services/modal.service';
 export class InfoComponent implements OnInit {
 
   modalOpened = false;
-  constructor(private modalService:ModalService) { }
+  eventInfo: EventDateType;
+  ticketData: TicketType;
+
+  constructor(private modalService:ModalService) {
+    this.eventInfo = EVENT_DATE;
+    this.ticketData = TICKET;
+  }
 
   openModal(id: string) {
     this.modalOpened = true;
@@ -23,6 +30,7 @@ export class InfoComponent implements OnInit {
   }
 
   ngOnInit() {
+
   }
 
   addToCalendar(){

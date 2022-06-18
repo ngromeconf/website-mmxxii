@@ -1,19 +1,25 @@
 import { Injectable } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { EventDateType, EVENT_DATE } from 'src/app/constants';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SeoService {
 
-  constructor(private meta: Meta, private titleService: Title) { }
+  eventInfo: EventDateType;
+
+
+  constructor(private meta: Meta, private titleService: Title) {
+    this.eventInfo = EVENT_DATE;
+  }
 
   generateTags(tags){
 
     tags = {
       card: '',
-      description: 'For the first time ever, the biggest Italian Angular Conference is taking place at NG Rome MMXIX, this year on October 7th at the Teatro Italia in Rome, Italy',
-      title: 'NG-Rome July 9th 2021 - The Italian Angular Conference',
+      description: `For the first time ever, the biggest Italian Angular Conference is taking place at NG Rome MMXIX, this year on ${this.eventInfo.when} at the Teatro Italia in Rome, Italy`,
+      title: `NG-Rome July ${this.eventInfo.when} - The Italian Angular Conference`,
       site: '@ngromeconf',
       slug: '',
       creator: '@ngromeconf',
