@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { EVENT_DATE } from 'src/app/constants';
+import { CALLFORPAPER, EVENT_DATE, TicketType } from 'src/app/constants';
 
 @Component({
   selector: 'ngrome-call-for-paper',
@@ -12,20 +12,19 @@ import { EVENT_DATE } from 'src/app/constants';
           </div>
 
           <div class="candidate__info">
-            <!-- <h2>
-            We are going to announce the official schedule by the end of
-            August
-            </h2> -->
+            <h2>
+            Applications for NG Rome {{romanicYear}} will be open soon!
+            </h2>
 
-            <p>
-              Applications for NG Rome {{romanicYear}} are open.
+            <!-- <p>
+
               <br />
-            </p>
+            </p> -->
 
-            <a
+            <a *ngIf="callForPaper.showButton"
               rel="noopener"
               class="button button--white"
-              href="https://forms.gle/J7Kr9hMiscduco6L9"
+              href="{{callForPaper.url}}"
               target="_blank"
               title="Candidate now for NG Rome {{romanicYear}}"
             >
@@ -53,9 +52,11 @@ import { EVENT_DATE } from 'src/app/constants';
   `],
 })
 export class CallForPaperComponent implements OnInit {
-  constructor() {}
   romanicYear: string;
+  callForPaper: TicketType
+  constructor() {}
   ngOnInit() {
     this.romanicYear = EVENT_DATE.romanYear;
+    this.callForPaper = CALLFORPAPER;
   }
 }
