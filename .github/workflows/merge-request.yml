@@ -1,4 +1,4 @@
-name: Pull-Request Build
+name: MR Build
 on:
   pull_request:
     branches:
