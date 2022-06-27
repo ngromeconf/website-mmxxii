@@ -14,9 +14,7 @@ export class MessagingService {
     private angularFireAuth: AngularFireAuth,
     private angularFireMessaging: AngularFireMessaging
   ) {
-    this.angularFireMessaging.messaging.subscribe((messaging) => {
-      messaging.onMessage = messaging.onMessage.bind(messaging);
-    });
+
   }
 
   /**

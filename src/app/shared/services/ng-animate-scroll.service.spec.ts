@@ -6,7 +6,7 @@ describe('NgAnimateScrollService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: NgAnimateScrollService = TestBed.get(NgAnimateScrollService);
+    const service: NgAnimateScrollService = TestBed.inject(NgAnimateScrollService);
     expect(service).toBeTruthy();
   });
 });

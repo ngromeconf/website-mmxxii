@@ -29,7 +29,7 @@ import { EventDateType, EVENT_DATE, TICKET, TicketType } from 'src/app/constants
               <a *ngIf="ticketData.showButton"
                 class="button button--green button--fill-green"
                 rel="noopener"
-                routerLink="ticketData.url"
+                routerLink="ticketData.conferenceTicketLink"
                 target="_blank"
                 title="Get your ticket!"
                 #registerButton
