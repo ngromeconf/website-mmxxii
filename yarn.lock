@@ -193,7 +193,7 @@
     "universal-analytics" "0.4.23"
     "uuid" "8.3.0"
 
-"@angular/common@*", "@angular/common@^10.2.5", "@angular/common@^9.0.0 || ^10.0.0 || ^11.0.0 || ^12.0.0", "@angular/common@^9.0.0 || ^10.0.0-0", "@angular/common@>=8.0.0", "@angular/common@10.2.5":
+"@angular/common@*", "@angular/common@^10.0.0 || ^11.0.0-0", "@angular/common@^10.2.5", "@angular/common@^9.0.0 || ^10.0.0 || ^11.0.0 || ^12.0.0", "@angular/common@>=8.0.0", "@angular/common@10.2.5":
   "integrity" "sha512-553yf6ZUHNqT4XpOqbW7EKKMfX56u/8DkwYXuSv8MAKdl4/AW6gliFOEJGYo04JcKF7Knq3VPvGSCO9kupf0hg=="
   "resolved" "https://registry.npmjs.org/@angular/common/-/common-10.2.5.tgz"
   "version" "10.2.5"
@@ -226,7 +226,7 @@
   dependencies:
     "tslib" "^2.0.0"
 
-"@angular/core@*", "@angular/core@^10.2.5", "@angular/core@^9.0.0 || ^10.0.0 || ^11.0.0 || ^12.0.0", "@angular/core@^9.0.0 || ^10.0.0-0", "@angular/core@>=4.2.0", "@angular/core@>=8.0.0", "@angular/core@10.2.5":
+"@angular/core@*", "@angular/core@^10.0.0 || ^11.0.0-0", "@angular/core@^10.2.5", "@angular/core@^9.0.0 || ^10.0.0 || ^11.0.0 || ^12.0.0", "@angular/core@>=4.2.0", "@angular/core@>=8.0.0", "@angular/core@10.2.5":
   "integrity" "sha512-krhOKNTj5XE92Rk9ASX5KmgTF72j7qT2PLVxrGEVjuUKjBY2XaK3TV0Kotq9zI3qa9WgeCrP/Njn6jlKQCCAEQ=="
   "resolved" "https://registry.npmjs.org/@angular/core/-/core-10.2.5.tgz"
   "version" "10.2.5"
@@ -296,13 +296,13 @@
   dependencies:
     "tslib" "^2.0.0"
 
-"@angular/youtube-player@^9.2.4":
-  "integrity" "sha512-Qojf/66Cex4ppqqe18ew4UVeZVQil6k+1n4r+BAp5/tWS3t3NhhW/xU2zYZujhckOCyH+NNIMjrguY/CrFKOnw=="
-  "resolved" "https://registry.npmjs.org/@angular/youtube-player/-/youtube-player-9.2.4.tgz"
-  "version" "9.2.4"
+"@angular/youtube-player@^10.2.7":
+  "integrity" "sha512-4NVX/tmwNWFW4G8Y+bZaehKO3GTCniy+HYijctNY8+jsxI5h9RsfHWkRAfX8oPp2KmBJ906//BCTIRqrT+CgUQ=="
+  "resolved" "https://registry.npmjs.org/@angular/youtube-player/-/youtube-player-10.2.7.tgz"
+  "version" "10.2.7"
   dependencies:
     "@types/youtube" "^0.0.38"
-    "tslib" "^1.9.0"
+    "tslib" "^2.0.0"
 
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.10.4", "@babel/code-frame@^7.16.7":
   "integrity" "sha512-iAXqUn8IIeBTNd72xsFlgaXHkMBMt6y4HJp1tIaK465CWLT/fG1aqB7ykr95gHHmlBdGbFeWWfyB4NJJ0nmeIg=="
@@ -1711,11 +1711,6 @@
   dependencies:
     "@types/minimatch" "*"
     "@types/node" "*"
-
-"@types/greensock@^1.15.32":
-  "integrity" "sha1-CD2qwlqebzMtVnixRi1vl6giUfc=sha512-iNMMlmG5Fh1fg5hsXLWzTrwgMp0FoO1U6mUPsIh50ZKcFZsVPUyrQGLPF+jAP6x3KI7IV8XtbPkSzBqfe5OHZg==sha512-iNMMlmG5Fh1fg5hsXLWzTrwgMp0FoO1U6mUPsIh50ZKcFZsVPUyrQGLPF+jAP6x3KI7IV8XtbPkSzBqfe5OHZg== sha512-iNMMlmG5Fh1fg5hsXLWzTrwgMp0FoO1U6mUPsIh50ZKcFZsVPUyrQGLPF+jAP6x3KI7IV8XtbPkSzBqfe5OHZg=="
-  "resolved" "https://registry.npmjs.org/@types/greensock/-/greensock-1.15.32.tgz"
-  "version" "1.15.32"
 
 "@types/http-proxy@^1.17.5":
   "integrity" "sha512-+qsjqR75S/ib0ig0R9WN+CDoZeOBU6F2XLewgC4KVgdXiNHiKKHFEMRHOrs5PbYE97D5vataw5wPj4KLYfUkuQ=="
@@ -7543,11 +7538,6 @@
   "resolved" "https://registry.npmjs.org/performance-now/-/performance-now-2.1.0.tgz"
   "version" "2.1.0"
 
-"perfume.js@^7.0.0":
-  "integrity" "sha512-BTBZDXzCZ7b6FZE4djjFfGr5dLPV8nrMeCXxBqXy6wm6tsVf0hnb62FXiuAEeAOngHvfp/Ssf4UpV4tS2R3IYg=="
-  "resolved" "https://registry.npmjs.org/perfume.js/-/perfume.js-7.0.0.tgz"
-  "version" "7.0.0"
-
 "picocolors@^1.0.0":
   "integrity" "sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ=="
   "resolved" "https://registry.npmjs.org/picocolors/-/picocolors-1.0.0.tgz"
@@ -9887,11 +9877,6 @@
   "integrity" "sha512-e4ERvRV2wb+rRZ/IQeb3jm2VxBsirQLpQhdxplZ2MEzGvDkkMmPglecnNDfSUBivMjP93vRbngYYDQqQ/78bcQ=="
   "resolved" "https://registry.npmjs.org/typescript/-/typescript-4.0.2.tgz"
   "version" "4.0.2"
-
-"typi@^3.2.0":
-  "integrity" "sha1-LYw4Uhkti41wIeoQ9wPeZEKEmn8=sha512-vdMnig2GnY1+0kww/DlLiGm5JGY0m+p9hQI8Akf4zn1MPU2f/dLGG8Ce63qmUUx26Lz2VYGZ0OuO5oNnGc8E8A==sha512-vdMnig2GnY1+0kww/DlLiGm5JGY0m+p9hQI8Akf4zn1MPU2f/dLGG8Ce63qmUUx26Lz2VYGZ0OuO5oNnGc8E8A== sha512-vdMnig2GnY1+0kww/DlLiGm5JGY0m+p9hQI8Akf4zn1MPU2f/dLGG8Ce63qmUUx26Lz2VYGZ0OuO5oNnGc8E8A=="
-  "resolved" "https://registry.npmjs.org/typi/-/typi-3.2.0.tgz"
-  "version" "3.2.0"
 
 "ua-parser-js@0.7.22":
   "integrity" "sha512-YUxzMjJ5T71w6a8WWVcMGM6YWOTX27rCoIQgLXiWaxqXSx9D7DNjiGWn1aJIRSQ5qr0xuhra77bSIh6voR/46Q=="
