@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { PerfumeModule } from 'perfume.js/angular';
+
+
+
 
 const routes: Routes = [
   {
@@ -61,14 +63,9 @@ const routes: Routes = [
   },
 ];
 
-// Perfume.js config, supports AOT and DI
-export const PerfumeConfig = {
-  firstContentfulPaint: true,
-  firstInputDelay: true,
-};
 
 @NgModule({
-  imports: [PerfumeModule.forRoot(PerfumeConfig), RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
