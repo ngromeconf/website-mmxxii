@@ -7,6 +7,10 @@ import { EventDateType, EVENT_DATE, TICKET, TicketType } from 'src/app/constants
   selector: 'ngrome-main-title',
   template: `
     <section class="site-content__section">
+      <video playsinline autoplay [muted]="'muted'" loop id="bgvid">
+        <source src="assets/videos/ng-rome-mmxix.mp4" type="video/mp4" />
+      </video>
+
       <div class="site-content__wrap">
         <div class="site-content__intro">
 
@@ -54,8 +58,7 @@ import { EventDateType, EVENT_DATE, TICKET, TicketType } from 'src/app/constants
     `],
 })
 export class MainTitleComponent implements AfterViewInit, OnDestroy {
-  @ViewChild('registerButton')
-  registerButton: ElementRef;
+  @ViewChild('registerButton') registerButton: ElementRef;
 
   actualPage: string;
   eventInfo: EventDateType;
