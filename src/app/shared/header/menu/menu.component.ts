@@ -26,7 +26,7 @@ import { EventDateType, EVENT_DATE, TICKET, TicketType } from 'src/app/constants
     class="button button--white button--fill"
     rel="noopener"
     target="_blank"
-    href="https://ti.to/ngrome-conf/ngrome-conf-mmxxi-online-9th-july-2021"
+    [href]="ticketData.url"
     title="Go to Tickets Page"
   >
     <svg width="20" height="14">
@@ -36,7 +36,7 @@ import { EventDateType, EVENT_DATE, TICKET, TicketType } from 'src/app/constants
         />
       </g>
     </svg>
-    Register For Free
+    Get your ticket
   </a>
 </div>
 <button
