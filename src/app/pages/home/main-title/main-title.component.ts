@@ -7,11 +7,11 @@ import { EventDateType, EVENT_DATE, TICKET, TicketType } from 'src/app/constants
   selector: 'ngrome-main-title',
   template: `
     <section class="site-content__section">
-      <video playsinline autoplay [muted]="'muted'" loop id="bgvid">
-        <source src="assets/videos/ng-rome-mmxix.mp4" type="video/mp4" />
-      </video>
 
       <div class="site-content__wrap">
+        <video playsinline autoplay [muted]="'muted'" loop id="bgvid">
+          <source src="assets/videos/ngrome-compressed-no-audio.mp4" type="video/mp4" />
+        </video>
         <div class="site-content__intro">
 
           <header class="site-content__intro__head">
@@ -33,9 +33,9 @@ import { EventDateType, EVENT_DATE, TICKET, TicketType } from 'src/app/constants
               <a *ngIf="ticketData.showButton"
                 class="button button--green button--fill-green"
                 rel="noopener"
-                routerLink="ticketData.conferenceTicketLink"
                 target="_blank"
                 title="Get your ticket!"
+                [href]="ticketData.url"
                 #registerButton
                 >GET YOUR TICKET!
               </a>
@@ -51,7 +51,7 @@ import { EventDateType, EVENT_DATE, TICKET, TicketType } from 'src/app/constants
       object-fit: cover;
       width: 100vw;
       height: 100vh;
-      position: fixed;
+      position: absolute;
       top: 0;
       left: 0;
     }
