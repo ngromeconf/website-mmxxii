@@ -12,14 +12,13 @@ import { CALLFORPAPER, EVENT_DATE, TicketType } from 'src/app/constants';
           </div>
 
           <div class="candidate__info">
-            <h2>
-            Applications for NG Rome {{romanicYear}} will be open soon!
-            </h2>
+            <h2>Interested in being a speaker for NGRome {{romanicYear}}?</h2>
 
-            <!-- <p>
-
+            <p>
+              Applications for NGRome {{romanicYear}} was closed on April 18th.
+              Be one of the heroes for 2022 and send us your paper.
               <br />
-            </p> -->
+            </p>
 
             <a *ngIf="callForPaper.showButton"
               rel="noopener"

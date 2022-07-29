@@ -16,11 +16,11 @@ export const EVENT_DATE: EventDateType = {
 }
 
 export const TICKET: TicketType = {
-  url: '',
-  showButton: false,
+  url: 'https://ti.to/ngrome-conf/ngrome-conf-mmxxii-dec-2022',
+  showButton: true,
 }
 
 export const CALLFORPAPER: TicketType = {
-  url: '',
-  showButton: false,
+  url: 'https://forms.gle/RReFPF9HkRAXb6an7',
+  showButton: true,
 }
