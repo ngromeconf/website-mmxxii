@@ -21,6 +21,6 @@ export const TICKET: TicketType = {
 }
 
 export const CALLFORPAPER: TicketType = {
-  url: '',
-  showButton: false,
+  url: 'https://forms.gle/RReFPF9HkRAXb6an7',
+  showButton: true,
 }
