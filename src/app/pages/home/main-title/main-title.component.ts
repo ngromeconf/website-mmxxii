@@ -10,7 +10,7 @@ import { EventDateType, EVENT_DATE, TICKET, TicketType } from 'src/app/constants
 
       <div class="site-content__wrap">
         <video playsinline autoplay [muted]="'muted'" loop id="bgvid">
-          <source src="assets/videos/ngrome-compressed-no-audio.mp4" type="video/mp4" />
+          <source src="https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/assets%2Fngrrome-noaudio-compressed.mp4?alt=media&token=d67794df-b03c-4735-b4e0-42487212619c" type="video/mp4" />
         </video>
         <div class="site-content__intro">
 
