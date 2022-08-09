@@ -68,6 +68,10 @@ ngrome-logo {
 
     & + & {
       margin-top: 65px;
+      @include breakpoint-m {
+        margin-top: 165px;
+      }
+
     }
 
     &--full {
