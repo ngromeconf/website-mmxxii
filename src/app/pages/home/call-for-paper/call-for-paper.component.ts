@@ -15,8 +15,8 @@ import { CALLFORPAPER, EVENT_DATE, TicketType } from 'src/app/constants';
             <h2>Interested in being a speaker for NGRome {{romanicYear}}?</h2>
 
             <p>
-              Applications for NGRome {{romanicYear}} was closed on April 18th.
-              Be one of the heroes for 2022 and send us your paper.
+              Be one of the heroes for 2022 and send us your paper.<br>
+              Applications is open for NGRome {{romanicYear}} up to  September 18th.
               <br />
             </p>
 
