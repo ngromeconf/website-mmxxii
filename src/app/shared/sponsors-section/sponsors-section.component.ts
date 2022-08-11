@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
+
 
 @Component({
   selector: 'ngrome-sponsors-section',
@@ -43,11 +44,9 @@ export class SponsorsSectionComponent implements OnInit {
 
   private getSponsors() {
     this.sponsors$ = this.afs
-      .collection('sponsor2020', (ref) => {
-        let query: firebase.firestore.CollectionReference | firebase.firestore.Query = ref;
-        query = query.where('type', '==', this.sponsorType);
-        return query;
-      })
+      .collection(
+        'sponsor2020',
+        ref => ref.where('type', '==', this.sponsorType))
       .valueChanges();
   }
 }

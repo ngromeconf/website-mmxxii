@@ -1,8 +1,8 @@
 import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 import { ActivatedRoute, Router, Event, NavigationStart, NavigationEnd } from '@angular/router';
 import { Observable, Subscription } from 'rxjs';
-import { AngularFirestore } from '@angular/fire/firestore';
-import { reduce, tap, filter, map } from 'rxjs/operators';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { tap, map } from 'rxjs/operators';
 
 @Component({
   selector: 'ngrome-speaker-detail',
@@ -52,11 +52,9 @@ export class SpeakerDetailComponent implements OnInit {
     console.log('getSpeakerDetail', name);
     this.speaker$ = this.afs
       .collection('speakers', ref => {
-        let query: firebase.firestore.CollectionReference | firebase.firestore.Query = ref;
-        query = query.where('name', '==', name);
-        query = query.orderBy('position', 'asc');
-        // console.log(query);
-        return query;
+        ref.where('name', '==', name);
+        ref.orderBy('position', 'asc');
+        return ref;
       })
       .valueChanges()
       .pipe(

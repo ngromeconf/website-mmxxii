@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Observable } from 'rxjs';
-import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 
 @Component({
   selector: 'ngrome-speaker-suggestion',
@@ -21,21 +21,17 @@ export class SpeakerSuggestionComponent implements OnInit {
 
     if ((this.current-1) !== 0) {
       this.previousSpeaker$ = this.afs
-        .collection('speakers', ref => {
-          let query: firebase.firestore.CollectionReference | firebase.firestore.Query = ref;
-          query = query.where('position', '==', this.current - 1);
-          return query;
-        })
+        .collection(
+          'speakers',
+          ref => ref.where('position', '==', this.current - 1))
         .valueChanges();
     }
 
     if ((this.current+1) <= 16) {
       this.nextSpeaker$ = this.afs
-        .collection('speakers', ref => {
-          let query: firebase.firestore.CollectionReference | firebase.firestore.Query = ref;
-          query = query.where('position', '==', this.current + 1);
-          return query;
-        })
+        .collection(
+          'speakers',
+          ref => ref.where('position', '==', this.current + 1))
         .valueChanges();
     }
   }

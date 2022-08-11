@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { NgAnimateScrollService } from 'src/app/shared/services/ng-animate-scroll.service';
 import { MessagingService } from 'src/app/shared/services/messaging.service';
-import { AngularFirestore } from '@angular/fire/firestore';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'ngrome-speakers',

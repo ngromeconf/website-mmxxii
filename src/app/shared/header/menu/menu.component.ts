@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Observable } from 'rxjs';
 import { EventDateType, EVENT_DATE, TICKET, TicketType } from 'src/app/constants';
 
@@ -65,12 +65,9 @@ export class MenuComponent implements OnInit {
 
   constructor(private afs: AngularFirestore) {
     this.menuList$ = afs
-      .collection('configuration2020', (ref) => {
-        let query: firebase.firestore.CollectionReference | firebase.firestore.Query = ref;
-        query = query.where('active', '==', true);
-        // query = query.orderBy('startTime', 'asc');
-        return query;
-      })
+      .collection(
+        'configuration2020',
+        ref => ref.where('active', '==', true))
       .valueChanges();
   }
 
