@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -58,10 +58,9 @@ export class AgendaComponent implements OnInit {
   constructor(private afs: AngularFirestore) {
     this.agendaList$ = afs
       .collection('agenda2021', (ref) => {
-        let query: firebase.firestore.CollectionReference | firebase.firestore.Query = ref;
-        query = query.where('visible', '==', true);
-        query = query.orderBy('startTime', 'asc');
-        return query;
+        ref.where('visible', '==', true);
+        ref.orderBy('startTime', 'asc');
+        return ref;
       })
       .valueChanges();
   }

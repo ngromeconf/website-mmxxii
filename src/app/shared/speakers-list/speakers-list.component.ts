@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Observable, BehaviorSubject, combineLatest } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 
@@ -44,16 +44,14 @@ export class SpeakerListComponent {
       switchMap(([homepage, visible]) =>
         afs
           .collection('speakers2020', (ref) => {
-            let query: firebase.firestore.CollectionReference | firebase.firestore.Query = ref;
             if (homepage) {
-              query = query.where('homepage', '==', true);
+              ref.where('homepage', '==', true);
             }
             if (visible) {
-              query = query.where('visible', '==', true);
+              ref.where('visible', '==', true);
             }
-            query = query.orderBy('position', 'asc');
-            console.log(query);
-            return query;
+            ref.orderBy('position', 'asc');
+            return ref;
           })
           .valueChanges()
       )

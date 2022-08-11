@@ -8,15 +8,18 @@ import { environment } from '../environments/environment';
 import { SharedModule } from './shared/shared.module';
 import { SideBarService } from './shared/services/sidebar.service';
 import { ModalService } from './shared/services/modal.service';
-import { AngularFireDatabaseModule } from '@angular/fire/database';
-import { AngularFireAuthModule } from '@angular/fire/auth';
-import { AngularFireMessagingModule } from '@angular/fire/messaging';
-import { AngularFireStorageModule,  } from '@angular/fire/storage';
-import { AngularFireModule } from '@angular/fire';
 import { MessagingService } from './shared/services/messaging.service';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { ScullyLibModule } from '@scullyio/ng-lib';
 import { HeaderModule } from './shared/header/header.module';
+
+//firebase
+import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
+import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { AngularFireDatabase } from '@angular/fire/compat/database';
+import { FIREBASE_OPTIONS } from '@angular/fire/compat';
+
+
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -29,19 +32,17 @@ import { HeaderModule } from './shared/header/header.module';
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
     }),
-    // firebase  modules
-    AngularFireDatabaseModule,
-    AngularFireAuthModule,
-    AngularFireStorageModule,
-    AngularFireMessagingModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule.enablePersistence(),
     ScullyLibModule,
+    // firebase  modules
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideFirestore(() => getFirestore()),
   ],
   providers: [
     SideBarService,
     ModalService,
     MessagingService,
+    { provide: FIREBASE_OPTIONS, useValue: environment.firebase },
+    AngularFireDatabase,
   ],
   bootstrap: [AppComponent],
 })
