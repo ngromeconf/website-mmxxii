@@ -1,9 +1,9 @@
 {
   "name": "ng-rome2020",
-  "version": "3.0.0",
+  "version": "13.0.0",
   "private": true,
   "volta": {
-    "node": "14.17.0",
+    "node": "16.16.0",
     "yarn": "1.19.2"
   },
   "scripts": {
