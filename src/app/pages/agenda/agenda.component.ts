@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Observable } from 'rxjs';
+import { Agenda } from 'src/app/shared/interfaces';
 
 @Component({
   selector: 'ngrome-agenda',
@@ -43,7 +44,7 @@ import { Observable } from 'rxjs';
               <span class="agenda_speaker__name"> {{ agenda.speakerName }}<br />- {{ agenda.company }} </span>
               <h1>{{ agenda.title }}</h1>
               <a class="read__more" title="Read more about the talk">Read more</a>
-              <div class="agenra__talk__detail"></div>
+              <div class="agenda__talk__detail"></div>
             </div>
             <div class="agenda__duration">{{ getDuration(agenda.startTime, agenda.endTime) }}''</div>
           </div>
@@ -53,15 +54,11 @@ import { Observable } from 'rxjs';
   styleUrls: ['./agenda.component.scss'],
 })
 export class AgendaComponent implements OnInit {
-  agendaList$: Observable<any[]>;
+  agendaList$: Observable<Agenda[]>;
 
-  constructor(private afs: AngularFirestore) {
-    this.agendaList$ = afs
-      .collection('agenda2021', (ref) => {
-        ref.where('visible', '==', true);
-        ref.orderBy('startTime', 'asc');
-        return ref;
-      })
+  constructor(private firestore: AngularFirestore) {
+    this.agendaList$ = firestore
+      .collection<Agenda>('agenda2021', (ref) => ref.where('visible', '==', true).orderBy('startTime','asc'))
       .valueChanges();
   }
 
