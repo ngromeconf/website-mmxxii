@@ -17,6 +17,7 @@ import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { AngularFireDatabase } from '@angular/fire/compat/database';
 import { FIREBASE_OPTIONS } from '@angular/fire/compat';
+import { provideAppCheck, initializeAppCheck, ReCaptchaV3Provider } from '@angular/fire/app-check';
 
 
 
@@ -36,6 +37,13 @@ import { FIREBASE_OPTIONS } from '@angular/fire/compat';
     // firebase  modules
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),
+    provideAppCheck(() => {
+      const provider = new ReCaptchaV3Provider(environment.recaptcha3SiteKey);
+      return initializeAppCheck(undefined, {
+        provider,
+        isTokenAutoRefreshEnabled: true
+      });
+    })
   ],
   providers: [
     SideBarService,
