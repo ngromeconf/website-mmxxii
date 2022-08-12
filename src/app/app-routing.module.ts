@@ -52,6 +52,12 @@ const routes: Routes = [
     data: { title: 'NG Rome MMXIX - Live Streaming' },
   },
   {
+    path: 'admin',
+    loadChildren: () =>
+      import('./pages/admin/admin.module').then((m) => m.AdminModule),
+    data: { title: 'NG Rome MMXIX - Admin Page' },
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full',
