@@ -6,6 +6,7 @@ export interface EventDateType {
 
 export interface TicketType {
   url: string;
+  studentUrl?: string;
   showButton: boolean;
 }
 
@@ -17,6 +18,7 @@ export const EVENT_DATE: EventDateType = {
 
 export const TICKET: TicketType = {
   url: 'https://ti.to/ngrome-conf/ngrome-conf-mmxxii-dec-2022',
+  studentUrl: 'https://ti.to/ngrome-conf/ngrome-conf-mmxxii-dec-2022/with/tnzzvxtxgcw',
   showButton: true,
 }
 
