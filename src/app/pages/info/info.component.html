@@ -18,8 +18,9 @@
 <section class="site-content__section">
   <div class="site-content__wrap">
     <div class="site-content__description">
-      <h1>1. When?</h1>
-      <p>{{eventInfo.when}}</p>
+      <h1>1. WHEN?</h1>
+    </div>
+    <p>{{eventInfo.when}}</p>
       <!-- a class="button" href="https://calendar.google.com/event?action=TEMPLATE&amp;tmeid=XzZ0bG5hcXJsZTVwNmNwYjRkaG1qNHBocGVocTc4cmhoZDRvbWVyamplMWlqOHE5a2VsajY2b3BvZDlqbjhxcmU2cG02dXJyMWNwaW4yb3I5NzFpN2FkYjI2NWluY3Jqa2Rrb25jZWI4Y3BrajAgYW5ndWxhcnJvbWFAbQ&amp;tmsrc=angularroma%40gmail.com"
         target="_blank"
         rel="noopener"
@@ -30,27 +31,138 @@
           stroke-width="2" d="M1 1l7.358 5L1 11"/>
         </svg>
       </a -->
-    </div>
+
+
+
   </div>
 </section>
 
 <section class="site-content__section">
   <div class="site-content__wrap">
     <div class="site-content__description">
-      <h1>2. Where?</h1>
-      <p>
-        After the pandemic years we want to back in person for {{eventInfo.romanYear}} edition.<br>
-        Spazio 900 (Rome, Italy) will be the place, we share more details soon!
-      </p>
+      <h1>2. WHERE?</h1>
     </div>
+    <p>
+      After the pandemic years we want to back in person for {{eventInfo.romanYear}} edition.<br>
+      Spazio 900 (Rome, Italy) will be the place, we share more details soon!
+    </p>
+    <br>
     <p><b>SPAZIO 900</b><br>
       Piazza Guglielmo Marconi, 26b, 00144 Roma RM
+    </p>
+
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1160.950316852213!2d12.470198805687213!3d41.83446587714204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13258ae307f9abf1%3A0x3091beece91dd9e2!2sSpazio%20Novecento!5e0!3m2!1sit!2sit!4v1660036170404!5m2!1sit!2sit" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+
+  </div>
+</section>
+
+<section class="site-content__section">
+  <div class="site-content__wrap">
+    <div class="site-content__description">
+      <h1>3. HOW CAN I BUY TICKETS? </h1>
+    </div>
+
+      <p>
+        You can purchase and pre-order tickets below!
+      </p>
+      <br>
+      <p>
+        <a *ngIf="ticketData.showButton"
+          class="button button--green button--fill-green"
+          rel="noopener"
+          target="_blank"
+          title="Get your ticket!"
+          [href]="ticketData.url"
+          #registerButton
+          >GET YOUR TICKET!
+          <img class="ticket-img" src="./assets/icons/ticket-icon.svg" />
+        </a>
       </p>
 
-    <div class="site-content__intro__description">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1160.950316852213!2d12.470198805687213!3d41.83446587714204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13258ae307f9abf1%3A0x3091beece91dd9e2!2sSpazio%20Novecento!5e0!3m2!1sit!2sit!4v1660036170404!5m2!1sit!2sit" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+  </div>
+</section>
 
+
+<section class="site-content__section">
+  <div class="site-content__wrap">
+    <div class="site-content__description">
+      <h1>4. ARE THERE DISCOUNTS FOR STUDENTS? </h1>
     </div>
+
+      <p>
+        Sì! We offer a special discounted ticket for students enrolled in university, secondary school, high school, or boot camp within the last year. Proof of enrollment will need to be presented upon admission. You can purchase them below.
+      </p>
+      <br>
+      <p>
+        <a *ngIf="ticketData.showButton"
+          class="button button--green button--fill-green"
+          rel="noopener"
+          target="_blank"
+          title="Get your ticket!"
+          [href]="ticketData.studentUrl"
+          #registerButton
+          >GET YOUR TICKET!
+          <img class="ticket-img" src="./assets/icons/ticket-icon.svg" />
+        </a>
+      </p>
+
+  </div>
+</section>
+
+<section class="site-content__section">
+  <div class="site-content__wrap">
+    <div class="site-content__description">
+      <h1>5. WHAT ABOUT DIVERSITY? </h1>
+    </div>
+
+      <p>
+        We take diversity seriously at NGRome and we host special events for women in tech. To see and learn more about this offer <a routerLink="/diversity" class="__text red">click here</a>.
+      </p>
+      <br>
+
+  </div>
+</section>
+
+<section class="site-content__section">
+  <div class="site-content__wrap">
+    <div class="site-content__description">
+      <h1>6. Lodging </h1>
+    </div>
+
+      <p>
+        <!-- We have some recommendations for hotels and airbnb in the area -->
+        Back soon for suggestion update in this area.
+      </p>
+      <br>
+
+  </div>
+</section>
+
+<section class="site-content__section">
+  <div class="site-content__wrap">
+    <div class="site-content__description">
+      <h1>7. Transportation </h1>
+    </div>
+
+      <p>
+        <b>In Metro</b><br>
+        Prendere la linea B direzione LAURENTINA e scendere alla fermata EUR FERMI.
+        <br>
+        Spazio 900 si trova a 650 metri.
+        <br>
+        Il biglietto costa 1,50 Euro per un singolo viaggio in metro. Considerate che il tempo di percorrenza dalla Stazione Termini è di 15minuti di metro più 10/15 minuti a piedi.
+        <br><br>
+        <b>In bus</b><br>
+        Dalla Stazione Termini di Roma prendere il bus 714 e scendere alla fermata COLOMBO/MARCONI, poi a piedi per 150 metri fino all’arrivo a Piazza Guglielmo Marconi, una volta lì…lo vedete!
+        <br>
+        Il biglietto costa 1,50 Euro e si possono prendere anche più bus nell’arco di 100 minuti.
+        <br>
+        Per il ritorno in AUTOBUS, c’è il bus notturno.
+      </p>
+      <br>
+
   </div>
 </section>
 
@@ -64,6 +176,7 @@
       <div class="info__image">
         <img src="./assets/images/hotels.com.png">
       </div>
+
       <div class="info__text">
         <strong>Hotels.com</strong> give us a <strong>10% of discount</strong> for accommodation near Teatro Italia.<br>
         Use the promo code <span class="red">HCOMAGILE</span> at checkout.<br>

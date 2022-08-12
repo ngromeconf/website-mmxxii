@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { EventDateType, EVENT_DATE, TICKET, TicketType } from 'src/app/constants';
 import { ModalService } from 'src/app/shared/services/modal.service';
 
-
 @Component({
   selector: 'ngrome-info',
   templateUrl: './info.component.html',
@@ -35,9 +34,8 @@ export class InfoComponent implements OnInit {
 
   addToCalendar(){
     console.log('event added to calendar');
-
-
-
   }
+
+
 
 }

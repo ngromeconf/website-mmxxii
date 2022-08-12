@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { Sponsor } from '../interfaces';
 
 
 @Component({
@@ -34,7 +35,7 @@ export class SponsorsSectionComponent implements OnInit {
   @Input() headerColor: string;
   @Input() sponsorType: string;
 
-  sponsors$: Observable<any>;
+  sponsors$: Observable<Sponsor[]>;
 
   constructor(private afs: AngularFirestore) {}
 
@@ -44,9 +45,11 @@ export class SponsorsSectionComponent implements OnInit {
 
   private getSponsors() {
     this.sponsors$ = this.afs
-      .collection(
+      .collection<Sponsor>(
         'sponsor2020',
-        ref => ref.where('type', '==', this.sponsorType))
+        ref => ref
+          .where('type', '==', this.sponsorType)
+          .where('visible', '==', true))
       .valueChanges();
   }
 }
