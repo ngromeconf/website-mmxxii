@@ -47,7 +47,9 @@ export class SponsorsSectionComponent implements OnInit {
     this.sponsors$ = this.afs
       .collection<Sponsor>(
         'sponsor2020',
-        ref => ref.where('type', '==', this.sponsorType))
+        ref => ref
+          .where('type', '==', this.sponsorType)
+          .where('visible', '==', true))
       .valueChanges();
   }
 }
