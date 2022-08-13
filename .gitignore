@@ -41,4 +41,6 @@ Thumbs.db
 
 #Firebase
 .firebase/hosting*
+
 .angular/
+scully.log

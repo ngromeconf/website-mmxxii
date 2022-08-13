@@ -1,2 +1,11 @@
 identifier: k2ndu24e3b55l786
 allowErrorCollect: true
+appPort: 1864
+staticPort: 1668
+reloadPort: 2667
+hostName: localhost
+projectName: ngRome2020
+homeFolder: /Users/luciano.murruni/development/ngrome/website-mmxxii
+distFolder: ./dist/ngRome2020
+outDir: /Users/luciano.murruni/development/ngrome/website-mmxxii/dist/static
+handle404: ''
