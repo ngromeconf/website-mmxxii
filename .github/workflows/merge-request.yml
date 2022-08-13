@@ -33,4 +33,4 @@ jobs:
           npm run build
       - name: generate static
         run: |
-          npm run scully
+          npm run scully -- --scanRoutes
