@@ -17,6 +17,7 @@
     background-repeat: no-repeat;
     background-position: bottom right;
     height: 150%;
+    margin-bottom: 40px;
   }
 
   &__main > p {
@@ -99,6 +100,8 @@
   }
 
   &__team img {
+    width: 146px;
+    height: 146px;
     border-radius: 50%;
   }
 

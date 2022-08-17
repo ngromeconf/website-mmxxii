@@ -133,6 +133,14 @@ import { SeoService } from 'src/app/shared/services/seo.service';
               <span>@ryanjheromeburgos</span>
             </a>
           </div>
+          <div>
+            <a href="https://www.linkedin.com/in/davide-passafaro" target="_blank">
+              <img src="./assets/images/team/davide_passafaro.jpg" /><br />
+            </a>
+            <a href="https://www.linkedin.com/in/davide-passafaro" target="_blank">
+              <span>@DavidePassafaro</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
