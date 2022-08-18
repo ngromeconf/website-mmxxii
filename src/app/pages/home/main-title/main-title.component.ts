@@ -20,8 +20,8 @@ import { map, startWith, tap } from 'rxjs/operators';
         <div class="site-content__intro">
           <header class="site-content__intro__head">
             <h2 class="site-content__intro__title">
-              The largest online
-              <b>Italian Angular Conference</b>
+              The largest<br>
+              <b>Italian Angular Conference</b><br>
               is taking place at <span class="assistive">NG Rome MMXXI</span>
             </h2>
             <img src="assets/logo/logo-mmxxii-red.svg" />

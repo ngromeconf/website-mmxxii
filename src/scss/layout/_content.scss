@@ -379,7 +379,7 @@ ngrome-logo {
       margin-bottom: 100px;
     }
 
-    p {
+    p,li {
       font-size: 18px;
       @include breakpoint-m {
         font-size: 24px;

@@ -25,9 +25,9 @@ import { CALLFORPAPER, EVENT_DATE, TicketType } from 'src/app/constants';
               class="button button--white"
               href="{{callForPaper.url}}"
               target="_blank"
-              title="Candidate now for NG Rome {{romanicYear}}"
+              title="Call For Papers is Open: NG Rome {{romanicYear}}"
             >
-              <span>Candidate now NG Rome {{romanicYear}}</span>
+              <span>Call For Papers is Open</span>
 
               <svg width="11" height="12">
                 <path
