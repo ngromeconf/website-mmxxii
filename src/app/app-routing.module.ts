@@ -21,8 +21,8 @@ const routes: Routes = [
     data: { title: 'NG Rome MMXIX - About' },
   },
   {
-    path: 'location',
-    loadChildren: () => import('./pages/location/location.module').then((m) => m.LocationModule),
+    path: 'venue',
+    loadChildren: () => import('./pages/venue/venue.module').then((m) => m.LocationModule),
     data: { title: 'NG Rome MMXIX - Location' },
   },
   {

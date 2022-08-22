@@ -2,6 +2,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Observable } from 'rxjs';
 import { EventDateType, EVENT_DATE, TICKET, TicketType } from 'src/app/constants';
+import { Menu } from '../../interfaces';
 
 @Component({
   selector: 'ngrome-menu',
@@ -59,13 +60,13 @@ import { EventDateType, EVENT_DATE, TICKET, TicketType } from 'src/app/constants
 export class MenuComponent implements OnInit {
   @Output() toggleSidebar = new EventEmitter();
 
-  menuList$: Observable<any[]>;
+  menuList$: Observable<Menu[]>;
   conferenceInfo: EventDateType;
   ticketData: TicketType;
 
   constructor(private afs: AngularFirestore) {
     this.menuList$ = afs
-      .collection(
+      .collection<Menu>(
         'configuration2020',
         ref => ref.where('active', '==', true))
       .valueChanges();
