@@ -66,14 +66,6 @@ ngrome-logo {
     position: relative;
     display: block; // Maledetto Angular
 
-    & + & {
-      margin-top: 65px;
-      @include breakpoint-m {
-        margin-top: 165px;
-      }
-
-    }
-
     &--full {
       color: $white;
       background-color: $ribbon;
@@ -133,7 +125,7 @@ ngrome-logo {
   }
 
   &__intro__head {
-    height: 100vh;
+    min-height: 100vh;
     margin: 55px 0;
     position: relative;
     display: flex;
@@ -195,11 +187,11 @@ ngrome-logo {
     padding-bottom: 20px;
   }
 
-  &__video__cover{
+  &__video__cover {
     width: calc(100vw - 80px);
     max-width: 890px;
     height: calc(100vh - 68px);
-    margin:0 auto;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -207,7 +199,7 @@ ngrome-logo {
   }
 
   &__intro__title {
-    color: white;
+    color: black;
     font-size: 20px;
     font-weight: normal;
     text-align: center;
@@ -215,6 +207,7 @@ ngrome-logo {
 
     @include breakpoint-m {
       padding: 120px 140px 30px;
+      color: white;
       font-size: 26px;
     }
 
@@ -223,11 +216,6 @@ ngrome-logo {
     }
 
     strong {
-      //
-      // @include breakpoint-s {
-      //   display: block;
-      // }
-
       color: $ribbon;
     }
   }
@@ -274,6 +262,10 @@ ngrome-logo {
 
     & > * {
       padding: 20px 0;
+
+      &:first-child {
+        padding-bottom: 0;
+      }
     }
 
     @include breakpoint-m {
@@ -384,7 +376,6 @@ ngrome-logo {
     }
 
     @include breakpoint-l {
-      margin-top: 80px;
       margin-bottom: 100px;
     }
 
