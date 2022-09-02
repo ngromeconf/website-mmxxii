@@ -74,9 +74,4 @@ export class SpeakerDetailComponent implements OnInit {
     });*/
   }
 
-  ngOnDestroy() {
-    console.log('on destroy');
-    // this._routerSubscribe.unsubscribe();
-    // this._speakerSubscribe.unsubscribe();
-  }
 }

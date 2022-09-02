@@ -17,7 +17,7 @@ import { PWAService } from './shared/services/pwa.service';
     <div class="site-menu--close--full" #siteMenuClose></div>
   `,
 })
-export class AppComponent implements OnInit, OnDestroy {
+export class AppComponent implements OnInit {
   title = 'ng-rome-MMXIX';
   containerStatus = 'hidden';
   private logoAlreadyAnimated = false;
@@ -70,9 +70,6 @@ export class AppComponent implements OnInit, OnDestroy {
     });
   }
 
-  ngOnDestroy() {
-    console.log('destroy app.component');
-  }
 
   openCloseSidebar() {
     this.sidebarService.toggleSidebarStatus();
