@@ -6,8 +6,11 @@ import { Component, OnInit } from '@angular/core';
     <section #tickets class="site-content__section">
       <div class="site-content__wrap">
         <h1 class="tickets_title">VENUE</h1>
-        <div class="ticket_card_list">
-          <p>NG-Rome MMXXII will take place at Spazio Novecento in the heart of EUR, an historical neighborhood two steps away from the city center of Rome.</p>
+
+        <div class="site-content__intro">
+          <div class="site-content__intro__info">
+          <p class="">NG-Rome MMXXII will take place at <a [routerLink]="['/info']">Spazio Novecento</a> in the heart of EUR, an historical neighborhood two steps away from the city center of Rome.</p>
+          </div>
         </div>
         <div class="site-venue"></div>
       </div>

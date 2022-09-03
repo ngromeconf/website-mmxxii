@@ -366,6 +366,7 @@ ngrome-logo {
     // margin-top: 40px;
     margin-bottom: 60px;
 
+
     @include breakpoint-s {
       margin-top: 64px;
     }
@@ -391,6 +392,10 @@ ngrome-logo {
       + p {
         margin-top: 32px;
       }
+    }
+    a{
+      color: $ribbon;
+      text-decoration: underline;
     }
   }
 
