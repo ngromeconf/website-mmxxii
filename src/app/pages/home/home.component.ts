@@ -49,10 +49,10 @@ export class HomeComponent implements OnInit {
 
   async onIdentifyButtonClick() : Promise<void> {
     // Get the visitor identifier when you need it.
-    const data = await this.fingerprintjsProAngularService.getVisitorData();
-    this.visitorId = data.visitorId;
-    console.log('VisitorId: ', this.visitorId);
-    console.log('Fingerprint Data: ', data);
+    await this.fingerprintjsProAngularService.getVisitorData();
+    // this.visitorId = data.visitorId;
+    // console.log('VisitorId: ', this.visitorId);
+
   }
 
   ngOnInit() {}
