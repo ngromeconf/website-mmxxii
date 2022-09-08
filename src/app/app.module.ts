@@ -18,6 +18,7 @@ import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { AngularFireDatabase } from '@angular/fire/compat/database';
 import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 import { provideAppCheck, initializeAppCheck, ReCaptchaV3Provider } from '@angular/fire/app-check';
+import { FingerprintjsProAngularModule } from '@fingerprintjs/fingerprintjs-pro-angular';
 
 
 
@@ -43,7 +44,11 @@ import { provideAppCheck, initializeAppCheck, ReCaptchaV3Provider } from '@angul
         provider,
         isTokenAutoRefreshEnabled: true
       });
-    })
+    }),
+    FingerprintjsProAngularModule.forRoot({loadOptions: {
+      apiKey: "bWqg7cgn9qs0BRNTujV6",
+      region: "eu"
+    }}),
   ],
   providers: [
     SideBarService,
@@ -51,6 +56,7 @@ import { provideAppCheck, initializeAppCheck, ReCaptchaV3Provider } from '@angul
     MessagingService,
     { provide: FIREBASE_OPTIONS, useValue: environment.firebase },
     AngularFireDatabase,
+
   ],
   bootstrap: [AppComponent],
 })

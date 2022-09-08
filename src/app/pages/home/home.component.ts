@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { FingerprintjsProAngularService } from '@fingerprintjs/fingerprintjs-pro-angular';
 
 @Component({
   selector: 'ngrome-home',
@@ -39,9 +40,19 @@ export class HomeComponent implements OnInit {
   public speakerFilter = true;
   actualPage: string;
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private fingerprintjsProAngularService: FingerprintjsProAngularService) {
     const urlTree = this.router.parseUrl(this.router.url);
     this.actualPage = urlTree.root.children['primary'].segments.map((it) => it.path).join('/');
+    this.onIdentifyButtonClick();
+  }
+  visitorId = 'Press "Identify" button to get visitorId';
+
+  async onIdentifyButtonClick() : Promise<void> {
+    // Get the visitor identifier when you need it.
+    const data = await this.fingerprintjsProAngularService.getVisitorData();
+    this.visitorId = data.visitorId;
+    console.log('VisitorId: ', this.visitorId);
+    console.log('Fingerprint Data: ', data);
   }
 
   ngOnInit() {}
