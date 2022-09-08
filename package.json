@@ -34,6 +34,7 @@
     "@angular/service-worker": "^13.3.11",
     "@angular/upgrade": "^13.3.11",
     "@angular/youtube-player": "^12.2.13",
+    "@fingerprintjs/fingerprintjs-pro-angular": "^1.0.2",
     "@scullyio/ng-lib": "^2.1.36",
     "@scullyio/scully": "^2.1.36",
     "@scullyio/scully-plugin-puppeteer": "^2.1.36",
