@@ -19,8 +19,7 @@ import { AngularFireDatabase } from '@angular/fire/compat/database';
 import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 import { provideAppCheck, initializeAppCheck, ReCaptchaV3Provider } from '@angular/fire/app-check';
 import { FingerprintjsProAngularModule } from '@fingerprintjs/fingerprintjs-pro-angular';
-
-
+import { getAnalytics, provideAnalytics, ScreenTrackingService, UserTrackingService } from '@angular/fire/analytics';
 
 
 @NgModule({
@@ -38,6 +37,7 @@ import { FingerprintjsProAngularModule } from '@fingerprintjs/fingerprintjs-pro-
     // firebase  modules
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),
+    provideAnalytics(() => getAnalytics()),
     provideAppCheck(() => {
       const provider = new ReCaptchaV3Provider(environment.recaptcha3SiteKey);
       return initializeAppCheck(undefined, {
@@ -55,6 +55,7 @@ import { FingerprintjsProAngularModule } from '@fingerprintjs/fingerprintjs-pro-
     ModalService,
     MessagingService,
     { provide: FIREBASE_OPTIONS, useValue: environment.firebase },
+
     AngularFireDatabase,
 
   ],
