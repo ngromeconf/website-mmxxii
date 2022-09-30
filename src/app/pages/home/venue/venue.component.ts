@@ -18,7 +18,7 @@ interface SCHEDULE {
           <div class="site-venue"></div>
         </div>
       </div>
-      <div class="site-content__wrap">
+      <!-- <div class="site-content__wrap">
         <h1 class="tickets_title">Agenda</h1>
         <div class="site-content__intro_info">
           <p>One track, one day, filled with talks of the Angular engineers who build the most performant apps and web experiences.</p>
@@ -33,7 +33,7 @@ interface SCHEDULE {
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </section>
   `,
   styleUrls: ['./venue.component.scss'],
@@ -45,7 +45,7 @@ export class VenueComponent implements OnInit {
     {'time': '9:10am',	'event': 'Opening Keynote'},
     {'time': '9:50am',	'event': 'Talk 1'},
     {'time': '10:15am',	'event': 'Lightning Talk 1'},
-    {'time': '10:25am',	'event': 'Sponsor Talk Platinum'},
+    {'time': '10:25am',	'event': 'Sponsor Talk: Almaviva Platinum Sponsor'},
     {'time': '10:30am',	'event': 'Panel 1'},
     {'time': '10:50am',	'event': 'Coffee Break'},
     {'time': '11:15am',	'event': 'Talk 2'},
@@ -60,7 +60,7 @@ export class VenueComponent implements OnInit {
     {'time': '2:40pm',	'event': 'Panel 3'},
     {'time': '3:00pm',	'event': 'Coffee Break'},
     {'time': '3:25pm',	'event': 'Talk 6'},
-    {'time': '3:50pm',	'event': 'Closing Keynote'},
+    {'time': '3:50pm',	'event': 'A Fistful of Angulars by Brian Love and Mike Ryan'},
     {'time': '4:30pm',	'event': 'Final Panel'},
     {'time': '4:50pm',	'event': 'Closing Remarks'},
     {'time': '5:00pm',	'event': 'After Party'},
