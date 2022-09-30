@@ -5,8 +5,13 @@ import { Component, OnInit } from '@angular/core';
   template: `
     <section class="site-content__section">
       <div class="site-content__wrap">
+        <div class="site-content__header">
+          <div class="site-content__header__image diversity-background-header">
+            <div class="site-content__header__title">Diversity <br/> & NG Rome</div>
+          </div>
+        </div>
         <div class="site-content__intro">
-          <header class="site-content__intro__head__inner-sub">
+          <header class="site-content__intro__head__inner-sub padding-top-s">
             <h1 class="site-content__intro__title-sub">Diversity</h1>
           </header>
           <div class="site-content__intro__info__inner">
@@ -32,6 +37,11 @@ import { Component, OnInit } from '@angular/core';
               Moreover, we will be running the program also for the next edition which we hope will be held in
               Rome.
             </p>
+          </div>
+        </div>
+        <div class="site-content__footer">
+          <div class="site-content__footer__image diversity-background-footer">
+            <div class="site-content__footer__title">VI <br/> ASPETTIAMO</div>
           </div>
         </div>
       </div>
@@ -61,7 +71,7 @@ import { Component, OnInit } from '@angular/core';
     </section -->
     <!-- <ngrome-tickets class="site-content__section" id="tickets"></ngrome-tickets> -->
   `,
-  styles: ['p {text-align: justify;}'],
+  styles: ['p {text-align: justify;}',],
 })
 export class DiversityComponent implements OnInit {
   constructor() {}
