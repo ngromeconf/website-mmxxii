@@ -2,6 +2,7 @@
   "name": "ng-rome2020",
   "version": "13.0.0",
   "private": true,
+  "type": "module",
   "volta": {
     "node": "16.16.0",
     "yarn": "1.19.2"
@@ -57,6 +58,7 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/jest": "^24.9.1",
     "@types/node": "^12.12.47",
+    "firebase-admin": "^11.0.1",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "^6.4.0",
