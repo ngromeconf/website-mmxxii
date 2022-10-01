@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   eventBriteKey: 'XWRQ7HXFCBECMBFMPN6M',
-  recaptcha3SiteKey: 'B25D6900-ABC9-4B23-B4B4-F943D988C01E',
+  recaptcha3SiteKey: '6LdzFWshAAAAAM-zdHDb7lGghOoZDApqNGmEWyAK',
   firebase: {
     apiKey: 'AIzaSyCEReSoxLo9zXnjrQS0zZL9kiInqSFv4Yc',
     authDomain: 'ngrome-79ce3.firebaseapp.com',

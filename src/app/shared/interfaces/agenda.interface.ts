@@ -24,5 +24,5 @@ export interface Agenda{
   description: string,
   image: string,
   type: string,
-  visible: true,
+  visible: boolean,
 }
