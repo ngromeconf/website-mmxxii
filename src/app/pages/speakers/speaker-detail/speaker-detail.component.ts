@@ -49,9 +49,8 @@ export class SpeakerDetailComponent implements OnInit {
   }
 
   getSpeakerDetail({ name }) {
-    console.log('getSpeakerDetail', name);
     this.speaker$ = this.afs
-      .collection('speakers', ref => {
+      .collection('speakers2022', ref => {
         ref.where('name', '==', name);
         ref.orderBy('position', 'asc');
         return ref;
@@ -74,9 +73,4 @@ export class SpeakerDetailComponent implements OnInit {
     });*/
   }
 
-  ngOnDestroy() {
-    console.log('on destroy');
-    // this._routerSubscribe.unsubscribe();
-    // this._speakerSubscribe.unsubscribe();
-  }
 }

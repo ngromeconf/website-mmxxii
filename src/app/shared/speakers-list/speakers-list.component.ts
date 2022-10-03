@@ -43,7 +43,7 @@ export class SpeakerListComponent {
     this.speakerList$ = combineLatest([homepage$, visible$]).pipe(
       switchMap(([homepage, visible]) =>
         afs
-          .collection('speakers2020', (ref) => {
+          .collection('speakers2022', (ref) => {
             if (homepage) {
               ref.where('homepage', '==', true);
             }
