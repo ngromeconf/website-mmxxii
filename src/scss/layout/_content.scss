@@ -419,7 +419,82 @@ ngrome-logo {
       }
     }
   }
+
+  &__header {
+    padding-top: 100px;
+    height: 388px;
+    position: relative;
+
+    @include breakpoint-s {
+      min-height: 200px;
+    }
+
+    &__image {
+      height: 100%;
+      position: relative;
+    }
+
+    &__title {
+      position: absolute;
+      left: 45%;
+      top: 20%;
+      font-size: 80px;
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 700;
+      /* or 90px */
+
+      letter-spacing: 00.05em;
+      text-transform: uppercase;
+
+      color: $ribbon;
+
+      @include breakpoint-m {
+        font-size: 60px;
+      }
+      @include breakpoint-s {
+        display: none;
+      }
+    }
+  }
+  &__footer {
+    position: relative;
+    @include breakpoint-s {
+      // padding-top: 50px;
+      // height: 200px;
+    }
+
+    &__image {
+      height: 388px;
+    }
+
+    &__title {
+      position: absolute;
+      left: 10vw;
+      top: 20%;
+      font-size: 80px;
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 700;
+      /* or 90px */
+
+      letter-spacing: 00.05em;
+      text-transform: uppercase;
+
+      color: $ribbon;
+
+      @include breakpoint-m {
+        font-size: 60px;
+      }
+      @include breakpoint-s {
+        font-size: 30px;
+        top: 40%;
+        // display: none;
+      }
+    }
+  }
 }
+
 
 .button {
   display: inline-block;
@@ -571,3 +646,31 @@ ngrome-logo {
 .assistive {
   @include assistive();
 }
+
+.diversity-background {
+  &-header {
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: contain;
+    @include bg-url(
+      '/assets/images/diversity-header.jpg',
+      '/assets/images/diversity-header.webp'
+    );
+  }
+  &-footer {
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+    @include bg-url(
+      '/assets/images/diversity-footer.jpg',
+      '/assets/images/diversity-footer.webp'
+    );
+  }
+}
+
+.padding-top-s {
+  @include breakpoint-s {
+    padding-top: 0;
+  }
+}
+
