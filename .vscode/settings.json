@@ -1,5 +1,25 @@
 {
     "terminal.integrated.automationShell.osx": "",
     "terminal.integrated.fontFamily": "Source Code Pro for Powerline",
-    "terminal.integrated.shell.osx": "/bin/zsh"
+    "terminal.integrated.shell.osx": "/bin/zsh",
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#9897f0",
+        "activityBar.background": "#9897f0",
+        "activityBar.foreground": "#15202b",
+        "activityBar.inactiveForeground": "#15202b99",
+        "activityBarBadge.background": "#fbe3e3",
+        "activityBarBadge.foreground": "#15202b",
+        "commandCenter.border": "#e7e7e799",
+        "sash.hoverBorder": "#9897f0",
+        "statusBar.background": "#6c6aea",
+        "statusBar.foreground": "#e7e7e7",
+        "statusBarItem.hoverBackground": "#9897f0",
+        "statusBarItem.remoteBackground": "#6c6aea",
+        "statusBarItem.remoteForeground": "#e7e7e7",
+        "titleBar.activeBackground": "#6c6aea",
+        "titleBar.activeForeground": "#e7e7e7",
+        "titleBar.inactiveBackground": "#6c6aea99",
+        "titleBar.inactiveForeground": "#e7e7e799"
+    },
+    "peacock.color": "#6c6aea"
 }
