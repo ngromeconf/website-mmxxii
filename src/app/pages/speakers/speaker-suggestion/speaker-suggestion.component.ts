@@ -22,7 +22,7 @@ export class SpeakerSuggestionComponent implements OnInit {
     if ((this.current-1) !== 0) {
       this.previousSpeaker$ = this.afs
         .collection(
-          'speakers',
+          'speakers2022',
           ref => ref.where('position', '==', this.current - 1))
         .valueChanges();
     }
