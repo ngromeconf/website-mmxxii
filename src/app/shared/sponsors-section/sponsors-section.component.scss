@@ -68,5 +68,14 @@
       position: relative;
       text-align: center;
     }
+
+    &.community-partner{
+      width: 150px;
+
+      img{
+        height: auto;
+      }
+    }
+
   }
 }
