@@ -57,7 +57,7 @@ export class TicketsComponent implements OnInit {
     },
     {
       title: 'NgRome MMXXII - Early Bird Ticket',
-      price: '65€',
+      price: 'SOLD OUT',
       description: 'This ticket give you full access the day of the conference.',
       details: 'Available starting from October',
       url: 'https://ti.to/ngrome-conf/ngrome-conf-mmxxii-dec-2022'
