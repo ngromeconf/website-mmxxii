@@ -12,16 +12,15 @@ import { SeoService } from 'src/app/shared/services/seo.service';
           </header>
           <div class="site-content__intro__info__inner">
             <p>
-              3 days of workshops, get your ticket for each of them!<br />
-              <!-- Location:
+              Workshop on December 1st!<br />
+              Location:
               <a
-                href="https://talentgarden.org/it/campus/italia/roma-ostiense/"
+                href=""
                 rel="noopener"
                 target="_blank"
-                >Talent Garden Ostiense, Via Ostiense, 92 - 00154 Roma RM</a
-              >
-            </p> -->
+                >Soon more detais:</a>
             </p>
+
           </div>
         </div>
       </div>

@@ -21,11 +21,7 @@ import { NgAnimateScrollService } from 'src/app/shared/services/ng-animate-scrol
       </div>
     </section>
     <!-- sponsor here -->
-    <ngrome-sponsors-section
-      [title]="'main partners'"
-      [sponsorType]="'main-partner'"
-      headerColor="sponsor-title__main-partners"
-    ></ngrome-sponsors-section>
+
     <ngrome-sponsors-section
       [title]="'platinum sponsors'"
       [sponsorType]="'platinum'"

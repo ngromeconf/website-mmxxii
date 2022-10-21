@@ -61,6 +61,7 @@
       margin: 0 auto;
       max-width: 100%;
       height: 233px;
+      width: auto;
     }
 
     span {
@@ -71,9 +72,13 @@
 
     &.community-partner{
       width: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
       img{
         height: auto;
+        width: 100%;
       }
     }
 

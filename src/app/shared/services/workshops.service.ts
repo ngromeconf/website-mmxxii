@@ -20,54 +20,32 @@ export interface Workshop {
 export class WorkshopsService {
   workshop: Workshop[] = [
     {
-      image: 'https://pbs.twimg.com/profile_images/1390871511939129346/H_Ny-6yx_400x400.jpg',
-      targetUrl: 'https://ti.to/ngrome-conf/ngrome-conf-mmxxi-online-9th-july-2021#schedule',
-      name: ' John Papa & Craig Shoemaker - Publish Your Angular App with Scale and Security!',
-      description: 'July 06 - <b>Duration</b>: 2h\n',
+      image: 'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/speaker%2Fmmxxii%2Fmike-brian-agenda.png?alt=media&token=d3a553b4-84a6-411c-af2e-e12a356d9c4f',
+      targetUrl: 'https://ti.to/ngrome-conf/ngrome-conf-mmxxii-dec-2022',
+      name: 'Mike Ryan & Brian Love - Advanced RxJS Workshop: Level up your RxJS skills',
+      description: 'Dec 01 - <b>Duration</b>: 7h\n',
       fullDescription: ``,
+
       visible: true,
       location: 'We are hosted at...',
-      start_time: '14:00',
-      end_time: '16:00',
-      twitter: ['John_Papa', 'craigshoemaker'],
+      start_time: '09:00',
+      end_time: '17:00',
+      twitter: ['brian_love', 'MikeRyanDev'],
     },
     {
       image:
         'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/partner%2Fnggirls.png?alt=media&token=4f300cae-9b96-402f-bf12-17d37adf63d3',
       targetUrl: 'https://workshops.ng-girls.org/ngRome-2021/',
-      name: 'ngGirls @ ngRome (online)',
-      description: 'July 08 - Duration 7h',
+      name: 'ngGirls @ ngRome',
+      description: 'Dec 01 - Duration 7h',
       fullDescription: ``,
       visible: true,
       location: 'We are hosted at...',
       start_time: '9:00',
       end_time: '17:00',
-      twitter: ['gerardsans'],
+      twitter: ['AngularGirls'],
     },
-    {
-      image: 'https://pbs.twimg.com/profile_images/1281665915994746880/aqhVyys1_400x400.jpg',
-      targetUrl: 'https://ti.to/ngrome-conf/ngrome-conf-mmxxi-online-9th-july-2021#schedule',
-      name: ' Stepan Suvorov - Angular Performance Tuning',
-      description: 'September 15 - <b>Duration</b>: 2h\n',
-      fullDescription: ``,
-      visible: true,
-      location: 'We are hosted at...',
-      start_time: '14:00',
-      end_time: '16:00',
-      twitter: ['stevermeister'],
-    },
-    {
-      image: 'https://pbs.twimg.com/profile_images/1364683651238273038/C-m4fT-Z_400x400.jpg',
-      targetUrl: 'https://ti.to/ngrome-conf/ngrome-conf-mmxxi-online-9th-july-2021#schedule',
-      name: 'Gerard Sans - Fullstack GraphQL using Angular v12',
-      description: 'September 16 - Duration 2h',
-      fullDescription: ``,
-      visible: true,
-      location: 'We are hosted at...',
-      start_time: '14:00',
-      end_time: '16:00',
-      twitter: ['gerardsans'],
-    },
+
   ];
 
   getWorkshops(filter?): Workshop[] {
