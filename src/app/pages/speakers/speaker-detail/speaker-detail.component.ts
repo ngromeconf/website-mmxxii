@@ -3,6 +3,7 @@ import { ActivatedRoute, Router, Event, NavigationStart, NavigationEnd } from '@
 import { Observable, Subscription } from 'rxjs';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { tap, map } from 'rxjs/operators';
+import { CollectionReference, Query } from 'firebase/firestore';
 
 @Component({
   selector: 'ngrome-speaker-detail',
@@ -49,17 +50,18 @@ export class SpeakerDetailComponent implements OnInit {
   }
 
   getSpeakerDetail({ name }) {
+    console.log(name);
     this.speaker$ = this.afs
-      .collection('speakers2022', ref => {
-        ref.where('name', '==', name);
-        ref.orderBy('position', 'asc');
-        return ref;
+      .collection('speakers2022', query => {
+        query.where('name', '==', name);
+        query.limit(1);
+        return query;
       })
       .valueChanges()
       .pipe(
-        map(x => {
-          console.log(x);
-          return x.reduce((acc, curr) => {
+        map(data => {
+          console.log('map: ',data);
+          return data.reduce((acc, curr) => {
             return curr;
           }, {});
         }),

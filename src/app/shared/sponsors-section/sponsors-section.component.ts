@@ -7,7 +7,7 @@ import { Sponsor } from '../interfaces';
 @Component({
   selector: 'ngrome-sponsors-section',
   template: `
-    <section class="sponsor-container">
+    <section class="sponsor-container" *ngIf="sponsors$ | async as sponsors">
       <div class="site-content__wrap">
         <div class="sponsors-section__header" [ngClass]="headerColor">
           <h1 class="sponsors-section__title">{{ title }}</h1>
@@ -15,7 +15,7 @@ import { Sponsor } from '../interfaces';
 
         <div class="sponsors-section__list">
           <div
-            *ngFor="let sponsor of sponsors$ | async as sponsors"
+            *ngFor="let sponsor of sponsors"
             class="sponsors-section__item {{sponsorType}}"
             [ngClass]="{ 'two-items-row': sponsors.length === 2 }"
           >
