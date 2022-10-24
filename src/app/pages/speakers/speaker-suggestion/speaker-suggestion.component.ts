@@ -30,7 +30,7 @@ export class SpeakerSuggestionComponent implements OnInit {
     if ((this.current+1) <= 16) {
       this.nextSpeaker$ = this.afs
         .collection(
-          'speakers',
+          'speakers2022',
           ref => ref.where('position', '==', this.current + 1))
         .valueChanges();
     }

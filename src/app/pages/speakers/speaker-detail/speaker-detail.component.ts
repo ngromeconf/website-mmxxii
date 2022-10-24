@@ -52,11 +52,7 @@ export class SpeakerDetailComponent implements OnInit {
   getSpeakerDetail({ name }) {
     console.log(name);
     this.speaker$ = this.afs
-      .collection('speakers2022', query => {
-        query.where('name', '==', name);
-        query.limit(1);
-        return query;
-      })
+      .collection('speakers2022', query => query.where('name','==',name))
       .valueChanges()
       .pipe(
         map(data => {
