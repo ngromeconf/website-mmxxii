@@ -1,8 +1,9 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { AngularFirestore, CollectionReference, Query } from '@angular/fire/compat/firestore';
 import { Observable, BehaviorSubject, combineLatest } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
+
 
 @Component({
   selector: 'ngrome-speakers-list',
@@ -44,14 +45,16 @@ export class SpeakerListComponent {
       switchMap(([homepage, visible]) =>
         afs
           .collection('speakers2022', (ref) => {
+            //let query : firebase.firestore.CollectionReference | firebase.firestore.Query = ref;
+            let query : CollectionReference | Query  = ref;
             if (homepage) {
-              ref.where('homepage', '==', true);
+              query.where('homepage', '==', true);
             }
             if (visible) {
-              ref.where('visible', '==', true);
+              query.where('visible', '==', true);
             }
-            ref.orderBy('position', 'asc');
-            return ref;
+            query.orderBy('position', 'asc');
+            return query;
           })
           .valueChanges()
       )
