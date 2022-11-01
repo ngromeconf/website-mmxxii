@@ -1,9 +1,8 @@
 import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
-import { ActivatedRoute, Router, Event, NavigationStart, NavigationEnd } from '@angular/router';
-import { Observable, Subscription } from 'rxjs';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Observable } from 'rxjs';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { tap, map } from 'rxjs/operators';
-import { CollectionReference, Query } from 'firebase/firestore';
 
 @Component({
   selector: 'ngrome-speaker-detail',
@@ -23,7 +22,6 @@ export class SpeakerDetailComponent implements OnInit {
 
   constructor(
     private _Activatedroute: ActivatedRoute,
-    private _router: Router,
     private afs: AngularFirestore,
     private cd: ChangeDetectorRef,
   ) {}

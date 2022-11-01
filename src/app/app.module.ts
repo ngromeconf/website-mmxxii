@@ -20,6 +20,8 @@ import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 import { provideAppCheck, initializeAppCheck, ReCaptchaV3Provider } from '@angular/fire/app-check';
 import { FingerprintjsProAngularModule } from '@fingerprintjs/fingerprintjs-pro-angular';
 import { getAnalytics, provideAnalytics, ScreenTrackingService, UserTrackingService } from '@angular/fire/analytics';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { TitoInterceptor } from './shared/services/tito/tito.interceptor';
 
 
 @NgModule({
@@ -29,6 +31,7 @@ import { getAnalytics, provideAnalytics, ScreenTrackingService, UserTrackingServ
     BrowserAnimationsModule,
     HeaderModule,
     AppRoutingModule,
+    HttpClientModule,
     SharedModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
@@ -57,7 +60,7 @@ import { getAnalytics, provideAnalytics, ScreenTrackingService, UserTrackingServ
     { provide: FIREBASE_OPTIONS, useValue: environment.firebase },
 
     AngularFireDatabase,
-
+    { provide: HTTP_INTERCEPTORS, useClass: TitoInterceptor, multi: true },
   ],
   bootstrap: [AppComponent],
 })
