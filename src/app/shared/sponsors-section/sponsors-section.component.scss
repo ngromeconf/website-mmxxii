@@ -46,23 +46,14 @@
   @include breakpoint-s {
     padding-bottom: 80px;
   }
-  .two-items-row {
-    @include breakpoint-l {
-      width: 450px !important;
-    }
 
-    img {
-      position: relative;
-      top: 50%;
-      -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      transform: translateY(-50%);
-    }
+  .community-partner {
+    margin-bottom: 15px;
   }
 
   .sponsors-section__item {
     width: 300px;
-    margin: 15px;
+    margin: auto;
 
     img {
       display: block;

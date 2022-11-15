@@ -17,7 +17,6 @@ import { Sponsor } from '../interfaces';
           <div
             *ngFor="let sponsor of sponsors"
             class="sponsors-section__item {{sponsorType}}"
-            [ngClass]="{ 'two-items-row': sponsors.length === 2 }"
           >
             <a rel="noopener" href="{{ sponsor.websiteUrl }}" target="_blank" title="{{ sponsor.name }}">
               <img src="{{ sponsor.image }}" alt="{{ sponsor.name }}" />
