@@ -22,7 +22,7 @@ import { MessagingService } from 'src/app/shared/services/messaging.service';
                 {{item.description}}
                 <br><b>{{item.details}}</b>
               </p>
-              <button class="ticket_card_button button button--green button--fill-green" title="Get tickets">
+              <button *ngIf="item.url" class="ticket_card_button button button--green button--fill-green" title="Get tickets">
                 <span>
                   Get ticket!
                   <img class="ticket_card_icon" src="./assets/icons/ticket-icon.svg" />
@@ -53,32 +53,53 @@ export class TicketsComponent implements OnInit {
       price: 'SOLD OUT',
       description: 'This ticket give you full access the day of the conference.',
       details: 'Available starting from October',
-      url: 'https://ti.to/ngrome-conf/ngrome-conf-mmxxii-dec-2022'
+      url: ''
     },
     {
       title: 'NgRome MMXXII - Regular Ticket',
-      price: '95€',
+      price: 'SOLD OUT',
       description: 'This ticket give you full access the day of the conference.',
       details: 'Regular tickets will be available till Nov 18th.',
+      url: ''
+    },
+    {
+      title: 'NgRome MMXXII - Last Minute Ticket',
+      price: '125€',
+      description: 'This ticket give you full access the day of the conference.',
+      details: 'Last minute tickets will be available till Nov 30th.',
       url: 'https://ti.to/ngrome-conf/ngrome-conf-mmxxii-dec-2022'
     },
     {
       title: 'NgRome MMXXII - VIP Ticket ',
-      price: '345€',
+      price: 'SOLD OUT',
       description: 'Access to Advanced RxJS Workshop, Access to the speaker dinner, Reserved area near the stage, Skip line for check-in',
+      details: 'Special edition T-Shirt included!',
+      url: ''
+    },
+    {
+      title: 'NgRome MMXXII - VIP Last Minute Ticket',
+      price: '365€',
+      description: 'Advanced RxJS Workshop Ticket (by Mike Ryan & Brian Love), Conference Ticket, Access to the speaker dinner, Reserved area near the stage, Skip line for check-in',
       details: 'Special edition T-Shirt included!',
       url: 'https://ti.to/ngrome-conf/ngrome-conf-mmxxii-dec-2022'
     },
     {
       title: 'NgRome MMXXII - Advanced RxJS Workshop Ticket',
-      price: '185€',
+      price: 'SOLD OUT',
       description: 'Advanced RxJS Workshop (by Brian Love and Mike Ryan)',
       details: 'Level up your RxJS skills.',
-      url: 'https://ti.to/ngrome-conf/ngrome-conf-mmxxii-dec-2022'
+      url: ''
     },
     {
       title: 'NgRome MMXXII - Early Combo Ticket (Workshop & Conference) ',
-      price: '235€',
+      price: 'SOLD OUT',
+      description: 'Conference + Advanced RxJS Workshop (by Brian Love and Mike Ryan), Level up your RxJS skills!',
+      details: 'This ticket give you full access the day of the conference.',
+      url: ''
+    },
+    {
+      title: 'NgRome MMXXII - Combo Last Minute Ticket (Workshop & Conference) ',
+      price: '325€',
       description: 'Conference + Advanced RxJS Workshop (by Brian Love and Mike Ryan), Level up your RxJS skills!',
       details: 'This ticket give you full access the day of the conference.',
       url: 'https://ti.to/ngrome-conf/ngrome-conf-mmxxii-dec-2022'
