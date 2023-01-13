@@ -63,6 +63,12 @@ const routes: Routes = [
     data: { title: 'NG Rome MMXIX - Admin Page' },
   },
   {
+    path: 'ticket',
+    loadChildren: () =>
+      import('./pages/print-ticket/print-ticket.module').then((m) => m.PrintTicketModule),
+    data: { title: 'NG Rome MMXIX - Social Ticket' },
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full',

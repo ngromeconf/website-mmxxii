@@ -1,0 +1,10 @@
+{
+  "/api.tito.io": {
+    "target": "https://api.tito.io/v3",
+    "pathRewrite": {
+      "^/api.tito.io": ""
+    },
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}
