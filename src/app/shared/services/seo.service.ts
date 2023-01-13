@@ -23,7 +23,7 @@ export class SeoService {
       site: '@ngromeconf',
       slug: '',
       creator: '@ngromeconf',
-      image: 'https://ngrome.io/assets/icons/ngrome-red.png',
+      image: 'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/assets%2Fsocial-home-image-min.jpg?alt=media&token=4754f650-726a-4ff9-86c9-be1bc2191381',
       ...tags
     }
 
