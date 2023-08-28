@@ -30,6 +30,7 @@
               "src/firebase-messaging-sw.js",
               "src/sitemap.xml",
               "src/robots.txt",
+              "src/_redirects",
               "src/google52e27203cffc2c9f.html"
             ],
             "styles": ["src/styles.scss"],
